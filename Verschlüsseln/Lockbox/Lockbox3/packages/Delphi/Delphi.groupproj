@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{CD35A969-3EE9-444D-8433-F317BE3BC706}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="LockBox3DR.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="LockBox3DD.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="LockBox3DR">
+        <MSBuild Projects="LockBox3DR.dproj"/>
+    </Target>
+    <Target Name="LockBox3DR:Clean">
+        <MSBuild Projects="LockBox3DR.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LockBox3DR:Make">
+        <MSBuild Projects="LockBox3DR.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LockBox3DD">
+        <MSBuild Projects="LockBox3DD.dproj"/>
+    </Target>
+    <Target Name="LockBox3DD:Clean">
+        <MSBuild Projects="LockBox3DD.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LockBox3DD:Make">
+        <MSBuild Projects="LockBox3DD.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="LockBox3DR;LockBox3DD"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="LockBox3DR:Clean;LockBox3DD:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="LockBox3DR:Make;LockBox3DD:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,291 @@
+hbTapi Components
+Copyright 2001-2015 Häger+Busch
+
+Release: 2017-03-28
+Version: 10.2
+
++ Embarcadero® Technologies Delphi XE10.2 (32/64-Bit), C++Builder XE10.2 and RAD Studio XE10.2 (Delphi 32/64-Bit, C++) supported.
+
+Legend : + Added feature
+         * Improved/changed feature
+         - Bug fixed (we hope)
+
+Information requests         : info@hbTapi.com
+Support Requests/Bug reports : support@hbTapi.com
+
+
+---- History of changes ------------------------------------------------------
+
+2016-05-02 Version 10.1
++ Embarcadero® Technologies Delphi XE10.1 (32/64-Bit), C++Builder XE10.1 and RAD Studio XE10.1 (Delphi 32/64-Bit, C++) supported.
+* Call-Information (LINECALLINFO) is now updated with each LINE_CALLSTATE event. 
+* LineGetMessage is now called with a minimal timeout to fix an issue with XPhone TAPI32.dll. 
+
+2015-09-30 Version 10
++ Embarcadero® Technologies Delphi XE10 (32/64-Bit), C++Builder XE10 and RAD Studio XE10 (Delphi 32/64-Bit, C++) supported.
+
+2015-05-20 Version 6.0
++ Embarcadero® Technologies Delphi XE8 (32/64-Bit), C++Builder XE8 and RAD Studio XE8 (Delphi 32/64-Bit, C++) supported.
+
+2014-09-12 Version 5.0
++ Embarcadero® Technologies Delphi XE7 (32/64-Bit), C++Builder XE7 and RAD Studio XE7 (Delphi 32/64-Bit, C++) supported.
+- Bug in global function GetStrInBuffer. In rare cases, the function returns an incorrect unicode value.
+
+2014-05-30 Version 4.0
+
++ Embarcadero® Technologies Delphi XE6 (32/64-Bit), C++Builder XE6 and RAD Studio XE6 (Delphi 32/64-Bit, C++) supported.
+
+2013-11-20 Version 3.0
+
++ Embarcadero® Technologies Delphi XE5 (32/64-Bit), C++Builder XE5 and RAD Studio XE5 (Delphi 32/64-Bit, C++) supported.
+
+2012-05-07 Version 2.5
+
++ Embarcadero® Technologies Delphi XE4 (32/64-Bit), C++Builder XE4 and RAD Studio XE4 (Delphi 32/64-Bit, C++) supported.
+- Bug in ThbCustomTapiLine.Close with Panasonic TSP fixed.
+- Bug in ThbTapiCallParams (CallingPartyID) fixed.
+
+2012-11-07 Version 2.4.1
+
+- Bug with Agfeo TSP LineGetIcon/PhoneGetIcon fixed.
+* Improved component initialisation.
+
+
+2012-10-22 Version 2.4
+
++ Embarcadero® Technologies Delphi XE3 (32/64-Bit), C++Builder XE3 and RAD Studio XE3 (Delphi 32/64-Bit, C++) supported.
+- Some errors in help file fixed.
+
+2012-01-13 Version 2.3
+
+- Memory leak with included TObjectList fixed.
+- Some errors in help file fixed.
+
+2011-11-28 Version 2.2
+
++ Embarcadero(R) Technologies Delphi XE2 (32/64-Bit), C++Builder XE2 and RAD Studio XE2 (Delphi 32/64-Bit, C++) supported. 
+* Improved timeout handling.
+
+2010-10-01 Version 2.1
+
++ Embarcadero(R) Technologies Delphi XE, C++Builder XE and RAD Studio XE (Delphi, C++) supported.
+
+2010-05-18 Version 2.0.6
+
++ New methods ThbComPort.WriteAnsiStr and ThbComPort.ReadAnsiString are added.
+- In some cases, idle calls are sometimes not freed automatically. This is fixed by a changed timer handling.
+* Property ThbTapiLine.CallOptions.MonitorDigits.AutoSelect is now false by default.
+
+2009-10-23 Version: 2.0.5
+
++ New property DeviceClasses in ThbTapiLine.Caps, ThbTapiPhone.CapsLine-, Address- and Phone-Caps shows the supported device classes.
++ New properties ThbTapiLine.LineStateMessages and ThbTapiLine.AddressStateMessages added.
++ New properties ThbTapiPhone.PhoneStateMessages, ThbTapiPhone.ButtonModeMessages and ThbTapiPhone.ButtonStateMessages added.
++ New properties ThbTapiLine.CallbackInstance and ThbTapiPhone.CallbackInstance added.
++ Some tool functions like LineDevStateToStr to hbTapiUtils added.
+* It's now allowd to close a ThbTapiLine component during a callstate event handling.
+
+2009-06-06 Version: 2.0.4
+
++ New property ThbTapiLine.PermanentDeviceID and ThbTapiPhone.PermanentDeviceId introduced to handle the problem devices with identical names. 
+- Bug fixed that has prevented to get the device id for comm and wave devices in Delphi / C++Builder 2009.
+- Bug fixed that has caused initializing of TAPI memory block beyond its valid range in Delphi / C++Builder 2009. 
+* Some samples improved. 
+* Help file improved. 
+* Comport events are now triggered asynchronous. 
+* The behavior of ThbTapiLine.Privileges.AutoSelect is changed to prevent using a line without owner or monitor privileges (only outbound calls).
+
+2009-03-24 Version: 2.0.3
+
++ Support for Delphi / C++Builder 2009 / CodeGear RAD Studio added.
+* New naming scheme for classes and events.
+
+2009-02-20 Version: 1.9.9
+
+* Memory allocation.
+- Bug fixed in AutoDropDiscCalls handling.
+- Bug fixed that has caused a deadlock in some situations with special TSP behavior.
+
+2008-08-04 Version 1.9.8
+
++ New event TTapiLine.OnTapiTranslateChange added.
++ New event TTapiapplication.OnTapiMessage added.
++ Method TTapiCall.Park included
++ New sample Park included.
++ Sample CallMonitor now available to C++ Builder
++ Sample WaveInfo now available to C++ Builder
++ Sample CallInfo now available to C++ Builder
++ Function GetTapiBlockStr added
+- TAPI Message handling improved. Sometimes calls were not deallocated automatically in systems with heavy call traffic.
+
+2007-10-30 Version 1.9.7
+
++ New sample CallMonitor now included.
++ New sample CallInfo now included
+* Debug unit hbTapiDbg now documented.
+
+2007-10-19 Version 1.9.6
+
++ Support for Delphi 2007 / CodeGear Delphi for Microsoft Windows Version 11 added.  
++ New event TTapiApplication.LineRename added.
++ New event TTapiApplication.PhoneRename added.
++ New event TTapiApplication.OnError added.
++ New event TTapiLine.OnError added.
++ New event TTapiPhone.OnError added.
++ New method TTapiPhone.SetDisplay added.
++ Unit hbDebug extended. New debug level and compiler flags added.
++ New error handling implemented.
++ New sample CallMonitor added.
++ New sample CallInfo added.
+
+2006-10-06 Version 1.9.5
+
++ Borland Developer Studio 2006 (Delphi 2006, BCB 2006, No .NET) support added.
++ Parameter Device added in TTapiLine.OnTapiMessage and TTapiLine.OnTapiMessage.
+* Help file improved.
+
+2006-04-27 Version 1.9.4
+
+- Bug fixed that made property ConnectedID unavailable below Enterprise Edtion.
+- Bug fixed that made the Standard Edition unable to install with Delphi 4.
+* Help file improved.
+
+2006-03-24 Version 1.9.3
+
++ Support for Borland Delphi 2006 added.
++ New property "About" added to visual components to show the installed hbTapi
+  Components version and edition.
+- Small memory leak fixed. At the end of a program during shutdown from TAPI the
+  thread that is used to get TAPI messages was not freed.
+
+2005-11-16 Version 1.9.2
+
++ Support for device specific methods and events added. Now hbTapi enabled you
+  to use special TSP functionality.
++ Call Pickup support added. TTapiLine.Pickup method can be used to pickup an
+  offering call from another station. Available at Professional Edition.
++ New Property TTapiLine.CallParams.Flags added.  
++ New Delphi samples Pickup and DevSpecific added.
+- Currected bug in TCustomTapiLine.IsCallValid: Calls are sometimes ignored and
+  no events are triggered when lineGetCallStatus has failed with a new call.
+  
+2005-03-30 Version 1.9.1
+
++ Support for Borland Delphi 2005 added.
+
+2005-02-18 Version 1.9
+
++ Support for Borland C++ Builder 5 and 6 added.
++ Samples improved and BCB samples added.
++ Properties TTapiCall.Feature renamed to Features and property FeaturesText
+  introduced.
++ Properties TTapiCall.ConnectedModeText, .DialtoneModeText,
+  .DisconnectModeText, .OfferingModeText, .SpecialInfoModeText added.
+- Property TTapiCall.DisconnectedMode renamed to Properties
+  TTapiCall.DisconnectMode. Because TAPI named it DisconnectMode too.
+- TTapiCall.SwapHold method able to find the fitting call on it's own.
+* Help file improved.
+
+2005-01-04 Version 1.8.1
+
+* Properties TTapiCall.State, .StateMode and .Privilege modified.
+  Now the values given by LINE_CALLSTATE message are stored and returned as
+  properties. The current status is still available with Call.Status.CallState,
+  .CallStateMode and .CallPrivilege.
+- Bug in TTapiPhone timeout mechanism fixed.
+- Some problems with Siemens CAP 2.0 TSP fixed.
+
+2004-09-06 Version 1.8
+
++ TComPort redesigned. Properties modified to use the real Windows values.
+  This is more like the concept used by TTapiLine and TTapiPhone.
++ Call transfering improved. Properties ConsultCall, PrimaryCall added. 
++ Call conferencing improved. Method GetConfRelatedCall introduced and properties
+  ConferenceCall and IsConferenceCall added. 
++ TTapiLine's Privileges.AutoSelect property implemented.
++ CallOptions.MonitorDigits.AutoSelect property implemented.
++ CallOptions.AutoOwner introduced.
++ Call Forwarding implemented.
++ Call tracing improved. Methods SetCallData, GetCallData introduced and property
+  CallID added.
++ Property TTapiCall.NotesList introduced.
++ Some new samples.
+* Unit hbTapiComm removed and units hbComm, hbCommProp and hbCommReg introduced.
+  We want to use this sheme in further versions to make the files more clearly.
+* Deriving of TTapiLine and TTapiCall now supported. TCustomTapiLine introduced
+  to allow deriving of special line objects. Although this feature is available
+  in all editions, it will be reserved to Enterprise Edition users because
+  source code knowledge is required.
+* Some new property editors.
+- Some memory leaks fixed.
+
+2004-02-02 Version 1.7.2
+
++ Some new samples added
+* Evaluating is now allowed outside the IDE for a period of 30 minures.
+* Property editor for TTapiLine.MediaModes improved (now without dialog)
+- Bugs in TTapiPhone.Controls (phone buttons) property fixed.
+
+2003-12-18 Version 1.7.1
+
++ Function GetTapiErrorMessage moved to public section and described 
++ Better support of asynchronous usage with GetRequestNote and SetRequestNote.
+* Documentation improved and restructured. Chapter Components and Units introduced.
+- Bug in TTapiCall.Dial, TTapiCall.BlindTransfer and TTapiCall.Redirct fixed
+- Bug in TAPI message handling fixed.
+  Bug has terminated TTapiapplication's handing of TAPI events with some
+  TSP's in special cases.
+- Bug in hbComPort fixed
+  Bug has caused an exception when using ThbComPort with Delphi7.
+
+2003-09-16 Version 1.7
+
++ Support of wave-form audio devices included. TWaveIn and TWaveOut added.
++ Samples MakeCall, WavePlayer and AnsweringMachine added.
+* Imporved Sample CallerID to work with AVM TAPI Services.
+* Documentation completed and structure improved.
+* Handling of TAPI info structures improved.
+  Now blocks invalidated and requested from TAPI if only needed.
+- Event OnTapiReplay and OnTapiTimeout moved to public section
+- Fixed bug in using TTapiLine.MediaModes property. 
+  The value dfined in Design-Time is now used.
+- Property WaveIn and WaveOut of TTapiCall published
+- Fixed bug in TTapiLine.Phone.Available. Now count is used too.
+- Bug fixed in TTapiLine with RequestedDeviceState.
+
+2003-07-22 Version 1.6.1
+
++ Delphi 4 support included.
++ hbTapiUtils.pas installed as source code.
+
+2003-07-17 Version 1.6
+
+- Fixed the bug in TTapiDevice which causes Delphi to crash, if one or more
+  enabled TTapiLine/TTapiPhone components are placed on a form and then removed
+  from it.
+* Samples are now separated in editons and improved.
++ New sample TranslateAddress added.
+
+2003-05-23 Version 1.5
+
+  First Public Release.
+
+2003-01-14 Version 1.3
+
+- Fixed the bug that causes an overflow error on systems with no TAPI devices installed.
+
+2002-10-02 Version 1.2
+
++ Added GatherDigits und MonitorDigits.
+* Improved poperty Enabled.
+
+2002-06-26 Version 1.1
+
+* DeviceList moved from TTapiApplication to TTapiLine and TTapiPhone.
++ Property Enabled implemented.
+
+2002-01-16 Version 1.0
++ Added DeallocateIdleCalls. 
+  Call-Objects which turn into IDLE are deallocated automatically if not reply is pending.
++ Added FreeBadCall
+  Call-Objects which get not positive reply of LineMakeCall are deallocated automatically.

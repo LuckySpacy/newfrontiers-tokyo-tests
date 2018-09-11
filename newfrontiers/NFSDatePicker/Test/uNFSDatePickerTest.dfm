@@ -1,0 +1,86 @@
+object Form16: TForm16
+  Left = 0
+  Top = 0
+  Caption = 'Form16'
+  ClientHeight = 300
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object NFSDatePicker1: TNFSDatePicker
+    Left = 312
+    Top = 96
+    Width = 121
+    Height = 21
+    TabOrder = 0
+    DateLessNotAllowed = 29221.502860370370000000
+    DateLessCheck = False
+  end
+  object NFSDatePicker2: TNFSDatePicker
+    Left = 456
+    Top = 168
+    Width = 121
+    Height = 21
+    TabOrder = 1
+    DateLessNotAllowed = 29221.000000000000000000
+    DateLessCheck = True
+  end
+  object NFSMaskButtonedEdit1: TNFSMaskButtonedEdit
+    Left = 256
+    Top = 168
+    Width = 121
+    Height = 21
+    TabOrder = 2
+    Text = 'NFSMaskButtonedEdit1'
+  end
+  object nfsEditAutoComplete1: TnfsEditAutoComplete
+    Left = 592
+    Top = 24
+    Width = 121
+    Height = 21
+    AutoSelect = False
+    TabOrder = 3
+    Text = 'nfsEditAutoComplete1'
+    SearchInterrupt = 1000
+    SearchByLetters = 1
+    MaxItems = 0
+    CaseSensitive = False
+  end
+  object NFSComboBox1: TNFSComboBox
+    Left = 432
+    Top = 32
+    Width = 145
+    Height = 21
+    TabOrder = 4
+    Text = 'NFSComboBox1'
+  end
+  object AdvEdit1: TAdvEdit
+    Left = 120
+    Top = 224
+    Width = 121
+    Height = 21
+    EmptyTextStyle = []
+    LabelFont.Charset = DEFAULT_CHARSET
+    LabelFont.Color = clWindowText
+    LabelFont.Height = -11
+    LabelFont.Name = 'Tahoma'
+    LabelFont.Style = []
+    Lookup.Font.Charset = DEFAULT_CHARSET
+    Lookup.Font.Color = clWindowText
+    Lookup.Font.Height = -11
+    Lookup.Font.Name = 'Arial'
+    Lookup.Font.Style = []
+    Lookup.Separator = ';'
+    Color = clWindow
+    TabOrder = 5
+    Text = 'AdvEdit1'
+    Visible = True
+    Version = '3.3.2.2'
+  end
+end

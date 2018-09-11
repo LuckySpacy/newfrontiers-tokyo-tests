@@ -1,0 +1,78 @@
+*.local
+*.stat
+*.identcache
+Android/Test 1/__history/
+Android/Test 1/Win32/Debug/Project1.exe
+*.dcu
+Backup/Test 1/__history/
+Backup/Test 1/Win32/Debug/Project2.exe
+CheckListEdit/Test 1/__history/Unit1.dfm.~1~
+CheckListEdit/Test 1/__history/
+Codesite/Test1/__history/
+Drag and Drop/Test 1/__history/
+Drag and Drop/Test 1/outlookdrop/__history/
+Drag and Drop/Test 1/Win32/Debug/Project15.exe
+FileAge/Test1/__history/
+Image in PDF/Gnostice Support/Test 1/FastReportDemo.exe
+Image in PDF/Test 1/__history/
+Image in PDF/Test 2/__history/
+Image in PDF/Test 2/Win32/Debug/Project1.exe
+Image in PDF/Test 3/__history/
+Image in PDF/Test 3/Win32/Debug/Project1.exe
+Image in PDF/Test 4/__history/
+Image in PDF/Test 4/Win32/Debug/Project1.exe
+Image in PDF/Test 5/__history/
+Image in PDF/Test 5/Win32/Debug/Project1.exe
+Image in PDF/Test 6/__history/
+Log/Test 1/__history/
+Log/Test 1/Win32/Debug/Log.exe
+Log4d/Demo/demo/Log4DDemo.exe
+Log4d/Test1/__history/
+Log4d/Test2/__history/
+Log4d/Test3/Log4dDemo.exe
+Log4d/Test3/FastMM/Demos/Dynamically Loaded DLL/TestApplication.exe
+Log4d/Test3/FastMM/Demos/Dynamically Loaded DLL/__history/
+Log4d/Test3/FastMM/FullDebugMode DLL/FullDebugMode_DLL_TestApp.exe
+Log4d/Test3/Form/__history/
+MailTest/Test 2/__history/
+MailTest/Test 3/__history/
+MailTest/Test 3/Win32/Debug/MailLesen.exe
+MailTest/Test 4/__history/
+MailTest/Test 4/Form/__history/
+MailTest/Test 4/Objekt/__history/
+MailTest/Test 4/Win32/Debug/SendMail.exe
+newfrontiers/LockProvider/__history/
+newfrontiers/NFSButton/__history/
+newfrontiers/NFSButton/Test/Win32/Debug/Project15.exe
+newfrontiers/NFSChecklistedit/__history/
+newfrontiers/NFSDatePicker/__history/
+newfrontiers/NFSEditBtn/Test/Win32/Debug/pNfsEditBtn.exe
+newfrontiers/NFSPackage/__history/
+PDF/gtPDFEngine/Bild in Position/Test 1/Project1.exe
+PDF/gtPDFEngine/Bild in Position/Test 1/__history/
+PDF/gtPDFEngine/Test 1/__history/
+PDF/gtPDFEngine/Test/__history/
+PDF/gtPDFEngine/Test/Win32/Debug/Project9.exe
+Spell/Test 1/__history/
+Timer/Test 1/__history/
+Timer/Test 1/Win32/Debug/Project1.exe
+tls/test 1/__history/Unit1.dfm.~1~
+tls/test 1/__history/
+tls/test 1/Win32/Debug/Project1.exe
+TnfsCheckListEdit/Beispiel/__history/
+TnfsCheckListEdit/Beispiel/Win32/Debug/Project1.exe
+TnfsCheckListEdit/TnfsCheckListEdit/__history/
+Verschlüsseln/Dec5.2-Test/Test1/__history/
+VorgangposSortierer/Test 1/__history/
+VorgangposSortierer/Test 1/Win32/Debug/Project1.exe
+VorgangposSortierer/Test 2/__history/
+VorgangposSortierer/Test 2/Win32/Debug/PosSorter.exe
+ZwischenProgrammeDatenTauschen/Test 1/Prg1/__history/
+ZwischenProgrammeDatenTauschen/Test 1/Prg2/__history/
+ZwischenProgrammeDatenTauschen/Test 1/Prg1/Win32/Debug/Project1.exe
+ZwischenProgrammeDatenTauschen/Test 1/Prg2/Win32/Debug/Prg2.exe
+ZwischenProgrammeDatenTauschen/Test 1/Prg1/Prg1.exe
+Codesite/Test1/Win32/Debug/Project1.exe
+FileAge/Test1/Win32/Debug/Project1.exe
+hbTapi Components/unins000.exe
+*.exe

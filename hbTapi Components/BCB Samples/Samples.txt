@@ -1,0 +1,11 @@
+ATTENTION
+=========
+
+Please respect that the classification of samples into three directories
+named Standard Edition, Professional Edition and Enterprise Edition is only
+an additional help and no garantee that a sample can be compiled with the
+corresponding edition of hbTapi Components.
+
+Please refer to the "Features Overview" section of hbTapi Component's
+documentation and read the functions description to get notified of which
+edition you need.

@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1855106D-D69A-4BCB-8E47-BD4DBB140FCC}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Prg1\Prg1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Prg2\Prg2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="D:\Projekt\Tokyo\Optima\client\opticli.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="D:\Projekt\Tokyo\Optima\Tapi\OptimaTapi.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="D:\Projekt\Tokyo\Optima\caller\OptiCall.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Prg1">
+        <MSBuild Projects="Prg1\Prg1.dproj"/>
+    </Target>
+    <Target Name="Prg1:Clean">
+        <MSBuild Projects="Prg1\Prg1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Prg1:Make">
+        <MSBuild Projects="Prg1\Prg1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Prg2">
+        <MSBuild Projects="Prg2\Prg2.dproj"/>
+    </Target>
+    <Target Name="Prg2:Clean">
+        <MSBuild Projects="Prg2\Prg2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Prg2:Make">
+        <MSBuild Projects="Prg2\Prg2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="opticli">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\client\opticli.dproj"/>
+    </Target>
+    <Target Name="opticli:Clean">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\client\opticli.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="opticli:Make">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\client\opticli.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="OptimaTapi">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\Tapi\OptimaTapi.dproj"/>
+    </Target>
+    <Target Name="OptimaTapi:Clean">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\Tapi\OptimaTapi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OptimaTapi:Make">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\Tapi\OptimaTapi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="OptiCall">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\caller\OptiCall.dproj"/>
+    </Target>
+    <Target Name="OptiCall:Clean">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\caller\OptiCall.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OptiCall:Make">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\caller\OptiCall.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Prg1;Prg2;opticli;OptimaTapi;OptiCall"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Prg1:Clean;Prg2:Clean;opticli:Clean;OptimaTapi:Clean;OptiCall:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Prg1:Make;Prg2:Make;opticli:Make;OptimaTapi:Make;OptiCall:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

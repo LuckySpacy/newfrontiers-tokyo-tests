@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{CF8AF17C-DF30-423A-8648-E23CFEA95D84}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="SendMail.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Test 2\MailTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="D:\Projekt\Tokyo\Optima\client\opticli.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="D:\Projekt\Tokyo\Optima\Tapi\OptimaTapi.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SendMail">
+        <MSBuild Projects="SendMail.dproj"/>
+    </Target>
+    <Target Name="SendMail:Clean">
+        <MSBuild Projects="SendMail.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SendMail:Make">
+        <MSBuild Projects="SendMail.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MailTest">
+        <MSBuild Projects="..\Test 2\MailTest.dproj"/>
+    </Target>
+    <Target Name="MailTest:Clean">
+        <MSBuild Projects="..\Test 2\MailTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MailTest:Make">
+        <MSBuild Projects="..\Test 2\MailTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="opticli">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\client\opticli.dproj"/>
+    </Target>
+    <Target Name="opticli:Clean">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\client\opticli.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="opticli:Make">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\client\opticli.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="OptimaTapi">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\Tapi\OptimaTapi.dproj"/>
+    </Target>
+    <Target Name="OptimaTapi:Clean">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\Tapi\OptimaTapi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OptimaTapi:Make">
+        <MSBuild Projects="D:\Projekt\Tokyo\Optima\Tapi\OptimaTapi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SendMail;MailTest;opticli;OptimaTapi"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SendMail:Clean;MailTest:Clean;opticli:Clean;OptimaTapi:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SendMail:Make;MailTest:Make;opticli:Make;OptimaTapi:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

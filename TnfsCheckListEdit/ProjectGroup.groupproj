@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FB73F947-1F9D-4607-8BB8-8EB82B1ACDC0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TnfsCheckListEdit\Package_NfsCheckListEdit.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Beispiel\Project1.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Package_NfsCheckListEdit">
+        <MSBuild Projects="TnfsCheckListEdit\Package_NfsCheckListEdit.dproj"/>
+    </Target>
+    <Target Name="Package_NfsCheckListEdit:Clean">
+        <MSBuild Projects="TnfsCheckListEdit\Package_NfsCheckListEdit.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Package_NfsCheckListEdit:Make">
+        <MSBuild Projects="TnfsCheckListEdit\Package_NfsCheckListEdit.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project1">
+        <MSBuild Projects="Beispiel\Project1.dproj"/>
+    </Target>
+    <Target Name="Project1:Clean">
+        <MSBuild Projects="Beispiel\Project1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project1:Make">
+        <MSBuild Projects="Beispiel\Project1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Package_NfsCheckListEdit;Project1"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Package_NfsCheckListEdit:Clean;Project1:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Package_NfsCheckListEdit:Make;Project1:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

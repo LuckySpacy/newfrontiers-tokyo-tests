@@ -1,0 +1,57 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = AnsweringMachine.exe AssistedTel.exe CallerID.exe Calls.exe \
+  DataComm.exe DataTerm.exe DeviceInfo.exe Display.exe MakeCall.exe \
+  TranslateAddress.exe WavePlayer.exe CallMonitor.exe WaveInfo.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+AnsweringMachine.exe: AnsweringMachine\AnsweringMachine.dpr
+  $(DCC)
+
+AssistedTel.exe: AssistedTel\AssistedTel.dpr
+  $(DCC)
+
+CallerID.exe: CallerID\CallerID.dpr
+  $(DCC)
+
+CallMonitor.exe: CallMonitor\CallMonitor.dpr
+  $(DCC)
+  
+Calls.exe: Calls\Calls.dpr
+  $(DCC)
+
+DataComm.exe: DataComm\DataComm.dpr
+  $(DCC)
+
+DataTerm.exe: DataTerm\DataTerm.dpr
+  $(DCC)
+
+DeviceInfo.exe: DeviceInfo\DeviceInfo.dpr
+  $(DCC)
+
+Display.exe: Display\Display.dpr
+  $(DCC)
+  
+MakeCall.exe: MakeCall\MakeCall.dpr
+  $(DCC)
+
+TranslateAddress.exe: TranslateAddress\TranslateAddress.dpr
+  $(DCC)
+
+WaveInfo.exe: WaveInfo\WaveInfo.dpr
+  $(DCC)
+
+WavePlayer.exe: WavePlayer\WavePlayer.dpr
+  $(DCC)
+

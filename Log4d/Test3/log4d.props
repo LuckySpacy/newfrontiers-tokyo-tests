@@ -1,0 +1,109 @@
+# Set internal debugging
+log4d.configDebug=false
+
+# Global logging level - Ändern!
+log4d.threshold=all
+
+# Set logger factory
+log4d.loggerFactory=TLogDefaultLoggerFactory
+
+# Set root level
+log4d.rootLogger=all,ODS
+
+# Establish logger hierarchy
+#log4d.logger.Std=all,Mem1,Fil1
+log4d.logger.LogAll=all,Mem1,LogAll
+log4d.logger.VerilockDienst=all,Mem1,VerilockDienst
+log4d.logger.LockItem=all,Mem1,LockItem
+log4d.logger.UserLog=all,Mem1,UserLog
+log4d.logger.Debug=all,Mem1,Debug
+log4d.logger.Demo=all,Mem1,DemoLogAppender
+
+# Create root appender
+log4d.appender.ODS=TLogODSAppender
+log4d.appender.ODS.layout=TLogSimpleLayout
+
+# Create a memo appender
+log4d.appender.Mem1=TMemoAppender
+log4d.appender.Mem1.memo=memLog
+log4d.appender.Mem1.layout=TLogPatternLayout
+log4d.appender.Mem1.layout.pattern=%d [T: %t] %p %c %x - %m%n
+log4d.appender.Mem1.layout.dateFormat=dd.mm.yyyy hh:nn:ss
+
+# Create a file appender
+# Dateiname wird im Programm überschrieben 
+log4d.appender.Fil1=TLogRollingFileAppender
+log4d.appender.Fil1.append=true
+log4d.appender.Fil1.fileName=OPTIMA_gen.log
+log4d.appender.Fil1.errorHandler=TLogOnlyOnceErrorHandler
+log4d.appender.Fil1.layout=TLogPatternLayout
+log4d.appender.Fil1.layout.pattern=%d [T: %t] %p %c %x - %m%n
+log4d.appender.Fil1.layout.dateFormat=dd.mm.yyyy hh:nn:ss
+log4d.appender.Fil1.maxFileSize=2MB
+log4d.appender.Fil1.maxBackupIndex=5
+
+log4d.appender.LogAll=TLogRollingFileAppender
+log4d.appender.LogAll.append=true
+log4d.appender.LogAll.filename=LogAll.log
+log4d.appender.LogAll.errorHandler=TLogOnlyOnceErrorHandler
+log4d.appender.LogAll.layout=TLogPatternLayout
+log4d.appender.LogAll.layout.pattern=%d - %m%n
+log4d.appender.LogAll.layout.dateFormat=dd.mm.yyyy hh:nn:ss
+log4d.appender.LogAll.maxFileSize=2MB
+log4d.appender.LogAll.maxBackupIndex=5
+
+log4d.appender.VerilockDienst=TLogRollingFileAppender
+log4d.appender.VerilockDienst.append=true
+log4d.appender.VerilockDienst.filename=VerilockDienst.log
+log4d.appender.VerilockDienst.errorHandler=TLogOnlyOnceErrorHandler
+log4d.appender.VerilockDienst.layout=TLogPatternLayout
+log4d.appender.VerilockDienst.layout.pattern=%d - %m%n
+log4d.appender.VerilockDienst.layout.dateFormat=dd.mm.yyyy hh:nn:ss
+log4d.appender.VerilockDienst.maxFileSize=2MB
+log4d.appender.VerilockDienst.maxBackupIndex=5
+
+log4d.appender.LockItem=TLogRollingFileAppender
+log4d.appender.LockItem.append=true
+log4d.appender.LockItem.filename=LockItem.log
+log4d.appender.LockItem.errorHandler=TLogOnlyOnceErrorHandler
+log4d.appender.LockItem.layout=TLogPatternLayout
+log4d.appender.LockItem.layout.pattern=%d - %m%n
+log4d.appender.LockItem.layout.dateFormat=dd.mm.yyyy hh:nn:ss
+log4d.appender.LockItem.maxFileSize=2MB
+log4d.appender.LockItem.maxBackupIndex=5
+
+log4d.appender.UserLog=TLogRollingFileAppender
+log4d.appender.UserLog.append=true
+log4d.appender.UserLog.filename=UserLog.log
+log4d.appender.UserLog.errorHandler=TLogOnlyOnceErrorHandler
+log4d.appender.UserLog.layout=TLogPatternLayout
+log4d.appender.UserLog.layout.pattern=%d - %m%n
+log4d.appender.UserLog.layout.dateFormat=dd.mm.yyyy hh:nn:ss
+log4d.appender.UserLog.maxFileSize=2MB
+log4d.appender.UserLog.maxBackupIndex=5
+
+log4d.appender.Debug=TLogRollingFileAppender
+log4d.appender.Debug.append=true
+log4d.appender.Debug.filename=Debug.log
+log4d.appender.Debug.errorHandler=TLogOnlyOnceErrorHandler
+log4d.appender.Debug.layout=TLogPatternLayout
+log4d.appender.Debug.layout.pattern=%d - %m%n
+log4d.appender.Debug.layout.dateFormat=dd.mm.yyyy hh:nn:ss
+log4d.appender.Debug.maxFileSize=2MB
+log4d.appender.Debug.maxBackupIndex=5
+
+log4d.appender.DemoLogAppender=TLogRollingFileAppender
+log4d.appender.DemoLogAppender.append=true
+log4d.appender.DemoLogAppender.filename=Demo.log
+log4d.appender.DemoLogAppender.errorHandler=TLogOnlyOnceErrorHandler
+log4d.appender.DemoLogAppender.layout=TLogPatternLayout
+log4d.appender.DemoLogAppender.layout.pattern=%d - %m%n
+log4d.appender.DemoLogAppender.layout.dateFormat=dd.mm.yyyy hh:nn:ss
+log4d.appender.DemoLogAppender.maxFileSize=2MB
+log4d.appender.DemoLogAppender.maxBackupIndex=5
+
+
+# Create a socket appender
+log4d.appender.Sckt=TLogIndySocketAppender
+log4d.appender.Sckt.host=localhost
+log4d.appender.Sckt.port=9009

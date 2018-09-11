@@ -1,0 +1,46 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Conference.exe FaxHandoff.exe Phone.exe Version.exe CallData.exe \
+  Forward.exe DevSpecific.exe CallInfo.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+CallData.exe: CallData\CallData.dpr
+  $(DCC)
+
+Conference.exe: Conference\Conference.dpr
+  $(DCC)
+
+CallInfo.exe: CallInfo\CallInfo.dpr
+  $(DCC)
+
+DevSpecific.exe: DevSpecific\DevSpecific.dpr
+  $(DCC)
+
+FaxHandoff.exe: FaxHandoff\FaxHandoff.dpr
+  $(DCC)
+
+Forward.exe: Forward\Forward.dpr
+  $(DCC)
+
+Phone.exe: Phone\Phone.dpr
+  $(DCC)
+
+Version.exe: Version\Version.dpr
+  $(DCC)
+
+
+
+
+
+

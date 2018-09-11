@@ -1,0 +1,129 @@
+
+--------------------------------2018/7/3 14:19:21--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 84
+
+This block was allocated by thread 0x4758, and the stack trace (return addresses) at the time was:
+4070C2 [System.pas][System][@GetMem$qqri][4749]
+408417 [System.pas][System][TObject.NewInstance][16913]
+408C36 [System.pas][System][@ClassCreate$qqrpvzc][18246]
+4B5156 [System.Classes.pas][System.Classes][Classes.TStringList.Create][7295]
+5DAEF7 [log4d.pas][Log4D][TLogLogger.GetLogger][1699]
+5E2277 [Unit1.pas][Unit1][TForm1.FormCreate][45]
+5C06EB [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+5C0307 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3669]
+408CA4 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][18295]
+5C02B8 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3659]
+5CB771 [Vcl.Forms.pas][Vcl.Forms][Forms.TApplication.CreateForm][10729]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TStringList
+
+The allocation number is: 3041
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE5F630:
+E4 13 49 00 00 00 00 00 40 B7 E7 7F 4C 73 E7 7F 00 00 00 00 00 00 00 00 2C 00 22 00 3D 00 0E 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 B9 E3 B4 78 80 80 80 80 80 80 80 80 00 00 00 00 51 FF E5 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1B 03 00 00 C2 70 40 00 17 84 40 00 36 8C 40 00
+56 51 4B 00 40 83 41 00 EE 03 5E 00 22 FB 5D 00 6E 02 5E 00 3E 22 5E 00 EB 06 5C 00 07 03 5C 00
+58 47 00 00 58 47 00 00 DE 70 40 00 35 84 40 00 81 8C 40 00 C8 49 4B 00 AF 85 40 00 E3 04 5E 00
+6E 02 5E 00 3E 22 5E 00 EB 06 5C 00 07 03 5C 00 A4 8C 40 00 4C 00 00 00 E4 13 49 00 0E 31 0E 87
+6C 8C 5F 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+‰  .  I  .  .  .  .  .  @  ∑  Á    L  s  Á    .  .  .  .  .  .  .  .  ,  .  "  .  =  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  π  „  ¥  x  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  Q  ˇ  Â  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ¬  p  @  .  .  Ñ  @  .  6  å  @  .
+V  Q  K  .  @  É  A  .  Ó  .  ^  .  "  ˚  ]  .  n  .  ^  .  >  "  ^  .  Î  .  \  .  .  .  \  .
+X  G  .  .  X  G  .  .  ﬁ  p  @  .  5  Ñ  @  .  Å  å  @  .  »  I  K  .  Ø  Ö  @  .  „  .  ^  .
+n  .  ^  .  >  "  ^  .  Î  .  \  .  .  .  \  .  §  å  @  .  L  .  .  .  ‰  .  I  .  .  1  .  á
+l  å  _  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+
+--------------------------------2018/7/3 14:19:21--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 20
+
+This block was allocated by thread 0x4758, and the stack trace (return addresses) at the time was:
+4070C2 [System.pas][System][@GetMem$qqri][4749]
+40A2F7 [System.pas][System][@NewUnicodeString$qqri][24629]
+40A784 [System.pas][System][@UStrAsg$qqrr20System.UnicodeStringx20System.UnicodeString][25613]
+4B2ACC [System.Classes.pas][System.Classes][Classes.TStrings.Create][6133]
+4B5163 [System.Classes.pas][System.Classes][Classes.TStringList.Create][7296]
+5E2277 [Unit1.pas][Unit1][TForm1.FormCreate][45]
+5C06EB [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+5C0307 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3669]
+408CA4 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][18295]
+5C02B8 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3659]
+5CB771 [Vcl.Forms.pas][Vcl.Forms][Forms.TApplication.CreateForm][10729]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt UnicodeString
+
+The allocation number is: 3042
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE77340:
+B0 04 02 00 01 00 00 00 02 00 00 00 0D 00 0A 00 00 00 65 6E A0 78 80 80 00 00 00 00 01 83 E7 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 06 00 00 C2 70 40 00 F7 A2 40 00 84 A7 40 00
+CC 2A 4B 00 63 51 4B 00 17 9A 5D 00 83 E9 5D 00 FF F2 5D 00 6C 16 5E 00 54 17 5E 00 11 09 5E 00
+58 47 00 00 58 47 00 00 DE 70 40 00 B1 A3 40 00 0D B7 40 00 31 B6 40 00 49 86 40 00 2E 84 40 00
+81 8C 40 00 C8 49 4B 00 AF 85 40 00 C0 99 5D 00 B2 E5 5D 00 12 00 00 00 B0 04 02 00 76 59 81 86
+6C 8C 5F 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 89 A6 7E 79 80 80 00 00 00 00 81 76 E7 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 EA 0B 00 00 C2 70 40 00 63 8F 42 00 71 8F 42 00
+81 A0 52 00 6D 36 52 00 0D FA 1B 77 A8 67 26 77 9E CB 20 77 71 5B 26 77 6A 91 20 77 57 5B 26 77
+∞  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  e  n  †  x  Ä  Ä  .  .  .  .  .  É  Á  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .     .  .  .  ¬  p  @  .  ˜  ¢  @  .  Ñ  ß  @  .
+Ã  *  K  .  c  Q  K  .  .  ö  ]  .  É  È  ]  .  ˇ  Ú  ]  .  l  .  ^  .  T  .  ^  .  .  .  ^  .
+X  G  .  .  X  G  .  .  ﬁ  p  @  .  ±  £  @  .  .  ∑  @  .  1  ∂  @  .  I  Ü  @  .  .  Ñ  @  .
+Å  å  @  .  »  I  K  .  Ø  Ö  @  .  ¿  ô  ]  .  ≤  Â  ]  .  .  .  .  .  ∞  .  .  .  v  Y  Å  Ü
+l  å  _  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  â  ¶  ~  y  Ä  Ä  .  .  .  .  Å  v  Á  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Í  .  .  .  ¬  p  @  .  c  è  B  .  q  è  B  .
+Å  †  R  .  m  6  R  .  .  ˙  .  w  ®  g  &  w  û  À     w  q  [  &  w  j  ë     w  W  [  &  w
+
+--------------------------------2018/7/3 14:19:21--------------------------------
+Diese Anwendung hat Speicher verloren. Die Grˆﬂen von kleinen Speicherblˆcken, die verlorengegangen sind, betragen (ausgenommen erwartete Speicherlecks, die durch Zeiger registriert wurden):
+
+13 - 20 Bytes: UnicodeString x 1
+69 - 84 Bytes: TStringList x 1
+
+Notiz: Speicherleck-Details werden in eine Textdatei geschrieben, die sich im selben Verzeichnis wie diese Anwendung befindet. Um diese Speicherleck-‹berpr¸fung abzuschalten, kommentieren Sie "EnableMemoryLeakReporting" aus.
+
+--------------------------------2018/7/3 14:37:24--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 36
+
+This block was allocated by thread 0x393C, and the stack trace (return addresses) at the time was:
+41853A [FastMM4][DebugReallocMem$qqrpvi]
+4070FF [System.pas][System][@ReallocMem$qqrrpvi][4871]
+40AFDD [System.pas][System][@UStrSetLength$qqrr20System.UnicodeStringi][29913]
+40B05E [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][30026]
+5E00B3 [log4d.pas][Log4D][Tokenise$qqrx20System.UnicodeStringxp26System.Classes.TStringListt1][3306]
+5E11AE [log4d.pas][Log4D][TLogPropertyConfigurator.ParseLogger][3735]
+5E0FF2 [log4d.pas][Log4D][TLogPropertyConfigurator.ParseLoggersAndRenderers][3711]
+5E05B1 [log4d.pas][Log4D][TLogPropertyConfigurator.DoConfigure][3593]
+5E0426 [log4d.pas][Log4D][TLogPropertyConfigurator.DoConfigure][3375]
+5E026E [log4d.pas][Log4D][TLogPropertyConfigurator.Configure][3332]
+5E223E [Unit1.pas][Unit1][TForm1.FormCreate][42]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt UnicodeString
+
+The allocation number is: 3282
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE7FAA0:
+B0 04 02 00 01 00 00 00 04 00 00 00 6C 00 6F 00 67 00 31 00 00 00 72 4E ED 78 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 00 00 00 00 71 EE E7 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+55 0D 00 00 C2 70 40 00 17 84 40 00 99 F1 40 00 36 8C 40 00 36 13 4B 00 38 DF 40 00 C2 E9 5D 00
+FF F2 5D 00 6C 16 5E 00 54 17 5E 00 11 09 5E 00 3C 39 00 00 3C 39 00 00 DE 70 40 00 35 84 40 00
+81 8C 40 00 AC 13 4B 00 AF 85 40 00 98 E5 5D 00 2A EE 5D 00 26 F2 40 00 27 DF 40 00 EF 13 4B 00
+9C B1 5D 00 18 00 00 00 34 E8 48 00 1A 61 C9 86 6C 8C 5F 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 E5 9E 36 79 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 E1 FC E7 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 15 00 00 C2 70 40 00 F7 A2 40 00 28 A5 40 00
+∞  .  .  .  .  .  .  .  .  .  .  .  l  .  o  .  g  .  1  .  .  .  r  N  Ì  x  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  q  Ó  Á    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+U  .  .  .  ¬  p  @  .  .  Ñ  @  .  ô  Ò  @  .  6  å  @  .  6  .  K  .  8  ﬂ  @  .  ¬  È  ]  .
+ˇ  Ú  ]  .  l  .  ^  .  T  .  ^  .  .  .  ^  .  <  9  .  .  <  9  .  .  ﬁ  p  @  .  5  Ñ  @  .
+Å  å  @  .  ¨  .  K  .  Ø  Ö  @  .  ò  Â  ]  .  *  Ó  ]  .  &  Ú  @  .  '  ﬂ  @  .  Ô  .  K  .
+ú  ±  ]  .  .  .  .  .  4  Ë  H  .  .  a  …  Ü  l  å  _  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Â  û  6  y  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ·  ¸  Á  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ¬  p  @  .  ˜  ¢  @  .  (  •  @  .
+
+--------------------------------2018/7/3 14:37:24--------------------------------
+Diese Anwendung hat Speicher verloren. Die Grˆﬂen von kleinen Speicherblˆcken, die verlorengegangen sind, betragen (ausgenommen erwartete Speicherlecks, die durch Zeiger registriert wurden):
+
+21 - 36 Bytes: UnicodeString x 1
+
+Notiz: Speicherleck-Details werden in eine Textdatei geschrieben, die sich im selben Verzeichnis wie diese Anwendung befindet. Um diese Speicherleck-‹berpr¸fung abzuschalten, kommentieren Sie "EnableMemoryLeakReporting" aus.

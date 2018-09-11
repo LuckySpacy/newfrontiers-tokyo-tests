@@ -1,0 +1,952 @@
+/* VER320
+  Generiert vom Embarcadero Delphi Pascal Compiler,
+  weil -GD oder --drc an den Compiler übergeben wurde.
+
+  Diese Datei enthält vom Compiler erzeugte Ressourcen, die an die ausführbare Datei gebunden wurden. Wenn diese Datei leer ist, dann wurden keine vom Compiler generierten Ressourcen an die erzeugte ausführbare Datei gebunden.
+*/
+
+#define JclResources_RsEFunctionNotFound 65056
+#define System_Win_ComConst_SOleError 65057
+#define System_Win_ComConst_SNoMethod 65058
+#define System_Win_ComConst_SVarNotObject 65059
+#define System_Win_ComConst_STooManyParams 65060
+#define JclResources_RsIntelCacheDescrE4 65072
+#define JclResources_RsIntelCacheDescrEA 65073
+#define JclResources_RsIntelCacheDescrEB 65074
+#define JclResources_RsIntelCacheDescrEC 65075
+#define JclResources_RsIntelCacheDescrF0 65076
+#define JclResources_RsIntelCacheDescrF1 65077
+#define JclResources_RsIntelCacheDescrFF 65078
+#define JclResources_RsOSVersionWin8 65079
+#define JclResources_RsOSVersionWinServer2012 65080
+#define JclResources_RsOSVersionWin81 65081
+#define JclResources_RsOSVersionWinServer2012R2 65082
+#define JclResources_RsCannotWriteRefStream 65083
+#define JclResources_RsHasNotTD32Info 65084
+#define JclResources_RsEUnexpectedEOSeq 65085
+#define JclResources_RsWin32Error 65086
+#define JclResources_RsELibraryNotFound 65087
+#define JclResources_RsIntelCacheDescrB3 65088
+#define JclResources_RsIntelCacheDescrB4 65089
+#define JclResources_RsIntelCacheDescrBA 65090
+#define JclResources_RsIntelCacheDescrC0 65091
+#define JclResources_RsIntelCacheDescrCA 65092
+#define JclResources_RsIntelCacheDescrD0 65093
+#define JclResources_RsIntelCacheDescrD1 65094
+#define JclResources_RsIntelCacheDescrD2 65095
+#define JclResources_RsIntelCacheDescrD6 65096
+#define JclResources_RsIntelCacheDescrD7 65097
+#define JclResources_RsIntelCacheDescrD8 65098
+#define JclResources_RsIntelCacheDescrDC 65099
+#define JclResources_RsIntelCacheDescrDD 65100
+#define JclResources_RsIntelCacheDescrDE 65101
+#define JclResources_RsIntelCacheDescrE2 65102
+#define JclResources_RsIntelCacheDescrE3 65103
+#define JclResources_RsIntelCacheDescr79 65104
+#define JclResources_RsIntelCacheDescr7A 65105
+#define JclResources_RsIntelCacheDescr7B 65106
+#define JclResources_RsIntelCacheDescr7C 65107
+#define JclResources_RsIntelCacheDescr7D 65108
+#define JclResources_RsIntelCacheDescr7F 65109
+#define JclResources_RsIntelCacheDescr80 65110
+#define JclResources_RsIntelCacheDescr82 65111
+#define JclResources_RsIntelCacheDescr83 65112
+#define JclResources_RsIntelCacheDescr84 65113
+#define JclResources_RsIntelCacheDescr85 65114
+#define JclResources_RsIntelCacheDescr86 65115
+#define JclResources_RsIntelCacheDescr87 65116
+#define JclResources_RsIntelCacheDescrB0 65117
+#define JclResources_RsIntelCacheDescrB1 65118
+#define JclResources_RsIntelCacheDescrB2 65119
+#define JclResources_RsIntelCacheDescr57 65120
+#define JclResources_RsIntelCacheDescr59 65121
+#define JclResources_RsIntelCacheDescr5A 65122
+#define JclResources_RsIntelCacheDescr5B 65123
+#define JclResources_RsIntelCacheDescr5C 65124
+#define JclResources_RsIntelCacheDescr5D 65125
+#define JclResources_RsIntelCacheDescr60 65126
+#define JclResources_RsIntelCacheDescr66 65127
+#define JclResources_RsIntelCacheDescr67 65128
+#define JclResources_RsIntelCacheDescr68 65129
+#define JclResources_RsIntelCacheDescr70 65130
+#define JclResources_RsIntelCacheDescr71 65131
+#define JclResources_RsIntelCacheDescr72 65132
+#define JclResources_RsIntelCacheDescr73 65133
+#define JclResources_RsIntelCacheDescr76 65134
+#define JclResources_RsIntelCacheDescr78 65135
+#define JclResources_RsIntelCacheDescr45 65136
+#define JclResources_RsIntelCacheDescr46 65137
+#define JclResources_RsIntelCacheDescr47 65138
+#define JclResources_RsIntelCacheDescr48 65139
+#define JclResources_RsIntelCacheDescr49 65140
+#define JclResources_RsIntelCacheDescr4A 65141
+#define JclResources_RsIntelCacheDescr4B 65142
+#define JclResources_RsIntelCacheDescr4C 65143
+#define JclResources_RsIntelCacheDescr4D 65144
+#define JclResources_RsIntelCacheDescr4E 65145
+#define JclResources_RsIntelCacheDescr4F 65146
+#define JclResources_RsIntelCacheDescr50 65147
+#define JclResources_RsIntelCacheDescr51 65148
+#define JclResources_RsIntelCacheDescr52 65149
+#define JclResources_RsIntelCacheDescr55 65150
+#define JclResources_RsIntelCacheDescr56 65151
+#define JclResources_RsIntelCacheDescr23 65152
+#define JclResources_RsIntelCacheDescr25 65153
+#define JclResources_RsIntelCacheDescr29 65154
+#define JclResources_RsIntelCacheDescr2C 65155
+#define JclResources_RsIntelCacheDescr30 65156
+#define JclResources_RsIntelCacheDescr39 65157
+#define JclResources_RsIntelCacheDescr3A 65158
+#define JclResources_RsIntelCacheDescr3B 65159
+#define JclResources_RsIntelCacheDescr3C 65160
+#define JclResources_RsIntelCacheDescr3D 65161
+#define JclResources_RsIntelCacheDescr3E 65162
+#define JclResources_RsIntelCacheDescr40 65163
+#define JclResources_RsIntelCacheDescr41 65164
+#define JclResources_RsIntelCacheDescr42 65165
+#define JclResources_RsIntelCacheDescr43 65166
+#define JclResources_RsIntelCacheDescr44 65167
+#define JclResources_RsIntelCacheDescr00 65168
+#define JclResources_RsIntelCacheDescr01 65169
+#define JclResources_RsIntelCacheDescr02 65170
+#define JclResources_RsIntelCacheDescr03 65171
+#define JclResources_RsIntelCacheDescr04 65172
+#define JclResources_RsIntelCacheDescr05 65173
+#define JclResources_RsIntelCacheDescr06 65174
+#define JclResources_RsIntelCacheDescr08 65175
+#define JclResources_RsIntelCacheDescr09 65176
+#define JclResources_RsIntelCacheDescr0A 65177
+#define JclResources_RsIntelCacheDescr0B 65178
+#define JclResources_RsIntelCacheDescr0C 65179
+#define JclResources_RsIntelCacheDescr0D 65180
+#define JclResources_RsIntelCacheDescr0E 65181
+#define JclResources_RsIntelCacheDescr21 65182
+#define JclResources_RsIntelCacheDescr22 65183
+#define JclResources_RsPePkgNeverBuild 65184
+#define JclResources_RsPePkgDesignOnly 65185
+#define JclResources_RsPePkgRunOnly 65186
+#define JclResources_RsPePkgIgnoreDupUnits 65187
+#define JclResources_RsPePkgV3Produced 65188
+#define JclResources_RsPePkgProducerUndefined 65189
+#define JclResources_RsPePkgBCB4Produced 65190
+#define JclResources_RsPePkgDelphi4Produced 65191
+#define JclResources_RsPePkgMain 65192
+#define JclResources_RsPePkgWeak 65193
+#define JclResources_RsPePkgOrgWeak 65194
+#define JclResources_RsPePkgImplicit 65195
+#define JclResources_RsUnableToOpenKeyRead 65196
+#define JclResources_RsUnableToAccessValue 65197
+#define JclResources_RsWrongDataType 65198
+#define JclResources_RsInconsistentPath 65199
+#define JclResources_RsPeSUBSYSTEM_WINDOWS_CUI 65200
+#define JclResources_RsPeSUBSYSTEM_OS2_CUI 65201
+#define JclResources_RsPeSUBSYSTEM_POSIX_CUI 65202
+#define JclResources_RsPeSUBSYSTEM_RESERVED8 65203
+#define JclResources_RsPeDEBUG_UNKNOWN 65204
+#define JclResources_RsPeDEBUG_COFF 65205
+#define JclResources_RsPeDEBUG_CODEVIEW 65206
+#define JclResources_RsPeDEBUG_FPO 65207
+#define JclResources_RsPeDEBUG_MISC 65208
+#define JclResources_RsPeDEBUG_EXCEPTION 65209
+#define JclResources_RsPeDEBUG_FIXUP 65210
+#define JclResources_RsPeDEBUG_OMAP_TO_SRC 65211
+#define JclResources_RsPeDEBUG_OMAP_FROM_SRC 65212
+#define JclResources_RsPePkgExecutable 65213
+#define JclResources_RsPePkgPackage 65214
+#define JclResources_PsPePkgLibrary 65215
+#define JclResources_RsPeMACHINE_POWERPC 65216
+#define JclResources_RsPeMACHINE_POWERPCFP 65217
+#define JclResources_RsPeMACHINE_IA64 65218
+#define JclResources_RsPeMACHINE_MIPS16 65219
+#define JclResources_RsPeMACHINE_AMPHA64 65220
+#define JclResources_RsPeMACHINE_MIPSFPU 65221
+#define JclResources_RsPeMACHINE_MIPSFPU16 65222
+#define JclResources_RsPeMACHINE_TRICORE 65223
+#define JclResources_RsPeMACHINE_CEF 65224
+#define JclResources_RsPeMACHINE_EBC 65225
+#define JclResources_RsPeMACHINE_AMD64 65226
+#define JclResources_RsPeMACHINE_M32R 65227
+#define JclResources_RsPeMACHINE_CEE 65228
+#define JclResources_RsPeSUBSYSTEM_UNKNOWN 65229
+#define JclResources_RsPeSUBSYSTEM_NATIVE 65230
+#define JclResources_RsPeSUBSYSTEM_WINDOWS_GUI 65231
+#define JclResources_RsPeEditList 65232
+#define JclResources_RsPeMACHINE_UNKNOWN 65233
+#define JclResources_RsPeMACHINE_I386 65234
+#define JclResources_RsPeMACHINE_R3000 65235
+#define JclResources_RsPeMACHINE_R4000 65236
+#define JclResources_RsPeMACHINE_R10000 65237
+#define JclResources_RsPeMACHINE_WCEMIPSV2 65238
+#define JclResources_RsPeMACHINE_ALPHA 65239
+#define JclResources_RsPeMACHINE_SH3 65240
+#define JclResources_RsPeMACHINE_SH3DSP 65241
+#define JclResources_RsPeMACHINE_SH3E 65242
+#define JclResources_RsPeMACHINE_SH4 65243
+#define JclResources_RsPeMACHINE_SH5 65244
+#define JclResources_RsPeMACHINE_ARM 65245
+#define JclResources_RsPeMACHINE_THUMB 65246
+#define JclResources_RsPeMACHINE_AM33 65247
+#define JclResources_RsPeSizeOfHeapCommit 65248
+#define JclResources_RsPeLoaderFlags 65249
+#define JclResources_RsPeNumberOfRvaAndSizes 65250
+#define JclResources_RsPeVersion 65251
+#define JclResources_RsPeGlobalFlagsClear 65252
+#define JclResources_RsPeGlobalFlagsSet 65253
+#define JclResources_RsPeCriticalSectionDefaultTimeout 65254
+#define JclResources_RsPeDeCommitFreeBlockThreshold 65255
+#define JclResources_RsPeDeCommitTotalFreeThreshold 65256
+#define JclResources_RsPeLockPrefixTable 65257
+#define JclResources_RsPeMaximumAllocationSize 65258
+#define JclResources_RsPeVirtualMemoryThreshold 65259
+#define JclResources_RsPeProcessHeapFlags 65260
+#define JclResources_RsPeProcessAffinityMask 65261
+#define JclResources_RsPeCSDVersion 65262
+#define JclResources_RsPeReserved 65263
+#define JclResources_RsPeBaseOfData 65264
+#define JclResources_RsPeImageBase 65265
+#define JclResources_RsPeSectionAlignment 65266
+#define JclResources_RsPeFileAlignment 65267
+#define JclResources_RsPeOperatingSystemVersion 65268
+#define JclResources_RsPeImageVersion 65269
+#define JclResources_RsPeSubsystemVersion 65270
+#define JclResources_RsPeWin32VersionValue 65271
+#define JclResources_RsPeSizeOfImage 65272
+#define JclResources_RsPeSizeOfHeaders 65273
+#define JclResources_RsPeCheckSum 65274
+#define JclResources_RsPeSubsystem 65275
+#define JclResources_RsPeDllCharacteristics 65276
+#define JclResources_RsPeSizeOfStackReserve 65277
+#define JclResources_RsPeSizeOfStackCommit 65278
+#define JclResources_RsPeSizeOfHeapReserve 65279
+#define JclResources_RsPeImg_Reserved 65280
+#define JclResources_RsPeSignature 65281
+#define JclResources_RsPeMachine 65282
+#define JclResources_RsPeNumberOfSections 65283
+#define JclResources_RsPeTimeDateStamp 65284
+#define JclResources_RsPePointerToSymbolTable 65285
+#define JclResources_RsPeNumberOfSymbols 65286
+#define JclResources_RsPeSizeOfOptionalHeader 65287
+#define JclResources_RsPeCharacteristics 65288
+#define JclResources_RsPeMagic 65289
+#define JclResources_RsPeLinkerVersion 65290
+#define JclResources_RsPeSizeOfCode 65291
+#define JclResources_RsPeSizeOfInitializedData 65292
+#define JclResources_RsPeSizeOfUninitializedData 65293
+#define JclResources_RsPeAddressOfEntryPoint 65294
+#define JclResources_RsPeBaseOfCode 65295
+#define JclResources_RsPeSectionNotFound 65296
+#define JclResources_RsPeImg_00 65297
+#define JclResources_RsPeImg_01 65298
+#define JclResources_RsPeImg_02 65299
+#define JclResources_RsPeImg_03 65300
+#define JclResources_RsPeImg_04 65301
+#define JclResources_RsPeImg_05 65302
+#define JclResources_RsPeImg_06 65303
+#define JclResources_RsPeImg_07 65304
+#define JclResources_RsPeImg_08 65305
+#define JclResources_RsPeImg_09 65306
+#define JclResources_RsPeImg_10 65307
+#define JclResources_RsPeImg_11 65308
+#define JclResources_RsPeImg_12 65309
+#define JclResources_RsPeImg_13 65310
+#define JclResources_RsPeImg_14 65311
+#define JclResources_RsEProcessNotValid 65312
+#define JclResources_RsEModuleNotValid 65313
+#define JclResources_RsFileUtilsNoVersionInfo 65314
+#define JclResources_RsFileUtilsFileDoesNotExist 65315
+#define JclResources_RsFileUtilsLanguageIndex 65316
+#define JclResources_RsFileUtilsEmptyValue 65317
+#define JclResources_RsFileUtilsValueNotFound 65318
+#define JclResources_RsCreateFileMapping 65319
+#define JclResources_RsCreateFileMappingView 65320
+#define JclResources_RsFailedToObtainSize 65321
+#define JclResources_RsPeReadOnlyStream 65322
+#define JclResources_RsPeCantOpen 65323
+#define JclResources_RsPeNotPE 65324
+#define JclResources_RsPeUnknownTarget 65325
+#define JclResources_RsPeNotResDir 65326
+#define JclResources_RsPeNotAvailableForAttached 65327
+#define System_RTLConsts_SWindows10 65328
+#define System_RTLConsts_sObserverUnsupported 65329
+#define System_RTLConsts_sObserverMultipleSingleCast 65330
+#define System_RTLConsts_sObserverNoInterface 65331
+#define System_RTLConsts_sObserverNoSinglecastFound 65332
+#define System_RTLConsts_sObserverNoMulticastFound 65333
+#define System_RTLConsts_SInvalidDateString 65334
+#define System_RTLConsts_SInvalidTimeString 65335
+#define System_RTLConsts_SInvalidOffsetString 65336
+#define System_RTLConsts_sMustWaitOnOneEvent 65337
+#define System_RTLConsts_sBeginInvokeDestroying 65338
+#define JclResources_RsEReplacementChar 65339
+#define JclResources_RsDateConversion 65340
+#define JclResources_RsUnknownFunctionAt 65341
+#define JclResources_RsEWindowsVersionNotSupported 65342
+#define JclResources_RsEWindowNotValid 65343
+#define System_RTLConsts_SVersion32 65344
+#define System_RTLConsts_SVersion64 65345
+#define System_RTLConsts_SWindows 65346
+#define System_RTLConsts_SWindowsVista 65347
+#define System_RTLConsts_SWindowsServer2008 65348
+#define System_RTLConsts_SWindows7 65349
+#define System_RTLConsts_SWindowsServer2008R2 65350
+#define System_RTLConsts_SWindows2000 65351
+#define System_RTLConsts_SWindowsXP 65352
+#define System_RTLConsts_SWindowsServer2003 65353
+#define System_RTLConsts_SWindowsServer2003R2 65354
+#define System_RTLConsts_SWindowsServer2012 65355
+#define System_RTLConsts_SWindowsServer2012R2 65356
+#define System_RTLConsts_SWindowsServer2016 65357
+#define System_RTLConsts_SWindows8 65358
+#define System_RTLConsts_SWindows8Point1 65359
+#define System_RTLConsts_sInvalidTimespanDuration 65360
+#define System_RTLConsts_sTimespanValueCannotBeNan 65361
+#define System_RTLConsts_sCannotNegateTimespan 65362
+#define System_RTLConsts_sInvalidTimespanFormat 65363
+#define System_RTLConsts_sTimespanElementTooLong 65364
+#define System_RTLConsts_SArgumentOutOfRange 65365
+#define System_RTLConsts_SArgumentNil 65366
+#define System_RTLConsts_SGenericItemNotFound 65367
+#define System_RTLConsts_SGenericDuplicateItem 65368
+#define System_RTLConsts_SInsufficientRtti 65369
+#define System_RTLConsts_SParameterCountMismatch 65370
+#define System_RTLConsts_SParameterCountExceeded 65371
+#define System_RTLConsts_SNonPublicType 65372
+#define System_RTLConsts_SByRefArgMismatch 65373
+#define System_RTLConsts_SVersionStr 65374
+#define System_RTLConsts_SSPVersionStr 65375
+#define System_RTLConsts_SWriteError 65376
+#define System_RTLConsts_SThreadCreateError 65377
+#define System_RTLConsts_SThreadError 65378
+#define System_RTLConsts_SThreadExternalTerminate 65379
+#define System_RTLConsts_SThreadExternalWait 65380
+#define System_RTLConsts_SThreadStartError 65381
+#define System_RTLConsts_SThreadExternalCheckTerminated 65382
+#define System_RTLConsts_SThreadExternalSetReturnValue 65383
+#define System_RTLConsts_SParamIsNegative 65384
+#define System_RTLConsts_SInputBufferExceed 65385
+#define System_RTLConsts_SFileNotFound 65386
+#define System_RTLConsts_sInvalidStringAndObjectArrays 65387
+#define System_RTLConsts_sNoConstruct 65388
+#define System_RTLConsts_sInvalidTimeoutValue 65389
+#define System_RTLConsts_sSpinCountOutOfRange 65390
+#define System_RTLConsts_sTimespanTooLong 65391
+#define System_RTLConsts_SInvalidName 65392
+#define System_RTLConsts_SInvalidProperty 65393
+#define System_RTLConsts_SInvalidPropertyPath 65394
+#define System_RTLConsts_SInvalidPropertyValue 65395
+#define System_RTLConsts_SListCapacityError 65396
+#define System_RTLConsts_SListCountError 65397
+#define System_RTLConsts_SListIndexError 65398
+#define System_RTLConsts_SMemoryStreamError 65399
+#define System_RTLConsts_SNoComSupport 65400
+#define System_RTLConsts_SPropertyException 65401
+#define System_RTLConsts_SReadError 65402
+#define System_RTLConsts_SReadOnlyProperty 65403
+#define System_RTLConsts_SSeekNotImplemented 65404
+#define System_RTLConsts_SSortedListError 65405
+#define System_RTLConsts_SUnknownGroup 65406
+#define System_RTLConsts_SUnknownProperty 65407
+#define System_SysConst_SInvalidCodePage 65408
+#define System_SysConst_SInvalidEncodingName 65409
+#define System_SysConst_SNoMappingForUnicodeCharacter 65410
+#define System_SysConst_SInvalidStringBaseIndex 65411
+#define System_RTLConsts_SAncestorNotFound 65412
+#define System_RTLConsts_SAssignError 65413
+#define System_RTLConsts_SCheckSynchronizeError 65414
+#define System_RTLConsts_SClassNotFound 65415
+#define System_RTLConsts_SDuplicateClass 65416
+#define System_RTLConsts_SDuplicateItem 65417
+#define System_RTLConsts_SDuplicateName 65418
+#define System_RTLConsts_SDuplicateString 65419
+#define System_RTLConsts_SFCreateErrorEx 65420
+#define System_RTLConsts_SFOpenErrorEx 65421
+#define System_RTLConsts_SInvalidFileName 65422
+#define System_RTLConsts_SInvalidImage 65423
+#define System_SysConst_SShortDayNameThu 65424
+#define System_SysConst_SShortDayNameFri 65425
+#define System_SysConst_SShortDayNameSat 65426
+#define System_SysConst_SLongDayNameSun 65427
+#define System_SysConst_SLongDayNameMon 65428
+#define System_SysConst_SLongDayNameTue 65429
+#define System_SysConst_SLongDayNameWed 65430
+#define System_SysConst_SLongDayNameThu 65431
+#define System_SysConst_SLongDayNameFri 65432
+#define System_SysConst_SLongDayNameSat 65433
+#define System_SysConst_SInvalidSourceArray 65434
+#define System_SysConst_SInvalidDestinationArray 65435
+#define System_SysConst_SCharIndexOutOfBounds 65436
+#define System_SysConst_SByteIndexOutOfBounds 65437
+#define System_SysConst_SInvalidCharCount 65438
+#define System_SysConst_SInvalidDestinationIndex 65439
+#define System_SysConst_SLongMonthNameJan 65440
+#define System_SysConst_SLongMonthNameFeb 65441
+#define System_SysConst_SLongMonthNameMar 65442
+#define System_SysConst_SLongMonthNameApr 65443
+#define System_SysConst_SLongMonthNameMay 65444
+#define System_SysConst_SLongMonthNameJun 65445
+#define System_SysConst_SLongMonthNameJul 65446
+#define System_SysConst_SLongMonthNameAug 65447
+#define System_SysConst_SLongMonthNameSep 65448
+#define System_SysConst_SLongMonthNameOct 65449
+#define System_SysConst_SLongMonthNameNov 65450
+#define System_SysConst_SLongMonthNameDec 65451
+#define System_SysConst_SShortDayNameSun 65452
+#define System_SysConst_SShortDayNameMon 65453
+#define System_SysConst_SShortDayNameTue 65454
+#define System_SysConst_SShortDayNameWed 65455
+#define System_SysConst_SCannotReadPackageInfo 65456
+#define System_SysConst_sErrorLoadingPackage 65457
+#define System_SysConst_SOSError 65458
+#define System_SysConst_SUnkOSError 65459
+#define System_SysConst_SShortMonthNameJan 65460
+#define System_SysConst_SShortMonthNameFeb 65461
+#define System_SysConst_SShortMonthNameMar 65462
+#define System_SysConst_SShortMonthNameApr 65463
+#define System_SysConst_SShortMonthNameMay 65464
+#define System_SysConst_SShortMonthNameJun 65465
+#define System_SysConst_SShortMonthNameJul 65466
+#define System_SysConst_SShortMonthNameAug 65467
+#define System_SysConst_SShortMonthNameSep 65468
+#define System_SysConst_SShortMonthNameOct 65469
+#define System_SysConst_SShortMonthNameNov 65470
+#define System_SysConst_SShortMonthNameDec 65471
+#define System_SysConst_SVarOverflow 65472
+#define System_SysConst_SVarInvalid 65473
+#define System_SysConst_SVarBadType 65474
+#define System_SysConst_SVarNotImplemented 65475
+#define System_SysConst_SVarUnexpected 65476
+#define System_SysConst_SExternalException 65477
+#define System_SysConst_SAssertionFailed 65478
+#define System_SysConst_SIntfCastError 65479
+#define System_SysConst_SSafecallException 65480
+#define System_SysConst_SMonitorLockException 65481
+#define System_SysConst_SNoMonitorSupportException 65482
+#define System_SysConst_SNotImplemented 65483
+#define System_SysConst_SObjectDisposed 65484
+#define System_SysConst_SAssertError 65485
+#define System_SysConst_SAbstractError 65486
+#define System_SysConst_SModuleAccessViolation 65487
+#define System_SysConst_SWriteAccess 65488
+#define System_SysConst_SExecuteAccess 65489
+#define System_SysConst_SInvalidAccess 65490
+#define System_SysConst_SVarArrayCreate 65491
+#define System_SysConst_SVarArrayBounds 65492
+#define System_SysConst_SVarArrayLocked 65493
+#define System_SysConst_SInvalidVarCast 65494
+#define System_SysConst_SInvalidVarOp 65495
+#define System_SysConst_SInvalidVarNullOp 65496
+#define System_SysConst_SInvalidVarOpWithHResultWithPrefix 65497
+#define System_SysConst_SVarTypeOutOfRangeWithPrefix 65498
+#define System_SysConst_SVarTypeAlreadyUsedWithPrefix 65499
+#define System_SysConst_SVarTypeNotUsableWithPrefix 65500
+#define System_SysConst_SVarTypeTooManyCustom 65501
+#define System_SysConst_SVarTypeCouldNotConvert 65502
+#define System_SysConst_SVarTypeConvertOverflow 65503
+#define System_SysConst_SZeroDivide 65504
+#define System_SysConst_SOverflow 65505
+#define System_SysConst_SUnderflow 65506
+#define System_SysConst_SInvalidPointer 65507
+#define System_SysConst_SInvalidCast 65508
+#define System_SysConst_SAccessViolationArg3 65509
+#define System_SysConst_SAccessViolationNoArg 65510
+#define System_SysConst_SStackOverflow 65511
+#define System_SysConst_SControlC 65512
+#define System_SysConst_SPrivilege 65513
+#define System_SysConst_SException 65514
+#define System_SysConst_SExceptTitle 65515
+#define System_SysConst_SInvalidFormat 65516
+#define System_SysConst_SArgumentMissing 65517
+#define System_SysConst_SDispatchError 65518
+#define System_SysConst_SReadAccess 65519
+#define System_SysConst_SUnknown 65520
+#define System_SysConst_SInvalidInteger 65521
+#define System_SysConst_SInvalidTimeStamp 65522
+#define System_SysConst_STimeEncodeError 65523
+#define System_SysConst_SDateEncodeError 65524
+#define System_SysConst_SOutOfMemory 65525
+#define System_SysConst_SInOutError 65526
+#define System_SysConst_STooManyOpenFiles 65527
+#define System_SysConst_SAccessDenied 65528
+#define System_SysConst_SEndOfFile 65529
+#define System_SysConst_SDiskFull 65530
+#define System_SysConst_SInvalidInput 65531
+#define System_SysConst_SDivByZero 65532
+#define System_SysConst_SRangeError 65533
+#define System_SysConst_SIntOverflow 65534
+#define System_SysConst_SInvalidOp 65535
+STRINGTABLE
+BEGIN
+	JclResources_RsEFunctionNotFound,	L"Function not found: %s.%s"
+	System_Win_ComConst_SOleError,	L"OLE-Fehler %.8x"
+	System_Win_ComConst_SNoMethod,	L"Die Methode '%s' wird vom Automatisierungsobjekt nicht unterst\x00fctzt"
+	System_Win_ComConst_SVarNotObject,	L"Variante referenziert kein Automatisierungsobjekt"
+	System_Win_ComConst_STooManyParams,	L"Dispatch-Methoden unterst\x00fctzen maximal 64 Parameter."
+	JclResources_RsIntelCacheDescrE4,	L"3rd-level cache: 8 MByte, 16-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrEA,	L"3rd-level cache: 12 MByte, 24-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrEB,	L"3rd-level cache: 18 MByte, 24-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrEC,	L"3rd-level cache: 24 MByte, 24-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrF0,	L"64-Byte Prefetching"
+	JclResources_RsIntelCacheDescrF1,	L"128-Byte Prefetching"
+	JclResources_RsIntelCacheDescrFF,	L"CPUID leaf 2 does not report cache descriptor information, use CPUID leaf 4 to query cache parameters"
+	JclResources_RsOSVersionWin8,	L"Windows 8"
+	JclResources_RsOSVersionWinServer2012,	L"Windows Server 2012"
+	JclResources_RsOSVersionWin81,	L"Windows 8.1"
+	JclResources_RsOSVersionWinServer2012R2,	L"Windows Server 2012 R2"
+	JclResources_RsCannotWriteRefStream,	L"Can not write to a read-only memory stream"
+	JclResources_RsHasNotTD32Info,	L"File [%s] has not TD32 debug information!"
+	JclResources_RsEUnexpectedEOSeq,	L"Unexpected end of sequence"
+	JclResources_RsWin32Error,	L"Win32 error: %s (%u)%s%s"
+	JclResources_RsELibraryNotFound,	L"Library not found: %s"
+	JclResources_RsIntelCacheDescrB3,	L"Data TLB: 4 KByte pages, 4-way set associative, 128 entries"
+	JclResources_RsIntelCacheDescrB4,	L"Data TLB1: 4 KByte pages, 4-way set associative, 256 entries"
+	JclResources_RsIntelCacheDescrBA,	L"Data TLB1: 4 KByte pages, 4-way set associative, 64 entries"
+	JclResources_RsIntelCacheDescrC0,	L"Data TLB: 4 KByte and 4 MByte pages, 4-way set associative, 8 entries"
+	JclResources_RsIntelCacheDescrCA,	L"Shared 2nd-Level TLB: 4 KByte pages, 4-way associative, 512 entries"
+	JclResources_RsIntelCacheDescrD0,	L"3rd-level cache: 512 KByte, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrD1,	L"3rd-level cache: 1 MByte, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrD2,	L"3rd-level cache: 2 MByte, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrD6,	L"3rd-level cache: 1 MByte, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrD7,	L"3rd-level cache: 2 MByte, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrD8,	L"3rd-level cache: 4 MByte, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrDC,	L"3rd-level cache: 1.5 MByte, 12-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrDD,	L"3rd-level cache: 3 MByte, 12-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrDE,	L"3rd-level cache: 6 MByte, 12-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrE2,	L"3rd-level cache: 2 MByte, 16-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrE3,	L"3rd-level cache: 4 MByte, 16-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr79,	L"2nd-level cache: 128 KBytes, 8-way set associative, 64 bytes line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr7A,	L"2nd-level cache: 256 KBytes, 8-way set associative, 64 bytes line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr7B,	L"2nd-level cache: 512 KBytes, 8-way set associative, 64 bytes line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr7C,	L"2nd-level cache: 1 MBytes, 8-way set associative, 64 bytes line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr7D,	L"2nd-level cache: 2 MBytes, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr7F,	L"2nd-level cache: 512 KBytes, 2-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr80,	L"2nd-level cache: 512 KBytes, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr82,	L"2nd-level cache: 256 KBytes, 8-way associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr83,	L"2nd-level cache: 512 KBytes, 8-way associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr84,	L"2nd-level cache: 1 MBytes, 8-way associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr85,	L"2nd-level cache: 2 MBytes, 8-way associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr86,	L"2nd-level cache: 512 KByte, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr87,	L"2nd-level cache: 1 MByte, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrB0,	L"Instruction TLB: 4 KByte pages, 4-way set associative, 128 entries"
+	JclResources_RsIntelCacheDescrB1,	L"Instruction TLB: 2 MByte pages, 4-way, 8 entries or 4 MByte pages, 4-way, 4 entries"
+	JclResources_RsIntelCacheDescrB2,	L"Instruction TLB: 4 KByte pages, 4-way set associative, 64 entries"
+	JclResources_RsIntelCacheDescr57,	L"Data TLB0: 4 KByte pages, 4-way associative, 16 entries"
+	JclResources_RsIntelCacheDescr59,	L"Data TLB0: 4 KByte pages, fully associative, 16 entries"
+	JclResources_RsIntelCacheDescr5A,	L"Data TLB0: 2 MByte or 4 MByte pages, 4-way set associative, 32 entries"
+	JclResources_RsIntelCacheDescr5B,	L"Data TLB: 4 KByte and 4 MByte pages, 64 Entries"
+	JclResources_RsIntelCacheDescr5C,	L"Data TLB: 4 KByte and 4 MByte pages, 128 Entries"
+	JclResources_RsIntelCacheDescr5D,	L"Data TLB: 4 KByte and 4 MByte pages, 256 Entries"
+	JclResources_RsIntelCacheDescr60,	L"1st-level data cache: 16 KByte, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr66,	L"1st-level data cache: 8 KBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr67,	L"1st-level data cache: 16 KBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr68,	L"1st-level data cache: 32 KBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr70,	L"Trace cache: 12 K-Ops, 8-way set associative"
+	JclResources_RsIntelCacheDescr71,	L"Trace cache: 16 K-Ops, 8-way set associative"
+	JclResources_RsIntelCacheDescr72,	L"Trace cache: 32 K-Ops, 8-way set associative"
+	JclResources_RsIntelCacheDescr73,	L"Trace cache: 64 K-Ops, 8-way set associative"
+	JclResources_RsIntelCacheDescr76,	L"Instruction TLB: 2M/4M pages, fully associative, 8 entries"
+	JclResources_RsIntelCacheDescr78,	L"2nd-level cache: 1 MBytes, 4-way set associative, 64 bytes line size"
+	JclResources_RsIntelCacheDescr45,	L"2nd-level cache: 2 MBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr46,	L"3rd-level cache: 4 MBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr47,	L"3rd-level cache: 8 MBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr48,	L"3rd-level cache: 8 MByte, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr49,	L"2nd-level cache: 4 MBytes, 16-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr4A,	L"3rd-level cache: 6MByte, 12-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr4B,	L"3rd-level cache: 8MByte, 16-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr4C,	L"3rd-level cache: 12MByte, 12-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr4D,	L"3rd-level cache: 16MByte, 16-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr4E,	L"2nd-level cache: 6MByte, 24-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr4F,	L"Instruction TLB: 4 KByte pages, 32 Entries"
+	JclResources_RsIntelCacheDescr50,	L"Instruction TLB: 4 KByte and 2 MByte or 4 MByte pages, 64 Entries"
+	JclResources_RsIntelCacheDescr51,	L"Instruction TLB: 4 KByte and 2 MByte or 4 MByte pages, 128 Entries"
+	JclResources_RsIntelCacheDescr52,	L"Instruction TLB: 4 KByte and 2 MByte or 4 MByte pages, 256 Entries"
+	JclResources_RsIntelCacheDescr55,	L"Instruction TLB: 2-MByte or 4-MByte pages, fully associative, 7 entries"
+	JclResources_RsIntelCacheDescr56,	L"Data TLB0: 4 MByte pages, 4-way set associative, 16 entries"
+	JclResources_RsIntelCacheDescr23,	L"3rd level cache: 1 MBytes, 8-way set associative, 64 byte line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr25,	L"3rd level cache: 2 MBytes, 8-way set associative, 64 byte line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr29,	L"3rd level cache: 4 MBytes, 8-way set associative, 64 byte line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr2C,	L"1st level data cache: 32 KBytes, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr30,	L"1st level instruction cache: 32 KBytes, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr39,	L"2nd-level cache: 128 KBytes, 4-way set associative, sectored cache, 64-byte line size"
+	JclResources_RsIntelCacheDescr3A,	L"2nd-level cache: 192 KBytes, 6-way set associative, sectored cache, 64-byte line size"
+	JclResources_RsIntelCacheDescr3B,	L"2nd-level cache: 128 KBytes, 2-way set associative, sectored cache, 64-byte line size"
+	JclResources_RsIntelCacheDescr3C,	L"2nd-level cache: 256 KBytes, 4-way set associative, sectored cache, 64-byte line size"
+	JclResources_RsIntelCacheDescr3D,	L"2nd-level cache: 384 KBytes, 6-way set associative, sectored cache, 64-byte line size"
+	JclResources_RsIntelCacheDescr3E,	L"2nd-level cache: 512 KBytes, 4-way set associative, sectored cache, 64-byte line size"
+	JclResources_RsIntelCacheDescr40,	L"No 2nd-level cache or, if processor contains a valid 2nd-level cache, no 3rd-level cache"
+	JclResources_RsIntelCacheDescr41,	L"2nd-level cache: 128 KBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr42,	L"2nd-level cache: 256 KBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr43,	L"2nd-level cache: 512 KBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr44,	L"2nd-level cache: 1 MBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr00,	L"Null descriptor"
+	JclResources_RsIntelCacheDescr01,	L"Instruction TLB: 4 KByte pages, 4-way set associative, 32 entries"
+	JclResources_RsIntelCacheDescr02,	L"Instruction TLB: 4 MByte pages, 4-way set associative, 2 entries"
+	JclResources_RsIntelCacheDescr03,	L"Data TLB: 4 KByte pages, 4-way set associative, 64 entries"
+	JclResources_RsIntelCacheDescr04,	L"Data TLB: 4 MByte pages, 4-way set associative, 8 entries"
+	JclResources_RsIntelCacheDescr05,	L"Data TLB1: 4 MByte pages, 4-way set associative, 32 entries"
+	JclResources_RsIntelCacheDescr06,	L"1st level instruction cache: 8 KBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr08,	L"1st level instruction cache: 16 KBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr09,	L"1st level instruction cache: 32 KBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr0A,	L"1st level data cache: 8 KBytes, 2-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr0B,	L"Instruction TLB: 4 MByte pages, 4-way set associative, 4 entries"
+	JclResources_RsIntelCacheDescr0C,	L"1st level data cache: 16 KBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr0D,	L"1st level data cache: 16 KBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr0E,	L"1st level data cache: 24 KBytes, 6-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr21,	L"2nd level cache: 256 KBytes, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr22,	L"3rd level cache: 512 KBytes, 4-way set associative, 64 byte line size, 2 lines per sector"
+	JclResources_RsPePkgNeverBuild,	L"NeverBuild"
+	JclResources_RsPePkgDesignOnly,	L"DesignOnly"
+	JclResources_RsPePkgRunOnly,	L"RunOnly"
+	JclResources_RsPePkgIgnoreDupUnits,	L"IgnoreDupUnits"
+	JclResources_RsPePkgV3Produced,	L"Delphi 3 or C++ Builder 3"
+	JclResources_RsPePkgProducerUndefined,	L"Undefined"
+	JclResources_RsPePkgBCB4Produced,	L"C++ Builder 4 or later"
+	JclResources_RsPePkgDelphi4Produced,	L"Delphi 4 or later"
+	JclResources_RsPePkgMain,	L"Main"
+	JclResources_RsPePkgWeak,	L"Weak"
+	JclResources_RsPePkgOrgWeak,	L"OrgWeak"
+	JclResources_RsPePkgImplicit,	L"Implicit"
+	JclResources_RsUnableToOpenKeyRead,	L"Unable to open key \"%s\\%s\" for read"
+	JclResources_RsUnableToAccessValue,	L"Unable to open key \"%s\\%s\" and access value \"%s\""
+	JclResources_RsWrongDataType,	L"\"%s\\%s\\%s\" is of wrong kind or size"
+	JclResources_RsInconsistentPath,	L"\"%s\" does not match RootKey"
+	JclResources_RsPeSUBSYSTEM_WINDOWS_CUI,	L"Console"
+	JclResources_RsPeSUBSYSTEM_OS2_CUI,	L"OS/2"
+	JclResources_RsPeSUBSYSTEM_POSIX_CUI,	L"Posix"
+	JclResources_RsPeSUBSYSTEM_RESERVED8,	L"Reserved 8"
+	JclResources_RsPeDEBUG_UNKNOWN,	L"UNKNOWN"
+	JclResources_RsPeDEBUG_COFF,	L"COFF"
+	JclResources_RsPeDEBUG_CODEVIEW,	L"CODEVIEW"
+	JclResources_RsPeDEBUG_FPO,	L"FPO"
+	JclResources_RsPeDEBUG_MISC,	L"MISC"
+	JclResources_RsPeDEBUG_EXCEPTION,	L"EXCEPTION"
+	JclResources_RsPeDEBUG_FIXUP,	L"FIXUP"
+	JclResources_RsPeDEBUG_OMAP_TO_SRC,	L"OMAP_TO_SRC"
+	JclResources_RsPeDEBUG_OMAP_FROM_SRC,	L"OMAP_FROM_SRC"
+	JclResources_RsPePkgExecutable,	L"Executable"
+	JclResources_RsPePkgPackage,	L"Package"
+	JclResources_PsPePkgLibrary,	L"Library"
+	JclResources_RsPeMACHINE_POWERPC,	L"IBM PowerPC Little-Endian"
+	JclResources_RsPeMACHINE_POWERPCFP,	L"IBM PowerPC FP"
+	JclResources_RsPeMACHINE_IA64,	L"Intel 64"
+	JclResources_RsPeMACHINE_MIPS16,	L"MIPS16"
+	JclResources_RsPeMACHINE_AMPHA64,	L"ALPHA64"
+	JclResources_RsPeMACHINE_MIPSFPU,	L"MIPSFPU"
+	JclResources_RsPeMACHINE_MIPSFPU16,	L"MIPSFPU16"
+	JclResources_RsPeMACHINE_TRICORE,	L"Infineon"
+	JclResources_RsPeMACHINE_CEF,	L"CEF"
+	JclResources_RsPeMACHINE_EBC,	L"EFI Byte Code"
+	JclResources_RsPeMACHINE_AMD64,	L"AMD64 (K8)"
+	JclResources_RsPeMACHINE_M32R,	L"M32R little-endian"
+	JclResources_RsPeMACHINE_CEE,	L"CEE"
+	JclResources_RsPeSUBSYSTEM_UNKNOWN,	L"Unknown"
+	JclResources_RsPeSUBSYSTEM_NATIVE,	L"Native"
+	JclResources_RsPeSUBSYSTEM_WINDOWS_GUI,	L"GUI"
+	JclResources_RsPeEditList,	L"EditList"
+	JclResources_RsPeMACHINE_UNKNOWN,	L"Unknown"
+	JclResources_RsPeMACHINE_I386,	L"Intel 386"
+	JclResources_RsPeMACHINE_R3000,	L"MIPS little-endian R3000"
+	JclResources_RsPeMACHINE_R4000,	L"MIPS little-endian R4000"
+	JclResources_RsPeMACHINE_R10000,	L"MIPS little-endian R10000"
+	JclResources_RsPeMACHINE_WCEMIPSV2,	L"MIPS little-endian WCE v2"
+	JclResources_RsPeMACHINE_ALPHA,	L"Alpha_AXP"
+	JclResources_RsPeMACHINE_SH3,	L"SH3 little-endian"
+	JclResources_RsPeMACHINE_SH3DSP,	L"SH3 DSP"
+	JclResources_RsPeMACHINE_SH3E,	L"SH3E little-endian"
+	JclResources_RsPeMACHINE_SH4,	L"SH4 little-endian"
+	JclResources_RsPeMACHINE_SH5,	L"SH5"
+	JclResources_RsPeMACHINE_ARM,	L"ARM Little-Endian"
+	JclResources_RsPeMACHINE_THUMB,	L"THUMB"
+	JclResources_RsPeMACHINE_AM33,	L"AM33"
+	JclResources_RsPeSizeOfHeapCommit,	L"Size of Heap Commit"
+	JclResources_RsPeLoaderFlags,	L"Loader Flags"
+	JclResources_RsPeNumberOfRvaAndSizes,	L"Number of RVA"
+	JclResources_RsPeVersion,	L"Version"
+	JclResources_RsPeGlobalFlagsClear,	L"GlobalFlagsClear"
+	JclResources_RsPeGlobalFlagsSet,	L"GlobalFlagsSet"
+	JclResources_RsPeCriticalSectionDefaultTimeout,	L"CriticalSectionDefaultTimeout"
+	JclResources_RsPeDeCommitFreeBlockThreshold,	L"DeCommitFreeBlockThreshold"
+	JclResources_RsPeDeCommitTotalFreeThreshold,	L"DeCommitTotalFreeThreshold"
+	JclResources_RsPeLockPrefixTable,	L"LockPrefixTable"
+	JclResources_RsPeMaximumAllocationSize,	L"MaximumAllocationSize"
+	JclResources_RsPeVirtualMemoryThreshold,	L"VirtualMemoryThreshold"
+	JclResources_RsPeProcessHeapFlags,	L"ProcessHeapFlags"
+	JclResources_RsPeProcessAffinityMask,	L"ProcessAffinityMask"
+	JclResources_RsPeCSDVersion,	L"CSDVersion"
+	JclResources_RsPeReserved,	L"Reserved"
+	JclResources_RsPeBaseOfData,	L"Base of Data"
+	JclResources_RsPeImageBase,	L"Image Base"
+	JclResources_RsPeSectionAlignment,	L"Section Alignment"
+	JclResources_RsPeFileAlignment,	L"File Alignment"
+	JclResources_RsPeOperatingSystemVersion,	L"Operating System Version"
+	JclResources_RsPeImageVersion,	L"Image Version"
+	JclResources_RsPeSubsystemVersion,	L"Subsystem Version"
+	JclResources_RsPeWin32VersionValue,	L"Win32 Version"
+	JclResources_RsPeSizeOfImage,	L"Size of Image"
+	JclResources_RsPeSizeOfHeaders,	L"Size of Headers"
+	JclResources_RsPeCheckSum,	L"CheckSum"
+	JclResources_RsPeSubsystem,	L"Subsystem"
+	JclResources_RsPeDllCharacteristics,	L"Dll Characteristics"
+	JclResources_RsPeSizeOfStackReserve,	L"Size of Stack Reserve"
+	JclResources_RsPeSizeOfStackCommit,	L"Size of Stack Commit"
+	JclResources_RsPeSizeOfHeapReserve,	L"Size of Heap Reserve"
+	JclResources_RsPeImg_Reserved,	L"reserved [%.2d]"
+	JclResources_RsPeSignature,	L"Signature"
+	JclResources_RsPeMachine,	L"Machine"
+	JclResources_RsPeNumberOfSections,	L"Number of Sections"
+	JclResources_RsPeTimeDateStamp,	L"Time Date Stamp"
+	JclResources_RsPePointerToSymbolTable,	L"Symbols Pointer"
+	JclResources_RsPeNumberOfSymbols,	L"Number of Symbols"
+	JclResources_RsPeSizeOfOptionalHeader,	L"Size of Optional Header"
+	JclResources_RsPeCharacteristics,	L"Characteristics"
+	JclResources_RsPeMagic,	L"Magic"
+	JclResources_RsPeLinkerVersion,	L"Linker Version"
+	JclResources_RsPeSizeOfCode,	L"Size of Code"
+	JclResources_RsPeSizeOfInitializedData,	L"Size of Initialized Data"
+	JclResources_RsPeSizeOfUninitializedData,	L"Size of Uninitialized Data"
+	JclResources_RsPeAddressOfEntryPoint,	L"Address of Entry Point"
+	JclResources_RsPeBaseOfCode,	L"Base of Code"
+	JclResources_RsPeSectionNotFound,	L"Section \"%s\" not found"
+	JclResources_RsPeImg_00,	L"Exports"
+	JclResources_RsPeImg_01,	L"Imports"
+	JclResources_RsPeImg_02,	L"Resources"
+	JclResources_RsPeImg_03,	L"Exceptions"
+	JclResources_RsPeImg_04,	L"Security"
+	JclResources_RsPeImg_05,	L"Base Relocations"
+	JclResources_RsPeImg_06,	L"Debug"
+	JclResources_RsPeImg_07,	L"Description"
+	JclResources_RsPeImg_08,	L"Machine Value"
+	JclResources_RsPeImg_09,	L"TLS"
+	JclResources_RsPeImg_10,	L"Load configuration"
+	JclResources_RsPeImg_11,	L"Bound Import"
+	JclResources_RsPeImg_12,	L"IAT"
+	JclResources_RsPeImg_13,	L"Delay load import"
+	JclResources_RsPeImg_14,	L"COM run-time"
+	JclResources_RsEProcessNotValid,	L"The process with ID %d is not valid"
+	JclResources_RsEModuleNotValid,	L"The Module with handle %d is not valid"
+	JclResources_RsFileUtilsNoVersionInfo,	L"File contains no version information"
+	JclResources_RsFileUtilsFileDoesNotExist,	L"The file %s does not exist"
+	JclResources_RsFileUtilsLanguageIndex,	L"Illegal language index"
+	JclResources_RsFileUtilsEmptyValue,	L"No value was supplied"
+	JclResources_RsFileUtilsValueNotFound,	L"The value %s was not found."
+	JclResources_RsCreateFileMapping,	L"Failed to create FileMapping"
+	JclResources_RsCreateFileMappingView,	L"Failed to create FileMappingView"
+	JclResources_RsFailedToObtainSize,	L"Failed to obtain size of file"
+	JclResources_RsPeReadOnlyStream,	L"Stream is read-only"
+	JclResources_RsPeCantOpen,	L"Cannot open file \"%s\""
+	JclResources_RsPeNotPE,	L"This is not a PE format"
+	JclResources_RsPeUnknownTarget,	L"Unknown PE target"
+	JclResources_RsPeNotResDir,	L"Not a resource directory"
+	JclResources_RsPeNotAvailableForAttached,	L"Feature is not available for attached images"
+	System_RTLConsts_SWindows10,	L"Windows 10"
+	System_RTLConsts_sObserverUnsupported,	L"Observer wird nicht unterst\x00fctzt"
+	System_RTLConsts_sObserverMultipleSingleCast,	L"Der Observer-Kollektion k\x00f6nnen nicht mehrere Einfach-Typumwandlungs-Observer hinzugef\x00fcgt werden"
+	System_RTLConsts_sObserverNoInterface,	L"Das Objekt implementiert das Observer-Interface nicht"
+	System_RTLConsts_sObserverNoSinglecastFound,	L"Der Observer-Kollektion wurde kein Einfach-Typumwandlungs-Observer mit der ID %d hinzugef\x00fcgt"
+	System_RTLConsts_sObserverNoMulticastFound,	L"Der Observer-Kollektion wurde kein Mehrfach-Typumwandlungs-Observer mit der ID %d hinzugef\x00fcgt"
+	System_RTLConsts_SInvalidDateString,	L"Ung\x00fcltiger Datums-String: %s"
+	System_RTLConsts_SInvalidTimeString,	L"Ung\x00fcltiger Zeit-String: %s"
+	System_RTLConsts_SInvalidOffsetString,	L"Ung\x00fcltiger Zeit-Offset-String: %s"
+	System_RTLConsts_sMustWaitOnOneEvent,	L"Es muss auf mindestens ein Ereignis gewartet werden"
+	System_RTLConsts_sBeginInvokeDestroying,	L"BeginInvoke kann bei der Freigabe f\x00fcr TComponent nicht aufgerufen werden"
+	JclResources_RsEReplacementChar,	L"Failed to get ANSI replacement character"
+	JclResources_RsDateConversion,	L"Error illegal date or time format"
+	JclResources_RsUnknownFunctionAt,	L"Unknown function at %s"
+	JclResources_RsEWindowsVersionNotSupported,	L"This windows version is not supported"
+	JclResources_RsEWindowNotValid,	L"The window with handle %d is not valid"
+	System_RTLConsts_SVersion32,	L"32-Bit-Edition"
+	System_RTLConsts_SVersion64,	L"64-Bit-Edition"
+	System_RTLConsts_SWindows,	L"Windows"
+	System_RTLConsts_SWindowsVista,	L"Windows Vista"
+	System_RTLConsts_SWindowsServer2008,	L"Windows Server 2008"
+	System_RTLConsts_SWindows7,	L"Windows 7"
+	System_RTLConsts_SWindowsServer2008R2,	L"Windows Server 2008 R2"
+	System_RTLConsts_SWindows2000,	L"Windows 2000"
+	System_RTLConsts_SWindowsXP,	L"Windows XP"
+	System_RTLConsts_SWindowsServer2003,	L"Windows Server 2003"
+	System_RTLConsts_SWindowsServer2003R2,	L"Windows Server 2003 R2"
+	System_RTLConsts_SWindowsServer2012,	L"Windows Server 2012"
+	System_RTLConsts_SWindowsServer2012R2,	L"Windows Server 2012 R2"
+	System_RTLConsts_SWindowsServer2016,	L"Windows Server 2016"
+	System_RTLConsts_SWindows8,	L"Windows 8"
+	System_RTLConsts_SWindows8Point1,	L"Windows 8.1"
+	System_RTLConsts_sInvalidTimespanDuration,	L"Die Dauer kann nicht zur\x00fcckgegeben werden, weil der absolute Wert den Wert von TTimeSpan.MaxValue \x00fcberschreitet"
+	System_RTLConsts_sTimespanValueCannotBeNan,	L"Wert darf nicht NaN"
+	System_RTLConsts_sCannotNegateTimespan,	L"Negation des Minimalwertes einer Zeitspanne ist ung\x00fcltig"
+	System_RTLConsts_sInvalidTimespanFormat,	L"Ung\x00fcltiges TimeSpan-Format"
+	System_RTLConsts_sTimespanElementTooLong,	L"TimeSpan-Element zu lang"
+	System_RTLConsts_SArgumentOutOfRange,	L"Argument au\x00dferhalb des Bereichs"
+	System_RTLConsts_SArgumentNil,	L"Argument darf nicht nil sein"
+	System_RTLConsts_SGenericItemNotFound,	L"Eintrag nicht gefunden"
+	System_RTLConsts_SGenericDuplicateItem,	L"Duplikate nicht zul\x00e4ssig"
+	System_RTLConsts_SInsufficientRtti,	L"Unzureichende RTTI zur Unterst\x00fctzung dieser Operation verf\x00fcgbar"
+	System_RTLConsts_SParameterCountMismatch,	L"Parameteranzahl stimmt nicht \x00fcberein"
+	System_RTLConsts_SParameterCountExceeded,	L"Parameteranzahl \x00fcberschritten"
+	System_RTLConsts_SNonPublicType,	L"Typ '%s' ist im interface-Abschnitt einer Unit nicht deklariert"
+	System_RTLConsts_SByRefArgMismatch,	L"VAR- und OUT-Argumente m\x00fcssen exakt mit dem Parametertyp \x00fcbereinstimmen"
+	System_RTLConsts_SVersionStr,	L"%s (Version %d.%d, Build %d, %5:s)"
+	System_RTLConsts_SSPVersionStr,	L"%s Service Pack %4:d (Version %1:d.%2:d, Build %3:d, %5:s)"
+	System_RTLConsts_SWriteError,	L"Stream-Schreibfehler"
+	System_RTLConsts_SThreadCreateError,	L"Fehler beim Erzeugen des Thread: %s"
+	System_RTLConsts_SThreadError,	L"Thread-Fehler: %s (%d)"
+	System_RTLConsts_SThreadExternalTerminate,	L"Ein extern erstellter Thread kann nicht beendet werden"
+	System_RTLConsts_SThreadExternalWait,	L"Auf einen extern erstellten Thread kann nicht gewartet werden"
+	System_RTLConsts_SThreadStartError,	L"Start kann f\x00fcr einen laufenden oder unterbrochenen Thread nicht aufgerufen werden"
+	System_RTLConsts_SThreadExternalCheckTerminated,	L"CheckTerminated kann nicht f\x00fcr einen extern erstellten Thread aufgerufen werden"
+	System_RTLConsts_SThreadExternalSetReturnValue,	L"SetReturnValue kann nicht f\x00fcr einen extern erstellten Thread aufgerufen werden"
+	System_RTLConsts_SParamIsNegative,	L"Parameter %s darf kein negativer Wert sein"
+	System_RTLConsts_SInputBufferExceed,	L"Eingabepuffer f\x00fcr %s = %d, %s = %d \x00fcberschritten"
+	System_RTLConsts_SFileNotFound,	L"Die angegebene Datei wurde nicht gefunden"
+	System_RTLConsts_sInvalidStringAndObjectArrays,	L"Die L\x00e4nge von String- und Objekt-Arrays muss gleich sein"
+	System_RTLConsts_sNoConstruct,	L"Klasse %s soll nicht erzeugt werden"
+	System_RTLConsts_sInvalidTimeoutValue,	L"Ung\x00fcltiger Wert f\x00fcr Zeit\x00fcberschreitung: %s"
+	System_RTLConsts_sSpinCountOutOfRange,	L"SpinCount au\x00dferhalb des Bereichs. Muss zwischen 0 und %d liegen"
+	System_RTLConsts_sTimespanTooLong,	L"TimeSpan zu lang"
+	System_RTLConsts_SInvalidName,	L"''%s'' ist kein g\x00fcltiger Komponentenname"
+	System_RTLConsts_SInvalidProperty,	L"Ung\x00fcltiger Eigenschaftswert"
+	System_RTLConsts_SInvalidPropertyPath,	L"Ung\x00fcltiger Pfad f\x00fcr Eigenschaft"
+	System_RTLConsts_SInvalidPropertyValue,	L"Ung\x00fcltiger Eigenschaftswert"
+	System_RTLConsts_SListCapacityError,	L"Kapazit\x00e4t der Liste ist ersch\x00f6pft (%d)"
+	System_RTLConsts_SListCountError,	L"Zu viele Eintr\x00e4ge in der Liste (%d)"
+	System_RTLConsts_SListIndexError,	L"Listenindex au\x00dferhalb des g\x00fcltigen Bereichs (%d)"
+	System_RTLConsts_SMemoryStreamError,	L"Expandieren des Speicher-Stream wegen Speichermangel nicht m\x00f6glich"
+	System_RTLConsts_SNoComSupport,	L"%s wurde nicht als COM-Klasse registriert"
+	System_RTLConsts_SPropertyException,	L"Fehler beim Lesen von %s%s%s: %s"
+	System_RTLConsts_SReadError,	L"Stream-Lesefehler"
+	System_RTLConsts_SReadOnlyProperty,	L"Eigenschaft kann nur gelesen werden"
+	System_RTLConsts_SSeekNotImplemented,	L"%s.Seek nicht implementiert"
+	System_RTLConsts_SSortedListError,	L"Operation f\x00fcr sortierte Listen nicht zul\x00e4ssig"
+	System_RTLConsts_SUnknownGroup,	L"%s befindet sich nicht in einer Gruppe f\x00fcr Klassenregistrierungen"
+	System_RTLConsts_SUnknownProperty,	L"Eigenschaft %s existiert nicht"
+	System_SysConst_SInvalidCodePage,	L"Ung\x00fcltige Codeseite"
+	System_SysConst_SInvalidEncodingName,	L"Ung\x00fcltiger Codierungsname"
+	System_SysConst_SNoMappingForUnicodeCharacter,	L"Keine Zuordnung f\x00fcr Unicode-Zeichen in der Multibyte-Zielcodeseite vorhanden"
+	System_SysConst_SInvalidStringBaseIndex,	L"Ung\x00fcltiger StringBaseIndex"
+	System_RTLConsts_SAncestorNotFound,	L"Vorfahr f\x00fcr '%s' nicht gefunden"
+	System_RTLConsts_SAssignError,	L"%s kann nicht zu %s zugewiesen werden"
+	System_RTLConsts_SCheckSynchronizeError,	L"CheckSynchronize wurde vom Thread $%x aufgerufen, der NICHT der Haupt-Thread ist."
+	System_RTLConsts_SClassNotFound,	L"Klasse %s nicht gefunden"
+	System_RTLConsts_SDuplicateClass,	L"Klasse mit der Bezeichnung %s existiert bereits"
+	System_RTLConsts_SDuplicateItem,	L"Liste gestattet keine doppelten Eintr\x00e4ge ($0%x)"
+	System_RTLConsts_SDuplicateName,	L"Komponente mit der Bezeichnung %s existiert bereits"
+	System_RTLConsts_SDuplicateString,	L"In der String-Liste sind Duplikate nicht zul\x00e4ssig"
+	System_RTLConsts_SFCreateErrorEx,	L"Datei \"%s\" kann nicht erstellt werden. %s"
+	System_RTLConsts_SFOpenErrorEx,	L"Datei %s kann nicht ge\x00f6ffnet werden. %s"
+	System_RTLConsts_SInvalidFileName,	L"Ung\x00fcltiger Dateiname - %s"
+	System_RTLConsts_SInvalidImage,	L"Ung\x00fcltiges Stream-Format"
+	System_SysConst_SShortDayNameThu,	L"Do"
+	System_SysConst_SShortDayNameFri,	L"Fr"
+	System_SysConst_SShortDayNameSat,	L"Sa"
+	System_SysConst_SLongDayNameSun,	L"Sonntag"
+	System_SysConst_SLongDayNameMon,	L"Montag"
+	System_SysConst_SLongDayNameTue,	L"Dienstag"
+	System_SysConst_SLongDayNameWed,	L"Mittwoch"
+	System_SysConst_SLongDayNameThu,	L"Donnerstag"
+	System_SysConst_SLongDayNameFri,	L"Freitag"
+	System_SysConst_SLongDayNameSat,	L"Samstag"
+	System_SysConst_SInvalidSourceArray,	L"Ung\x00fcltiges Quell-Array"
+	System_SysConst_SInvalidDestinationArray,	L"Ung\x00fcltiges Ziel-Array"
+	System_SysConst_SCharIndexOutOfBounds,	L"Zeichenindex au\x00dferhalb des g\x00fcltigen Bereichs (%d)"
+	System_SysConst_SByteIndexOutOfBounds,	L"Startindex au\x00dferhalb des g\x00fcltigen Bereichs (%d)"
+	System_SysConst_SInvalidCharCount,	L"Ung\x00fcltige Anzahl (%d)"
+	System_SysConst_SInvalidDestinationIndex,	L"Ung\x00fcltiger Zielindex (%d)"
+	System_SysConst_SLongMonthNameJan,	L"Januar"
+	System_SysConst_SLongMonthNameFeb,	L"Februar"
+	System_SysConst_SLongMonthNameMar,	L"M\x00e4rz"
+	System_SysConst_SLongMonthNameApr,	L"April"
+	System_SysConst_SLongMonthNameMay,	L"Mai"
+	System_SysConst_SLongMonthNameJun,	L"Juni"
+	System_SysConst_SLongMonthNameJul,	L"Juli"
+	System_SysConst_SLongMonthNameAug,	L"August"
+	System_SysConst_SLongMonthNameSep,	L"September"
+	System_SysConst_SLongMonthNameOct,	L"Oktober"
+	System_SysConst_SLongMonthNameNov,	L"November"
+	System_SysConst_SLongMonthNameDec,	L"Dezember"
+	System_SysConst_SShortDayNameSun,	L"So"
+	System_SysConst_SShortDayNameMon,	L"Mo"
+	System_SysConst_SShortDayNameTue,	L"Di"
+	System_SysConst_SShortDayNameWed,	L"Mi"
+	System_SysConst_SCannotReadPackageInfo,	L"Zugriff auf Package-Informationen von '%s' nicht m\x00f6glich"
+	System_SysConst_sErrorLoadingPackage,	L"Package %s kann nicht geladen werden.\r\n%s"
+	System_SysConst_SOSError,	L"Systemfehler.  Code: %d.\r\n%s%s"
+	System_SysConst_SUnkOSError,	L"Ein Aufruf einer Betriebssystemfunktion ist fehlgeschlagen"
+	System_SysConst_SShortMonthNameJan,	L"Jan"
+	System_SysConst_SShortMonthNameFeb,	L"Feb"
+	System_SysConst_SShortMonthNameMar,	L"M\x00e4r"
+	System_SysConst_SShortMonthNameApr,	L"Apr"
+	System_SysConst_SShortMonthNameMay,	L"Mai"
+	System_SysConst_SShortMonthNameJun,	L"Jun"
+	System_SysConst_SShortMonthNameJul,	L"Jul"
+	System_SysConst_SShortMonthNameAug,	L"Aug"
+	System_SysConst_SShortMonthNameSep,	L"Sep"
+	System_SysConst_SShortMonthNameOct,	L"Okt"
+	System_SysConst_SShortMonthNameNov,	L"Nov"
+	System_SysConst_SShortMonthNameDec,	L"Dez"
+	System_SysConst_SVarOverflow,	L"Variant-\x00dcberlauf"
+	System_SysConst_SVarInvalid,	L"Ung\x00fcltiges Argument"
+	System_SysConst_SVarBadType,	L"Ung\x00fcltiger Variant-Typ"
+	System_SysConst_SVarNotImplemented,	L"Operation nicht unterst\x00fctzt"
+	System_SysConst_SVarUnexpected,	L"Unerwarteter Variant-Fehler"
+	System_SysConst_SExternalException,	L"Externe Exception %x"
+	System_SysConst_SAssertionFailed,	L"Auswertung von assert fehlgeschlagen"
+	System_SysConst_SIntfCastError,	L"Interface nicht unterst\x00fctzt"
+	System_SysConst_SSafecallException,	L"Exception in safecall-Methode"
+	System_SysConst_SMonitorLockException,	L"Kein Eigent\x00fcmer der Objektsperre"
+	System_SysConst_SNoMonitorSupportException,	L"Unterst\x00fctzungsfunktion f\x00fcr Monitor nicht initialisiert"
+	System_SysConst_SNotImplemented,	L"Feature nicht implementiert"
+	System_SysConst_SObjectDisposed,	L"Methode f\x00fcr freigegebenes Objekt aufgerufen"
+	System_SysConst_SAssertError,	L"%s (%s, Zeile %d)"
+	System_SysConst_SAbstractError,	L"Abstrakter Fehler"
+	System_SysConst_SModuleAccessViolation,	L"Zugriffsverletzung bei Adresse %p in Modul '%s'. %s von Adresse %p"
+	System_SysConst_SWriteAccess,	L"Schreiben"
+	System_SysConst_SExecuteAccess,	L"Ausf\x00fchrung"
+	System_SysConst_SInvalidAccess,	L"Ung\x00fcltiger Zugriff"
+	System_SysConst_SVarArrayCreate,	L"Fehler beim Erzeugen von Variante oder sicherem Array"
+	System_SysConst_SVarArrayBounds,	L"Variante oder sicheres Array-Index au\x00dferhalb des g\x00fcltigen Bereichs"
+	System_SysConst_SVarArrayLocked,	L"Variante oder sicheres Array ist gesperrt"
+	System_SysConst_SInvalidVarCast,	L"Ung\x00fcltige Varianten-Typumwandlung"
+	System_SysConst_SInvalidVarOp,	L"Ung\x00fcltige Variantenoperation"
+	System_SysConst_SInvalidVarNullOp,	L"Ung\x00fcltige NULL-Variantenoperation"
+	System_SysConst_SInvalidVarOpWithHResultWithPrefix,	L"Ung\x00fcltige Variantenoperation (%s%.8x)\n%s"
+	System_SysConst_SVarTypeOutOfRangeWithPrefix,	L"Benutzerdefinierter Variant-Typ (%s%.4x) au\x00dferhalb des g\x00fcltigen Bereichs"
+	System_SysConst_SVarTypeAlreadyUsedWithPrefix,	L"Benutzerdefinierter Variant-Typ (%s%.4x) bereits benutzt von %s"
+	System_SysConst_SVarTypeNotUsableWithPrefix,	L"Benutzerdefinierter Variant-Typ (%s%.4x) nicht brauchbar"
+	System_SysConst_SVarTypeTooManyCustom,	L"Es wurden zu viele benutzerdefinierte Variant-Typen registriert"
+	System_SysConst_SVarTypeCouldNotConvert,	L"Variante des Typs (%s) konnte nicht in Typ (%s) konvertiert werden"
+	System_SysConst_SVarTypeConvertOverflow,	L"\x00dcberlauf bei der Konvertierung einer Variante vom Typ (%s) in Typ (%s)"
+	System_SysConst_SZeroDivide,	L"Gleitkommadivision durch Null"
+	System_SysConst_SOverflow,	L"Gleitkomma\x00fcberlauf"
+	System_SysConst_SUnderflow,	L"Gleitkommaunterlauf"
+	System_SysConst_SInvalidPointer,	L"Ung\x00fcltige Zeigeroperation"
+	System_SysConst_SInvalidCast,	L"Ung\x00fcltige Typumwandlung"
+	System_SysConst_SAccessViolationArg3,	L"Zugriffsverletzung bei Adresse %p. %s von Adresse %p"
+	System_SysConst_SAccessViolationNoArg,	L"Zugriffsverletzung"
+	System_SysConst_SStackOverflow,	L"Stack-\x00dcberlauf"
+	System_SysConst_SControlC,	L"Strg+C gedr\x00fcckt"
+	System_SysConst_SPrivilege,	L"Privilegierte Anweisung"
+	System_SysConst_SException,	L"Exception %s in Modul %s bei %p.\r\n%s%s\r\n"
+	System_SysConst_SExceptTitle,	L"Anwendungsfehler"
+	System_SysConst_SInvalidFormat,	L"Format '%s' ung\x00fcltig oder nicht kompatibel mit Argument"
+	System_SysConst_SArgumentMissing,	L"Kein Argument f\x00fcr Format '%s'"
+	System_SysConst_SDispatchError,	L"Variant-Methodenaufruf nicht unterst\x00fctzt"
+	System_SysConst_SReadAccess,	L"Lesen"
+	System_SysConst_SUnknown,	L"<unbekannt>"
+	System_SysConst_SInvalidInteger,	L"'%s' ist kein g\x00fcltiger Integerwert"
+	System_SysConst_SInvalidTimeStamp,	L"'%d.%d' ist kein g\x00fcltiger Zeitstempel"
+	System_SysConst_STimeEncodeError,	L"Ung\x00fcltiges Argument zum Codieren der Uhrzeit"
+	System_SysConst_SDateEncodeError,	L"Ung\x00fcltiges Argument zum Codieren des Datums"
+	System_SysConst_SOutOfMemory,	L"Zu wenig Arbeitsspeicher"
+	System_SysConst_SInOutError,	L"E/A-Fehler %d"
+	System_SysConst_STooManyOpenFiles,	L"Zu viele ge\x00f6ffnete Dateien"
+	System_SysConst_SAccessDenied,	L"Dateizugriff verweigert"
+	System_SysConst_SEndOfFile,	L"Versuch hinter dem Dateiende zu lesen"
+	System_SysConst_SDiskFull,	L"Zu wenig Speicherplatz"
+	System_SysConst_SInvalidInput,	L"Ung\x00fcltige numerische Eingabe"
+	System_SysConst_SDivByZero,	L"Division durch Null"
+	System_SysConst_SRangeError,	L"Fehler bei Bereichspr\x00fcfung"
+	System_SysConst_SIntOverflow,	L"Integer\x00fcberlauf"
+	System_SysConst_SInvalidOp,	L"Ung\x00fcltige Gleitkommaoperation"
+END
+
+/* d:\Projekt\Tokyo\Komponenten\Jedi\\jcl\lib\d25\win64\JclUnicode.res */
+/* D:\Projekt\Tokyo\FastMM\FullDebugMode DLL\FastMM_FullDebugMode.res */
+/* D:\Projekt\Tokyo\FastMM\FullDebugMode DLL\FastMM_FullDebugMode.drf */

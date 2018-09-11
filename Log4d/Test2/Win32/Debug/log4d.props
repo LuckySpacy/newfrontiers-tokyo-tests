@@ -1,0 +1,54 @@
+# Set internal debugging
+log4d.configDebug=false
+
+# Global logging level - Ändern!
+log4d.threshold=all
+
+# Set logger factory
+log4d.loggerFactory=TLogDefaultLoggerFactory
+
+# Set root level
+log4d.rootLogger=all,ODS
+
+# Establish logger hierarchy
+log4d.logger.std=all,Mem1,Fil1
+log4d.logger.logging1=all,Mem1,log1
+
+# Create root appender
+log4d.appender.ODS=TLogODSAppender
+log4d.appender.ODS.layout=TLogSimpleLayout
+
+# Create a memo appender
+log4d.appender.Mem1=TMemoAppender
+log4d.appender.Mem1.memo=memLog
+log4d.appender.Mem1.layout=TLogPatternLayout
+log4d.appender.Mem1.layout.pattern=%d [T: %t] %p %c %x - %m%n
+log4d.appender.Mem1.layout.dateFormat=dd.mm.yyyy hh:nn:ss
+
+# Create a file appender
+# Dateiname wird im Programm überschrieben 
+log4d.appender.Fil1=TLogRollingFileAppender
+log4d.appender.Fil1.append=true
+log4d.appender.Fil1.fileName=OPTIMA_gen.log
+log4d.appender.Fil1.errorHandler=TLogOnlyOnceErrorHandler
+log4d.appender.Fil1.layout=TLogPatternLayout
+log4d.appender.Fil1.layout.pattern=%d [T: %t] %p %c %x - %m%n
+log4d.appender.Fil1.layout.dateFormat=dd.mm.yyyy hh:nn:ss
+log4d.appender.Fil1.maxFileSize=2MB
+log4d.appender.Fil1.maxBackupIndex=5
+
+log4d.appender.log1=TLogRollingFileAppender
+log4d.appender.log1.append=true
+log4d.appender.log1.fileName=OPTIMA_gen1.log
+log4d.appender.log1.errorHandler=TLogOnlyOnceErrorHandler
+log4d.appender.log1.layout=TLogPatternLayout
+log4d.appender.log1.layout.pattern=%d - %m%n
+log4d.appender.log1.layout.dateFormat=dd.mm.yyyy hh:nn:ss
+log4d.appender.log1.maxFileSize=2MB
+log4d.appender.log1.maxBackupIndex=5
+
+
+# Create a socket appender
+log4d.appender.Sckt=TLogIndySocketAppender
+log4d.appender.Sckt.host=localhost
+log4d.appender.Sckt.port=9009

@@ -1,0 +1,72 @@
+package Package.NFS;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  ibxpress,
+  tmsdXE11,
+  dsnap;
+
+contains
+  midaslib,
+  nfsButton in '..\NFSButton\nfsButton.pas',
+  nfsPropNotification in '..\NFSButton\nfsPropNotification.pas',
+  nfsPropNotificationtext in '..\NFSButton\nfsPropNotificationtext.pas',
+  nfsPropPos in '..\NFSButton\nfsPropPos.pas',
+  NfsLabel in '..\NFSLabel\NfsLabel.pas',
+  NFSComboBox in '..\NFSComboBox\NFSComboBox.pas',
+  NFSDatePicker in '..\NFSDatePicker\NFSDatePicker.pas',
+  NFSCustomEdit in '..\NFSDatePicker\NFSCustomEdit.pas',
+  NFSCustomMaskEdit in '..\NFSDatePicker\NFSCustomMaskEdit.pas',
+  NFSdpCalendar in '..\NFSDatePicker\NFSdpCalendar.pas',
+  NFSEditButton in '..\NFSDatePicker\NFSEditButton.pas',
+  NFSMaskButtonedEdit in '..\NFSDatePicker\NFSMaskButtonedEdit.pas',
+  NFSMonthCalendar in '..\NFSDatePicker\NFSMonthCalendar.pas',
+  nfsEditAutoComplete in '..\NFSEditAutoComplete\nfsEditAutoComplete.pas',
+  NFSEditBtn in '..\NFSEditBtn\NFSEditBtn.pas',
+  NFSEditBtnProp in '..\NFSEditBtn\NFSEditBtnProp.pas',
+  NFSEditProp in '..\NFSEditBtn\NFSEditProp.pas',
+  NFSEditFloat in '..\NFSEditFloat\NFSEditFloat.pas',
+  ExecOnTime in '..\ExecOnTime\ExecOnTime.pas',
+  ProcessQueue in '..\ProcessQueue\ProcessQueue.pas',
+  LockProvider in '..\LockProvider\LockProvider.pas',
+  o_license_base in '..\LockProvider\o_license_base.pas',
+  Ueberschriftenpanel_norm in '..\Ueberschriftenpanel\Ueberschriftenpanel_norm.pas',
+  nfsPropTextAndImageCenter in '..\NFSButton\nfsPropTextAndImageCenter.pas',
+  nfsButtonPosBerechnung in '..\NFSButton\nfsButtonPosBerechnung.pas',
+  NewFrontiers.Vcl.Ueberschrift in '..\..\NfsFramework\NewFrontiers.Vcl\NewFrontiers.Vcl.Ueberschrift.pas',
+  o_lpUser in '..\LockProvider\o_lpUser.pas',
+  o_lpUserlist in '..\LockProvider\o_lpUserlist.pas',
+  o_lpBaseList in '..\LockProvider\o_lpBaseList.pas',
+  nfsCheckListEdit in '..\NFSChecklistedit\nfsCheckListEdit.pas';
+
+end.
+

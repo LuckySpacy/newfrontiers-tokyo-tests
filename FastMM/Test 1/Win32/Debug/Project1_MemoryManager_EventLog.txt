@@ -1,0 +1,812 @@
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 1012
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+5BE294 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3624]
+407F99 [System.pas][System][TObject.FreeInstance][16922]
+4087E5 [System.pas][System][@ClassDestroy$qqrxp14System.TObject][18289]
+4561E2 [System.Rtti.pas][System.Rtti][Rtti.TPoolToken.$bdtr$qqrv][4675]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+5BE84B [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+5BE467 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3669]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TForm
+
+The allocation number is: 587
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE039F0:
+EC 68 5B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 9C A6 49 00 AC A6 49 00
+00 00 00 00 00 00 00 00 1C F7 5B 00 F0 39 E0 7F 00 00 00 00 00 00 00 00 40 01 00 00 F0 00 00 00
+AB 00 68 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 03 80 42 E8 7F 00 00 00 00 0F 00 00 FF
+C0 DD E7 7F 70 DE E7 7F 00 00 F4 FF 00 00 00 00 00 00 00 00 00 00 00 00 0F 00 01 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 EC 68 5B 00 D0 DF E7 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Ï  h  [  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ú  ¶  I  .  ¨  ¶  I  .
+.  .  .  .  .  .  .  .  .  ˜  [  .    9  ‡    .  .  .  .  .  .  .  .  @  .  .  .    .  .  .
+´  .  h  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ä  B  Ë    .  .  .  .  .  .  .  ˇ
+¿  ›  Á    p  ﬁ  Á    .  .  Ù  ˇ  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ï  h  [  .  –  ﬂ  Á  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 116
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+4FD893 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TCanvas.Create][3698]
+5BE520 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.InitializeNewForm][3692]
+5BE2FD [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3636]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+5BE84B [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+5BE467 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3669]
+408808 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][18295]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TControlCanvas
+
+The allocation number is: 602
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE10FA0:
+2C 23 51 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF FF FF
+FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00 D0 07 00 02 00 00 00 00 00 00 00 00 00 00 00 00
+40 43 E8 7F A0 E4 E7 7F 50 E5 E7 7F 00 00 00 00 00 00 00 00 20 00 CC 00 F0 39 E0 7F 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 11 D0 7B 7C 80 80 80 80 80 80 80 80 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+,  #  Q  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ˇ  ˇ  ˇ  ˇ
+ˇ  ˇ  ˇ  ˇ  .  .  .  .  .  .  .  .  .  .  .  .  –  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+@  C  Ë    †  ‰  Á    P  Â  Á    .  .  .  .  .  .  .  .     .  Ã  .    9  ‡    .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  –  {  |  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 164
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+4FBED1 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TResourceManager.AllocResource$qqrpxv][1845]
+4FC749 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TFont.Create][2439]
+5C7800 [Vcl.Forms.pas][Vcl.Forms][Forms.TApplication.Create][9489]
+77EA56F9 [RtlSetLastWin32Error]
+77EA56F9 [RtlSetLastWin32Error]
+5DB52C 
+1679336 [GetRawStackTrace]
+416E86 [FastMM4.pas][FastMM4][CalculateHeaderCheckSum$qqrp29Fastmm4.TFullDebugBlockHeader][8215]
+416E95 [FastMM4.pas][FastMM4][UpdateHeaderAndFooterCheckSums$qqrp29Fastmm4.TFullDebugBlockHeader][8225]
+40DA9C [System.pas][System][@IntfCopy$qqrr44System.%DelphiInterface$17System.IInterface%x44System.%DelphiInterface$17System.IInterface%][37257]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt Unbekannt
+
+The allocation number is: 258
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE29930:
+00 00 00 00 02 00 00 00 00 00 00 00 F9 F9 80 80 94 10 00 00 00 00 00 00 F5 FF FF FF 00 00 00 00
+00 00 01 06 54 61 68 6F 6D 61 73 20 53 65 72 69 66 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 A6 79 D7 88 00 00 00 00 41 9C E2 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+F2 00 00 00 82 70 40 00 D1 BE 4F 00 53 C0 4F 00 E3 C8 4F 00 F2 CB 4F 00 E2 69 5C 00 4C 1F EC 77
+F9 56 EA 77 AD 40 4C 00 36 93 67 01 86 6E 41 00 94 10 00 00 94 10 00 00 9E 70 40 00 0E C0 4F 00
+.  .  .  .  .  .  .  .  .  .  .  .  ˘  ˘  Ä  Ä  î  .  .  .  .  .  .  .  ı  ˇ  ˇ  ˇ  .  .  .  .
+.  .  .  .  T  a  h  o  m  a  s     S  e  r  i  f  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  ¶  y  ◊  à  .  .  .  .  A  ú  ‚    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+Ú  .  .  .  Ç  p  @  .  —  æ  O  .  S  ¿  O  .  „  »  O  .  Ú  À  O  .  ‚  i  \  .  L  .  Ï  w
+˘  V  Í  w  ≠  @  L  .  6  ì  g  .  Ü  n  A  .  î  .  .  .  î  .  .  .  û  p  @  .  .  ¿  O  .
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 84
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+5BCC92 [Vcl.Forms.pas][Vcl.Forms][Forms.TControlScrollBar.Create][2623]
+5BD8B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TScrollingWinControl.Create][3088]
+5BE2B2 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3625]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+5BE84B [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+5BE467 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3669]
+408808 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][18295]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TControlScrollBar
+
+The allocation number is: 598
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE57340:
+D0 3E 5B 00 F0 39 E0 7F 08 00 50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00
+0A 00 00 00 00 00 00 00 14 00 00 FF 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0C 00 00 00
+04 00 00 00 01 00 00 00 00 00 00 00 4E 85 6B 7C 80 80 80 80 80 80 80 80 00 00 00 00 80 65 E5 7F
+00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00 57 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00
+92 CC 5B 00 C9 D8 5B 00 B2 E2 5B 00 25 F8 42 00 D2 2A 5D 00 4B E8 5B 00 67 E4 5B 00 08 88 40 00
+94 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 4C 00 00 00 00 00 00 00 A8 7B 94 83
+D0 3E 5B 00 F0 39 E0 7F 08 00 50 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00
+–  >  [  .    9  ‡    .  .  P  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  ˇ  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  N  Ö  k  |  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  Ä  e  Â  
+.  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .  W  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .
+í  Ã  [  .  …  ÿ  [  .  ≤  ‚  [  .  %  ¯  B  .  “  *  ]  .  K  Ë  [  .  g  ‰  [  .  .  à  @  .
+î  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  L  .  .  .  .  .  .  .  ®  {  î  É
+–  >  [  .    9  ‡    .  .  P  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 84
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+5BCC92 [Vcl.Forms.pas][Vcl.Forms][Forms.TControlScrollBar.Create][2623]
+5BD8C9 [Vcl.Forms.pas][Vcl.Forms][Forms.TScrollingWinControl.Create][3089]
+5BE2B2 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3625]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+5BE84B [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+5BE467 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3669]
+408808 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][18295]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TControlScrollBar
+
+The allocation number is: 599
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE57420:
+D0 3E 5B 00 F0 39 E0 7F 08 00 50 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00
+0A 00 00 00 00 00 00 00 14 00 00 FF 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0C 00 00 00
+04 00 00 00 01 00 00 00 00 00 00 00 57 84 6B 7C 80 80 80 80 80 80 80 80 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+–  >  [  .    9  ‡    .  .  P  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  ˇ  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  W  Ñ  k  |  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 68
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+50697F [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TIcon.Create][9955]
+51F3B0 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.SetHeight][5759]
+5BE4D1 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.InitializeNewForm][3687]
+5BE2FD [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3636]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+5BE84B [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+5BE467 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3669]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TIcon
+
+The allocation number is: 600
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE5F010:
+E4 AF 4F 00 00 00 00 00 A4 E7 48 00 00 00 00 00 7C F1 5B 00 F0 39 E0 7F 00 00 00 00 00 00 00 00
+00 01 00 00 6C 8A 4F 00 F0 E3 E7 7F 10 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 29 71 43 79
+80 80 80 80 80 80 80 80 00 00 00 00 41 E8 E5 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+10 02 00 00 62 81 41 00 6A 70 40 00 76 8A 40 00 22 8E 40 00 BB 03 4B 00 8C E1 51 00 87 59 52 00
+99 59 52 00 5E 75 4C 00 22 C4 51 00 2B 34 32 76 94 10 00 00 94 10 00 00 9E 70 40 00 CE 8A 40 00
+A5 8A 40 00 BA 81 40 00 92 7F 40 00 E5 87 40 00 06 81 40 00 13 81 40 00 B9 02 4B 00 13 81 40 00
+37 FC 52 00 40 00 00 00 00 00 00 00 AC B5 DD FB 6C 8C 5E 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+‰  Ø  O  .  .  .  .  .  §  Á  H  .  .  .  .  .  |  Ò  [  .    9  ‡    .  .  .  .  .  .  .  .
+.  .  .  .  l  ä  O  .    „  Á    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  )  q  C  y
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  A  Ë  Â    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  b  Å  A  .  j  p  @  .  v  ä  @  .  "  é  @  .  ª  .  K  .  å  ·  Q  .  á  Y  R  .
+ô  Y  R  .  ^  u  L  .  "  ƒ  Q  .  +  4  2  v  î  .  .  .  î  .  .  .  û  p  @  .  Œ  ä  @  .
+•  ä  @  .  ∫  Å  @  .  í    @  .  Â  á  @  .  .  Å  @  .  .  Å  @  .  π  .  K  .  .  Å  @  .
+7  ¸  R  .  @  .  .  .  .  .  .  .  ¨  µ  ›  ˚  l  å  ^  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 20
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+4080E4 [System.pas][System][TObject.Create][16972]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+531440 [Vcl.Controls.pas][Vcl.Controls][Controls.TCustomTouchManager.Create][17650]
+5227E1 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.CreateTouchManager][7885]
+51E9CA [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Create][5392]
+523390 [Vcl.Controls.pas][Vcl.Controls][Controls.TWinControl.Create][8396]
+5BD89B [Vcl.Forms.pas][Vcl.Forms][Forms.TScrollingWinControl.Create][3086]
+5BE2B2 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3625]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TList
+
+The allocation number is: 592
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE6E850:
+E4 D0 48 00 38 E1 E7 7F 01 00 00 00 04 00 00 00 00 00 00 00 6A FB 31 79 00 00 00 00 B1 E9 E6 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 61 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00
+E4 80 40 00 0B 40 31 76 BE 98 52 00 DC 25 5C 00 EB 31 5C 00 F5 17 52 00 E6 41 31 76 F3 41 31 76
+94 10 00 00 94 10 00 00 9E 70 40 00 99 7F 40 00 E5 87 40 00 71 F6 4A 00 13 81 40 00 91 99 52 00
+DC 25 5C 00 EB 31 5C 00 F5 17 52 00 E6 41 31 76 F3 41 31 76 14 00 00 00 E4 D0 48 00 90 1E 2F D4
+6C 8C 5E 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 6F E1 D0 2B 00 00 00 00 D1 DD E6 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 AF 01 00 00 F1 70 40 00 65 C0 40 00 15 29 44 00
+CE 5B 4C 00 86 55 4C 00 46 5D 4C 00 75 DB 4A 00 BA FC 51 00 21 BE 4B 00 84 75 4B 00 5B 64 4B 00
+‰  –  H  .  8  ·  Á    .  .  .  .  .  .  .  .  .  .  .  .  j  ˚  1  y  .  .  .  .  ±  È  Ê  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  a  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .
+‰  Ä  @  .  .  @  1  v  æ  ò  R  .  ‹  %  \  .  Î  1  \  .  ı  .  R  .  Ê  A  1  v  Û  A  1  v
+î  .  .  .  î  .  .  .  û  p  @  .  ô    @  .  Â  á  @  .  q  ˆ  J  .  .  Å  @  .  ë  ô  R  .
+‹  %  \  .  Î  1  \  .  ı  .  R  .  Ê  A  1  v  Û  A  1  v  .  .  .  .  ‰  –  H  .  ê  .  /  ‘
+l  å  ^  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  o  ·  –  +  .  .  .  .  —  ›  Ê  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ø  .  .  .  Ò  p  @  .  e  ¿  @  .  .  )  D  .
+Œ  [  L  .  Ü  U  L  .  F  ]  L  .  u  €  J  .  ∫  ¸  Q  .  !  æ  K  .  Ñ  u  K  .  [  d  K  .
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 36
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+4FBED1 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TResourceManager.AllocResource$qqrpxv][1845]
+4FCFE6 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TPen.Create][3012]
+4FD8D6 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TCanvas.Create][3715]
+52C514 [Vcl.Controls.pas][Vcl.Controls][Controls.TCustomControl.Create][14073]
+52BA1F [Vcl.Controls.pas][Vcl.Controls][Controls.THintWindow.Create][13743]
+5CA29D [Vcl.Forms.pas][Vcl.Forms][Forms.TApplication.SetShowHint][11109]
+52FDAE [Vcl.Controls.pas][Vcl.Controls][Controls.InitControls$qqrv][16410]
+5DB031 
+409930 [System.pas][System][InitUnits$qqrv][22827]
+40999C [System.pas][System][@StartExe$qqrp23System.PackageInfoTablep17System.TLibModule][22902]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt Unbekannt
+
+The allocation number is: 285
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE7C3A0:
+00 00 00 00 01 00 00 00 00 00 00 00 08 00 80 80 94 10 00 00 00 00 00 00 00 00 00 00 01 00 00 00
+00 00 00 00 04 D3 72 7C 00 00 00 00 C1 C1 E7 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1E 01 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00 82 D3 4F 00 F7 D8 4F 00 14 C5 52 00 1F BA 52 00
+9D A2 5C 00 AE FD 52 00 31 B0 5D 00 30 99 40 00 94 10 00 00 94 10 00 00 99 7F 40 00 E5 87 40 00
+EA D3 4F 00 13 81 40 00 82 D9 4F 00 45 E2 51 00 13 81 40 00 5A C5 52 00 13 81 40 00 BC A2 5C 00
+E6 C6 5B 00 1C 00 00 00 DC 67 4F 00 61 24 CB 86 6C 8C 5E 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 9E DB 34 79 80 80 80 80 80 80 80 80 00 00 00 00 D1 C3 E7 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 24 01 00 00 82 70 40 00 D1 BE 4F 00 53 C0 4F 00
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Ä  Ä  î  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  ”  r  |  .  .  .  .  ¡  ¡  Á    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .  Ç  ”  O  .  ˜  ÿ  O  .  .  ≈  R  .  .  ∫  R  .
+ù  ¢  \  .  Æ  ˝  R  .  1  ∞  ]  .  0  ô  @  .  î  .  .  .  î  .  .  .  ô    @  .  Â  á  @  .
+Í  ”  O  .  .  Å  @  .  Ç  Ÿ  O  .  E  ‚  Q  .  .  Å  @  .  Z  ≈  R  .  .  Å  @  .  º  ¢  \  .
+Ê  ∆  [  .  .  .  .  .  ‹  g  O  .  a  $  À  Ü  l  å  ^  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  û  €  4  y  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  —  √  Á  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  $  .  .  .  Ç  p  @  .  —  æ  O  .  S  ¿  O  .
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 36
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+4FBED1 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TResourceManager.AllocResource$qqrpxv][1845]
+4FC053 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TResourceManager.ChangeResource$qqrp28Vcl.Graphics.TGraphicsObjectpxv][1918]
+4FD4E3 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TBrush.SetData][3394]
+4FD58F [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TBrush.SetColor][3452]
+528504 [Vcl.Controls.pas][Vcl.Controls][Controls.TWinControl.CMColorChanged][11630]
+5C0FA2 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.CMColorChanged][5260]
+5217F5 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.WndProc][7326]
+77E8C512 [LdrGetDllHandleEx]
+763165FB [Unknown function at SetWindowLongW]
+763165B3 [Unknown function at SetWindowLongW]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt Unbekannt
+
+The allocation number is: 409
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE7DD10:
+00 00 00 00 02 00 00 00 2F 14 10 84 80 F8 80 80 94 10 00 00 00 00 00 00 0F 00 00 FF 00 00 00 00
+00 00 00 00 2F BC 0A 19 00 00 00 00 70 A5 E7 7F 00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00
+4D 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00 AF E3 51 00 66 C7 4F 00 39 E9 51 00 90 33 52 00
+9B D8 5B 00 B2 E2 5B 00 25 F8 42 00 D2 2A 5D 00 94 10 00 00 94 10 00 00 9E 70 40 00 15 9F 40 00
+7B F3 4A 00 F2 F3 4A 00 43 E3 5B 00 D1 98 5C 00 5E B5 5D 00 44 87 EF 74 2D 58 EB 77 FD 57 EB 77
+00 00 00 00 24 00 00 00 B0 04 02 00 BE 00 7E EA 5C 2A 51 00 F0 39 E0 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 AC 11 52 00 F0 39 E0 7F 00 00 00 00 41 FF 81 15 00 00 00 00 70 A5 E7 7F
+00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00 4E 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00
+.  .  .  .  .  .  .  .  /  .  .  Ñ  Ä  ¯  Ä  Ä  î  .  .  .  .  .  .  .  .  .  .  ˇ  .  .  .  .
+.  .  .  .  /  º  .  .  .  .  .  .  p  •  Á    .  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .
+M  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .  Ø  „  Q  .  f  «  O  .  9  È  Q  .  ê  3  R  .
+õ  ÿ  [  .  ≤  ‚  [  .  %  ¯  B  .  “  *  ]  .  î  .  .  .  î  .  .  .  û  p  @  .  .  ü  @  .
+{  Û  J  .  Ú  Û  J  .  C  „  [  .  —  ò  \  .  ^  µ  ]  .  D  á  Ô  t  -  X  Î  w  ˝  W  Î  w
+.  .  .  .  $  .  .  .  ∞  .  .  .  æ  .  ~  Í  \  *  Q  .    9  ‡    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  ¨  .  R  .    9  ‡    .  .  .  .  A  ˇ  Å  .  .  .  .  .  p  •  Á  
+.  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .  N  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 36
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+51E3AF [Vcl.Controls.pas][Vcl.Controls][Controls.TSizeConstraints.Create][5166]
+4FC766 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TFont.Create][2443]
+51E939 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Create][5372]
+523390 [Vcl.Controls.pas][Vcl.Controls][Controls.TWinControl.Create][8396]
+5BD89B [Vcl.Forms.pas][Vcl.Forms][Forms.TScrollingWinControl.Create][3086]
+5BE2B2 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3625]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TSizeConstraints
+
+The allocation number is: 589
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE7DDC0:
+5C 2A 51 00 F0 39 E0 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 AC 11 52 00 F0 39 E0 7F
+00 00 00 00 41 FF 81 15 00 00 00 00 70 A5 E7 7F 00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00
+4E 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00 FB FE 52 00 59 E9 51 00 90 33 52 00 9B D8 5B 00
+B2 E2 5B 00 25 F8 42 00 D2 2A 5D 00 4B E8 5B 00 94 10 00 00 94 10 00 00 9E 70 40 00 99 7F 40 00
+E5 87 40 00 F6 74 4B 00 13 81 40 00 1B DC 4A 00 64 F3 4A 00 F2 F3 4A 00 43 E3 5B 00 D1 98 5C 00
+5E B5 5D 00 24 00 00 00 38 43 49 00 50 7F 23 87 D0 2C 51 00 F0 39 E0 7F 03 00 00 00 03 00 00 00
+03 00 00 00 03 00 00 00 C0 31 52 00 F0 39 E0 7F 00 00 00 00 AF 80 DC 78 00 00 00 00 C1 B6 E7 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 AA 01 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00
+\  *  Q  .    9  ‡    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ¨  .  R  .    9  ‡  
+.  .  .  .  A  ˇ  Å  .  .  .  .  .  p  •  Á    .  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .
+N  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .  ˚  ˛  R  .  Y  È  Q  .  ê  3  R  .  õ  ÿ  [  .
+≤  ‚  [  .  %  ¯  B  .  “  *  ]  .  K  Ë  [  .  î  .  .  .  î  .  .  .  û  p  @  .  ô    @  .
+Â  á  @  .  ˆ  t  K  .  .  Å  @  .  .  ‹  J  .  d  Û  J  .  Ú  Û  J  .  C  „  [  .  —  ò  \  .
+^  µ  ]  .  $  .  .  .  8  C  I  .  P    #  á  –  ,  Q  .    9  ‡    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  ¿  1  R  .    9  ‡    .  .  .  .  Ø  Ä  ‹  x  .  .  .  .  ¡  ∂  Á  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ™  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 36
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+52FEFB [Vcl.Controls.pas][Vcl.Controls][Controls.TMargins.Create][16605]
+51E959 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Create][5374]
+523390 [Vcl.Controls.pas][Vcl.Controls][Controls.TWinControl.Create][8396]
+5BD89B [Vcl.Forms.pas][Vcl.Forms][Forms.TScrollingWinControl.Create][3086]
+5BE2B2 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3625]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+5BE84B [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TMargins
+
+The allocation number is: 590
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE7DE70:
+D0 2C 51 00 F0 39 E0 7F 03 00 00 00 03 00 00 00 03 00 00 00 03 00 00 00 C0 31 52 00 F0 39 E0 7F
+00 00 00 00 AF 80 DC 78 00 00 00 00 C1 B6 E7 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+AA 01 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00 D2 48 43 00 74 9F 4B 00 C5 44 43 00 B1 C2 4B 00
+DA BD 4B 00 84 75 4B 00 5B 64 4B 00 04 DC 4A 00 94 10 00 00 94 10 00 00 9E 70 40 00 99 7F 40 00
+E5 87 40 00 06 81 40 00 13 81 40 00 E4 2D 43 00 9A 2D 43 00 C4 98 40 00 6F B5 5D 00 44 87 EF 74
+2D 58 EB 77 1C 00 00 00 B0 5E 42 00 A5 3E 79 72 6C 8C 5E 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 5A C1 86 8D 80 80 80 80 80 80 80 80 00 00 00 00 70 A5 E7 7F
+00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00 4F 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00
+–  ,  Q  .    9  ‡    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ¿  1  R  .    9  ‡  
+.  .  .  .  Ø  Ä  ‹  x  .  .  .  .  ¡  ∂  Á    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+™  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .  “  H  C  .  t  ü  K  .  ≈  D  C  .  ±  ¬  K  .
+⁄  Ω  K  .  Ñ  u  K  .  [  d  K  .  .  ‹  J  .  î  .  .  .  î  .  .  .  û  p  @  .  ô    @  .
+Â  á  @  .  .  Å  @  .  .  Å  @  .  ‰  -  C  .  ö  -  C  .  ƒ  ò  @  .  o  µ  ]  .  D  á  Ô  t
+-  X  Î  w  .  .  .  .  ∞  ^  B  .  •  >  y  r  l  å  ^  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Z  ¡  Ü  ç  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  p  •  Á  
+.  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .  O  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 36
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+531417 [Vcl.Controls.pas][Vcl.Controls][Controls.TCustomTouchManager.Create][17645]
+52FF1F [Vcl.Controls.pas][Vcl.Controls][Controls.TMargins.Create][16609]
+5227E1 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.CreateTouchManager][7885]
+51E9CA [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Create][5392]
+523390 [Vcl.Controls.pas][Vcl.Controls][Controls.TWinControl.Create][8396]
+5BD89B [Vcl.Forms.pas][Vcl.Forms][Forms.TScrollingWinControl.Create][3086]
+5BE2B2 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3625]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TTouchManager
+
+The allocation number is: 591
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE7DFD0:
+24 48 51 00 F0 39 E0 7F 00 00 00 00 00 00 00 00 12 17 00 00 50 E8 E6 7F 01 00 00 00 00 00 01 00
+00 00 00 00 86 46 7D 04 00 00 00 00 61 D6 E7 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+AD 01 00 00 82 70 40 00 5B 9E 40 00 6B AB 40 00 E7 43 43 00 74 9F 4B 00 D0 C2 4B 00 0B BE 4B 00
+84 75 4B 00 5B 64 4B 00 04 DC 4A 00 64 F3 4A 00 94 10 00 00 94 10 00 00 9E 70 40 00 15 9F 40 00
+71 B2 40 00 95 B1 40 00 AD 81 40 00 92 7F 40 00 E5 87 40 00 10 E8 5B 00 71 52 4C 00 FA C6 5B 00
+73 6C 42 00 18 00 00 00 B0 04 02 00 2D 3A 09 86 6C 8C 5E 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 D2 C5 F6 79 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 70 A5 E7 7F
+00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00 51 02 00 00 F1 70 40 00 65 C0 40 00 A6 C1 40 00
+$  H  Q  .    9  ‡    .  .  .  .  .  .  .  .  .  .  .  .  P  Ë  Ê    .  .  .  .  .  .  .  .
+.  .  .  .  Ü  F  }  .  .  .  .  .  a  ÷  Á    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+≠  .  .  .  Ç  p  @  .  [  û  @  .  k  ´  @  .  Á  C  C  .  t  ü  K  .  –  ¬  K  .  .  æ  K  .
+Ñ  u  K  .  [  d  K  .  .  ‹  J  .  d  Û  J  .  î  .  .  .  î  .  .  .  û  p  @  .  .  ü  @  .
+q  ≤  @  .  ï  ±  @  .  ≠  Å  @  .  í    @  .  Â  á  @  .  .  Ë  [  .  q  R  L  .  ˙  ∆  [  .
+s  l  B  .  .  .  .  .  ∞  .  .  .  -  :  .  Ü  l  å  ^  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  “  ≈  ˆ  y  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  p  •  Á  
+.  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .  Q  .  .  .  Ò  p  @  .  e  ¿  @  .  ¶  ¡  @  .
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 36
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+4070F1 [System.pas][System][@ReallocMem$qqrrpvi][4941]
+40C065 [System.pas][System][DynArraySetLength$qqrrpvpvipi][35000]
+40C1A6 [System.pas][System][@DynArraySetLength$qqrv][35098]
+4AFB3F [System.Classes.pas][System.Classes][Classes.TList.SetCapacity][4854]
+4AF8C0 [System.Classes.pas][System.Classes][Classes.TList.Grow][4690]
+4AF689 [System.Classes.pas][System.Classes][Classes.TList.Add][4604]
+53144E [Vcl.Controls.pas][Vcl.Controls][Controls.TCustomTouchManager.Create][17651]
+5227E1 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.CreateTouchManager][7885]
+51E9CA [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Create][5392]
+523390 [Vcl.Controls.pas][Vcl.Controls][Controls.TWinControl.Create][8396]
+5BD89B [Vcl.Forms.pas][Vcl.Forms][Forms.TScrollingWinControl.Create][3086]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt Unbekannt
+
+The allocation number is: 593
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE7E130:
+01 00 00 00 04 00 00 00 F0 39 E0 7F 00 00 00 00 00 00 00 00 00 00 00 00 4D ED 89 79 80 80 80 80
+80 80 80 80 80 80 80 80 00 00 00 00 70 A5 E7 7F 00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00
+52 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00 82 D3 4F 00 AD 33 52 00 9B D8 5B 00 B2 E2 5B 00
+25 F8 42 00 D2 2A 5D 00 4B E8 5B 00 67 E4 5B 00 94 10 00 00 94 10 00 00 9E 70 40 00 15 9F 40 00
+9A CB 4F 00 FC 97 52 00 C8 7F 41 00 40 4F 52 00 F9 56 EA 77 36 93 67 01 96 D9 5B 00 F3 1A 5C 00
+D4 53 52 00 1C 00 00 00 B0 04 02 00 BB 25 B2 FF DC 67 4F 00 00 00 00 00 00 00 00 00 00 00 00 00
+10 DD E7 7F 00 00 00 00 00 00 00 00 44 DA 4D 00 80 80 80 80 80 80 80 80 00 00 00 00 01 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 54 02 00 00 82 70 40 00 D1 BE 4F 00 53 C0 4F 00
+.  .  .  .  .  .  .  .    9  ‡    .  .  .  .  .  .  .  .  .  .  .  .  M  Ì  â  y  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  p  •  Á    .  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .
+R  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .  Ç  ”  O  .  ≠  3  R  .  õ  ÿ  [  .  ≤  ‚  [  .
+%  ¯  B  .  “  *  ]  .  K  Ë  [  .  g  ‰  [  .  î  .  .  .  î  .  .  .  û  p  @  .  .  ü  @  .
+ö  À  O  .  ¸  ó  R  .  »    A  .  @  O  R  .  ˘  V  Í  w  6  ì  g  .  ñ  Ÿ  [  .  Û  .  \  .
+‘  S  R  .  .  .  .  .  ∞  .  .  .  ª  %  ≤  ˇ  ‹  g  O  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  ›  Á    .  .  .  .  .  .  .  .  D  ⁄  M  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  T  .  .  .  Ç  p  @  .  —  æ  O  .  S  ¿  O  .
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 36
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+4FD382 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TBrush.Create][3318]
+5233AD [Vcl.Controls.pas][Vcl.Controls][Controls.TWinControl.Create][8408]
+5BD89B [Vcl.Forms.pas][Vcl.Forms][Forms.TScrollingWinControl.Create][3086]
+5BE2B2 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3625]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+5BE84B [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+5BE467 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3669]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TBrush
+
+The allocation number is: 594
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE7E1E0:
+DC 67 4F 00 00 00 00 00 00 00 00 00 00 00 00 00 10 DD E7 7F 00 00 00 00 00 00 00 00 44 DA 4D 00
+80 80 80 80 80 80 80 80 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+54 02 00 00 82 70 40 00 D1 BE 4F 00 53 C0 4F 00 E3 D4 4F 00 8F D5 4F 00 BF 33 52 00 9B D8 5B 00
+B2 E2 5B 00 25 F8 42 00 D2 2A 5D 00 4B E8 5B 00 94 10 00 00 94 10 00 00 9E 70 40 00 0E C0 4F 00
+6D C0 4F 00 E3 D4 4F 00 8F D5 4F 00 04 85 52 00 A2 0F 5C 00 F5 17 52 00 0C 5A 31 76 29 5C 31 76
+B9 58 31 76 24 00 00 00 10 DD E7 7F 3A CE 69 68 6C 8C 5E 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 C5 31 96 97 00 00 00 00 70 A5 E7 7F
+00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00 55 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00
+‹  g  O  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ›  Á    .  .  .  .  .  .  .  .  D  ⁄  M  .
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+T  .  .  .  Ç  p  @  .  —  æ  O  .  S  ¿  O  .  „  ‘  O  .  è  ’  O  .  ø  3  R  .  õ  ÿ  [  .
+≤  ‚  [  .  %  ¯  B  .  “  *  ]  .  K  Ë  [  .  î  .  .  .  î  .  .  .  û  p  @  .  .  ¿  O  .
+m  ¿  O  .  „  ‘  O  .  è  ’  O  .  .  Ö  R  .  ¢  .  \  .  ı  .  R  .  .  Z  1  v  )  \  1  v
+π  X  1  v  $  .  .  .  .  ›  Á    :  Œ  i  h  l  å  ^  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ≈  1  ñ  ó  .  .  .  .  p  •  Á  
+.  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .  U  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .
+
+--------------------------------2017/12/6 16:17:34--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 36
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+52FEFB [Vcl.Controls.pas][Vcl.Controls][Controls.TMargins.Create][16605]
+4FD58F [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TBrush.SetColor][3452]
+523426 [Vcl.Controls.pas][Vcl.Controls][Controls.TWinControl.Create][8421]
+5BD89B [Vcl.Forms.pas][Vcl.Forms][Forms.TScrollingWinControl.Create][3086]
+5BE2B2 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3625]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+5BE84B [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TPadding
+
+The allocation number is: 597
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE7E340:
+C0 31 51 00 F0 39 E0 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 B6 52 00 F0 39 E0 7F
+00 00 00 00 63 C2 FE F8 00 00 00 00 70 A5 E7 7F 00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00
+59 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00 E4 80 40 00 9A 87 40 00 73 FD 4F 00 9C 69 50 00
+D1 E4 5B 00 FD E2 5B 00 25 F8 42 00 D2 2A 5D 00 94 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 1C 00 00 00 00 00 00 00 DE 45 64 83 D4 AE 4F 00 01 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 21 BA 9B 7C 80 80 80 80 80 80 80 80 00 00 00 00 70 A5 E7 7F
+00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00 5C 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00
+¿  1  Q  .    9  ‡    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ∂  R  .    9  ‡  
+.  .  .  .  c  ¬  ˛  ¯  .  .  .  .  p  •  Á    .  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .
+Y  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .  ‰  Ä  @  .  ö  á  @  .  s  ˝  O  .  ú  i  P  .
+—  ‰  [  .  ˝  ‚  [  .  %  ¯  B  .  “  *  ]  .  î  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  ﬁ  E  d  É  ‘  Æ  O  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  !  ∫  õ  |  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  p  •  Á  
+.  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .  \  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .
+
+--------------------------------2017/12/6 16:17:35--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 36
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+4080E4 [System.pas][System][TObject.Create][16972]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+4FFD73 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TGraphic.Create][5317]
+50699C [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TIcon.Create][9958]
+5BE4D1 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.InitializeNewForm][3687]
+5BE2FD [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3636]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TIconImage
+
+The allocation number is: 601
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE7E3F0:
+D4 AE 4F 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 21 BA 9B 7C
+80 80 80 80 80 80 80 80 00 00 00 00 70 A5 E7 7F 00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00
+5C 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00 CA CF 4F 00 D6 D8 4F 00 20 E5 5B 00 FD E2 5B 00
+25 F8 42 00 D2 2A 5D 00 4B E8 5B 00 67 E4 5B 00 94 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 24 00 00 00 00 00 00 00 AD 4C 9A 83 C8 65 4F 00 00 00 00 00 94 E9 4F 00 A0 0F E1 7F
+A0 C3 E7 7F BC 0F E1 7F 04 00 00 00 00 00 00 00 00 00 00 00 52 B3 65 7C 00 00 00 00 70 A5 E7 7F
+00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00 5D 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00
+‘  Æ  O  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  !  ∫  õ  |
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  p  •  Á    .  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .
+\  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .     œ  O  .  ÷  ÿ  O  .     Â  [  .  ˝  ‚  [  .
+%  ¯  B  .  “  *  ]  .  K  Ë  [  .  g  ‰  [  .  î  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  $  .  .  .  .  .  .  .  ≠  L  ö  É  »  e  O  .  .  .  .  .  î  È  O  .  †  .  ·  
+†  √  Á    º  .  ·    .  .  .  .  .  .  .  .  .  .  .  .  R  ≥  e  |  .  .  .  .  p  •  Á  
+.  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .  ]  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .
+
+--------------------------------2017/12/6 16:17:35--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 36
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+4FCFCA [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TPen.Create][3006]
+4FD8D6 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TCanvas.Create][3715]
+5BE520 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.InitializeNewForm][3692]
+5BE2FD [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3636]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+5BE84B [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+5BE467 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3669]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TPen
+
+The allocation number is: 604
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE7E4A0:
+C8 65 4F 00 00 00 00 00 94 E9 4F 00 A0 0F E1 7F A0 C3 E7 7F BC 0F E1 7F 04 00 00 00 00 00 00 00
+00 00 00 00 52 B3 65 7C 00 00 00 00 70 A5 E7 7F 00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00
+5D 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00 82 D3 4F 00 F7 D8 4F 00 20 E5 5B 00 FD E2 5B 00
+25 F8 42 00 D2 2A 5D 00 4B E8 5B 00 67 E4 5B 00 94 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 1C 00 00 00 00 00 00 00 2F 51 9A 83 DC 67 4F 00 00 00 00 00 B4 E9 4F 00 A0 0F E1 7F
+10 DD E7 7F BC 0F E1 7F 00 00 00 00 D0 AE 65 7C 80 80 80 80 80 80 80 80 00 00 00 00 41 C7 E7 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 63 02 00 00 F1 70 40 00 65 C0 40 00 A6 C1 40 00
+»  e  O  .  .  .  .  .  î  È  O  .  †  .  ·    †  √  Á    º  .  ·    .  .  .  .  .  .  .  .
+.  .  .  .  R  ≥  e  |  .  .  .  .  p  •  Á    .  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .
+]  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .  Ç  ”  O  .  ˜  ÿ  O  .     Â  [  .  ˝  ‚  [  .
+%  ¯  B  .  “  *  ]  .  K  Ë  [  .  g  ‰  [  .  î  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  /  Q  ö  É  ‹  g  O  .  .  .  .  .  ¥  È  O  .  †  .  ·  
+.  ›  Á    º  .  ·    .  .  .  .  –  Æ  e  |  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  A  «  Á  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  c  .  .  .  Ò  p  @  .  e  ¿  @  .  ¶  ¡  @  .
+
+--------------------------------2017/12/6 16:17:35--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 36
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+4FD382 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TBrush.Create][3318]
+4FD8F7 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TCanvas.Create][3718]
+5BE520 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.InitializeNewForm][3692]
+5BE2FD [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3636]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+5BE84B [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+5BE467 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3669]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TBrush
+
+The allocation number is: 605
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE7E550:
+DC 67 4F 00 00 00 00 00 B4 E9 4F 00 A0 0F E1 7F 10 DD E7 7F BC 0F E1 7F 00 00 00 00 D0 AE 65 7C
+80 80 80 80 80 80 80 80 00 00 00 00 41 C7 E7 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+63 02 00 00 F1 70 40 00 65 C0 40 00 A6 C1 40 00 3F FB 4A 00 C0 F8 4A 00 89 F6 4A 00 C5 81 5C 00
+D6 A9 30 76 3A A8 30 76 DA C6 5B 00 73 6C 42 00 94 10 00 00 94 10 00 00 9E 70 40 00 00 C3 40 00
+2D BF 40 00 C8 7F 41 00 A6 C1 40 00 3F FB 4A 00 C9 F6 4A 00 66 F6 4A 00 13 81 40 00 7F 7B 5C 00
+13 81 40 00 18 00 00 00 00 00 00 00 15 88 E9 71 6C 8C 5E 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 EA 77 16 8E 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+‹  g  O  .  .  .  .  .  ¥  È  O  .  †  .  ·    .  ›  Á    º  .  ·    .  .  .  .  –  Æ  e  |
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  A  «  Á    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+c  .  .  .  Ò  p  @  .  e  ¿  @  .  ¶  ¡  @  .  ?  ˚  J  .  ¿  ¯  J  .  â  ˆ  J  .  ≈  Å  \  .
+÷  ©  0  v  :  ®  0  v  ⁄  ∆  [  .  s  l  B  .  î  .  .  .  î  .  .  .  û  p  @  .  .  √  @  .
+-  ø  @  .  »    A  .  ¶  ¡  @  .  ?  ˚  J  .  …  ˆ  J  .  f  ˆ  J  .  .  Å  @  .    {  \  .
+.  Å  @  .  .  .  .  .  .  .  .  .  .  à  È  q  l  å  ^  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Í  w  .  é  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+
+--------------------------------2017/12/6 16:17:35--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 52
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+4FC726 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TFont.Create][2433]
+416E86 [FastMM4.pas][FastMM4][CalculateHeaderCheckSum$qqrp29Fastmm4.TFullDebugBlockHeader][8215]
+51E912 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Create][5369]
+523390 [Vcl.Controls.pas][Vcl.Controls][Controls.TWinControl.Create][8396]
+5BD89B [Vcl.Forms.pas][Vcl.Forms][Forms.TScrollingWinControl.Create][3086]
+5BE2B2 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3625]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TFont
+
+The allocation number is: 588
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE84280:
+48 62 4F 00 00 00 00 00 84 FF 51 00 F0 39 E0 7F 30 99 E2 7F 00 00 00 00 08 00 00 FF 60 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 4C DB 5D 79 80 80 80 80 80 80 80 80 00 00 00 00 A0 18 E8 7F
+00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00 5B 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00
+26 C7 4F 00 B5 D8 4F 00 20 E5 5B 00 FD E2 5B 00 25 F8 42 00 D2 2A 5D 00 4B E8 5B 00 67 E4 5B 00
+94 10 00 00 94 10 00 00 9E 70 40 00 99 7F 40 00 E5 87 40 00 E4 2D 4D 00 13 81 40 00 F5 F2 4A 00
+27 F4 4A 00 43 E3 5B 00 D1 98 5C 00 5E B5 5D 00 44 87 EF 74 2C 00 00 00 40 E5 4A 00 48 5F D0 FB
+48 62 4F 00 00 00 00 00 74 E9 4F 00 A0 0F E1 7F 30 99 E2 7F BC 0F E1 7F 08 00 00 FF 60 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 B7 A0 2F 04 80 80 80 80 80 80 80 80 00 00 00 00 A0 18 E8 7F
+H  b  O  .  .  .  .  .  Ñ  ˇ  Q  .    9  ‡    0  ô  ‚    .  .  .  .  .  .  .  ˇ  `  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  L  €  ]  y  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  †  .  Ë  
+.  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .  [  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .
+&  «  O  .  µ  ÿ  O  .     Â  [  .  ˝  ‚  [  .  %  ¯  B  .  “  *  ]  .  K  Ë  [  .  g  ‰  [  .
+î  .  .  .  î  .  .  .  û  p  @  .  ô    @  .  Â  á  @  .  ‰  -  M  .  .  Å  @  .  ı  Ú  J  .
+'  Ù  J  .  C  „  [  .  —  ò  \  .  ^  µ  ]  .  D  á  Ô  t  ,  .  .  .  @  Â  J  .  H  _  –  ˚
+H  b  O  .  .  .  .  .  t  È  O  .  †  .  ·    0  ô  ‚    º  .  ·    .  .  .  ˇ  `  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  ∑  †  /  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  †  .  Ë  
+
+--------------------------------2017/12/6 16:17:35--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 52
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+4FC726 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TFont.Create][2433]
+4FD8B5 [Vcl.Graphics.pas][Vcl.Graphics][Graphics.TCanvas.Create][3712]
+5BE520 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.InitializeNewForm][3692]
+5BE2FD [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3636]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+5BE84B [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+5BE467 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3669]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TFont
+
+The allocation number is: 603
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE84340:
+48 62 4F 00 00 00 00 00 74 E9 4F 00 A0 0F E1 7F 30 99 E2 7F BC 0F E1 7F 08 00 00 FF 60 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 B7 A0 2F 04 80 80 80 80 80 80 80 80 00 00 00 00 A0 18 E8 7F
+00 00 00 00 00 00 00 00 7C 7D 41 00 00 00 00 00 5F 02 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00
+1B B7 5C 00 76 E5 5B 00 FD E2 5B 00 25 F8 42 00 D2 2A 5D 00 4B E8 5B 00 67 E4 5B 00 08 88 40 00
+94 10 00 00 94 10 00 00 9E 70 40 00 99 7F 40 00 E5 87 40 00 3C C3 4C 00 13 81 40 00 A2 F2 4A 00
+27 F4 4A 00 43 E3 5B 00 D1 98 5C 00 5E B5 5D 00 44 87 EF 74 34 00 00 00 A8 03 4A 00 1F B3 CC FB
+DC 4F 5B 00 F0 39 E0 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+A0 54 5C 00 F0 39 E0 7F 00 00 00 00 00 00 00 00 00 00 00 00 E0 4C 33 04 00 00 00 00 01 33 E8 7F
+H  b  O  .  .  .  .  .  t  È  O  .  †  .  ·    0  ô  ‚    º  .  ·    .  .  .  ˇ  `  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  ∑  †  /  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  †  .  Ë  
+.  .  .  .  .  .  .  .  |  }  A  .  .  .  .  .  _  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .
+.  ∑  \  .  v  Â  [  .  ˝  ‚  [  .  %  ¯  B  .  “  *  ]  .  K  Ë  [  .  g  ‰  [  .  .  à  @  .
+î  .  .  .  î  .  .  .  û  p  @  .  ô    @  .  Â  á  @  .  <  √  L  .  .  Å  @  .  ¢  Ú  J  .
+'  Ù  J  .  C  „  [  .  —  ò  \  .  ^  µ  ]  .  D  á  Ô  t  4  .  .  .  ®  .  J  .  .  ≥  Ã  ˚
+‹  O  [  .    9  ‡    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+†  T  \  .    9  ‡    .  .  .  .  .  .  .  .  .  .  .  .  ‡  L  3  .  .  .  .  .  .  3  Ë  
+
+--------------------------------2017/12/6 16:17:35--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 52
+
+This block was allocated by thread 0x1094, and the stack trace (return addresses) at the time was:
+407082 [System.pas][System][@GetMem$qqri][4749]
+407F7B [System.pas][System][TObject.NewInstance][16913]
+40879A [System.pas][System][@ClassCreate$qqrpvzc][18246]
+5CB71B [Vcl.Forms.pas][Vcl.Forms][Forms.TGlassFrame.Create][11971]
+5BE576 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.InitializeNewForm][3700]
+5BE2FD [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3636]
+42F825 [System.SysUtils.pas][System.SysUtils][Sysutils.TThreadLocalCounter.HashIndex][26242]
+5D2AD2 [Unit1.pas][Unit1][TForm1.FormCreate][26]
+5BE84B [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3786]
+5BE467 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3669]
+408808 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][18295]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TGlassFrame
+
+The allocation number is: 607
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE84400:
+DC 4F 5B 00 F0 39 E0 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+A0 54 5C 00 F0 39 E0 7F 00 00 00 00 00 00 00 00 00 00 00 00 E0 4C 33 04 00 00 00 00 01 33 E8 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 AE 01 00 00 82 70 40 00 7B 7F 40 00 9A 87 40 00
+33 C1 4C 00 F9 56 EA 77 86 55 4C 00 46 5D 4C 00 75 DB 4A 00 BA FC 51 00 21 BE 4B 00 84 75 4B 00
+94 10 00 00 94 10 00 00 99 7F 40 00 E5 87 40 00 3C C3 4C 00 13 81 40 00 18 52 4C 00 BF 52 4C 00
+FA C6 5B 00 73 6C 42 00 93 9C 40 00 6F B5 5D 00 44 87 EF 74 34 00 00 00 A8 03 4A 00 AC B6 CA 72
+6C 8C 5E 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 53 49 35 8D 00 00 00 00 C1 45 E8 7F
+‹  O  [  .    9  ‡    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+†  T  \  .    9  ‡    .  .  .  .  .  .  .  .  .  .  .  .  ‡  L  3  .  .  .  .  .  .  3  Ë  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Æ  .  .  .  Ç  p  @  .  {    @  .  ö  á  @  .
+3  ¡  L  .  ˘  V  Í  w  Ü  U  L  .  F  ]  L  .  u  €  J  .  ∫  ¸  Q  .  !  æ  K  .  Ñ  u  K  .
+î  .  .  .  î  .  .  .  ô    @  .  Â  á  @  .  <  √  L  .  .  Å  @  .  .  R  L  .  ø  R  L  .
+˙  ∆  [  .  s  l  B  .  ì  ú  @  .  o  µ  ]  .  D  á  Ô  t  4  .  .  .  ®  .  J  .  ¨  ∂     r
+l  å  ^  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  S  I  5  ç  .  .  .  .  ¡  E  Ë  
+
+--------------------------------2017/12/6 16:17:35--------------------------------
+Diese Anwendung hat Speicher verloren. Die Grˆﬂen von kleinen Speicherblˆcken, die verlorengegangen sind, betragen (ausgenommen erwartete Speicherlecks, die durch Zeiger registriert wurden):
+
+13 - 20 Bytes: TList x 1
+21 - 36 Bytes: TPen x 1, TIconImage x 1, TPadding x 1, TBrush x 2, TTouchManager x 1, TMargins x 1, TSizeConstraints x 1, Unbekannt x 3
+37 - 52 Bytes: TGlassFrame x 1, TFont x 2
+53 - 68 Bytes: TIcon x 1
+69 - 84 Bytes: TControlScrollBar x 2
+101 - 116 Bytes: TControlCanvas x 1
+149 - 164 Bytes: Unbekannt x 1
+917 - 1012 Bytes: TForm x 1
+
+Notiz: Speicherleck-Details werden in eine Textdatei geschrieben, die sich im selben Verzeichnis wie diese Anwendung befindet. Um diese Speicherleck-‹berpr¸fung abzuschalten, kommentieren Sie "EnableMemoryLeakReporting" aus.

@@ -1,0 +1,37 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = AddressTranslation.exe Digits.exe Location.exe \
+  Park.exe Pickup.exe Transfer.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+AddressTranslation.exe: AddressTranslation\AddressTranslation.dpr
+  $(DCC)
+
+Digits.exe: Digits\Digits.dpr
+  $(DCC)
+
+Location.exe: Location\Location.dpr
+  $(DCC)
+
+Park.exe: Park\Park.dpr
+  $(DCC)
+  
+Pickup.exe: Pickup\Pickup.dpr
+  $(DCC)
+  
+Transfer.exe: Transfer\Transfer.dpr
+  $(DCC)
+
+
+

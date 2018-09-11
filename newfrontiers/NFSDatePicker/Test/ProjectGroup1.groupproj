@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{CFD13B43-9170-4589-B88A-352FF95F05AF}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="NFSDatePickerTest.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="..\Package\NFSDatePicker_Package.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="NFSDatePickerTest">
+			<MSBuild Projects="NFSDatePickerTest.dproj"/>
+		</Target>
+		<Target Name="NFSDatePickerTest:Clean">
+			<MSBuild Projects="NFSDatePickerTest.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="NFSDatePickerTest:Make">
+			<MSBuild Projects="NFSDatePickerTest.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="NFSDatePicker_Package">
+			<MSBuild Projects="..\Package\NFSDatePicker_Package.dproj"/>
+		</Target>
+		<Target Name="NFSDatePicker_Package:Clean">
+			<MSBuild Projects="..\Package\NFSDatePicker_Package.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="NFSDatePicker_Package:Make">
+			<MSBuild Projects="..\Package\NFSDatePicker_Package.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="NFSDatePickerTest;NFSDatePicker_Package"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="NFSDatePickerTest:Clean;NFSDatePicker_Package:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="NFSDatePickerTest:Make;NFSDatePicker_Package:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

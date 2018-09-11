@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{645D751F-3C6E-47BC-BE43-5BA041B207B9}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="pNfsEditBtn.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="..\..\NFSPackage\NFSPackage.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="pNfsEditBtn">
+			<MSBuild Projects="pNfsEditBtn.dproj"/>
+		</Target>
+		<Target Name="pNfsEditBtn:Clean">
+			<MSBuild Targets="Clean" Projects="pNfsEditBtn.dproj"/>
+		</Target>
+		<Target Name="pNfsEditBtn:Make">
+			<MSBuild Targets="Make" Projects="pNfsEditBtn.dproj"/>
+		</Target>
+		<Target Name="NFSPackage">
+			<MSBuild Projects="..\..\NFSPackage\NFSPackage.dproj"/>
+		</Target>
+		<Target Name="NFSPackage:Clean">
+			<MSBuild Targets="Clean" Projects="..\..\NFSPackage\NFSPackage.dproj"/>
+		</Target>
+		<Target Name="NFSPackage:Make">
+			<MSBuild Targets="Make" Projects="..\..\NFSPackage\NFSPackage.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="pNfsEditBtn;NFSPackage"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="pNfsEditBtn:Clean;NFSPackage:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="pNfsEditBtn:Make;NFSPackage:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

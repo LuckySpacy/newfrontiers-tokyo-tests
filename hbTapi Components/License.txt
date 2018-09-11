@@ -1,0 +1,106 @@
+HÄGER+BUSCH - HBTAPI COMPONENTS
+
+HÄGER+BUSCH LICENSE STATEMENT AND LIMITED WARRANTY
+
+This license statement and limited warranty constitutes a legal
+agreement ("License Agreement") between you (either as an individual
+or a single entity) and Häger+Busch GbR ("hbTapi Components for Delphi
+- hbTapi Components") for the software product ("Software") identified
+above, including any software, media, and accompanying on-line or
+printed documentation.
+
+By installing, copying, or otherwise using the software, you aggree
+to be bound by all the terms and conditions of the license agreement.
+If you do not understand or do not accept these terms, or your local
+regulations prohibit "after sale" license agreements or limited
+disclaimers, you must stop using this product immediately. If you are
+the original purchaser of the Software and you do not agree with the
+terms and conditions of the License Agreement, promptly return the
+unused Software to the place from which you obtained it.
+
+Häger+Busch GbR reserves all other rights and restrictions not
+specifically granted in this license.
+
+UNREGISTERED USER - TERMS APPLICABLE WHEN LICENSE FEES NOT (YET) PAID
+
+You are permitted to install the Software on as many computers as you
+like to evaluate the hbTapi Components. Write and compile your own
+application programs using the Software and evaluate the hbTapi
+Components in your design environment.
+
+You are not permitted to reproduce and distribute application
+executables using trial versions of Häger+Busch hbTapi Components for
+Delphi. After the eavaluation period you are required to either
+(a) Destroy the original and all copies in whatever form of all
+software and documentation and help files supplied as part of
+the Häger+Busch hbTapi Components package or (b) Purchase a full
+licence directly from Häger+Busch GbR or an authorized agent thereof.
+You are not permitted to circumvent in any way the display of the
+dialog boxes on initialization including the illegal use of an
+evaluation version.
+
+REGISTERED USER - TERMS APPLICABLE WHEN LICENSE FEES PAID
+
+A registered user of the Häger+Busch hbTapi Components must have a
+fully paid up licence key provided by Häger+Busch GbR or authorized
+agent thereof. The registered user undertakes not to divulge the
+licence key to any other party and to take necessary care to prevent
+disclosure so as to prevent loss to Häger+Busch GbR for the
+unauthorized use of the Häger+Busch hbTapi Components. As a registered
+user you have the right to use Häger+Busch hbTapi Components in your
+development environment on one machine only or on as many machines as
+you have purchased licence keys.
+
+You have the royalty free right to distribute your own application
+executables develped with the Häger+Busch hbTapi Components.
+Häger+Busch hbTapi Components may not be used as a constituent control
+of a compound control nor may it be used in any ActiveX server that
+allows the use in anyway by a third party software application unless
+a separate licence for each application is purchased.
+
+You may distribute our components free of any royalty charge with your
+applications but you must purchase one copy for every developer that
+will be working on the development of your application using hbTapiComponent.
+There is no limit to the number of applications that you can develop
+as long as each developer who has hbTapi Components installed owns a licence.
+
+LIMITED WARRANTY AND DISCLAIMER OF WARRANTY
+
+Häger+Busch warrants that the Software, as updated and when properly
+used, will perform substantially as described in the accompanying
+documentation for a period of ninety (90) days from the date of receipt.
+
+Häger+Busch makes no representation or warranty that the software or
+documentation are "error-free", or meet any user's particular standards,
+requirements, or needs. The entire risk as to the quality and performance
+of the Software in your environment is borne by you. Should the Software
+prove defective, you and not Häger+Busch assume the entire cost of any
+service and repair.  All files are provided "as is", without warranty of
+any kind.
+
+Häger+Busch warrants the physical media (if any) provided by Häger+Busch
+to be free of defects in materials and workmanship for a period of thirty
+(30) days from the date of receipt. Upon notification within the warranty
+period of such defects, Häger+Busch will replace the defective media.
+
+Häger+Busch provides no warranty at all to any person, other than the
+Limited Warranty provided to the original paid licensee of this Software.
+
+CHANGING TERMS AND CONDITIONS OF THIS AGREEMENT
+
+Any variation to the terms of this agreement shall only be valid if made
+and delivered by Häger+Busch. If you do not agree to any clause of this
+agreement you may ask for explanations from Häger+Busch. However, this
+doesn't authorize you to consider this agreement nullified.
+
+
+Häger+Busch GbR
+Am Mohrenshof 11a
+28277 Bremen
+Germanny
+
+Internet: http://www.hbTapi.com
+eMail   : info@hbTapi.com
+
+
+

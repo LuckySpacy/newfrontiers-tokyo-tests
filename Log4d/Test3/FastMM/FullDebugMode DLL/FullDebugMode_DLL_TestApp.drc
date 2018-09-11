@@ -1,0 +1,233 @@
+/* VER320
+  Generiert vom Embarcadero Delphi Pascal Compiler,
+  weil -GD oder --drc an den Compiler übergeben wurde.
+
+  Diese Datei enthält vom Compiler erzeugte Ressourcen, die an die ausführbare Datei gebunden wurden. Wenn diese Datei leer ist, dann wurden keine vom Compiler generierten Ressourcen an die erzeugte ausführbare Datei gebunden.
+*/
+
+#define System_RTLConsts_SWindowsVista 65424
+#define System_RTLConsts_SWindowsServer2008 65425
+#define System_RTLConsts_SWindows7 65426
+#define System_RTLConsts_SWindowsServer2008R2 65427
+#define System_RTLConsts_SWindows2000 65428
+#define System_RTLConsts_SWindowsXP 65429
+#define System_RTLConsts_SWindowsServer2003 65430
+#define System_RTLConsts_SWindowsServer2003R2 65431
+#define System_RTLConsts_SWindowsServer2012 65432
+#define System_RTLConsts_SWindowsServer2012R2 65433
+#define System_RTLConsts_SWindowsServer2016 65434
+#define System_RTLConsts_SWindows8 65435
+#define System_RTLConsts_SWindows8Point1 65436
+#define System_RTLConsts_SWindows10 65437
+#define System_SysConst_SShortDayNameFri 65440
+#define System_SysConst_SShortDayNameSat 65441
+#define System_SysConst_SLongDayNameSun 65442
+#define System_SysConst_SLongDayNameMon 65443
+#define System_SysConst_SLongDayNameTue 65444
+#define System_SysConst_SLongDayNameWed 65445
+#define System_SysConst_SLongDayNameThu 65446
+#define System_SysConst_SLongDayNameFri 65447
+#define System_SysConst_SLongDayNameSat 65448
+#define System_RTLConsts_SInvalidFileName 65449
+#define System_RTLConsts_SFileNotFound 65450
+#define System_RTLConsts_SVersionStr 65451
+#define System_RTLConsts_SSPVersionStr 65452
+#define System_RTLConsts_SVersion32 65453
+#define System_RTLConsts_SVersion64 65454
+#define System_RTLConsts_SWindows 65455
+#define System_SysConst_SLongMonthNameFeb 65456
+#define System_SysConst_SLongMonthNameMar 65457
+#define System_SysConst_SLongMonthNameApr 65458
+#define System_SysConst_SLongMonthNameMay 65459
+#define System_SysConst_SLongMonthNameJun 65460
+#define System_SysConst_SLongMonthNameJul 65461
+#define System_SysConst_SLongMonthNameAug 65462
+#define System_SysConst_SLongMonthNameSep 65463
+#define System_SysConst_SLongMonthNameOct 65464
+#define System_SysConst_SLongMonthNameNov 65465
+#define System_SysConst_SLongMonthNameDec 65466
+#define System_SysConst_SShortDayNameSun 65467
+#define System_SysConst_SShortDayNameMon 65468
+#define System_SysConst_SShortDayNameTue 65469
+#define System_SysConst_SShortDayNameWed 65470
+#define System_SysConst_SShortDayNameThu 65471
+#define System_SysConst_SAssertError 65472
+#define System_SysConst_SAbstractError 65473
+#define System_SysConst_SModuleAccessViolation 65474
+#define System_SysConst_SShortMonthNameJan 65475
+#define System_SysConst_SShortMonthNameFeb 65476
+#define System_SysConst_SShortMonthNameMar 65477
+#define System_SysConst_SShortMonthNameApr 65478
+#define System_SysConst_SShortMonthNameMay 65479
+#define System_SysConst_SShortMonthNameJun 65480
+#define System_SysConst_SShortMonthNameJul 65481
+#define System_SysConst_SShortMonthNameAug 65482
+#define System_SysConst_SShortMonthNameSep 65483
+#define System_SysConst_SShortMonthNameOct 65484
+#define System_SysConst_SShortMonthNameNov 65485
+#define System_SysConst_SShortMonthNameDec 65486
+#define System_SysConst_SLongMonthNameJan 65487
+#define System_SysConst_SWriteAccess 65488
+#define System_SysConst_SExecuteAccess 65489
+#define System_SysConst_SInvalidAccess 65490
+#define System_SysConst_SVarArrayCreate 65491
+#define System_SysConst_SVarArrayBounds 65492
+#define System_SysConst_SInvalidVarCast 65493
+#define System_SysConst_SInvalidVarOp 65494
+#define System_SysConst_SVarInvalid 65495
+#define System_SysConst_SExternalException 65496
+#define System_SysConst_SAssertionFailed 65497
+#define System_SysConst_SIntfCastError 65498
+#define System_SysConst_SSafecallException 65499
+#define System_SysConst_SMonitorLockException 65500
+#define System_SysConst_SNoMonitorSupportException 65501
+#define System_SysConst_SNotImplemented 65502
+#define System_SysConst_SObjectDisposed 65503
+#define System_SysConst_SZeroDivide 65504
+#define System_SysConst_SOverflow 65505
+#define System_SysConst_SUnderflow 65506
+#define System_SysConst_SInvalidPointer 65507
+#define System_SysConst_SInvalidCast 65508
+#define System_SysConst_SAccessViolationArg3 65509
+#define System_SysConst_SAccessViolationNoArg 65510
+#define System_SysConst_SStackOverflow 65511
+#define System_SysConst_SControlC 65512
+#define System_SysConst_SPrivilege 65513
+#define System_SysConst_SException 65514
+#define System_SysConst_SExceptTitle 65515
+#define System_SysConst_SInvalidFormat 65516
+#define System_SysConst_SArgumentMissing 65517
+#define System_SysConst_SDispatchError 65518
+#define System_SysConst_SReadAccess 65519
+#define System_SysConst_SUnknown 65520
+#define System_SysConst_SInvalidInteger 65521
+#define System_SysConst_SInvalidTimeStamp 65522
+#define System_SysConst_STimeEncodeError 65523
+#define System_SysConst_SDateEncodeError 65524
+#define System_SysConst_SOutOfMemory 65525
+#define System_SysConst_SInOutError 65526
+#define System_SysConst_STooManyOpenFiles 65527
+#define System_SysConst_SAccessDenied 65528
+#define System_SysConst_SEndOfFile 65529
+#define System_SysConst_SDiskFull 65530
+#define System_SysConst_SInvalidInput 65531
+#define System_SysConst_SDivByZero 65532
+#define System_SysConst_SRangeError 65533
+#define System_SysConst_SIntOverflow 65534
+#define System_SysConst_SInvalidOp 65535
+STRINGTABLE
+BEGIN
+	System_RTLConsts_SWindowsVista,	L"Windows Vista"
+	System_RTLConsts_SWindowsServer2008,	L"Windows Server 2008"
+	System_RTLConsts_SWindows7,	L"Windows 7"
+	System_RTLConsts_SWindowsServer2008R2,	L"Windows Server 2008 R2"
+	System_RTLConsts_SWindows2000,	L"Windows 2000"
+	System_RTLConsts_SWindowsXP,	L"Windows XP"
+	System_RTLConsts_SWindowsServer2003,	L"Windows Server 2003"
+	System_RTLConsts_SWindowsServer2003R2,	L"Windows Server 2003 R2"
+	System_RTLConsts_SWindowsServer2012,	L"Windows Server 2012"
+	System_RTLConsts_SWindowsServer2012R2,	L"Windows Server 2012 R2"
+	System_RTLConsts_SWindowsServer2016,	L"Windows Server 2016"
+	System_RTLConsts_SWindows8,	L"Windows 8"
+	System_RTLConsts_SWindows8Point1,	L"Windows 8.1"
+	System_RTLConsts_SWindows10,	L"Windows 10"
+	System_SysConst_SShortDayNameFri,	L"Fr"
+	System_SysConst_SShortDayNameSat,	L"Sa"
+	System_SysConst_SLongDayNameSun,	L"Sonntag"
+	System_SysConst_SLongDayNameMon,	L"Montag"
+	System_SysConst_SLongDayNameTue,	L"Dienstag"
+	System_SysConst_SLongDayNameWed,	L"Mittwoch"
+	System_SysConst_SLongDayNameThu,	L"Donnerstag"
+	System_SysConst_SLongDayNameFri,	L"Freitag"
+	System_SysConst_SLongDayNameSat,	L"Samstag"
+	System_RTLConsts_SInvalidFileName,	L"Ung\x00fcltiger Dateiname - %s"
+	System_RTLConsts_SFileNotFound,	L"Die angegebene Datei wurde nicht gefunden"
+	System_RTLConsts_SVersionStr,	L"%s (Version %d.%d, Build %d, %5:s)"
+	System_RTLConsts_SSPVersionStr,	L"%s Service Pack %4:d (Version %1:d.%2:d, Build %3:d, %5:s)"
+	System_RTLConsts_SVersion32,	L"32-Bit-Edition"
+	System_RTLConsts_SVersion64,	L"64-Bit-Edition"
+	System_RTLConsts_SWindows,	L"Windows"
+	System_SysConst_SLongMonthNameFeb,	L"Februar"
+	System_SysConst_SLongMonthNameMar,	L"M\x00e4rz"
+	System_SysConst_SLongMonthNameApr,	L"April"
+	System_SysConst_SLongMonthNameMay,	L"Mai"
+	System_SysConst_SLongMonthNameJun,	L"Juni"
+	System_SysConst_SLongMonthNameJul,	L"Juli"
+	System_SysConst_SLongMonthNameAug,	L"August"
+	System_SysConst_SLongMonthNameSep,	L"September"
+	System_SysConst_SLongMonthNameOct,	L"Oktober"
+	System_SysConst_SLongMonthNameNov,	L"November"
+	System_SysConst_SLongMonthNameDec,	L"Dezember"
+	System_SysConst_SShortDayNameSun,	L"So"
+	System_SysConst_SShortDayNameMon,	L"Mo"
+	System_SysConst_SShortDayNameTue,	L"Di"
+	System_SysConst_SShortDayNameWed,	L"Mi"
+	System_SysConst_SShortDayNameThu,	L"Do"
+	System_SysConst_SAssertError,	L"%s (%s, Zeile %d)"
+	System_SysConst_SAbstractError,	L"Abstrakter Fehler"
+	System_SysConst_SModuleAccessViolation,	L"Zugriffsverletzung bei Adresse %p in Modul '%s'. %s von Adresse %p"
+	System_SysConst_SShortMonthNameJan,	L"Jan"
+	System_SysConst_SShortMonthNameFeb,	L"Feb"
+	System_SysConst_SShortMonthNameMar,	L"M\x00e4r"
+	System_SysConst_SShortMonthNameApr,	L"Apr"
+	System_SysConst_SShortMonthNameMay,	L"Mai"
+	System_SysConst_SShortMonthNameJun,	L"Jun"
+	System_SysConst_SShortMonthNameJul,	L"Jul"
+	System_SysConst_SShortMonthNameAug,	L"Aug"
+	System_SysConst_SShortMonthNameSep,	L"Sep"
+	System_SysConst_SShortMonthNameOct,	L"Okt"
+	System_SysConst_SShortMonthNameNov,	L"Nov"
+	System_SysConst_SShortMonthNameDec,	L"Dez"
+	System_SysConst_SLongMonthNameJan,	L"Januar"
+	System_SysConst_SWriteAccess,	L"Schreiben"
+	System_SysConst_SExecuteAccess,	L"Ausf\x00fchrung"
+	System_SysConst_SInvalidAccess,	L"Ung\x00fcltiger Zugriff"
+	System_SysConst_SVarArrayCreate,	L"Fehler beim Erzeugen von Variante oder sicherem Array"
+	System_SysConst_SVarArrayBounds,	L"Variante oder sicheres Array-Index au\x00dferhalb des g\x00fcltigen Bereichs"
+	System_SysConst_SInvalidVarCast,	L"Ung\x00fcltige Varianten-Typumwandlung"
+	System_SysConst_SInvalidVarOp,	L"Ung\x00fcltige Variantenoperation"
+	System_SysConst_SVarInvalid,	L"Ung\x00fcltiges Argument"
+	System_SysConst_SExternalException,	L"Externe Exception %x"
+	System_SysConst_SAssertionFailed,	L"Auswertung von assert fehlgeschlagen"
+	System_SysConst_SIntfCastError,	L"Interface nicht unterst\x00fctzt"
+	System_SysConst_SSafecallException,	L"Exception in safecall-Methode"
+	System_SysConst_SMonitorLockException,	L"Kein Eigent\x00fcmer der Objektsperre"
+	System_SysConst_SNoMonitorSupportException,	L"Unterst\x00fctzungsfunktion f\x00fcr Monitor nicht initialisiert"
+	System_SysConst_SNotImplemented,	L"Feature nicht implementiert"
+	System_SysConst_SObjectDisposed,	L"Methode f\x00fcr freigegebenes Objekt aufgerufen"
+	System_SysConst_SZeroDivide,	L"Gleitkommadivision durch Null"
+	System_SysConst_SOverflow,	L"Gleitkomma\x00fcberlauf"
+	System_SysConst_SUnderflow,	L"Gleitkommaunterlauf"
+	System_SysConst_SInvalidPointer,	L"Ung\x00fcltige Zeigeroperation"
+	System_SysConst_SInvalidCast,	L"Ung\x00fcltige Typumwandlung"
+	System_SysConst_SAccessViolationArg3,	L"Zugriffsverletzung bei Adresse %p. %s von Adresse %p"
+	System_SysConst_SAccessViolationNoArg,	L"Zugriffsverletzung"
+	System_SysConst_SStackOverflow,	L"Stack-\x00dcberlauf"
+	System_SysConst_SControlC,	L"Strg+C gedr\x00fcckt"
+	System_SysConst_SPrivilege,	L"Privilegierte Anweisung"
+	System_SysConst_SException,	L"Exception %s in Modul %s bei %p.\r\n%s%s\r\n"
+	System_SysConst_SExceptTitle,	L"Anwendungsfehler"
+	System_SysConst_SInvalidFormat,	L"Format '%s' ung\x00fcltig oder nicht kompatibel mit Argument"
+	System_SysConst_SArgumentMissing,	L"Kein Argument f\x00fcr Format '%s'"
+	System_SysConst_SDispatchError,	L"Variant-Methodenaufruf nicht unterst\x00fctzt"
+	System_SysConst_SReadAccess,	L"Lesen"
+	System_SysConst_SUnknown,	L"<unbekannt>"
+	System_SysConst_SInvalidInteger,	L"'%s' ist kein g\x00fcltiger Integerwert"
+	System_SysConst_SInvalidTimeStamp,	L"'%d.%d' ist kein g\x00fcltiger Zeitstempel"
+	System_SysConst_STimeEncodeError,	L"Ung\x00fcltiges Argument zum Codieren der Uhrzeit"
+	System_SysConst_SDateEncodeError,	L"Ung\x00fcltiges Argument zum Codieren des Datums"
+	System_SysConst_SOutOfMemory,	L"Zu wenig Arbeitsspeicher"
+	System_SysConst_SInOutError,	L"E/A-Fehler %d"
+	System_SysConst_STooManyOpenFiles,	L"Zu viele ge\x00f6ffnete Dateien"
+	System_SysConst_SAccessDenied,	L"Dateizugriff verweigert"
+	System_SysConst_SEndOfFile,	L"Versuch hinter dem Dateiende zu lesen"
+	System_SysConst_SDiskFull,	L"Zu wenig Speicherplatz"
+	System_SysConst_SInvalidInput,	L"Ung\x00fcltige numerische Eingabe"
+	System_SysConst_SDivByZero,	L"Division durch Null"
+	System_SysConst_SRangeError,	L"Fehler bei Bereichspr\x00fcfung"
+	System_SysConst_SIntOverflow,	L"Integer\x00fcberlauf"
+	System_SysConst_SInvalidOp,	L"Ung\x00fcltige Gleitkommaoperation"
+END
+
+/* D:\Projekt\Tokyo\FastMM\FullDebugMode DLL\FullDebugMode_DLL_TestApp.res */
+/* D:\Projekt\Tokyo\FastMM\FullDebugMode DLL\FullDebugMode_DLL_TestApp.drf */
