@@ -1,9 +1,10 @@
-*.local
+﻿*.local
 *.stat
 *.identcache
+*.exe
+*.dcu
 Android/Test 1/__history/
 Android/Test 1/Win32/Debug/Project1.exe
-*.dcu
 Backup/Test 1/__history/
 Backup/Test 1/Win32/Debug/Project2.exe
 CheckListEdit/Test 1/__history/Unit1.dfm.~1~
@@ -75,4 +76,11 @@ ZwischenProgrammeDatenTauschen/Test 1/Prg1/Prg1.exe
 Codesite/Test1/Win32/Debug/Project1.exe
 FileAge/Test1/Win32/Debug/Project1.exe
 hbTapi Components/unins000.exe
-*.exe
+Projekte/nfsBackup/Allgemein/__history/
+Projekte/nfsBackup/Backup/Datenmodul/__history/
+Projekte/nfsBackup/Backup/Objekt/__history/
+Projekte/nfsBackup/Zeitplaner/__history/
+Projekte/nfsBackup/Zeitplaner/Formular/__history/
+Projekte/nfsBackup/Zeitplaner/bugreport.txt
+Projekte/nfsBackup/Zeitplaner/nfsBackup_kopie.dat
+Projekte/nfsBackup/Zeitplaner/LogFiles/
