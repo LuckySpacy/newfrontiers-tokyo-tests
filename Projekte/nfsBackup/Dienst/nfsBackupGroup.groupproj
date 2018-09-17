@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{48C89B7B-68EE-487C-9544-239499E641EF}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="nfsBackupdienst.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Zeitplaner\NFSBackupUI.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="nfsBackupdienst">
+        <MSBuild Projects="nfsBackupdienst.dproj"/>
+    </Target>
+    <Target Name="nfsBackupdienst:Clean">
+        <MSBuild Projects="nfsBackupdienst.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="nfsBackupdienst:Make">
+        <MSBuild Projects="nfsBackupdienst.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="NFSBackupUI">
+        <MSBuild Projects="..\Zeitplaner\NFSBackupUI.dproj"/>
+    </Target>
+    <Target Name="NFSBackupUI:Clean">
+        <MSBuild Projects="..\Zeitplaner\NFSBackupUI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="NFSBackupUI:Make">
+        <MSBuild Projects="..\Zeitplaner\NFSBackupUI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="nfsBackupdienst;NFSBackupUI"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="nfsBackupdienst:Clean;NFSBackupUI:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="nfsBackupdienst:Make;NFSBackupUI:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

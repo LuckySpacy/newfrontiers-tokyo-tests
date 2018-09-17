@@ -1,4 +1,4 @@
-﻿*.local
+*.local
 *.stat
 *.identcache
 *.exe
@@ -84,3 +84,7 @@ Projekte/nfsBackup/Zeitplaner/Formular/__history/
 Projekte/nfsBackup/Zeitplaner/bugreport.txt
 Projekte/nfsBackup/Zeitplaner/nfsBackup_kopie.dat
 Projekte/nfsBackup/Zeitplaner/LogFiles/
+Projekte/nfsBackup/Dienst/bugreport.txt
+Projekte/nfsBackup/Dienst/__history/
+Projekte/nfsBackup/Dienst/__recovery/
+Projekte/nfsBackup/Dienst/LogFiles/

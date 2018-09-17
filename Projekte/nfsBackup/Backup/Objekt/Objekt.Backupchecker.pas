@@ -57,11 +57,14 @@ begin
   fTimerEnabled := false;
   fCheckTimer := TTimer.Create(nil);
   //fCheckTimer.Interval := 600000; // Alle 10 Minuten
+  //fCheckTimer.Interval := 1000; //
+  AllgemeinObj.Log.DebugInfo('Inifile=' + AllgemeinObj.Ini.IniFilename);
   fCheckTimer.Interval := AllgemeinObj.Ini.CheckInterval;
   fCheckTimer.Enabled := fTimerEnabled;
   fCheckTimer.OnTimer := Check;
   fDateTime := TTbDateTime.Create(nil);
   fAktualData := false;
+  AllgemeinObj.Log.DebugInfo('TimerInterval=' + IntToStr(fCheckTimer.Interval));
 end;
 
 destructor TBackupchecker.Destroy;
@@ -80,7 +83,10 @@ procedure TBackupchecker.setFullDataFilename(const Value: string);
 begin
   fFullDataFilename := '';
   if not FileExists(Value) then
+  begin
+    AllgemeinObj.Log.BackupInfo('Backupdatei exisitiert nicht: ' + Value);
     exit;
+  end;
   fDataPfad := ExtractFilePath(Value);
   fFullDataFilename := Value;
   fOptionList.LoadFromFile(fFullDataFilename);
@@ -105,14 +111,19 @@ var
 begin
   if fDataPfad = '' then
     exit;
+
   if fAktualData then
   begin
     fOptionList.LoadFromFile(fFullDataFilename);
     fAktualData := false;
   end;
 
+  AllgemeinObj.Log.DebugInfo('OptionListCount=' + IntToStr(fOptionList.Count));
   if fOptionList.Count <= 0 then
+  begin
+    AllgemeinObj.Log.BackupInfo('OptionListCount=' + IntToStr(fOptionList.Count) + ' / Keine Backupinfo vorhanden.');
     exit;
+  end;
   Cur := Screen.Cursor;
   try
     fCheckTimer.Enabled := false;
@@ -122,9 +133,11 @@ begin
       //s := Option.Datenbank + ' / ' + Option.Backupdatei + ' / ' + 'Start:' + FormatDateTime('hh:nn', Option.StartZeit) + ' / ' +
       //     'Letztes Backup:' + FormatDateTime('dd.mm.yyyy', Option.LastBackupDate);
       //AllgemeinObj.Log.BackupInfo(s);
+       AllgemeinObj.Log.DebugInfo('LastBackup ' + FormatDateTime('dd.mm.yyyy hh:nn', Option.LastBackupDate));
       if Option.LastBackupDate >= trunc(now) then
         continue;
       Startzeit := getStartZeit(Option.StartZeit);
+      AllgemeinObj.Log.DebugInfo('Startzeit ' + FormatDateTime('dd.mm.yyyy hh:nn', Option.Startzeit));
       if now < Startzeit then
         continue;
       Backup := TBackup.Create;

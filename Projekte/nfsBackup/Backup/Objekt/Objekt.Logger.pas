@@ -11,6 +11,7 @@ type
     fLogPath: string;
     fDebugLog: log4d.TLogLogger;
     fBackupLog: log4d.TLogLogger;
+    fDienstLog: log4d.TLogLogger;
   protected
   public
     constructor Create;
@@ -19,8 +20,10 @@ type
     property LogPath: string read fLogPath;
     procedure DebugInfo(aMsg: string);
     procedure BackupInfo(aMsg: string);
+    procedure DienstInfo(aMsg: string);
     function getLogger: log4d.TLogLogger;
     function getLoggerIni: log4d.TLogLogger;
+    function getLoggerDienst: log4d.TLogLogger;
   end;
 
 
@@ -36,6 +39,7 @@ begin
 
   fDebugLog := nil;
   fBackupLog := nil;
+  fDienstLog := nil;
 
  if (not FileExists(ExtractFilePath(Application.ExeName) + 'log4dBackup.props')) then
    exit;
@@ -51,12 +55,17 @@ begin
 
   fDebugLog := TLogLogger.GetLogger('Debug');
   fBackupLog := TLogLogger.GetLogger('Backup');
+  fDienstLog := TLogLogger.GetLogger('Dienst');
 
   if fDebugLog.Appenders.Count = 1 then
     (fDebugLog.Appenders[0] as ILogRollingFileAppender).renameLogfile(fLogPath + 'Debug.log');  //<-- Pfad zuweisen
 
   if fBackupLog.Appenders.Count = 1 then
     (fBackupLog.Appenders[0] as ILogRollingFileAppender).renameLogfile(fLogPath + 'Backup.log');  //<-- Pfad zuweisen
+
+  if fDienstLog.Appenders.Count = 1 then
+    (fDienstLog.Appenders[0] as ILogRollingFileAppender).renameLogfile(fLogPath + 'Dienst.log');  //<-- Pfad zuweisen
+
 
 end;
 
@@ -66,9 +75,21 @@ begin
   inherited;
 end;
 
+procedure TLoggerObj.DienstInfo(aMsg: string);
+begin
+  if fDienstLog = nil then
+    exit;
+  fDienstLog.Info(aMsg);
+end;
+
 function TLoggerObj.getLogger: log4d.TLogLogger;
 begin
   Result := fDebugLog;
+end;
+
+function TLoggerObj.getLoggerDienst: log4d.TLogLogger;
+begin
+  Result := fDienstLog;
 end;
 
 function TLoggerObj.getLoggerIni: log4d.TLogLogger;

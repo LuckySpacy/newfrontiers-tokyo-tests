@@ -14,8 +14,6 @@ type
     fIniFilename: string;
     function getUserPfad: string;
     function getIniFilename: string;
-    constructor Create;
-    destructor Destroy; override;
     function getManuellesBackup: Boolean;
     procedure setManuellesBackup(const Value: Boolean);
     function getSkin: string;
@@ -28,6 +26,8 @@ type
     property ManuellesBackup: Boolean read getManuellesBackup write setManuellesBackup;
     property Skin: string read getSkin write setSkin;
     property CheckInterval: Integer read getCheckInterval write setCheckInterval;
+    constructor Create;
+    destructor Destroy; override;
   end;
 
 implementation
