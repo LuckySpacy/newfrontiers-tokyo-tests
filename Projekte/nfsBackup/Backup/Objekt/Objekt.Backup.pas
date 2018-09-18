@@ -38,7 +38,7 @@ implementation
 { TBackup }
 
 uses
-  Allgemein.System;
+  Allgemein.System, Objekt.Allgemein;
 
 
 
@@ -83,7 +83,13 @@ begin
       CheckAndDeleteOldestFile(aOption.Backupdatei, aOption.MaxAnzahlBackup);
 
     if Trim(BackupFilename) = '' then
+    begin
+      AllgemeinObj.Log.DebugInfo('Es wird kein Backup durchgeführt, da Backupdateiname leer ist.');
       exit;
+    end;
+
+    if FileExists(BackupFilename) then
+      AllgemeinObj.Log.DebugInfo('Datei wird gelöscht(2):' + BackupFilename);
 
     DeleteFile(BackupFilename);
 
@@ -192,12 +198,20 @@ var
   ext: string;
 begin
   LeseBackupsInList(aValue);
-  if (fBackupFilenameList.Count = 0) or (aMaxAnzahl < fBackupFilenameList.Count) then
+  if (fBackupFilenameList.Count = 0) then
+    AllgemeinObj.Log.DebugInfo('Keine älteren Backupdatein zum Löschen gefunden');
+//  AllgemeinObj.Log.DebugInfo('Anz der Backupdateien:' + IntToStr(fBackupFilenameList.Count) + ' / ' +
+//                             'Anz der max. Backupdateien:' + IntToStr(aMaxAnzahl));
+  if (fBackupFilenameList.Count = 0) or (fBackupFilenameList.Count < aMaxAnzahl) then
     exit;
   Filename := fBackupFilenameList.ValueFromIndex[0];
   ext := ExtractFileExt(Filename);
   if SameText('.fdb', ext) then
+  begin
+    AllgemeinObj.Log.DebugInfo('Eine Backupdatei mit der Erweiterung ".fdb" ist nicht zulässig:'+aValue);
     exit; // Nur zur Sicherheit, dass keine Datenbanken gelöscht werden
+  end;
+  AllgemeinObj.Log.DebugInfo('Datei wird gelöscht(1):' + Filename);
   DeleteFile(Filename);
 end;
 

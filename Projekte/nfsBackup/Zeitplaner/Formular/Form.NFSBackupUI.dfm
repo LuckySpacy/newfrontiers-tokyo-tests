@@ -2,7 +2,7 @@ object frm_NFSBackupUI: Tfrm_NFSBackupUI
   Left = 0
   Top = 0
   Caption = 'NFS Backup Zeitlplaner'
-  ClientHeight = 299
+  ClientHeight = 357
   ClientWidth = 635
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -80,17 +80,18 @@ object frm_NFSBackupUI: Tfrm_NFSBackupUI
     Left = 0
     Top = 41
     Width = 635
-    Height = 258
+    Height = 316
     Align = alClient
     BevelOuter = bvNone
     Caption = 'Panel2'
     ShowCaption = False
     TabOrder = 1
+    ExplicitTop = 44
     object grd: TAdvStringGrid
       Left = 0
       Top = 0
       Width = 635
-      Height = 258
+      Height = 294
       Cursor = crDefault
       Align = alClient
       DrawingStyle = gdsClassic
@@ -190,6 +191,8 @@ object frm_NFSBackupUI: Tfrm_NFSBackupUI
       SearchFooter.ResultFormat = '(%d of %d)'
       SortSettings.DefaultFormat = ssAutomatic
       Version = '8.3.2.4'
+      ExplicitTop = 3
+      ExplicitHeight = 258
       ColWidths = (
         64
         64
@@ -207,6 +210,31 @@ object frm_NFSBackupUI: Tfrm_NFSBackupUI
         22
         22
         22)
+    end
+    object Panel3: TPanel
+      Left = 0
+      Top = 294
+      Width = 635
+      Height = 22
+      Align = alBottom
+      BevelOuter = bvLowered
+      Caption = 'Panel3'
+      ShowCaption = False
+      TabOrder = 1
+      object Label1: TLabel
+        AlignWithMargins = True
+        Left = 4
+        Top = 4
+        Width = 620
+        Height = 14
+        Margins.Right = 10
+        Align = alClient
+        Alignment = taRightJustify
+        Caption = 'Version 1.0.0.0 vom 18.09.2018 new|frontiers Software GmbH'
+        ExplicitLeft = 322
+        ExplicitWidth = 302
+        ExplicitHeight = 13
+      end
     end
   end
   object Timer1: TTimer

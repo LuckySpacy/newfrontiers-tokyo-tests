@@ -38,6 +38,8 @@ type
     ApplicationEvents: TApplicationEvents;
     pop_Einstellung: TPopupMenu;
     pop_EMailEinstellung: TMenuItem;
+    Panel3: TPanel;
+    Label1: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btn_NeuClick(Sender: TObject);
