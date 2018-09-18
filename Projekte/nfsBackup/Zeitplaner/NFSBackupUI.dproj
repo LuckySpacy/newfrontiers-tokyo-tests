@@ -91,6 +91,7 @@
         <DCC_Define>madExcept;$(DCC_Define)</DCC_Define>
         <DCC_MapFile>3</DCC_MapFile>
         <Icon_MainIcon>NFSBackupUI_Icon1.ico</Icon_MainIcon>
+        <DCC_UnitSearchPath>..\Lockbox3\ciphers\;..\Lockbox3\cryptography\;..\Lockbox3\hashes\;..\Lockbox3\library surface\;..\Lockbox3\RSA\;..\Lockbox3\utilities\;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -133,6 +134,12 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
+        <DCCReference Include="Formular\Form.Mail.pas">
+            <Form>frm_Mail</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Backup\Objekt\Objekt.Maildat.pas"/>
+        <DCCReference Include="..\Backup\Objekt\Objekt.SendMail.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

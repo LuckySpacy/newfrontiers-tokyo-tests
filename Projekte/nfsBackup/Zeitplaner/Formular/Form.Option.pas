@@ -38,6 +38,8 @@ type
     lbl_Anzahl: TLabel;
     Shape1: TShape;
     lbl_Hinweis: TLabel;
+    Label8: TLabel;
+    edt_Passwort2: TEdit;
     procedure FormCreate(Sender: TObject);
     procedure btn_OkClick(Sender: TObject);
     procedure btn_CancelClick(Sender: TObject);
@@ -94,6 +96,7 @@ begin
   edt_Backupdatei.Text := fOption.Backupdatei;
   edt_User.Text := fOption.User;
   edt_Passwort.Text := fOption.Passwort;
+  edt_Passwort2.Text := fOption.Passwort;
   edt_Uhrzeit.Time := fOption.StartZeit;
   cbx_Checksum.Checked := fOption.Checksum;
   cbx_Limbo.Checked := fOption.Limbo;
@@ -140,6 +143,11 @@ procedure Tfrm_Option.btn_OkClick(Sender: TObject);
 var
   ConnectType: RConnectType;
 begin
+  if edt_Passwort.Text <> edt_Passwort2.Text then
+  begin
+    MessageDlg('Das Passwort stimmt nicht überein.', mtError, [mbOk], 0);
+    exit;
+  end;
   ConnectType.Servername := edt_Servername.Text;
   ConnectType.Datenbank  := edt_Datenbank.Text;
   ConnectType.Passwort   := edt_Passwort.Text;

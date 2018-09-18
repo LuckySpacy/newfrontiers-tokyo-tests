@@ -118,7 +118,6 @@ begin
     fAktualData := false;
   end;
 
-  AllgemeinObj.Log.DebugInfo('OptionListCount=' + IntToStr(fOptionList.Count));
   if fOptionList.Count <= 0 then
   begin
     AllgemeinObj.Log.BackupInfo('OptionListCount=' + IntToStr(fOptionList.Count) + ' / Keine Backupinfo vorhanden.');
@@ -133,11 +132,11 @@ begin
       //s := Option.Datenbank + ' / ' + Option.Backupdatei + ' / ' + 'Start:' + FormatDateTime('hh:nn', Option.StartZeit) + ' / ' +
       //     'Letztes Backup:' + FormatDateTime('dd.mm.yyyy', Option.LastBackupDate);
       //AllgemeinObj.Log.BackupInfo(s);
-       AllgemeinObj.Log.DebugInfo('LastBackup ' + FormatDateTime('dd.mm.yyyy hh:nn', Option.LastBackupDate));
+       //AllgemeinObj.Log.DebugInfo('LastBackup ' + FormatDateTime('dd.mm.yyyy hh:nn', Option.LastBackupDate));
       if Option.LastBackupDate >= trunc(now) then
         continue;
       Startzeit := getStartZeit(Option.StartZeit);
-      AllgemeinObj.Log.DebugInfo('Startzeit ' + FormatDateTime('dd.mm.yyyy hh:nn', Option.Startzeit));
+      //AllgemeinObj.Log.DebugInfo('Startzeit ' + FormatDateTime('dd.mm.yyyy hh:nn', Option.Startzeit));
       if now < Startzeit then
         continue;
       Backup := TBackup.Create;
@@ -151,7 +150,6 @@ begin
         Backup.StartBackup(Option);
         Option.LastBackupDate := trunc(now);
         AllgemeinObj.Log.BackupInfo('Ende Backup');
-        AllgemeinObj.Log.BackupInfo(' ');
       finally
         FreeAndNil(Backup);
         if Assigned(fOnEndBackup) then

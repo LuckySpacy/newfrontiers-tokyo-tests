@@ -133,6 +133,19 @@ object frm_Option: Tfrm_Option
       'ern der Sicherungsoptionen neu zu starten. '
     WordWrap = True
   end
+  object Label8: TLabel
+    Left = 221
+    Top = 130
+    Width = 25
+    Height = 13
+    Caption = 'Wdh'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object edt_Datenbank: TEdit
     Left = 112
     Top = 46
@@ -163,9 +176,10 @@ object frm_Option: Tfrm_Option
   object edt_Passwort: TEdit
     Left = 112
     Top = 127
-    Width = 239
+    Width = 100
     Height = 21
     MaxLength = 255
+    PasswordChar = '*'
     TabOrder = 4
     Text = 'Edit1'
   end
@@ -253,7 +267,6 @@ object frm_Option: Tfrm_Option
     Caption = 'Panel1'
     ShowCaption = False
     TabOrder = 14
-    ExplicitTop = 423
     object btn_Ok: TButton
       AlignWithMargins = True
       Left = 283
@@ -309,5 +322,15 @@ object frm_Option: Tfrm_Option
     MinValue = 0
     TabOrder = 16
     Value = 0
+  end
+  object edt_Passwort2: TEdit
+    Left = 251
+    Top = 127
+    Width = 100
+    Height = 21
+    MaxLength = 255
+    PasswordChar = '*'
+    TabOrder = 17
+    Text = 'edt_Passwort2'
   end
 end

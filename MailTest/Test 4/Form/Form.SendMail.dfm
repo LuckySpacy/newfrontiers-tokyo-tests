@@ -24,9 +24,6 @@ object frm_Sendmail: Tfrm_Sendmail
     Align = alTop
     Caption = 'Web.de'
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 593
     object Label1: TLabel
       Left = 16
       Top = 32
@@ -66,10 +63,7 @@ object frm_Sendmail: Tfrm_Sendmail
     Align = alClient
     Caption = 'Nachricht'
     TabOrder = 1
-    ExplicitLeft = 8
-    ExplicitTop = 81
-    ExplicitWidth = 593
-    ExplicitHeight = 322
+    ExplicitTop = 80
     object Label3: TLabel
       Left = 16
       Top = 61

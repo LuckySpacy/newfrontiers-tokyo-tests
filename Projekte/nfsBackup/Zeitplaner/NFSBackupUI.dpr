@@ -25,7 +25,10 @@ uses
   Objekt.Ini in '..\Backup\Objekt\Objekt.Ini.pas',
   Datenmodul.DM in '..\Backup\Datenmodul\Datenmodul.DM.pas' {dm: TDataModule},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  Form.Mail in 'Formular\Form.Mail.pas' {frm_Mail},
+  Objekt.Maildat in '..\Backup\Objekt\Objekt.Maildat.pas',
+  Objekt.SendMail in '..\Backup\Objekt\Objekt.SendMail.pas';
 
 {$R *.res}
 

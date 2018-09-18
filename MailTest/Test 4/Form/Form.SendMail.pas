@@ -44,7 +44,8 @@ begin
   fSendMail.Nachricht    := mem_Nachricht.Text;
   fSendMail.EMailAdresse := edt_EMail.Text;
 
-  fSendMail.SendenUeberWebDe;
+  //fSendMail.SendenUeberWebDe;
+  fSendMail.SendenUeberExchange;
 
   ShowMessage('E-Mail wurde versendet');
 
@@ -53,6 +54,8 @@ end;
 procedure Tfrm_Sendmail.FormCreate(Sender: TObject);
 begin
   fSendMail := TSendMail.Create;
+  edt_MeineWebEMail.Text := 'bachmann@new-frontiers.de';
+  edt_EMail.Text := 'bachmann@new-frontiers.de';
 end;
 
 procedure Tfrm_Sendmail.FormDeactivate(Sender: TObject);

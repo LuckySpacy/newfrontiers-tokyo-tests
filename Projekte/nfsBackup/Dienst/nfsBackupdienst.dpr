@@ -20,7 +20,9 @@ uses
   Objekt.OptionList in '..\Backup\Objekt\Objekt.OptionList.pas',
   Objekt.BaseList in '..\Backup\Objekt\Objekt.BaseList.pas',
   Objekt.DateTime in '..\Backup\Objekt\Objekt.DateTime.pas',
-  Objekt.Backup in '..\Backup\Objekt\Objekt.Backup.pas';
+  Objekt.Backup in '..\Backup\Objekt\Objekt.Backup.pas',
+  Objekt.Maildat in '..\Backup\Objekt\Objekt.Maildat.pas',
+  Objekt.SendMail in '..\Backup\Objekt\Objekt.SendMail.pas';
 
 {$R *.RES}
 

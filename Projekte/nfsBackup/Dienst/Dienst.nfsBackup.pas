@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.SvcMgr, Vcl.Dialogs,
-  Objekt.Allgemein, Objekt.Backupchecker, Objekt.Option, Objekt.OptionList;
+  Objekt.Allgemein, Objekt.Backupchecker, Objekt.Option, Objekt.OptionList, Objekt.Maildat,
+  Objekt.SendMail;
 
 type
   TnfsBackup = class(TService)
@@ -24,9 +25,11 @@ type
     fDataFile: string;
     fProgrammpfad: string;
     fBackupchecker: TBackupchecker;
+    fMaildat: TMailDat;
     procedure BackupLauft(Sender: TObject; aOption: TOption);
     procedure BackupEndet(Sender: TObject; aOption: TOption);
     procedure ErrorBackup(Sender: TObject; aOption: TOption; aError: string);
+    procedure MailError(Sender: TObject; aError: string);
   public
     function GetServiceController: TServiceController; override;
   end;
@@ -51,6 +54,7 @@ end;
 
 
 
+
 procedure TnfsBackup.ServiceCreate(Sender: TObject);
 begin
   AllgemeinObj := TAllgemeinObj.create;
@@ -59,14 +63,20 @@ begin
   fProgrammpfad := IncludeTrailingPathDelimiter(ExtractFilePath(ParamStr(0)));
   AllgemeinObj.Log.DebugInfo('fProgrammpfad='+fProgrammpfad);
   fDataFile := fProgrammpfad + 'nfsBackup.dat';
-  AllgemeinObj.Log.DebugInfo('fDataFile='+fDataFile);
   fBackupchecker := TBackupchecker.Create;
+  AllgemeinObj.Log.DebugInfo('fDataFile='+fDataFile);
   fBackupChecker.FullDataFilename := fDataFile;
+  fBackupchecker.OnStartBackup := BackupLauft;
+  fBackupchecker.OnEndBackup   := BackupEndet;
+  fBackupchecker.OnBackupError := ErrorBackup;
+  fMaildat := TMailDat.Create;
+
 end;
 
 procedure TnfsBackup.ServiceDestroy(Sender: TObject);
 begin
   FreeAndNil(fBackupchecker);
+  FreeAndNil(fMaildat);
   FreeAndNil(AllgemeinObj);
 end;
 
@@ -135,6 +145,7 @@ end;
 procedure TnfsBackup.BackupEndet(Sender: TObject; aOption: TOption);
 begin
   AllgemeinObj.Log.BackupInfo('Backup beendet - ' + aOption.Datenbank);
+  AllgemeinObj.Log.BackupInfo(' ');
 end;
 
 procedure TnfsBackup.BackupLauft(Sender: TObject; aOption: TOption);
@@ -145,9 +156,58 @@ end;
 
 procedure TnfsBackup.ErrorBackup(Sender: TObject; aOption: TOption;
   aError: string);
+var
+  Mail: TSendMail;
+  s: string;
 begin
   AllgemeinObj.Log.BackupInfo('Backupfehler: ' +  aError);
+
+  Mail := TSendMail.Create;
+  try
+    Mail.OnMailError := MailError;
+    fMaildat.Load;
+    if (Trim(fMaildat.Mail) = '') or (Trim(fMaildat.Passwort) = '') then
+    begin
+      AllgemeinObj.Log.DienstInfo('Mail kann nicht gesendet werden, da EMail-Adresse und oder EMail-Passwort fehlt');
+      AllgemeinObj.Log.DebugInfo('Mail kann nicht gesendet werden, da EMail-Adresse und oder EMail-Passwort fehlt');
+      exit;
+    end;
+
+    s := 'Backupfehler: ' + sLineBreak +
+         'Servername: ' + aOption.Servername + sLineBreak +
+         'Datenbank: ' + aOption.Datenbank + sLineBreak +
+         'Backupdatei: ' + aOption.Backupdatei + sLineBreak + sLineBreak +
+         'Fehlerbeschreibung:' + sLineBreak + aError;
+
+    Mail.Host := fMaildat.Host;
+    Mail.MeineEMail := fMaildat.Mail;
+    Mail.MeinPasswort := fMaildat.Passwort;
+    Mail.MeinUsername := fMaildat.User;
+    Mail.Betreff := fMaildat.Betreff;
+    Mail.Nachricht := s;
+    Mail.EMailAdresse := fMaildat.Mail;
+    Mail.OnMailError := MailError;
+    if fMaildat.Provider = pvExchange then
+      Mail.SendenUeberExchange;
+    if fMaildat.Provider = pvGmail then
+      Mail.SendenUeberGMail;
+    if fMaildat.Provider = pvWeb then
+      Mail.SendenUeberWebDe;
+  finally
+    FreeAndNil(Mail);
+  end;
+
+
 end;
+
+
+procedure TnfsBackup.MailError(Sender: TObject; aError: string);
+begin
+  AllgemeinObj.Log.DebugInfo('Fehler beim Senden einer Mail: ' + aError);
+  AllgemeinObj.Log.DienstInfo('Fehler beim Senden einer Mail: ' + aError);
+end;
+
+
 
 
 

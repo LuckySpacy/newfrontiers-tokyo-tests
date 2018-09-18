@@ -94,6 +94,7 @@ object frm_NFSBackupUI: Tfrm_NFSBackupUI
       Cursor = crDefault
       Align = alClient
       DrawingStyle = gdsClassic
+      PopupMenu = pop_Einstellung
       ScrollBars = ssBoth
       TabOrder = 0
       HoverRowCells = [hcNormal, hcSelected]
@@ -3756,5 +3757,13 @@ object frm_NFSBackupUI: Tfrm_NFSBackupUI
     OnMinimize = ApplicationEventsMinimize
     Left = 392
     Top = 49
+  end
+  object pop_Einstellung: TPopupMenu
+    Left = 360
+    Top = 177
+    object pop_EMailEinstellung: TMenuItem
+      Caption = 'EMail-Einstellung'
+      OnClick = pop_EMailEinstellungClick
+    end
   end
 end

@@ -32,6 +32,7 @@ type
     property EMailAdresse: string read FEMailAdresse write FEMailAdresse;
     procedure SendenUeberWebDe;
     procedure SendenUeberGMail;
+    procedure SendenUeberExchange;
   end;
 
 
@@ -61,6 +62,7 @@ begin
   FreeAndNil(FIOHandler);
   inherited;
 end;
+
 
 procedure TSendMail.SendenUeberGMail;
 begin
@@ -97,6 +99,21 @@ begin
   FIOHandler.SSLOptions.VerifyDepth := 0;
   VersendeEMail;
 end;
+
+procedure TSendMail.SendenUeberExchange;
+begin
+  Fsmtp.Host := 'exchange.ass-systemhaus.de';
+  //Fsmtp.Host := '172.16.10.11';
+  Fsmtp.Password := FMeinPasswort;
+  Fsmtp.Username := 'gb\tbachmann';
+  Fsmtp.Port := 25;
+  Fsmtp.AuthType := satDefault;
+  Fsmtp.UseTLS := utNoTLSSupport;
+  fsmtp.SASLMechanisms.Clear;
+  FSmtp.IOHandler := nil;
+  VersendeEMail;
+end;
+
 
 procedure TSendMail.VersendeEMail;
 begin

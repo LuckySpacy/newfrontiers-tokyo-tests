@@ -5,208 +5,427 @@
   Diese Datei enthält vom Compiler erzeugte Ressourcen, die an die ausführbare Datei gebunden wurden. Wenn diese Datei leer ist, dann wurden keine vom Compiler generierten Ressourcen an die erzeugte ausführbare Datei gebunden.
 */
 
-#define IBX_IBXConst_SInvalidLibraryType 64832
-#define IBX_IBXConst_SCannotChangeServerType 64833
-#define IBX_IBXConst_SColumnEncryptionError 64834
-#define IBX_IBXConst_SEncryptionError 64835
-#define IBX_IBXConst_SIBXE3feature 64836
-#define IBX_IBXConst_SSSLSeverExclusive 64837
-#define IBX_IBXConst_SSSLClientExclusive 64838
-#define IBX_IBXConst_SOnlineDumpAvailable 64839
-#define IBX_IBXConst_SInvalidODSVersion 64840
-#define Vcl_VDBConsts_SRemoteLogin 64841
-#define IBX_IBXConst_SDPBConstantUnknownEx 64848
-#define IBX_IBXConst_STPBConstantUnknownEx 64849
-#define IBX_IBXConst_SUnknownPlan 64850
-#define IBX_IBXConst_SFieldSizeMismatch 64851
-#define IBX_IBXConst_SEventAlreadyRegistered 64852
-#define IBX_IBXConst_SStringTooLarge 64853
-#define IBX_IBXConst_SNoTimers 64854
-#define IBX_IBXConst_SIB65feature 64855
-#define IBX_IBXConst_SLoginPromptFailure 64856
-#define IBX_IBXConst_SIB70feature 64857
-#define IBX_IBXConst_SIB71feature 64858
-#define IBX_IBXConst_SIB80feature 64859
-#define IBX_IBXConst_SNoVersionInfo 64860
-#define IBX_IBXConst_SFileSizeDumpCountIncompatibility 64861
-#define IBX_IBXConst_SCannotPerformDumpOnActiveConnection 64862
-#define IBX_IBXConst_SIBUnknownServerType 64863
-#define IBX_IBXConst_SCantPrintValue 64864
-#define IBX_IBXConst_SEOFReached 64865
-#define IBX_IBXConst_SEOFInComment 64866
-#define IBX_IBXConst_SEOFInString 64867
-#define IBX_IBXConst_SParamNameExpected 64868
-#define IBX_IBXConst_SSuccess 64869
-#define IBX_IBXConst_SDelphiException 64870
-#define IBX_IBXConst_SNoOptionsSet 64871
-#define IBX_IBXConst_SNoDestinationDirectory 64872
-#define IBX_IBXConst_SNosourceDirectory 64873
-#define IBX_IBXConst_SNoUninstallFile 64874
-#define IBX_IBXConst_SOptionNeedsClient 64875
-#define IBX_IBXConst_SOptionNeedsServer 64876
-#define IBX_IBXConst_SInvalidOption 64877
-#define IBX_IBXConst_SInvalidOnErrorResult 64878
-#define IBX_IBXConst_SInvalidOnStatusResult 64879
-#define IBX_IBXConst_SMaximumEvents 64880
-#define IBX_IBXConst_SNoEventsRegistered 64881
-#define IBX_IBXConst_SInvalidQueueing 64882
-#define IBX_IBXConst_SInvalidRegistration 64883
-#define IBX_IBXConst_SInvalidBatchMove 64884
-#define IBX_IBXConst_SSQLDialectInvalid 64885
-#define IBX_IBXConst_SSPBConstantNotSupported 64886
-#define IBX_IBXConst_SSPBConstantUnknown 64887
-#define IBX_IBXConst_SServiceActive 64888
-#define IBX_IBXConst_SServiceInActive 64889
-#define IBX_IBXConst_SServerNameMissing 64890
-#define IBX_IBXConst_SQueryParamsError 64891
-#define IBX_IBXConst_SStartParamsError 64892
-#define IBX_IBXConst_SOutputParsingError 64893
-#define IBX_IBXConst_SUseSpecificProcedures 64894
-#define IBX_IBXConst_SSQLMonitorAlreadyPresent 64895
-#define IBX_IBXConst_SIsASelectStatement 64896
-#define IBX_IBXConst_SRequiredParamNotSet 64897
-#define IBX_IBXConst_SNoStoredProcName 64898
-#define IBX_IBXConst_SIsAExecuteProcedure 64899
-#define IBX_IBXConst_SUpdateFailed 64900
-#define IBX_IBXConst_SNotCachedUpdates 64901
-#define IBX_IBXConst_SNotLiveRequest 64902
-#define IBX_IBXConst_SNoProvider 64903
-#define IBX_IBXConst_SNoRecordsAffected 64904
-#define IBX_IBXConst_SNoTableName 64905
-#define IBX_IBXConst_SCannotCreatePrimaryIndex 64906
-#define IBX_IBXConst_SCannotDropSystemIndex 64907
-#define IBX_IBXConst_STableNameMismatch 64908
-#define IBX_IBXConst_SIndexFieldMissing 64909
-#define IBX_IBXConst_SInvalidCancellation 64910
-#define IBX_IBXConst_SInvalidEvent 64911
-#define IBX_IBXConst_SCannotUpdate 64912
-#define IBX_IBXConst_SCannotDelete 64913
-#define IBX_IBXConst_SCannotRefresh 64914
-#define IBX_IBXConst_SBufferNotSet 64915
-#define IBX_IBXConst_SCircularReference 64916
-#define IBX_IBXConst_SSQLParseError 64917
-#define IBX_IBXConst_SUserAbort 64918
-#define IBX_IBXConst_SDataSetUniDirectional 64919
-#define IBX_IBXConst_SCannotCreateSharedResource 64920
-#define IBX_IBXConst_SWindowsAPIError 64921
-#define IBX_IBXConst_SColumnListsDontMatch 64922
-#define IBX_IBXConst_SColumnTypesDontMatch 64923
-#define IBX_IBXConst_SCantEndSharedTransaction 64924
-#define IBX_IBXConst_SFieldUnsupportedType 64925
-#define IBX_IBXConst_SCircularDataLink 64926
-#define IBX_IBXConst_SEmptySQLStatement 64927
-#define IBX_IBXConst_SDatasetClosed 64928
-#define IBX_IBXConst_SUnknownSQLDataType 64929
-#define IBX_IBXConst_SInvalidColumnIndex 64930
-#define IBX_IBXConst_SInvalidParamColumnIndex 64931
-#define IBX_IBXConst_SInvalidDataConversion 64932
-#define IBX_IBXConst_SColumnIsNotNullable 64933
-#define IBX_IBXConst_SBlobCannotBeRead 64934
-#define IBX_IBXConst_SBlobCannotBeWritten 64935
-#define IBX_IBXConst_SEmptyQuery 64936
-#define IBX_IBXConst_SCannotOpenNonSQLSelect 64937
-#define IBX_IBXConst_SNoFieldAccess 64938
-#define IBX_IBXConst_SFieldReadOnly 64939
-#define IBX_IBXConst_SFieldNotFound 64940
-#define IBX_IBXConst_SNotEditing 64941
-#define IBX_IBXConst_SCannotInsert 64942
-#define IBX_IBXConst_SCannotPost 64943
-#define IBX_IBXConst_SNotInTransaction 64944
-#define IBX_IBXConst_SInTransaction 64945
-#define IBX_IBXConst_STimeoutNegative 64946
-#define IBX_IBXConst_SNoDatabasesInTransaction 64947
-#define IBX_IBXConst_SUpdateWrongDB 64948
-#define IBX_IBXConst_SUpdateWrongTR 64949
-#define IBX_IBXConst_SDatabaseNotAssigned 64950
-#define IBX_IBXConst_STransactionNotAssigned 64951
-#define IBX_IBXConst_SXSQLDAIndexOutOfRange 64952
-#define IBX_IBXConst_SXSQLDANameDoesNotExist 64953
-#define IBX_IBXConst_SEOF 64954
-#define IBX_IBXConst_SBOF 64955
-#define IBX_IBXConst_SInvalidStatementHandle 64956
-#define IBX_IBXConst_SSQLOpen 64957
-#define IBX_IBXConst_SSQLClosed 64958
-#define IBX_IBXConst_SDatasetOpen 64959
-#define IBX_IBXConst_SInterBaseInstallMissing 64960
-#define IBX_IBXConst_SIB60feature 64961
-#define IBX_IBXConst_SNotSupported 64962
-#define IBX_IBXConst_SNotPermitted 64963
-#define IBX_IBXConst_SFileAccessError 64964
-#define IBX_IBXConst_SConnectionTimeout 64965
-#define IBX_IBXConst_SCannotSetDatabase 64966
-#define IBX_IBXConst_SCannotSetTransaction 64967
-#define IBX_IBXConst_SOperationCancelled 64968
-#define IBX_IBXConst_SDPBConstantNotSupported 64969
-#define IBX_IBXConst_SDPBConstantUnknown 64970
-#define IBX_IBXConst_STPBConstantNotSupported 64971
-#define IBX_IBXConst_STPBConstantUnknown 64972
-#define IBX_IBXConst_SDatabaseClosed 64973
-#define IBX_IBXConst_SDatabaseOpen 64974
-#define IBX_IBXConst_SDatabaseNameMissing 64975
-#define IBX_IBXConst_StrStart 64976
-#define IBX_IBXConst_StrExecute 64977
-#define IBX_IBXConst_StrNULL 64978
-#define IBX_IBXConst_StrBLOB 64979
-#define IBX_IBXConst_StrFetch 64980
-#define IBX_IBXConst_StrPrepare 64981
-#define IBX_IBXConst_StrPlan 64982
-#define IBX_IBXConst_StrPlanCantRetrive 64983
-#define IBX_IBXConst_StrCommitHardComm 64984
-#define IBX_IBXConst_StrCommitRetaining 64985
-#define IBX_IBXConst_StrRollback 64986
-#define IBX_IBXConst_StrRollbackRetainin 64987
-#define IBX_IBXConst_StrStartTransaction 64988
-#define IBX_IBXConst_StrApplication 64989
-#define IBX_IBXConst_SUnknownError 64990
-#define IBX_IBXConst_SInterBaseMissing 64991
-#define Data_DBConsts_SInvalidVersion 64992
-#define Data_DBConsts_SBadFieldType 64993
-#define Data_DBConsts_SProviderSQLNotSupported 64994
-#define Data_DBConsts_SProviderExecuteNotSupported 64995
-#define Data_DBConsts_SDataSetUnidirectional 64996
-#define Data_DBConsts_SUnassignedVar 64997
-#define Data_DBConsts_SRecordNotFound 64998
-#define Data_DBConsts_SBcdOverflow 64999
-#define Data_DBConsts_SInvalidBcdValue 65000
-#define Data_DBConsts_SCouldNotParseTimeStamp 65001
-#define Data_DBConsts_SInvalidSqlTimeStamp 65002
-#define IBX_IBXConst_StrMisc 65003
-#define IBX_IBXConst_StrError 65004
-#define IBX_IBXConst_StrAttach 65005
-#define IBX_IBXConst_StrDetach 65006
-#define IBX_IBXConst_StrQuery 65007
-#define Data_DBConsts_SDuplicateIndexName 65008
-#define Data_DBConsts_SNoIndexForFields 65009
-#define Data_DBConsts_SIndexNotFound 65010
-#define Data_DBConsts_SDBDuplicateName 65011
-#define Data_DBConsts_SCircularDataLink 65012
-#define Data_DBConsts_SLookupInfoError 65013
-#define Data_DBConsts_SDataSourceChange 65014
-#define Data_DBConsts_SDataSetOpen 65015
-#define Data_DBConsts_SNotEditing 65016
-#define Data_DBConsts_SDataSetClosed 65017
-#define Data_DBConsts_SDataSetEmpty 65018
-#define Data_DBConsts_SDataSetReadOnly 65019
-#define Data_DBConsts_SNestedDataSetClass 65020
-#define Data_DBConsts_STextFalse 65021
-#define Data_DBConsts_STextTrue 65022
-#define Data_DBConsts_SParameterNotFound 65023
-#define Data_DBConsts_SDuplicateFieldName 65024
-#define Data_DBConsts_SFieldNotFound 65025
-#define Data_DBConsts_SFieldAccessError 65026
-#define Data_DBConsts_SFieldValueError 65027
-#define Data_DBConsts_SFieldRangeError 65028
-#define Data_DBConsts_SBcdFieldRangeError 65029
-#define Data_DBConsts_SInvalidIntegerValue 65030
-#define Data_DBConsts_SInvalidBoolValue 65031
-#define Data_DBConsts_SInvalidFloatValue 65032
-#define Data_DBConsts_SFieldTypeMismatch 65033
-#define Data_DBConsts_SFieldSizeMismatch 65034
-#define Data_DBConsts_SInvalidVarByteArray 65035
-#define Data_DBConsts_SFieldOutOfRange 65036
-#define Data_DBConsts_SFieldRequired 65037
-#define Data_DBConsts_SDataSetMissing 65038
-#define Data_DBConsts_SInvalidCalcType 65039
+#define IdResourceStringsOpenSSL_RSOSSLConnectError 64608
+#define IdResourceStringsOpenSSL_RSOSSLConnectFailed 64609
+#define IdResourceStringsOpenSSL_RSOSSLConnectExit 64610
+#define IdResourceStringsOpenSSL_RSOSSLHandshakeStart 64611
+#define IdResourceStringsOpenSSL_RSOSSLHandshakeDone 64612
+#define IdResourceStringsProtocols_RSTLSSLSSLHandshakeFailed 64624
+#define IdResourceStringsProtocols_RSSMTPReplyInvalidReplyStr 64625
+#define IdResourceStringsProtocols_RSSMTPReplyInvalidClass 64626
+#define IdResourceStringsProtocols_RSHeaderEncodeError 64627
+#define IdResourceStringsOpenSSL_RSOSSFailedToLoad 64628
+#define IdResourceStringsOpenSSL_RSOSSLModeNotSet 64629
+#define IdResourceStringsOpenSSL_RSOSSLCouldNotLoadSSLLibrary 64630
+#define IdResourceStringsOpenSSL_RSOSSLStatusString 64631
+#define IdResourceStringsOpenSSL_RSOSSLAlert 64632
+#define IdResourceStringsOpenSSL_RSOSSLReadAlert 64633
+#define IdResourceStringsOpenSSL_RSOSSLWriteAlert 64634
+#define IdResourceStringsOpenSSL_RSOSSLAcceptLoop 64635
+#define IdResourceStringsOpenSSL_RSOSSLAcceptError 64636
+#define IdResourceStringsOpenSSL_RSOSSLAcceptFailed 64637
+#define IdResourceStringsOpenSSL_RSOSSLAcceptExit 64638
+#define IdResourceStringsOpenSSL_RSOSSLConnectLoop 64639
+#define IdResourceStringsProtocols_RSSSLLoadingCertError 64640
+#define IdResourceStringsProtocols_RSSSLLoadingKeyError 64641
+#define IdResourceStringsProtocols_RSSSLLoadingDHParamsError 64642
+#define IdResourceStringsProtocols_RSSSLGetMethodError 64643
+#define IdResourceStringsProtocols_RSSSLFDSetError 64644
+#define IdResourceStringsProtocols_RSSSLDataBindingError 64645
+#define IdResourceStringsProtocols_RSSSLEOFViolation 64646
+#define IdResourceStringsProtocols_RSMessageDecoderNotFound 64647
+#define IdResourceStringsProtocols_RSMessageEncoderNotFound 64648
+#define IdResourceStringsProtocols_RSUnrecognizedUUEEncodingScheme 64649
+#define IdResourceStringsProtocols_RSURINoProto 64650
+#define IdResourceStringsProtocols_RSURINoHost 64651
+#define IdResourceStringsProtocols_RSTLSSSLIOHandlerRequired 64652
+#define IdResourceStringsProtocols_RSTLSSLCanNotSetWhileConnected 64653
+#define IdResourceStringsProtocols_RSTLSSLSSLNotAvailable 64654
+#define IdResourceStringsProtocols_RSTLSSLSSLCmdFailed 64655
+#define IdResourceStringsProtocols_RSMIMEExtensionEmpty 64656
+#define IdResourceStringsProtocols_RSMIMEMIMETypeEmpty 64657
+#define IdResourceStringsProtocols_RSMIMEMIMEExtAlreadyExists 64658
+#define IdResourceStringsProtocols_RSIdMessageCannotLoad 64659
+#define IdResourceStringsProtocols_RSMsgClientEncodingText 64660
+#define IdResourceStringsProtocols_RSMsgClientEncodingAttachment 64661
+#define IdResourceStringsProtocols_RSMsgClientInvalidForTransferEncoding 64662
+#define IdResourceStringsProtocols_RSTIdMessagePartCreate 64663
+#define IdResourceStringsProtocols_RSTIdMessageErrorSavingAttachment 64664
+#define IdResourceStringsProtocols_RSTIdMessageErrorAttachmentBlocked 64665
+#define IdResourceStringsProtocols_RSSSLAcceptError 64666
+#define IdResourceStringsProtocols_RSSSLConnectError 64667
+#define IdResourceStringsProtocols_RSSSLSettingCipherError 64668
+#define IdResourceStringsProtocols_RSSSLCreatingSessionError 64669
+#define IdResourceStringsProtocols_RSSSLCreatingContextError 64670
+#define IdResourceStringsProtocols_RSSSLLoadingRootCertError 64671
+#define IdResourceStringsCore_RSThreadTerminateAndWaitFor 64672
+#define IdResourceStringsCore_RSAlreadyConnected 64673
+#define IdResourceStringsCore_RSMaximumNumberOfCaptureLineExceeded 64674
+#define IdResourceStringsCore_RSInterceptIsDifferent 64675
+#define IdResourceStringsCore_RSTransparentProxyCannotBind 64676
+#define IdResourceStringsCore_RSTransparentProxyCanNotSupportUDP 64677
+#define IdResourceStringsCore_RSBufferMissingTerminator 64678
+#define IdResourceStringsCore_RSBufferInvalidStartPos 64679
+#define IdResourceStringsCore_RSIOHandlerCannotChange 64680
+#define IdResourceStringsCore_RSIOHandlerTypeNotInstalled 64681
+#define IdResourceStringsCore_RSReplyInvalidCode 64682
+#define IdResourceStringsCore_RSReplyCodeAlreadyExists 64683
+#define IdResourceStringsProtocols_RSFIPSAlgorithmNotAllowed 64684
+#define IdResourceStringsProtocols_RSSASLNotReady 64685
+#define IdResourceStringsProtocols_RSSASLNotSupported 64686
+#define IdResourceStringsProtocols_RSSASLRequired 64687
+#define IdResourceStringsCore_RSSocksServerTTLExpiredError 64688
+#define IdResourceStringsCore_RSSocksServerCommandError 64689
+#define IdResourceStringsCore_RSSocksServerAddressError 64690
+#define IdResourceStringsCore_RSInterceptCircularLink 64691
+#define IdResourceStringsCore_RSNotEnoughDataInBuffer 64692
+#define IdResourceStringsCore_RSTooMuchDataInBuffer 64693
+#define IdResourceStringsCore_RSFileNotFound 64694
+#define IdResourceStringsCore_RSNotConnected 64695
+#define IdResourceStringsCore_RSObjectTypeNotSupported 64696
+#define IdResourceStringsCore_RSIdNoDataToRead 64697
+#define IdResourceStringsCore_RSReadTimeout 64698
+#define IdResourceStringsCore_RSReadLnWaitMaxAttemptsExceeded 64699
+#define IdResourceStringsCore_RSReadLnMaxLineLengthExceeded 64700
+#define IdResourceStringsCore_RSRequiresLargeStream 64701
+#define IdResourceStringsCore_RSDataTooLarge 64702
+#define IdResourceStringsCore_RSConnectTimeout 64703
+#define IdResourceStrings_RSPackageSizeTooBig 64704
+#define IdResourceStrings_RSSetSizeExceeded 64705
+#define IdResourceStrings_RSEndOfStream 64706
+#define IdResourceStringsCore_RSSocksUDPNotSupported 64707
+#define IdResourceStringsCore_RSSocksRequestFailed 64708
+#define IdResourceStringsCore_RSSocksRequestServerFailed 64709
+#define IdResourceStringsCore_RSSocksRequestIdentFailed 64710
+#define IdResourceStringsCore_RSSocksUnknownError 64711
+#define IdResourceStringsCore_RSSocksServerRespondError 64712
+#define IdResourceStringsCore_RSSocksAuthMethodError 64713
+#define IdResourceStringsCore_RSSocksAuthError 64714
+#define IdResourceStringsCore_RSSocksServerGeneralError 64715
+#define IdResourceStringsCore_RSSocksServerPermissionError 64716
+#define IdResourceStringsCore_RSSocksServerNetUnreachableError 64717
+#define IdResourceStringsCore_RSSocksServerHostUnreachableError 64718
+#define IdResourceStringsCore_RSSocksServerConnectionRefusedError 64719
+#define IdResourceStrings_RSStackEHOSTDOWN 64720
+#define IdResourceStrings_RSStackEHOSTUNREACH 64721
+#define IdResourceStrings_RSStackENOTEMPTY 64722
+#define IdResourceStrings_RSStackHOST_NOT_FOUND 64723
+#define IdResourceStrings_RSStackClassUndefined 64724
+#define IdResourceStrings_RSStackAlreadyCreated 64725
+#define IdResourceStrings_RSAntiFreezeOnlyOne 64726
+#define IdResourceStrings_RSCannotSetIPVersionWhenConnected 64727
+#define IdResourceStrings_RSCannotBindRange 64728
+#define IdResourceStrings_RSConnectionClosedGracefully 64729
+#define IdResourceStrings_RSCouldNotBindSocket 64730
+#define IdResourceStrings_RSInvalidPortRange 64731
+#define IdResourceStrings_RSInvalidServiceName 64732
+#define IdResourceStrings_RSInvalidIPv6Address 64733
+#define IdResourceStrings_RSIPVersionUnsupported 64734
+#define IdResourceStrings_RSNotAllBytesSent 64735
+#define IdResourceStrings_RSStackEADDRINUSE 64736
+#define IdResourceStrings_RSStackEADDRNOTAVAIL 64737
+#define IdResourceStrings_RSStackENETDOWN 64738
+#define IdResourceStrings_RSStackENETUNREACH 64739
+#define IdResourceStrings_RSStackENETRESET 64740
+#define IdResourceStrings_RSStackECONNABORTED 64741
+#define IdResourceStrings_RSStackECONNRESET 64742
+#define IdResourceStrings_RSStackENOBUFS 64743
+#define IdResourceStrings_RSStackEISCONN 64744
+#define IdResourceStrings_RSStackENOTCONN 64745
+#define IdResourceStrings_RSStackESHUTDOWN 64746
+#define IdResourceStrings_RSStackETOOMANYREFS 64747
+#define IdResourceStrings_RSStackETIMEDOUT 64748
+#define IdResourceStrings_RSStackECONNREFUSED 64749
+#define IdResourceStrings_RSStackELOOP 64750
+#define IdResourceStrings_RSStackENAMETOOLONG 64751
+#define IdResourceStrings_RSStackEFAULT 64752
+#define IdResourceStrings_RSStackEINVAL 64753
+#define IdResourceStrings_RSStackEMFILE 64754
+#define IdResourceStrings_RSStackEWOULDBLOCK 64755
+#define IdResourceStrings_RSStackEINPROGRESS 64756
+#define IdResourceStrings_RSStackEALREADY 64757
+#define IdResourceStrings_RSStackENOTSOCK 64758
+#define IdResourceStrings_RSStackEDESTADDRREQ 64759
+#define IdResourceStrings_RSStackEMSGSIZE 64760
+#define IdResourceStrings_RSStackEPROTOTYPE 64761
+#define IdResourceStrings_RSStackENOPROTOOPT 64762
+#define IdResourceStrings_RSStackEPROTONOSUPPORT 64763
+#define IdResourceStrings_RSStackESOCKTNOSUPPORT 64764
+#define IdResourceStrings_RSStackEOPNOTSUPP 64765
+#define IdResourceStrings_RSStackEPFNOSUPPORT 64766
+#define IdResourceStrings_RSStackEAFNOSUPPORT 64767
+#define IdResourceStrings_RSInvalidCharCount 64768
+#define IdResourceStrings_RSInvalidDestinationIndex 64769
+#define IdResourceStrings_RSInvalidCodePage 64770
+#define IdResourceStrings_RSFailedTimeZoneInfo 64771
+#define IdResourceStrings_RSWinsockCallError 64772
+#define IdResourceStrings_RSWinsockLoadError 64773
+#define IdResourceStrings_RSStatusResolving 64774
+#define IdResourceStrings_RSStatusConnecting 64775
+#define IdResourceStrings_RSStatusConnected 64776
+#define IdResourceStrings_RSStatusDisconnecting 64777
+#define IdResourceStrings_RSStatusDisconnected 64778
+#define IdResourceStrings_RSStatusText 64779
+#define IdResourceStrings_RSStackError 64780
+#define IdResourceStrings_RSStackEINTR 64781
+#define IdResourceStrings_RSStackEBADF 64782
+#define IdResourceStrings_RSStackEACCES 64783
+#define IBX_IBXConst_SFileSizeDumpCountIncompatibility 64784
+#define IBX_IBXConst_SCannotPerformDumpOnActiveConnection 64785
+#define IBX_IBXConst_SIBUnknownServerType 64786
+#define IBX_IBXConst_SInvalidLibraryType 64787
+#define IBX_IBXConst_SCannotChangeServerType 64788
+#define IBX_IBXConst_SColumnEncryptionError 64789
+#define IBX_IBXConst_SEncryptionError 64790
+#define IBX_IBXConst_SIBXE3feature 64791
+#define IBX_IBXConst_SSSLSeverExclusive 64792
+#define IBX_IBXConst_SSSLClientExclusive 64793
+#define IBX_IBXConst_SOnlineDumpAvailable 64794
+#define IBX_IBXConst_SInvalidODSVersion 64795
+#define Vcl_VDBConsts_SRemoteLogin 64796
+#define IdResourceStrings_RSInvalidSourceArray 64797
+#define IdResourceStrings_RSInvalidDestinationArray 64798
+#define IdResourceStrings_RSCharIndexOutOfBounds 64799
+#define IBX_IBXConst_SInvalidOption 64800
+#define IBX_IBXConst_SInvalidOnErrorResult 64801
+#define IBX_IBXConst_SInvalidOnStatusResult 64802
+#define IBX_IBXConst_SDPBConstantUnknownEx 64803
+#define IBX_IBXConst_STPBConstantUnknownEx 64804
+#define IBX_IBXConst_SUnknownPlan 64805
+#define IBX_IBXConst_SFieldSizeMismatch 64806
+#define IBX_IBXConst_SEventAlreadyRegistered 64807
+#define IBX_IBXConst_SStringTooLarge 64808
+#define IBX_IBXConst_SNoTimers 64809
+#define IBX_IBXConst_SIB65feature 64810
+#define IBX_IBXConst_SLoginPromptFailure 64811
+#define IBX_IBXConst_SIB70feature 64812
+#define IBX_IBXConst_SIB71feature 64813
+#define IBX_IBXConst_SIB80feature 64814
+#define IBX_IBXConst_SNoVersionInfo 64815
+#define IBX_IBXConst_SOutputParsingError 64816
+#define IBX_IBXConst_SUseSpecificProcedures 64817
+#define IBX_IBXConst_SSQLMonitorAlreadyPresent 64818
+#define IBX_IBXConst_SCantPrintValue 64819
+#define IBX_IBXConst_SEOFReached 64820
+#define IBX_IBXConst_SEOFInComment 64821
+#define IBX_IBXConst_SEOFInString 64822
+#define IBX_IBXConst_SParamNameExpected 64823
+#define IBX_IBXConst_SSuccess 64824
+#define IBX_IBXConst_SDelphiException 64825
+#define IBX_IBXConst_SNoOptionsSet 64826
+#define IBX_IBXConst_SNoDestinationDirectory 64827
+#define IBX_IBXConst_SNosourceDirectory 64828
+#define IBX_IBXConst_SNoUninstallFile 64829
+#define IBX_IBXConst_SOptionNeedsClient 64830
+#define IBX_IBXConst_SOptionNeedsServer 64831
+#define IBX_IBXConst_SIndexFieldMissing 64832
+#define IBX_IBXConst_SInvalidCancellation 64833
+#define IBX_IBXConst_SInvalidEvent 64834
+#define IBX_IBXConst_SMaximumEvents 64835
+#define IBX_IBXConst_SNoEventsRegistered 64836
+#define IBX_IBXConst_SInvalidQueueing 64837
+#define IBX_IBXConst_SInvalidRegistration 64838
+#define IBX_IBXConst_SInvalidBatchMove 64839
+#define IBX_IBXConst_SSQLDialectInvalid 64840
+#define IBX_IBXConst_SSPBConstantNotSupported 64841
+#define IBX_IBXConst_SSPBConstantUnknown 64842
+#define IBX_IBXConst_SServiceActive 64843
+#define IBX_IBXConst_SServiceInActive 64844
+#define IBX_IBXConst_SServerNameMissing 64845
+#define IBX_IBXConst_SQueryParamsError 64846
+#define IBX_IBXConst_SStartParamsError 64847
+#define IBX_IBXConst_SFieldUnsupportedType 64848
+#define IBX_IBXConst_SCircularDataLink 64849
+#define IBX_IBXConst_SEmptySQLStatement 64850
+#define IBX_IBXConst_SIsASelectStatement 64851
+#define IBX_IBXConst_SRequiredParamNotSet 64852
+#define IBX_IBXConst_SNoStoredProcName 64853
+#define IBX_IBXConst_SIsAExecuteProcedure 64854
+#define IBX_IBXConst_SUpdateFailed 64855
+#define IBX_IBXConst_SNotCachedUpdates 64856
+#define IBX_IBXConst_SNotLiveRequest 64857
+#define IBX_IBXConst_SNoProvider 64858
+#define IBX_IBXConst_SNoRecordsAffected 64859
+#define IBX_IBXConst_SNoTableName 64860
+#define IBX_IBXConst_SCannotCreatePrimaryIndex 64861
+#define IBX_IBXConst_SCannotDropSystemIndex 64862
+#define IBX_IBXConst_STableNameMismatch 64863
+#define IBX_IBXConst_SNotEditing 64864
+#define IBX_IBXConst_SCannotInsert 64865
+#define IBX_IBXConst_SCannotPost 64866
+#define IBX_IBXConst_SCannotUpdate 64867
+#define IBX_IBXConst_SCannotDelete 64868
+#define IBX_IBXConst_SCannotRefresh 64869
+#define IBX_IBXConst_SBufferNotSet 64870
+#define IBX_IBXConst_SCircularReference 64871
+#define IBX_IBXConst_SSQLParseError 64872
+#define IBX_IBXConst_SUserAbort 64873
+#define IBX_IBXConst_SDataSetUniDirectional 64874
+#define IBX_IBXConst_SCannotCreateSharedResource 64875
+#define IBX_IBXConst_SWindowsAPIError 64876
+#define IBX_IBXConst_SColumnListsDontMatch 64877
+#define IBX_IBXConst_SColumnTypesDontMatch 64878
+#define IBX_IBXConst_SCantEndSharedTransaction 64879
+#define IBX_IBXConst_SSQLOpen 64880
+#define IBX_IBXConst_SSQLClosed 64881
+#define IBX_IBXConst_SDatasetOpen 64882
+#define IBX_IBXConst_SDatasetClosed 64883
+#define IBX_IBXConst_SUnknownSQLDataType 64884
+#define IBX_IBXConst_SInvalidColumnIndex 64885
+#define IBX_IBXConst_SInvalidParamColumnIndex 64886
+#define IBX_IBXConst_SInvalidDataConversion 64887
+#define IBX_IBXConst_SColumnIsNotNullable 64888
+#define IBX_IBXConst_SBlobCannotBeRead 64889
+#define IBX_IBXConst_SBlobCannotBeWritten 64890
+#define IBX_IBXConst_SEmptyQuery 64891
+#define IBX_IBXConst_SCannotOpenNonSQLSelect 64892
+#define IBX_IBXConst_SNoFieldAccess 64893
+#define IBX_IBXConst_SFieldReadOnly 64894
+#define IBX_IBXConst_SFieldNotFound 64895
+#define IBX_IBXConst_SDatabaseClosed 64896
+#define IBX_IBXConst_SDatabaseOpen 64897
+#define IBX_IBXConst_SDatabaseNameMissing 64898
+#define IBX_IBXConst_SNotInTransaction 64899
+#define IBX_IBXConst_SInTransaction 64900
+#define IBX_IBXConst_STimeoutNegative 64901
+#define IBX_IBXConst_SNoDatabasesInTransaction 64902
+#define IBX_IBXConst_SUpdateWrongDB 64903
+#define IBX_IBXConst_SUpdateWrongTR 64904
+#define IBX_IBXConst_SDatabaseNotAssigned 64905
+#define IBX_IBXConst_STransactionNotAssigned 64906
+#define IBX_IBXConst_SXSQLDAIndexOutOfRange 64907
+#define IBX_IBXConst_SXSQLDANameDoesNotExist 64908
+#define IBX_IBXConst_SEOF 64909
+#define IBX_IBXConst_SBOF 64910
+#define IBX_IBXConst_SInvalidStatementHandle 64911
+#define IBX_IBXConst_StrApplication 64912
+#define IBX_IBXConst_SUnknownError 64913
+#define IBX_IBXConst_SInterBaseMissing 64914
+#define IBX_IBXConst_SInterBaseInstallMissing 64915
+#define IBX_IBXConst_SIB60feature 64916
+#define IBX_IBXConst_SNotSupported 64917
+#define IBX_IBXConst_SNotPermitted 64918
+#define IBX_IBXConst_SFileAccessError 64919
+#define IBX_IBXConst_SConnectionTimeout 64920
+#define IBX_IBXConst_SCannotSetDatabase 64921
+#define IBX_IBXConst_SCannotSetTransaction 64922
+#define IBX_IBXConst_SOperationCancelled 64923
+#define IBX_IBXConst_SDPBConstantNotSupported 64924
+#define IBX_IBXConst_SDPBConstantUnknown 64925
+#define IBX_IBXConst_STPBConstantNotSupported 64926
+#define IBX_IBXConst_STPBConstantUnknown 64927
+#define IBX_IBXConst_StrAttach 64928
+#define IBX_IBXConst_StrDetach 64929
+#define IBX_IBXConst_StrQuery 64930
+#define IBX_IBXConst_StrStart 64931
+#define IBX_IBXConst_StrExecute 64932
+#define IBX_IBXConst_StrNULL 64933
+#define IBX_IBXConst_StrBLOB 64934
+#define IBX_IBXConst_StrFetch 64935
+#define IBX_IBXConst_StrPrepare 64936
+#define IBX_IBXConst_StrPlan 64937
+#define IBX_IBXConst_StrPlanCantRetrive 64938
+#define IBX_IBXConst_StrCommitHardComm 64939
+#define IBX_IBXConst_StrCommitRetaining 64940
+#define IBX_IBXConst_StrRollback 64941
+#define IBX_IBXConst_StrRollbackRetainin 64942
+#define IBX_IBXConst_StrStartTransaction 64943
+#define Data_DBConsts_STextFalse 64944
+#define Data_DBConsts_STextTrue 64945
+#define Data_DBConsts_SParameterNotFound 64946
+#define Data_DBConsts_SInvalidVersion 64947
+#define Data_DBConsts_SBadFieldType 64948
+#define Data_DBConsts_SProviderSQLNotSupported 64949
+#define Data_DBConsts_SProviderExecuteNotSupported 64950
+#define Data_DBConsts_SDataSetUnidirectional 64951
+#define Data_DBConsts_SUnassignedVar 64952
+#define Data_DBConsts_SRecordNotFound 64953
+#define Data_DBConsts_SBcdOverflow 64954
+#define Data_DBConsts_SInvalidBcdValue 64955
+#define Data_DBConsts_SCouldNotParseTimeStamp 64956
+#define Data_DBConsts_SInvalidSqlTimeStamp 64957
+#define IBX_IBXConst_StrMisc 64958
+#define IBX_IBXConst_StrError 64959
+#define Data_DBConsts_SFieldRequired 64960
+#define Data_DBConsts_SDataSetMissing 64961
+#define Data_DBConsts_SInvalidCalcType 64962
+#define Data_DBConsts_SDuplicateIndexName 64963
+#define Data_DBConsts_SNoIndexForFields 64964
+#define Data_DBConsts_SIndexNotFound 64965
+#define Data_DBConsts_SDBDuplicateName 64966
+#define Data_DBConsts_SCircularDataLink 64967
+#define Data_DBConsts_SLookupInfoError 64968
+#define Data_DBConsts_SDataSourceChange 64969
+#define Data_DBConsts_SDataSetOpen 64970
+#define Data_DBConsts_SNotEditing 64971
+#define Data_DBConsts_SDataSetClosed 64972
+#define Data_DBConsts_SDataSetEmpty 64973
+#define Data_DBConsts_SDataSetReadOnly 64974
+#define Data_DBConsts_SNestedDataSetClass 64975
+#define Data_DBConsts_SInvalidFieldKind 64976
+#define Data_DBConsts_SUnknownFieldType 64977
+#define Data_DBConsts_SFieldNameMissing 64978
+#define Data_DBConsts_SDuplicateFieldName 64979
+#define Data_DBConsts_SFieldNotFound 64980
+#define Data_DBConsts_SFieldAccessError 64981
+#define Data_DBConsts_SFieldValueError 64982
+#define Data_DBConsts_SFieldRangeError 64983
+#define Data_DBConsts_SBcdFieldRangeError 64984
+#define Data_DBConsts_SInvalidIntegerValue 64985
+#define Data_DBConsts_SInvalidBoolValue 64986
+#define Data_DBConsts_SInvalidFloatValue 64987
+#define Data_DBConsts_SFieldTypeMismatch 64988
+#define Data_DBConsts_SFieldSizeMismatch 64989
+#define Data_DBConsts_SInvalidVarByteArray 64990
+#define Data_DBConsts_SFieldOutOfRange 64991
+#define uTPLb_I18n_ES_OpenSSLCompat_RequiresIV 64992
+#define uTPLb_I18n_AS_HugeCardinal_DivideLogicFail 64993
+#define uTPLb_I18n_AS_ZeroToZero 64994
+#define uTPLb_I18n_AS_LCM_Fail 64995
+#define uTPLb_I18n_AS_HugeCardinal_N_tooSmall 64996
+#define uTPLb_I18n_AS_HugeCardinal_N_tooBig 64997
+#define uTPLb_I18n_AS_HugeCardinal_N_tooSmall_for_n 64998
+#define uTPLb_I18n_AS_BlockToStream_EndEncrypt_InternalMarshalling 64999
+#define uTPLb_I18n_AS_BlockToStream_EndDecrypt_InternalMarshalling 65000
+#define uTPLb_I18n_AS_BlockPaddingCorrupt 65001
+#define uTPLb_I18n_RSA_DisplayName 65002
+#define uTPLb_I18n_BlockCipher_DisplayName 65003
+#define uTPLb_I18n_Base64_DisplayName 65004
+#define uTPLb_I18n_CFB8bit_DisplayName 65005
+#define uTPLb_I18n_ECB_DisplayName 65006
+#define Data_DBConsts_SInvalidFieldSize 65007
+#define uTPLb_I18n_ES_CannotAssignHuge_BecauseSourceTooBig 65008
+#define uTPLb_I18n_ES_HugeCardinal_IncrementOverflow 65009
+#define uTPLb_I18n_ES_HugeCardinal_DivideOverflow 65010
+#define uTPLb_I18n_ES_HugeCardinal_Power2 65011
+#define uTPLb_I18n_ES_HugeCardinal_MulSmallOverflow 65012
+#define uTPLb_I18n_ES_HugeCardinal_ResizeOverflow 65013
+#define uTPLb_I18n_ES_HugeCardinal_PowerOverflow 65014
+#define uTPLb_I18n_ES_HugeCardinal_SubractOverflow 65015
+#define uTPLb_I18n_ES_HugeCardinal_StreamOutOverflow 65016
+#define uTPLb_I18n_ES_HugeCardinal_StreamInOverflow 65017
+#define uTPLb_I18n_ES_EratosthenesSievSizeTooSmall 65018
+#define uTPLb_I18n_ES_InternalError_Suffix 65019
+#define uTPLb_I18n_ES_InvalidKey 65020
+#define uTPLb_I18n_ES_PlaintextFN_Empty 65021
+#define uTPLb_I18n_ES_CiphertextFN_Empty 65022
+#define uTPLb_I18n_ES_NoOpenSSLCompat 65023
+#define uTPLb_I18n_ES_WrongModeEncrypt 65024
+#define uTPLb_I18n_ES_EncryptNoAlg 65025
+#define uTPLb_I18n_ES_WrongModeDecrypt 65026
+#define uTPLb_I18n_ES_DecryptNoAlg 65027
+#define uTPLb_I18n_ES_WrongModeEncryptMem 65028
+#define uTPLb_I18n_ES_WrongModeDecryptMem 65029
+#define uTPLb_I18n_ES_WrongModeEndDecryptMem 65030
+#define uTPLb_I18n_ES_WrongModeEndEncryptMem 65031
+#define uTPLb_I18n_ES_Asym_CannotSetParam 65032
+#define uTPLb_I18n_ES_Asym_CannotSetCipher 65033
+#define uTPLb_I18n_ES_AsymNotInitByStr 65034
+#define uTPLb_I18n_ES_NotImplementedNot_Suffix 65035
+#define uTPLb_I18n_ES_LibsChainTooDeep 65036
+#define uTPLb_I18n_ES_CircularLibs 65037
+#define uTPLb_I18n_ES_HugeCardinal_CloneOverflow 65038
+#define uTPLb_I18n_ES_HugeCardinal_AddOverflow 65039
 #define Log4D_ParsingLayoutMsg 65040
 #define Log4D_PleaseInitMsg 65041
 #define Log4D_RendererMsg 65042
@@ -219,10 +438,10 @@
 #define Log4D_ThreadHdr 65049
 #define Log4D_TimeHdr 65050
 #define Log4D_ValueUnknownMsg 65051
-#define Data_DBConsts_SInvalidFieldSize 65052
-#define Data_DBConsts_SInvalidFieldKind 65053
-#define Data_DBConsts_SUnknownFieldType 65054
-#define Data_DBConsts_SFieldNameMissing 65055
+#define uTPLb_I18n_ES_NoPassword 65052
+#define uTPLb_I18n_ES_AsymPassword 65053
+#define uTPLb_I18n_ES_HashFailed 65054
+#define uTPLb_I18n_ES_WrongModeReset 65055
 #define Log4D_MessageHdr 65056
 #define Log4D_NDCHdr 65057
 #define Log4D_NilErrorHandlerMsg 65058
@@ -705,6 +924,174 @@
 #define System_SysConst_SEndOfFile 65535
 STRINGTABLE
 BEGIN
+	IdResourceStringsOpenSSL_RSOSSLConnectError,	L"Fehler bei der Verbindung"
+	IdResourceStringsOpenSSL_RSOSSLConnectFailed,	L"Verbindung fehlgeschlagen"
+	IdResourceStringsOpenSSL_RSOSSLConnectExit,	L"Verbindungsende"
+	IdResourceStringsOpenSSL_RSOSSLHandshakeStart,	L"Handshake-Start"
+	IdResourceStringsOpenSSL_RSOSSLHandshakeDone,	L"Handshake ausgef\x00fchrt"
+	IdResourceStringsProtocols_RSTLSSLSSLHandshakeFailed,	L"SSL-Aushandlung fehlgeschlagen."
+	IdResourceStringsProtocols_RSSMTPReplyInvalidReplyStr,	L"Invalid Reply String."
+	IdResourceStringsProtocols_RSSMTPReplyInvalidClass,	L"Invalid Reply Class."
+	IdResourceStringsProtocols_RSHeaderEncodeError,	L"Header-Daten konnten nicht mit Zeichensatz \"%s\" codiert werden"
+	IdResourceStringsOpenSSL_RSOSSFailedToLoad,	L"Fehler beim Laden von %s."
+	IdResourceStringsOpenSSL_RSOSSLModeNotSet,	L"Der Modus wurde nicht gesetzt."
+	IdResourceStringsOpenSSL_RSOSSLCouldNotLoadSSLLibrary,	L"SSL.-Bibliothek konnte nicht geladen werden."
+	IdResourceStringsOpenSSL_RSOSSLStatusString,	L"SSL-Status: \"%s\""
+	IdResourceStringsOpenSSL_RSOSSLAlert,	L"%s Meldung"
+	IdResourceStringsOpenSSL_RSOSSLReadAlert,	L"%s Lesemeldung"
+	IdResourceStringsOpenSSL_RSOSSLWriteAlert,	L"%s Schreibmeldung"
+	IdResourceStringsOpenSSL_RSOSSLAcceptLoop,	L"Annahme-Schleife"
+	IdResourceStringsOpenSSL_RSOSSLAcceptError,	L"Fehler bei der Annahme"
+	IdResourceStringsOpenSSL_RSOSSLAcceptFailed,	L"Annahme fehlgeschlagen"
+	IdResourceStringsOpenSSL_RSOSSLAcceptExit,	L"Annahme-Ende"
+	IdResourceStringsOpenSSL_RSOSSLConnectLoop,	L"Verbindungsschleife"
+	IdResourceStringsProtocols_RSSSLLoadingCertError,	L"Zertifikat konnte nicht geladen werden."
+	IdResourceStringsProtocols_RSSSLLoadingKeyError,	L"Der Schl\x00fcssel konnte nicht geladen werden; \x00fcberpr\x00fcfen Sie das Passwort."
+	IdResourceStringsProtocols_RSSSLLoadingDHParamsError,	L"DH-Parameter konnten nicht geladen werden."
+	IdResourceStringsProtocols_RSSSLGetMethodError,	L"Fehler beim Abrufen einer SSL-Methode."
+	IdResourceStringsProtocols_RSSSLFDSetError,	L"Fehler beim Setzen des Dateideskriptors f\x00fcr SSL"
+	IdResourceStringsProtocols_RSSSLDataBindingError,	L"Fehler beim Binden der Daten an den SSL-Socket."
+	IdResourceStringsProtocols_RSSSLEOFViolation,	L"EOF festgestellt, das gegen das Protokoll verst\x00f6\x00dft"
+	IdResourceStringsProtocols_RSMessageDecoderNotFound,	L"Botschafts-Decoder nicht gefunden"
+	IdResourceStringsProtocols_RSMessageEncoderNotFound,	L"Botschafts-Encoder nicht gefunden"
+	IdResourceStringsProtocols_RSUnrecognizedUUEEncodingScheme,	L"Nicht erkanntes UUE-Codierungsschema."
+	IdResourceStringsProtocols_RSURINoProto,	L"Protokollfeld ist leer"
+	IdResourceStringsProtocols_RSURINoHost,	L"Host-Feld ist leer"
+	IdResourceStringsProtocols_RSTLSSSLIOHandlerRequired,	L"SSL IOHandler ist f\x00fcr diese Einstellung erforderlich"
+	IdResourceStringsProtocols_RSTLSSLCanNotSetWhileConnected,	L"Dieser Wert kann nicht gesetzt werden, w\x00e4hrend der Client verbunden ist."
+	IdResourceStringsProtocols_RSTLSSLSSLNotAvailable,	L"SSL ist auf diesem Server nicht verf\x00fcgbar."
+	IdResourceStringsProtocols_RSTLSSLSSLCmdFailed,	L"Befehl zum Starten der SSL-Aushandlung fehlgeschlagen."
+	IdResourceStringsProtocols_RSMIMEExtensionEmpty,	L"Erweiterung ist leer"
+	IdResourceStringsProtocols_RSMIMEMIMETypeEmpty,	L"Mimetype ist leer"
+	IdResourceStringsProtocols_RSMIMEMIMEExtAlreadyExists,	L"Erweiterung existiert bereits"
+	IdResourceStringsProtocols_RSIdMessageCannotLoad,	L"Meldung aus Datei %s kann nicht geladen werden"
+	IdResourceStringsProtocols_RSMsgClientEncodingText,	L"Text wird codiert"
+	IdResourceStringsProtocols_RSMsgClientEncodingAttachment,	L"Anlage wird codiert"
+	IdResourceStringsProtocols_RSMsgClientInvalidForTransferEncoding,	L"Botschaftsteile k\x00f6nnen in einer Botschaft nicht verwendet, die einen ContentTransferEncoding-Wert hat."
+	IdResourceStringsProtocols_RSTIdMessagePartCreate,	L"TIdMessagePart kann nicht erzeugt werden. Verwenden Sie abgeleitete Klassen. "
+	IdResourceStringsProtocols_RSTIdMessageErrorSavingAttachment,	L"Fehler beim Speichern der Anlage."
+	IdResourceStringsProtocols_RSTIdMessageErrorAttachmentBlocked,	L"Anlage %s ist blockiert."
+	IdResourceStringsProtocols_RSSSLAcceptError,	L"Fehler beim Annehmen der Verbindung mit SSL."
+	IdResourceStringsProtocols_RSSSLConnectError,	L"Fehler beim Verbinden mit SSL."
+	IdResourceStringsProtocols_RSSSLSettingCipherError,	L"SetCipher fehlgeschlagen."
+	IdResourceStringsProtocols_RSSSLCreatingSessionError,	L"Fehler beim Anlegen einer SSL-Sitzung."
+	IdResourceStringsProtocols_RSSSLCreatingContextError,	L"Fehler beim Anlegen eines SSL-Kontexts."
+	IdResourceStringsProtocols_RSSSLLoadingRootCertError,	L"Stammzertifikat konnte nicht geladen werden."
+	IdResourceStringsCore_RSThreadTerminateAndWaitFor,	L"Aufruf von TerminateAndWaitFor f\x00fcr FreeAndTerminate-Threads nicht m\x00f6glich"
+	IdResourceStringsCore_RSAlreadyConnected,	L"Verbindung besteht bereits."
+	IdResourceStringsCore_RSMaximumNumberOfCaptureLineExceeded,	L"Maximal zul\x00e4ssige Zeilenanzahl \x00fcberschritten"
+	IdResourceStringsCore_RSInterceptIsDifferent,	L"Dem IOHandler wurde bereits ein anderes Intercept zugewiesen"
+	IdResourceStringsCore_RSTransparentProxyCannotBind,	L"Transparenter Proxy kann nicht binden."
+	IdResourceStringsCore_RSTransparentProxyCanNotSupportUDP,	L"UDP wird von diesem Proxy nicht unterst\x00fctzt."
+	IdResourceStringsCore_RSBufferMissingTerminator,	L"Pufferbegrenzer muss angegeben werden."
+	IdResourceStringsCore_RSBufferInvalidStartPos,	L"Pufferstartposition ist ung\x00fcltig."
+	IdResourceStringsCore_RSIOHandlerCannotChange,	L"Verbundener IOHandler kann nicht ge\x00e4ndert werden."
+	IdResourceStringsCore_RSIOHandlerTypeNotInstalled,	L"Kein IOHandler des Typs %s installiert."
+	IdResourceStringsCore_RSReplyInvalidCode,	L"Antwortcode ist ung\x00fcltig: %s"
+	IdResourceStringsCore_RSReplyCodeAlreadyExists,	L"Antwortcode bereits vorhanden: %s"
+	IdResourceStringsProtocols_RSFIPSAlgorithmNotAllowed,	L"Algorithmus %s im FIPS-Modus nicht zul\x00e4ssig"
+	IdResourceStringsProtocols_RSSASLNotReady,	L"Die angegebenen SASL-Behandlungsroutinen sind nicht bereit!!"
+	IdResourceStringsProtocols_RSSASLNotSupported,	L"AUTH oder die angegebenen SASL-Behandlungsroutinen werden nicht unterst\x00fctzt!!"
+	IdResourceStringsProtocols_RSSASLRequired,	L"SASL-Mechanismus f\x00fcr Anmeldung erforderlich!!"
+	IdResourceStringsCore_RSSocksServerTTLExpiredError,	L"TTL abgelaufen."
+	IdResourceStringsCore_RSSocksServerCommandError,	L"Anweisung nicht unterst\x00fctzt."
+	IdResourceStringsCore_RSSocksServerAddressError,	L"Adresstyp nicht unterst\x00fctzt."
+	IdResourceStringsCore_RSInterceptCircularLink,	L"%s: Zirkul\x00e4re Verkn\x00fcpfungen sind nicht zul\x00e4ssig"
+	IdResourceStringsCore_RSNotEnoughDataInBuffer,	L"Nicht gen\x00fcgend Daten im Puffer. (%d/%d)"
+	IdResourceStringsCore_RSTooMuchDataInBuffer,	L"Zu viele Daten im Puffer."
+	IdResourceStringsCore_RSFileNotFound,	L"Datei \"%s\" nicht gefunden"
+	IdResourceStringsCore_RSNotConnected,	L"Nicht verbunden"
+	IdResourceStringsCore_RSObjectTypeNotSupported,	L"Objekttyp nicht unterst\x00fctzt."
+	IdResourceStringsCore_RSIdNoDataToRead,	L"Keine Daten f\x00fcr den Lesezugriff."
+	IdResourceStringsCore_RSReadTimeout,	L"Zeit\x00fcberschreitung beim Lesen."
+	IdResourceStringsCore_RSReadLnWaitMaxAttemptsExceeded,	L"Max. Zeilenleseversuche \x00fcberschritten."
+	IdResourceStringsCore_RSReadLnMaxLineLengthExceeded,	L"Max. Zeilenl\x00e4nge \x00fcberschritten."
+	IdResourceStringsCore_RSRequiresLargeStream,	L"Setzen Sie LargeStream auf True, um Streams, die gr\x00f6\x00dfer als 2 GB sind, zu senden"
+	IdResourceStringsCore_RSDataTooLarge,	L"Daten sind f\x00fcr den Stream zu gro\x00df"
+	IdResourceStringsCore_RSConnectTimeout,	L"Zeit\x00fcberschreitung der Verbindung."
+	IdResourceStrings_RSPackageSizeTooBig,	L"Package zu gro\x00df."
+	IdResourceStrings_RSSetSizeExceeded,	L"Festgelegte Gr\x00f6\x00dfe \x00fcberschritten."
+	IdResourceStrings_RSEndOfStream,	L"Ende des Streams: Klasse %s bei %d"
+	IdResourceStringsCore_RSSocksUDPNotSupported,	L"UDP wird in dieser SOCKS-Version nicht unterst\x00fctzt."
+	IdResourceStringsCore_RSSocksRequestFailed,	L"Anforderung zur\x00fcckgewiesen oder fehlgeschlagen."
+	IdResourceStringsCore_RSSocksRequestServerFailed,	L"Anforderung zur\x00fcckgewiesen, weil der SOCKS-Server keine Verbindung herstellen kann."
+	IdResourceStringsCore_RSSocksRequestIdentFailed,	L"Anforderung zur\x00fcckgewiesen, weil das Client-Programm und der Identd verschiedene Benutzer-IDs melden."
+	IdResourceStringsCore_RSSocksUnknownError,	L"Unbekannter Socks-Fehler."
+	IdResourceStringsCore_RSSocksServerRespondError,	L"Socks-Server hat nicht geantwortet."
+	IdResourceStringsCore_RSSocksAuthMethodError,	L"Ung\x00fcltige Authentifizierungsmethode f\x00fcr Socks."
+	IdResourceStringsCore_RSSocksAuthError,	L"Authentifizierungsfehler beim Socks-Server."
+	IdResourceStringsCore_RSSocksServerGeneralError,	L"Allgemeiner SOCKS-Server-Fehler."
+	IdResourceStringsCore_RSSocksServerPermissionError,	L"Verbindung von Regelmenge nicht zugelassen."
+	IdResourceStringsCore_RSSocksServerNetUnreachableError,	L"Netzwerk nicht erreichbar."
+	IdResourceStringsCore_RSSocksServerHostUnreachableError,	L"Host nicht erreichbar."
+	IdResourceStringsCore_RSSocksServerConnectionRefusedError,	L"Verbindung abgelehnt."
+	IdResourceStrings_RSStackEHOSTDOWN,	L"Host ist heruntergefahren."
+	IdResourceStrings_RSStackEHOSTUNREACH,	L"Keine Route zum Host."
+	IdResourceStrings_RSStackENOTEMPTY,	L"Verzeichnis ist nicht leer"
+	IdResourceStrings_RSStackHOST_NOT_FOUND,	L"Host nicht gefunden."
+	IdResourceStrings_RSStackClassUndefined,	L"Stack-Klasse ist nicht definiert."
+	IdResourceStrings_RSStackAlreadyCreated,	L"Stack bereits erstellt."
+	IdResourceStrings_RSAntiFreezeOnlyOne,	L"Pro Anwendung darf nur ein TIdAntiFreeze vorhanden sein."
+	IdResourceStrings_RSCannotSetIPVersionWhenConnected,	L"Wenn verbunden, kann IPVersion nicht ver\x00e4ndert werden"
+	IdResourceStrings_RSCannotBindRange,	L"Port-Bereich (%d - %d) kann nicht eingebunden werden"
+	IdResourceStrings_RSConnectionClosedGracefully,	L"Die Verbindung wurde erfolgreich geschlossen."
+	IdResourceStrings_RSCouldNotBindSocket,	L"Socket konnte nicht gebunden werden. Adresse und Port werden bereits verwendet."
+	IdResourceStrings_RSInvalidPortRange,	L"Ung\x00fcltiger Port-Bereich (%d - %d)"
+	IdResourceStrings_RSInvalidServiceName,	L"%s ist kein g\x00fcltiger Service."
+	IdResourceStrings_RSInvalidIPv6Address,	L"%s ist keine g\x00fcltige IPv6-Adresse"
+	IdResourceStrings_RSIPVersionUnsupported,	L"Die angeforderte IPVersion-/Adress-Familie wird nicht unterst\x00fctzt."
+	IdResourceStrings_RSNotAllBytesSent,	L"Es wurden nicht alle Bytes gesendet."
+	IdResourceStrings_RSStackEADDRINUSE,	L"Adresse wird bereits verwendet."
+	IdResourceStrings_RSStackEADDRNOTAVAIL,	L"Angeforderte Adresse kann nicht zugewiesen werden."
+	IdResourceStrings_RSStackENETDOWN,	L"Netzwerk ist heruntergefahren."
+	IdResourceStrings_RSStackENETUNREACH,	L"Netzwerk ist nicht erreichbar."
+	IdResourceStrings_RSStackENETRESET,	L"Netz hat die Verbindung verloren oder zur\x00fcckgesetzt."
+	IdResourceStrings_RSStackECONNABORTED,	L"Software verursachte einen Verbindungsabbruch."
+	IdResourceStrings_RSStackECONNRESET,	L"Die Verbindung wurde von Peer zur\x00fcckgesetzt."
+	IdResourceStrings_RSStackENOBUFS,	L"Kein Pufferplatz verf\x00fcgbar."
+	IdResourceStrings_RSStackEISCONN,	L"Socket ist bereits verbunden."
+	IdResourceStrings_RSStackENOTCONN,	L"Socket ist nicht verbunden."
+	IdResourceStrings_RSStackESHUTDOWN,	L"Nach Schlie\x00dfen des Socket kann weder gesendet noch empfangen werden."
+	IdResourceStrings_RSStackETOOMANYREFS,	L"Zu viele Referenzen; keine Verbindungen m\x00f6glich."
+	IdResourceStrings_RSStackETIMEDOUT,	L"Zeit\x00fcberschreitung bei Verbindung."
+	IdResourceStrings_RSStackECONNREFUSED,	L"Verbindung abgelehnt."
+	IdResourceStrings_RSStackELOOP,	L"Zu viele Ebenen symbolischer Verkn\x00fcpfungen."
+	IdResourceStrings_RSStackENAMETOOLONG,	L"Dateiname zu lang."
+	IdResourceStrings_RSStackEFAULT,	L"Pufferfehler."
+	IdResourceStrings_RSStackEINVAL,	L"Ung\x00fcltiges Argument."
+	IdResourceStrings_RSStackEMFILE,	L"Zu viele ge\x00f6ffnete Dateien."
+	IdResourceStrings_RSStackEWOULDBLOCK,	L"Operation w\x00fcrde blockieren."
+	IdResourceStrings_RSStackEINPROGRESS,	L"Die Operation wird gerade durchgef\x00fchrt."
+	IdResourceStrings_RSStackEALREADY,	L"Operation wird bereits verarbeitet."
+	IdResourceStrings_RSStackENOTSOCK,	L"Socket-Operation f\x00fcr Nicht-Socket."
+	IdResourceStrings_RSStackEDESTADDRREQ,	L"Zieladresse erforderlich."
+	IdResourceStrings_RSStackEMSGSIZE,	L"Nachricht zu lang."
+	IdResourceStrings_RSStackEPROTOTYPE,	L"Falscher Protokolltyp f\x00fcr Socket."
+	IdResourceStrings_RSStackENOPROTOOPT,	L"Falsche Protokolloption."
+	IdResourceStrings_RSStackEPROTONOSUPPORT,	L"Protokoll nicht unterst\x00fctzt."
+	IdResourceStrings_RSStackESOCKTNOSUPPORT,	L"Socket-Typ wird nicht unterst\x00fctzt."
+	IdResourceStrings_RSStackEOPNOTSUPP,	L"Operation f\x00fcr Socket nicht unterst\x00fctzt."
+	IdResourceStrings_RSStackEPFNOSUPPORT,	L"Protokollfamilie nicht unterst\x00fctzt."
+	IdResourceStrings_RSStackEAFNOSUPPORT,	L"Die Adressfamilie wird von der Protokollfamilie nicht unterst\x00fctzt."
+	IdResourceStrings_RSInvalidCharCount,	L"Ung\x00fcltige Anzahl (%d)"
+	IdResourceStrings_RSInvalidDestinationIndex,	L"Ung\x00fcltiger Zielindex (%d)"
+	IdResourceStrings_RSInvalidCodePage,	L"Ung\x00fcltige Codeseite (%d)"
+	IdResourceStrings_RSFailedTimeZoneInfo,	L"Das Einlesen der Informationen \x00fcber die Zeitzone ist fehlgeschlagen."
+	IdResourceStrings_RSWinsockCallError,	L"Fehler beim Aufruf der Winsock2-Bibliotheksfunktion %s"
+	IdResourceStrings_RSWinsockLoadError,	L"Fehler beim Laden der Winsock2-Bibliothek (%s)"
+	IdResourceStrings_RSStatusResolving,	L"Host-Name %s wird aufgel\x00f6st."
+	IdResourceStrings_RSStatusConnecting,	L"Verbinden mit %s."
+	IdResourceStrings_RSStatusConnected,	L"Verbunden."
+	IdResourceStrings_RSStatusDisconnecting,	L"Verbindung wird getrennt."
+	IdResourceStrings_RSStatusDisconnected,	L"Verbindung getrennt."
+	IdResourceStrings_RSStatusText,	L"%s"
+	IdResourceStrings_RSStackError,	L"Socket-Fehler # %d%s\r\n"
+	IdResourceStrings_RSStackEINTR,	L"Unterbrochener Systemaufruf."
+	IdResourceStrings_RSStackEBADF,	L"Falsche Dateinummer."
+	IdResourceStrings_RSStackEACCES,	L"Zugriff verweigert."
+	IBX_IBXConst_SFileSizeDumpCountIncompatibility,	L"Wenn Sie Gr\x00f6\x00dfen bereitstellen, dann m\x00fcssen Sie eine Gr\x00f6\x00dfe f\x00fcr alle Dateien in der Dateiliste angeben (letzte Gr\x00f6\x00dfe optional)"
+	IBX_IBXConst_SCannotPerformDumpOnActiveConnection,	L"Datenbank kann bei Durchf\x00fchrung eines Online-Dump nicht verbunden werden"
+	IBX_IBXConst_SIBUnknownServerType,	L"%s ist kein registrierter Servertyp"
 	IBX_IBXConst_SInvalidLibraryType,	L"Ung\x00fcltiger Bibliothekstyp zugewiesen.  G\x00fcltige Strings sind %s"
 	IBX_IBXConst_SCannotChangeServerType,	L"ServerType kann f\x00fcr eine aktive Verbindung nicht ge\x00e4ndert werden"
 	IBX_IBXConst_SColumnEncryptionError,	L"Tabellenname und Spaltenname sind zum Festlegen von Passw\x00f6rtern f\x00fcr die Spaltenverschl\x00fcsselung erforderlich"
@@ -715,6 +1102,12 @@ BEGIN
 	IBX_IBXConst_SOnlineDumpAvailable,	L"Online-Auszug der Dienst-API "
 	IBX_IBXConst_SInvalidODSVersion,	L"Ung\x00fcltige Version von ODS Major Restore. G\x00fcltige Optionen sind 0 (keine \x00c4nderung) und >= ODS 13"
 	Vcl_VDBConsts_SRemoteLogin,	L"Externe Anmeldung"
+	IdResourceStrings_RSInvalidSourceArray,	L"Ung\x00fcltiges Quell-Array"
+	IdResourceStrings_RSInvalidDestinationArray,	L"Ung\x00fcltiges Ziel-Array"
+	IdResourceStrings_RSCharIndexOutOfBounds,	L"Zeichenindex au\x00dferhalb des g\x00fcltigen Bereichs (%d)"
+	IBX_IBXConst_SInvalidOption,	L"Ung\x00fcltige Option angegeben"
+	IBX_IBXConst_SInvalidOnErrorResult,	L"Unerwarteter R\x00fcckgabewert von onError"
+	IBX_IBXConst_SInvalidOnStatusResult,	L"Unerwarteter R\x00fcckgabewert von onStatus"
 	IBX_IBXConst_SDPBConstantUnknownEx,	L"DPB-Konstante (%s) ist unbekannt"
 	IBX_IBXConst_STPBConstantUnknownEx,	L"TPB-Konstante (%s) ist unbekannt"
 	IBX_IBXConst_SUnknownPlan,	L"Unbekannter Fehler - Plan kann nicht abgerufen werden"
@@ -728,9 +1121,9 @@ BEGIN
 	IBX_IBXConst_SIB71feature,	L"%s ist ein Funktion von InterBase 7.1. Upgraden Sie auf InterBase 7.1, um diese Funktion zu nutzen"
 	IBX_IBXConst_SIB80feature,	L"%s ist ein Funktion von InterBase 2007. Upgraden Sie auf InterBase 2007, um diese Funktion zu nutzen"
 	IBX_IBXConst_SNoVersionInfo,	L"Versionsinformation f\x00fcr diesen Server wurde nicht ermittelt"
-	IBX_IBXConst_SFileSizeDumpCountIncompatibility,	L"Wenn Sie Gr\x00f6\x00dfen bereitstellen, dann m\x00fcssen Sie eine Gr\x00f6\x00dfe f\x00fcr alle Dateien in der Dateiliste angeben (letzte Gr\x00f6\x00dfe optional)"
-	IBX_IBXConst_SCannotPerformDumpOnActiveConnection,	L"Datenbank kann bei Durchf\x00fchrung eines Online-Dump nicht verbunden werden"
-	IBX_IBXConst_SIBUnknownServerType,	L"%s ist kein registrierter Servertyp"
+	IBX_IBXConst_SOutputParsingError,	L"Unerwarteter Wert f\x00fcr Ausgabepuffer"
+	IBX_IBXConst_SUseSpecificProcedures,	L"Generisches ServiceStart ist hier nicht anwendbar: Verwenden Sie spezifische Prozeduren, um die Konfigurationsparameter festzulegen"
+	IBX_IBXConst_SSQLMonitorAlreadyPresent,	L"Es gibt schon eine Instanz des SQL-Monitors"
 	IBX_IBXConst_SCantPrintValue,	L"Wert kann nicht gedruckt werden"
 	IBX_IBXConst_SEOFReached,	L"SEOFReached"
 	IBX_IBXConst_SEOFInComment,	L"EOF im Kommentar gefunden"
@@ -744,9 +1137,9 @@ BEGIN
 	IBX_IBXConst_SNoUninstallFile,	L"Dateiname f\x00fcr die Deinstallation ist nicht festgelegt"
 	IBX_IBXConst_SOptionNeedsClient,	L"Komponente %s setzt voraus, dass der Client richtig funktioniert"
 	IBX_IBXConst_SOptionNeedsServer,	L"Komponente %s setzt voraus, dass der Server richtig funktioniert"
-	IBX_IBXConst_SInvalidOption,	L"Ung\x00fcltige Option angegeben"
-	IBX_IBXConst_SInvalidOnErrorResult,	L"Unerwarteter R\x00fcckgabewert von onError"
-	IBX_IBXConst_SInvalidOnStatusResult,	L"Unerwarteter R\x00fcckgabewert von onStatus"
+	IBX_IBXConst_SIndexFieldMissing,	L"Indexfeld fehlt"
+	IBX_IBXConst_SInvalidCancellation,	L"W\x00e4hrend der Verarbeitung k\x00f6nnen Ereignisse nicht abgebrochen werden"
+	IBX_IBXConst_SInvalidEvent,	L"Ung\x00fcltiges Ereignis"
 	IBX_IBXConst_SMaximumEvents,	L"Das Maximum an Ereignissen wurde \x00fcberschritten"
 	IBX_IBXConst_SNoEventsRegistered,	L"Es sind keine Ereignisse registriert"
 	IBX_IBXConst_SInvalidQueueing,	L"Ung\x00fcltiges Queueing"
@@ -760,9 +1153,9 @@ BEGIN
 	IBX_IBXConst_SServerNameMissing,	L"Server-Name fehlt"
 	IBX_IBXConst_SQueryParamsError,	L"Abfrageparameter fehlen oder sind nicht korrekt"
 	IBX_IBXConst_SStartParamsError,	L"Start-Parameter fehlen oder sind nicht korrekt"
-	IBX_IBXConst_SOutputParsingError,	L"Unerwarteter Wert f\x00fcr Ausgabepuffer"
-	IBX_IBXConst_SUseSpecificProcedures,	L"Generisches ServiceStart ist hier nicht anwendbar: Verwenden Sie spezifische Prozeduren, um die Konfigurationsparameter festzulegen"
-	IBX_IBXConst_SSQLMonitorAlreadyPresent,	L"Es gibt schon eine Instanz des SQL-Monitors"
+	IBX_IBXConst_SFieldUnsupportedType,	L"Nicht unterst\x00fctzter Feldtyp"
+	IBX_IBXConst_SCircularDataLink,	L"Zirkul\x00e4rer DataLink-Verweis"
+	IBX_IBXConst_SEmptySQLStatement,	L"Leere SQL-Anweisung"
 	IBX_IBXConst_SIsASelectStatement,	L"Verwenden Sie Open f\x00fcr eine Select-Anweisung"
 	IBX_IBXConst_SRequiredParamNotSet,	L"Wert f\x00fcr erforderlichen Parameter nicht festgelegt"
 	IBX_IBXConst_SNoStoredProcName,	L"Stored Procedure wurde kein Name zugewiesen"
@@ -776,9 +1169,9 @@ BEGIN
 	IBX_IBXConst_SCannotCreatePrimaryIndex,	L"Prim\x00e4rindex kann nicht erzeugt werden; wird automatisch erzeugt"
 	IBX_IBXConst_SCannotDropSystemIndex,	L"Systemindex kann nicht entfernt werden"
 	IBX_IBXConst_STableNameMismatch,	L"Fehlende \x00dcbereinstimmung bei Tabellennamen"
-	IBX_IBXConst_SIndexFieldMissing,	L"Indexfeld fehlt"
-	IBX_IBXConst_SInvalidCancellation,	L"W\x00e4hrend der Verarbeitung k\x00f6nnen Ereignisse nicht abgebrochen werden"
-	IBX_IBXConst_SInvalidEvent,	L"Ung\x00fcltiges Ereignis"
+	IBX_IBXConst_SNotEditing,	L"Nicht im Bearbeitungsmodus"
+	IBX_IBXConst_SCannotInsert,	L"In Datenmenge kann nicht eingef\x00fcgt werden. (Keine Einf\x00fcge-Abfrage)"
+	IBX_IBXConst_SCannotPost,	L"Zur\x00fcckschreiben nicht m\x00f6glich. (Keine Aktualisierungs-/Einf\x00fcgen-Abfrage)"
 	IBX_IBXConst_SCannotUpdate,	L"Aktualisierung nicht m\x00f6glich. (Keine Aktualisierungs-Abfrage)"
 	IBX_IBXConst_SCannotDelete,	L"Aus der Datenmenge kann nichts gel\x00f6scht werden. (Keine L\x00f6sch-Abfrage)"
 	IBX_IBXConst_SCannotRefresh,	L"Zeile kann nicht aktualisiert werden. (Keine Aktualisierungs-Abfrage)"
@@ -792,9 +1185,9 @@ BEGIN
 	IBX_IBXConst_SColumnListsDontMatch,	L"Spaltenlisten stimmen nicht \x00fcberein"
 	IBX_IBXConst_SColumnTypesDontMatch,	L"Spaltentypen stimmen nicht \x00fcberein. (Von Index: %d; Bis Index: %d)"
 	IBX_IBXConst_SCantEndSharedTransaction,	L"Beenden einer gemeinsamen Transaktion nur durch Erzwingen und bei \x00dcbereinstimmung mit TimeoutAction der Transaktion m\x00f6glich"
-	IBX_IBXConst_SFieldUnsupportedType,	L"Nicht unterst\x00fctzter Feldtyp"
-	IBX_IBXConst_SCircularDataLink,	L"Zirkul\x00e4rer DataLink-Verweis"
-	IBX_IBXConst_SEmptySQLStatement,	L"Leere SQL-Anweisung"
+	IBX_IBXConst_SSQLOpen,	L"IBSQL ge\x00f6ffnet"
+	IBX_IBXConst_SSQLClosed,	L"IBSQL geschlossen"
+	IBX_IBXConst_SDatasetOpen,	L"Datenmenge ge\x00f6ffnet"
 	IBX_IBXConst_SDatasetClosed,	L"Datenmenge geschlossen"
 	IBX_IBXConst_SUnknownSQLDataType,	L"Unbekannter SQL-Datentyp (%d)"
 	IBX_IBXConst_SInvalidColumnIndex,	L"Ung\x00fcltiger Spaltenindex (Index \x00fcberschreitet den zul\x00e4ssigen Bereich)"
@@ -808,9 +1201,9 @@ BEGIN
 	IBX_IBXConst_SNoFieldAccess,	L"Kein Zugriff auf Feld \"%s\""
 	IBX_IBXConst_SFieldReadOnly,	L"Feld \"%s\" ist schreibgesch\x00fctzt"
 	IBX_IBXConst_SFieldNotFound,	L"Feld \"%s\" nicht gefunden"
-	IBX_IBXConst_SNotEditing,	L"Nicht im Bearbeitungsmodus"
-	IBX_IBXConst_SCannotInsert,	L"In Datenmenge kann nicht eingef\x00fcgt werden. (Keine Einf\x00fcge-Abfrage)"
-	IBX_IBXConst_SCannotPost,	L"Zur\x00fcckschreiben nicht m\x00f6glich. (Keine Aktualisierungs-/Einf\x00fcgen-Abfrage)"
+	IBX_IBXConst_SDatabaseClosed,	L"Operation kann nicht ausgef\x00fchrt werden - DB ist nicht ge\x00f6ffnet"
+	IBX_IBXConst_SDatabaseOpen,	L"Operation kann nicht ausgef\x00fchrt werden - DB ist aktuell ge\x00f6ffnet"
+	IBX_IBXConst_SDatabaseNameMissing,	L"Datenbankname fehlt"
 	IBX_IBXConst_SNotInTransaction,	L"Transaktion ist nicht aktiv"
 	IBX_IBXConst_SInTransaction,	L"Transaktion ist aktiv"
 	IBX_IBXConst_STimeoutNegative,	L"Werte f\x00fcr Zeit\x00fcberschreitung d\x00fcrfen nicht negativ sein"
@@ -824,9 +1217,9 @@ BEGIN
 	IBX_IBXConst_SEOF,	L"Dateiende"
 	IBX_IBXConst_SBOF,	L"Dateianfang"
 	IBX_IBXConst_SInvalidStatementHandle,	L"Ung\x00fcltiges Anweisungs-Handle"
-	IBX_IBXConst_SSQLOpen,	L"IBSQL ge\x00f6ffnet"
-	IBX_IBXConst_SSQLClosed,	L"IBSQL geschlossen"
-	IBX_IBXConst_SDatasetOpen,	L"Datenmenge ge\x00f6ffnet"
+	IBX_IBXConst_StrApplication,	L"[Anwendung: "
+	IBX_IBXConst_SUnknownError,	L"Unbekannter Fehler"
+	IBX_IBXConst_SInterBaseMissing,	L"InterBase-Bibliothek %s im Pfad nicht gefunden. Installieren Sie InterBase, um diese Funktion zu nutzen"
 	IBX_IBXConst_SInterBaseInstallMissing,	L"InterBase-Installations-DLL ibinstall.dll im Pfad nicht gefunden. Installieren Sie InterBase 6, um diese Funktion zu nutzen"
 	IBX_IBXConst_SIB60feature,	L"%s ist ein Funktion von InterBase 6. Upgraden Sie auf InterBase 6, um diese Funktion zu nutzen"
 	IBX_IBXConst_SNotSupported,	L"Nicht unterst\x00fctzte Funktion"
@@ -840,9 +1233,9 @@ BEGIN
 	IBX_IBXConst_SDPBConstantUnknown,	L"DPB-Konstante (%d) ist unbekannt"
 	IBX_IBXConst_STPBConstantNotSupported,	L"TPB-Konstante (isc_tpb_%s) wird nicht unterst\x00fctzt"
 	IBX_IBXConst_STPBConstantUnknown,	L"TPB-Konstante (%d) ist unbekannt"
-	IBX_IBXConst_SDatabaseClosed,	L"Operation kann nicht ausgef\x00fchrt werden - DB ist nicht ge\x00f6ffnet"
-	IBX_IBXConst_SDatabaseOpen,	L"Operation kann nicht ausgef\x00fchrt werden - DB ist aktuell ge\x00f6ffnet"
-	IBX_IBXConst_SDatabaseNameMissing,	L"Datenbankname fehlt"
+	IBX_IBXConst_StrAttach,	L": [Verbinden]"
+	IBX_IBXConst_StrDetach,	L": [L\x00f6sen]"
+	IBX_IBXConst_StrQuery,	L": [Abfrage]"
 	IBX_IBXConst_StrStart,	L": [Starten]"
 	IBX_IBXConst_StrExecute,	L": [Ausf\x00fchren] "
 	IBX_IBXConst_StrNULL,	L"<NULL>"
@@ -856,9 +1249,9 @@ BEGIN
 	IBX_IBXConst_StrRollback,	L": [Zur\x00fccksetzen]"
 	IBX_IBXConst_StrRollbackRetainin,	L": [Zur\x00fccksetzen beibehalten (Vorl\x00e4ufig zur\x00fccksetzen)]"
 	IBX_IBXConst_StrStartTransaction,	L": [Transaktion starten]"
-	IBX_IBXConst_StrApplication,	L"[Anwendung: "
-	IBX_IBXConst_SUnknownError,	L"Unbekannter Fehler"
-	IBX_IBXConst_SInterBaseMissing,	L"InterBase-Bibliothek %s im Pfad nicht gefunden. Installieren Sie InterBase, um diese Funktion zu nutzen"
+	Data_DBConsts_STextFalse,	L"Falsch"
+	Data_DBConsts_STextTrue,	L"Wahr"
+	Data_DBConsts_SParameterNotFound,	L"Parameter '%s' nicht gefunden"
 	Data_DBConsts_SInvalidVersion,	L"Bind-Parameter k\x00f6nnen nicht geladen werden"
 	Data_DBConsts_SBadFieldType,	L"Der Typ von Feld '%s' wird nicht unterst\x00fctzt"
 	Data_DBConsts_SProviderSQLNotSupported,	L"SQL wird nicht unterst\x00fctzt"
@@ -872,9 +1265,9 @@ BEGIN
 	Data_DBConsts_SInvalidSqlTimeStamp,	L"Ung\x00fcltige SQL-Datums-/Uhrzeitwerte"
 	IBX_IBXConst_StrMisc,	L"[Versch] "
 	IBX_IBXConst_StrError,	L"[Fehler] "
-	IBX_IBXConst_StrAttach,	L": [Verbinden]"
-	IBX_IBXConst_StrDetach,	L": [L\x00f6sen]"
-	IBX_IBXConst_StrQuery,	L": [Abfrage]"
+	Data_DBConsts_SFieldRequired,	L"Feld '%s' muss einen Wert haben"
+	Data_DBConsts_SDataSetMissing,	L"Feld '%s' hat keine Datenmenge"
+	Data_DBConsts_SInvalidCalcType,	L"Feld '%s' kann kein berechnetes oder Nachschlage-Feld sein"
 	Data_DBConsts_SDuplicateIndexName,	L"Doppelter Indexname '%s'"
 	Data_DBConsts_SNoIndexForFields,	L"Kein Index f\x00fcr die Felder '%s' vorhanden"
 	Data_DBConsts_SIndexNotFound,	L"Index '%s' wurde nicht gefunden"
@@ -888,9 +1281,9 @@ BEGIN
 	Data_DBConsts_SDataSetEmpty,	L"Operation bei leerer Datenmenge nicht ausf\x00fchrbar"
 	Data_DBConsts_SDataSetReadOnly,	L"Eine Datenmenge, die nur zum Lesen ist, kann nicht ge\x00e4ndert werden"
 	Data_DBConsts_SNestedDataSetClass,	L"Verschachtelte Datenmengen m\x00fcssen von %s vererbt sein"
-	Data_DBConsts_STextFalse,	L"Falsch"
-	Data_DBConsts_STextTrue,	L"Wahr"
-	Data_DBConsts_SParameterNotFound,	L"Parameter '%s' nicht gefunden"
+	Data_DBConsts_SInvalidFieldKind,	L"FieldKind ung\x00fcltig"
+	Data_DBConsts_SUnknownFieldType,	L"Typ f\x00fcr Feld '%s' ist unbekannt"
+	Data_DBConsts_SFieldNameMissing,	L"Feldname fehlt"
 	Data_DBConsts_SDuplicateFieldName,	L"Doppelter Feldname '%s'"
 	Data_DBConsts_SFieldNotFound,	L"Das Feld '%s' wurde nicht gefunden"
 	Data_DBConsts_SFieldAccessError,	L"Feld '%s' kann nicht als Typ %s angesprochen werden"
@@ -904,9 +1297,54 @@ BEGIN
 	Data_DBConsts_SFieldSizeMismatch,	L"Unterschiedliche Gr\x00f6\x00dfe f\x00fcr Feld '%s'; erwartet: %d, gefunden: %d"
 	Data_DBConsts_SInvalidVarByteArray,	L"Variant-Typ oder -gr\x00f6\x00dfe f\x00fcr Feld '%s' ist ung\x00fcltig"
 	Data_DBConsts_SFieldOutOfRange,	L"Wert des Feldes '%s' ist au\x00dferhalb des zul\x00e4ssigen Bereichs"
-	Data_DBConsts_SFieldRequired,	L"Feld '%s' muss einen Wert haben"
-	Data_DBConsts_SDataSetMissing,	L"Feld '%s' hat keine Datenmenge"
-	Data_DBConsts_SInvalidCalcType,	L"Feld '%s' kann kein berechnetes oder Nachschlage-Feld sein"
+	uTPLb_I18n_ES_OpenSSLCompat_RequiresIV,	L"OpenSSL Compability mode requires an explicit IV (except ECB mode)."
+	uTPLb_I18n_AS_HugeCardinal_DivideLogicFail,	L"THugeCardinal.Divide internal logic failure."
+	uTPLb_I18n_AS_ZeroToZero,	L"Zero raised to zero is an invalid operation."
+	uTPLb_I18n_AS_LCM_Fail,	L"function lcm failed."
+	uTPLb_I18n_AS_HugeCardinal_N_tooSmall,	L"RequiredBitLengthOfN too small."
+	uTPLb_I18n_AS_HugeCardinal_N_tooBig,	L"RequiredBitLengthOfN absurdly large."
+	uTPLb_I18n_AS_HugeCardinal_N_tooSmall_for_n,	L"RequiredBitLengthOfN too small for n."
+	uTPLb_I18n_AS_BlockToStream_EndEncrypt_InternalMarshalling,	L"TNoncibleEncryptor.End_Encrypt - Internal marshalling error."
+	uTPLb_I18n_AS_BlockToStream_EndDecrypt_InternalMarshalling,	L"TNoncibleDecryptor.End_Encrypt - Internal marshalling error."
+	uTPLb_I18n_AS_BlockPaddingCorrupt,	L"Invalid ciphertext - block padding is corrupted."
+	uTPLb_I18n_RSA_DisplayName,	L"RSA public key encryption system"
+	uTPLb_I18n_BlockCipher_DisplayName,	L"Block mode"
+	uTPLb_I18n_Base64_DisplayName,	L"Base64"
+	uTPLb_I18n_CFB8bit_DisplayName,	L"CFB 8-bit"
+	uTPLb_I18n_ECB_DisplayName,	L"ECB (with block padding)"
+	Data_DBConsts_SInvalidFieldSize,	L"Ung\x00fcltige Feldgr\x00f6\x00dfe"
+	uTPLb_I18n_ES_CannotAssignHuge_BecauseSourceTooBig,	L"Cannot assign THugeCardinal because source is too big and resizing is not allowed."
+	uTPLb_I18n_ES_HugeCardinal_IncrementOverflow,	L"THugeCardinal.Increment overflow."
+	uTPLb_I18n_ES_HugeCardinal_DivideOverflow,	L"THugeCardinal.Divide overflow."
+	uTPLb_I18n_ES_HugeCardinal_Power2,	L"MulPower2 overflow."
+	uTPLb_I18n_ES_HugeCardinal_MulSmallOverflow,	L"MulSmall overflow."
+	uTPLb_I18n_ES_HugeCardinal_ResizeOverflow,	L"THugeCardinal.Resize overflow"
+	uTPLb_I18n_ES_HugeCardinal_PowerOverflow,	L"Power overflow"
+	uTPLb_I18n_ES_HugeCardinal_SubractOverflow,	L"THugeCardinal.Subtract overflow."
+	uTPLb_I18n_ES_HugeCardinal_StreamOutOverflow,	L"THugeCardinal.StreamOut overflow."
+	uTPLb_I18n_ES_HugeCardinal_StreamInOverflow,	L"THugeCardinal.StreamIn overflow."
+	uTPLb_I18n_ES_EratosthenesSievSizeTooSmall,	L"EratosthenesSieveSize value (%d) too small for required number of pre-computed small primes (%d primes)"
+	uTPLb_I18n_ES_InternalError_Suffix,	L"internal error."
+	uTPLb_I18n_ES_InvalidKey,	L"Invalid key."
+	uTPLb_I18n_ES_PlaintextFN_Empty,	L"TSimpleCodec.EncryptFile - plaintext filename parameter was empty."
+	uTPLb_I18n_ES_CiphertextFN_Empty,	L"TSimpleCodec.EncryptFile - ciphertext filename parameter was empty."
+	uTPLb_I18n_ES_NoOpenSSLCompat,	L"Cipher %s does not support OpenSSL Compatibility mode."
+	uTPLb_I18n_ES_WrongModeEncrypt,	L"TSimpleCodec.Begin_EncryptMemory - Wrong mode."
+	uTPLb_I18n_ES_EncryptNoAlg,	L"TSimpleCodec.Begin_EncryptMemory - Algorithms not set."
+	uTPLb_I18n_ES_WrongModeDecrypt,	L"TSimpleCodec.Begin_DecryptMemory - Wrong mode."
+	uTPLb_I18n_ES_DecryptNoAlg,	L"TSimpleCodec.Begin_DecryptMemory - Algorithms not set."
+	uTPLb_I18n_ES_WrongModeEncryptMem,	L"TSimpleCodec.EncryptMemory - Wrong mode."
+	uTPLb_I18n_ES_WrongModeDecryptMem,	L"TSimpleCodec.DecryptMemory - Wrong mode."
+	uTPLb_I18n_ES_WrongModeEndDecryptMem,	L"TSimpleCodec.End_DecryptMemory - Wrong mode."
+	uTPLb_I18n_ES_WrongModeEndEncryptMem,	L"TSimpleCodec.End_EncryptMemory - Wrong mode."
+	uTPLb_I18n_ES_Asym_CannotSetParam,	L"TSimpleCodec.AsymetricKeySizeInBits - Cannot set parameter whilst enc/decrypting."
+	uTPLb_I18n_ES_Asym_CannotSetCipher,	L"TSimpleCodec.Init - Cannot set Cipher whilst enc/decrypting."
+	uTPLb_I18n_ES_AsymNotInitByStr,	L"TSimpleCodec.Init - Asymetric codecs are not initialized by string."
+	uTPLb_I18n_ES_NotImplementedNot_Suffix,	L"(not implemented yet!)"
+	uTPLb_I18n_ES_LibsChainTooDeep,	L"TCryptographicLibrarys cannot chain more than %d deep."
+	uTPLb_I18n_ES_CircularLibs,	L"Circular TCryptographicLibrary chaining is prohibited."
+	uTPLb_I18n_ES_HugeCardinal_CloneOverflow,	L"THugeCardinal.CreateAsSizedClone overflow."
+	uTPLb_I18n_ES_HugeCardinal_AddOverflow,	L"THugeCardinal.Add overflow."
 	Log4D_ParsingLayoutMsg,	L"Parsing layout options for \"%s\""
 	Log4D_PleaseInitMsg,	L"Please initialise the Log4D system properly"
 	Log4D_RendererMsg,	L"Rendering class: \"%s\", Rendered class: \"%s\""
@@ -919,10 +1357,10 @@ BEGIN
 	Log4D_ThreadHdr,	L"Thread"
 	Log4D_TimeHdr,	L"Time"
 	Log4D_ValueUnknownMsg,	L"Unknown"
-	Data_DBConsts_SInvalidFieldSize,	L"Ung\x00fcltige Feldgr\x00f6\x00dfe"
-	Data_DBConsts_SInvalidFieldKind,	L"FieldKind ung\x00fcltig"
-	Data_DBConsts_SUnknownFieldType,	L"Typ f\x00fcr Feld '%s' ist unbekannt"
-	Data_DBConsts_SFieldNameMissing,	L"Feldname fehlt"
+	uTPLb_I18n_ES_NoPassword,	L"TSimpleCodec.Init - No password."
+	uTPLb_I18n_ES_AsymPassword,	L"TSimpleCodec.Init - Asymetric codecs are not initialized by string."
+	uTPLb_I18n_ES_HashFailed,	L"TSimpleCodec.Init - Hash failed."
+	uTPLb_I18n_ES_WrongModeReset,	L"TSimpleCodec.Init - Reset when not intialized."
 	Log4D_MessageHdr,	L"Message"
 	Log4D_NDCHdr,	L"NDC"
 	Log4D_NilErrorHandlerMsg,	L"An appender cannot have a nil error handler"
@@ -1418,6 +1856,7 @@ END
 /* D:\Projekt\Tokyo\nfsBackup\Backup\Datenmodul\Datenmodul.DM.dfm */
 /* c:\program files (x86)\embarcadero\studio\19.0\lib\Win32\release\SPIN.RES */
 /* D:\Projekt\Tokyo\nfsBackup\Zeitplaner\Formular\Form.Option.dfm */
+/* D:\Projekt\Tokyo\nfsBackup\Zeitplaner\Formular\Form.Mail.dfm */
 /* D:\Projekt\Tokyo\nfsBackup\Zeitplaner\Formular\Form.NFSBackupUI.dfm */
 /* c:\program files (x86)\embarcadero\studio\19.0\lib\Win32\release\CategoryButtons.res */
 /* D:\Projekt\Tokyo\nfsBackup\Zeitplaner\NFSBackupUI.res */

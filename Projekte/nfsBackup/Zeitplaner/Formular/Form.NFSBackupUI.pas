@@ -36,6 +36,8 @@ type
     N1: TMenuItem;
     pop_Close: TMenuItem;
     ApplicationEvents: TApplicationEvents;
+    pop_Einstellung: TPopupMenu;
+    pop_EMailEinstellung: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btn_NeuClick(Sender: TObject);
@@ -47,6 +49,7 @@ type
     procedure pop_ShowClick(Sender: TObject);
     procedure pop_CloseClick(Sender: TObject);
     procedure ApplicationEventsMinimize(Sender: TObject);
+    procedure pop_EMailEinstellungClick(Sender: TObject);
   private
     fCol: RCol;
     fOptionList: TOptionList;
@@ -59,6 +62,7 @@ type
     procedure BackupLauft(Sender: TObject; aOption: TOption);
     procedure BackupEndet(Sender: TObject; aOption: TOption);
     procedure ErrorBackup(Sender: TObject; aOption: TOption; aError: string);
+    procedure Show_EMail_Einstellung;
   public
     procedure Aktual(aReload: Boolean);
   end;
@@ -71,7 +75,7 @@ implementation
 {$R *.dfm}
 
 uses
-  Form.Option, Objekt.Backup;
+  Form.Option, Objekt.Backup, Form.Mail;
 
 
 
@@ -258,6 +262,7 @@ begin
 end;
 
 
+
 procedure Tfrm_NFSBackupUI.Aktual(aReload: Boolean);
 var
   i1: Integer;
@@ -309,6 +314,11 @@ begin
   close;
 end;
 
+procedure Tfrm_NFSBackupUI.pop_EMailEinstellungClick(Sender: TObject);
+begin
+  Show_EMail_Einstellung;
+end;
+
 procedure Tfrm_NFSBackupUI.pop_ShowClick(Sender: TObject);
 begin
   show;
@@ -320,6 +330,20 @@ procedure Tfrm_NFSBackupUI.ApplicationEventsMinimize(Sender: TObject);
 begin
   Hide;
   WindowState := wsMinimized;
+end;
+
+
+procedure Tfrm_NFSBackupUI.Show_EMail_Einstellung;
+var
+  Form: Tfrm_Mail;
+begin
+  Form := Tfrm_Mail.Create(nil);
+  try
+    Form.ShowModal;
+  finally
+    FreeAndNil(Form);
+  end;
+
 end;
 
 
