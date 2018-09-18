@@ -12,20 +12,24 @@ type
     Panel1: TPanel;
     cbo_Provider: TComboBox;
     Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    edt_Host: TEdit;
-    edt_EMail: TEdit;
-    edt_User: TEdit;
     Panel2: TPanel;
     btn_Ok: TButton;
     btn_Cancel: TButton;
     btn_Mail: TButton;
+    GroupBox1: TGroupBox;
+    Label2: TLabel;
+    edt_Host: TEdit;
+    Label3: TLabel;
+    edt_EMail: TEdit;
+    Label4: TLabel;
+    edt_User: TEdit;
     lbl_Passwort: TLabel;
     edt_Passwort: TEdit;
+    GroupBox2: TGroupBox;
     Label5: TLabel;
     edt_Betreff: TEdit;
+    Label6: TLabel;
+    edt_EMailAn: TEdit;
     procedure btn_CancelClick(Sender: TObject);
     procedure btn_OkClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -93,6 +97,7 @@ begin
   edt_EMail.Text := fMaildat.Mail;
   edt_Passwort.Text := fMaildat.Passwort;
   edt_Betreff.Text  := fMaildat.Betreff;
+  edt_EMailAn.Text  := fMaildat.MailAn;
 end;
 
 
@@ -109,6 +114,7 @@ begin
   fMaildat.Mail := edt_EMail.Text;
   fMaildat.Passwort := edt_Passwort.Text;
   fMaildat.Betreff  := edt_Betreff.Text;
+  fMaildat.MailAn   := edt_EMailAn.Text;
   fMaildat.Provider := TProvider(Integer(cbo_Provider.Items.Objects[cbo_Provider.ItemIndex]));
   fMaildat.Save;
   close;
@@ -137,7 +143,7 @@ begin
     Mail.MeinUsername := edt_User.Text;
     Mail.Betreff := edt_Betreff.Text;
     Mail.Nachricht := 'Das ist eine Nachricht (nfsBackup)';
-    Mail.EMailAdresse := edt_EMail.Text;
+    Mail.EMailAdresse := edt_EMailAn.Text;
     Mail.Host := edt_Host.Text;
     Mail.OnMailError := MailError;
     Provider := TProvider(Integer(cbo_Provider.Items.Objects[cbo_Provider.ItemIndex]));

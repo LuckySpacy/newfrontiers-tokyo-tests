@@ -20,6 +20,7 @@ type
     fUser: string;
     fPasswort: string;
     fBetreff: string;
+    fMailAn: string;
   public
     property Provider: TProvider read fProvider write fProvider;
     property Host: string read fHost write fHost;
@@ -27,6 +28,7 @@ type
     property User: string read fUser write fUser;
     property Passwort: string read fPasswort write fPasswort;
     property Betreff: string read fBetreff write fBetreff;
+    property MailAn: string read fMailAn write fMailAn;
     constructor Create;
     destructor Destroy; override;
     procedure Init;
@@ -64,6 +66,7 @@ begin
   fMail := '';
   fPasswort := '';
   fBetreff := '';
+  fMailAn := '';
 end;
 
 procedure TMailDat.Load;
@@ -82,7 +85,7 @@ begin
     List2.StrictDelimiter := true;
     List.LoadFromFile(fDataFile);
     List2.DelimitedText := AllgemeinObj.Entschluesseln(List.Text);
-    if List2.Count < 6 then
+    if List2.Count < 7 then
       exit;
     if not TryStrToInt(List2.Strings[0], iProvider) then
       iProvider := 0;
@@ -92,6 +95,7 @@ begin
     fMail     := List2.Strings[3];
     fPasswort := List2.Strings[4];
     fBetreff  := List2.Strings[5];
+    fMailAn   := List2.Strings[6];
   finally
     FreeAndNil(List);
     FreeAndNil(List2);
@@ -108,7 +112,7 @@ begin
   List := TStringList.Create;
   try
     s := IntToStr(Ord(fProvider)) + ';' +
-         fHost + ';' + fUser + ';' + fMail + ';' + fPasswort + ';' + fBetreff;
+         fHost + ';' + fUser + ';' + fMail + ';' + fPasswort + ';' + fBetreff + ';' + fMailAn;
     List.Text := AllgemeinObj.Verschluesseln(s);
     List.SaveToFile(fDataFile);
   finally

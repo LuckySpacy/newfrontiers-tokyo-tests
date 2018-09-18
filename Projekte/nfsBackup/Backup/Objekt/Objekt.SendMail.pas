@@ -133,8 +133,7 @@ end;
 procedure TSendMail.VersendeEMail;
 begin
   FMsg.From.Address := FMeineEmail;
-  //FMsg.Recipients.EMailAddresses := FEMailAdresse;
-  FMsg.Recipients.EMailAddresses := 'thomas.bachmann.shopping@gmail.com';
+  FMsg.Recipients.EMailAddresses := FEMailAdresse;
   FMsg.Body.Add(FNachricht);
   FMsg.Subject := FBetreff;
   try

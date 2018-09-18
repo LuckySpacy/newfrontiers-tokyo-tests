@@ -185,7 +185,7 @@ begin
     Mail.MeinUsername := fMaildat.User;
     Mail.Betreff := fMaildat.Betreff;
     Mail.Nachricht := s;
-    Mail.EMailAdresse := fMaildat.Mail;
+    Mail.EMailAdresse := fMaildat.MailAn;
     Mail.OnMailError := MailError;
     if fMaildat.Provider = pvExchange then
       Mail.SendenUeberExchange;
