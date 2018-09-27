@@ -1,0 +1,19 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cis="http://dhl.de/webservice/cisbase" xmlns:bus="http://dhl.de/webservices/businesscustomershipping">
+   <soapenv:Header>
+      <cis:Authentification>
+         <cis:user>2222222222_01</cis:user>
+         <cis:signature>pass</cis:signature>
+      </cis:Authentification>
+   </soapenv:Header>
+   <soapenv:Body>
+      <bus:GetManifestRequest>
+         <bus:Version>
+            <majorRelease>2</majorRelease>
+            <minorRelease>0</minorRelease>
+            <!--Optional:-->
+            <build>?</build>
+         </bus:Version>
+         <manifestDate>2016-06-06</manifestDate>
+      </bus:GetManifestRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

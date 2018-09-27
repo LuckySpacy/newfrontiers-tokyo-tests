@@ -1,0 +1,194 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cis="http://dhl.de/webservice/cisbase" xmlns:bus="http://dhl.de/webservices/businesscustomershipping">
+   <soapenv:Header>
+      <cis:Authentification>
+         <cis:user>2222222222_01</cis:user>
+         <cis:signature>pass</cis:signature>
+      </cis:Authentification>
+   </soapenv:Header>
+   <soapenv:Body>
+      <bus:CreateShipmentOrderRequest>
+         <bus:Version>
+            <majorRelease>2</majorRelease>
+            <minorRelease>0</minorRelease>
+            <!--Optional:-->
+            <build>?</build>
+         </bus:Version>
+         <!--1 to 30 repetitions:-->
+         <ShipmentOrder>
+            <sequenceNumber>01</sequenceNumber>
+            <Shipment>
+               <ShipmentDetails>
+                  <product>V01PAK</product>
+                  <cis:accountNumber>${#Project#testAccountNumber}</cis:accountNumber>
+                  <!--Optional:-->
+                  <customerReference>Sendungsreferenz</customerReference>
+                  <shipmentDate>${=new Date().format("YYYY-MM-dd")}</shipmentDate>
+                  <!--Optional:-->
+                  <returnShipmentAccountNumber>${#Project#testReturnShipmentAccountNumber}</returnShipmentAccountNumber>
+                  <!--Optional:-->
+                  <returnShipmentReference>Retouren-Sendungsreferenz</returnShipmentReference>
+                  <ShipmentItem>
+                     <weightInKG>10</weightInKG>
+                     <!--Optional:-->
+                     <lengthInCM>120</lengthInCM>
+                     <!--Optional:-->
+                     <widthInCM>60</widthInCM>
+                     <!--Optional:-->
+                     <heightInCM>60</heightInCM>
+                  </ShipmentItem>
+                  <!--Optional:-->
+                  <Service>
+                     <!--You may enter the following 16 items in any order-->
+                     <!--Optional:-->
+                     <VisualCheckOfAge active="1" type="A16"/>
+                     <!--Optional:-->
+                     <PreferredLocation active="0" details="?"/>
+                     <!--Optional:-->
+                     <PreferredNeighbour active="0" details="?"/>
+                     <!--Optional:-->
+                     <GoGreen active="1"/>
+                     <!--Optional:-->
+                     <Personally active="0"/>
+                     <CashOnDelivery active="1" codAmount="23.25"/>
+                     <!--Optional:-->
+                     <AdditionalInsurance active="1" insuranceAmount="2500"/>
+                     <!--Optional:-->
+                     <BulkyGoods active="1"/>
+                  </Service>
+                  <!--Optional:-->
+                  <Notification>
+                     <recipientEmailAddress>no-reply@deutschepost.de</recipientEmailAddress>
+                  </Notification>
+                  <!--Optional:-->
+                  <BankData>
+                     <cis:accountOwner>Max Mustermann</cis:accountOwner>
+                     <cis:bankName>Postbank</cis:bankName>
+                     <cis:iban>DE77100100100123456789</cis:iban>
+                     <!--Optional:-->
+                     <cis:note1>note 1</cis:note1>
+                     <!--Optional:-->
+                     <cis:note2>note 2</cis:note2>
+                     <!--Optional:-->
+                     <cis:bic>PBNKDEFFXXX</cis:bic>
+                     <!--Optional:-->
+                     <cis:accountreference>?</cis:accountreference>
+                  </BankData>
+               </ShipmentDetails>
+               <Shipper>
+                  <Name>
+                     <cis:name1>DHL Paket GmbH</cis:name1>
+                     <!--Optional:-->
+                     
+                     <!--Optional:-->
+                     
+                  </Name>
+                  <Address>
+                     <cis:streetName>Str‰ﬂchensweg</cis:streetName>
+                     <cis:streetNumber>10</cis:streetNumber>
+                     <!--0 to 2 repetitions:-->
+                     <cis:addressAddition>?</cis:addressAddition>
+                     <!--Optional:-->
+                     <cis:dispatchingInformation>?</cis:dispatchingInformation>
+                     <cis:zip>53113</cis:zip>
+                     <cis:city>Bonn</cis:city>
+                     <!--Optional:-->
+                     <cis:Origin>
+                        <!--Optional:-->
+                        <cis:country>Deutschland</cis:country>
+                        <!--Optional:-->
+                        <cis:countryISOCode>DE</cis:countryISOCode>
+                        <!--Optional:-->
+                        <cis:state>?</cis:state>
+                     </cis:Origin>
+                  </Address>
+                  <Communication>
+                     <!--Optional:-->
+                     
+                     <!--Optional:-->
+                     
+                     <!--Optional:-->
+                     
+                  </Communication>
+               </Shipper>
+               <Receiver>
+                  <cis:name1>DHL Paket GmbH</cis:name1>
+                  <!--You have a CHOICE of the next 4 items at this level-->
+                  <Address>
+                     <!--Optional:-->
+                     
+                     <!--Optional:-->
+                     
+                     <cis:streetName>Charles-de-Gaulle-Str.</cis:streetName>
+                     <cis:streetNumber>20</cis:streetNumber>
+                     <!--0 to 2 repetitions:-->
+                     <cis:addressAddition>?</cis:addressAddition>
+                     <!--Optional:-->
+                     <cis:dispatchingInformation>?</cis:dispatchingInformation>
+                     <cis:zip>53113</cis:zip>
+                     <cis:city>Bonn</cis:city>
+                     <!--Optional:-->
+                     <cis:Origin>
+                        <!--Optional:-->
+                        <cis:country>Deutschland</cis:country>
+                        <!--Optional:-->
+                        <cis:countryISOCode>DE</cis:countryISOCode>
+                        <!--Optional:-->
+                        <cis:state>?</cis:state>
+                     </cis:Origin>
+                  </Address>
+                  <Communication>
+                     <!--Optional:-->
+                     
+                     <!--Optional:-->
+                     
+                     <!--Optional:-->
+                     
+                  </Communication>
+               </Receiver>
+               <!--Optional:-->
+               <ReturnReceiver>
+                  <Name>
+                     <cis:name1>DHL Paket GmbH</cis:name1>
+                     <!--Optional:-->
+                     
+                     <!--Optional:-->
+                     
+                  </Name>
+                  <Address>
+                     <cis:streetName>Str‰ﬂchensweg</cis:streetName>
+                     <cis:streetNumber>10</cis:streetNumber>
+                     <!--0 to 2 repetitions:-->
+                     <cis:addressAddition>?</cis:addressAddition>
+                     <!--Optional:-->
+                     <cis:dispatchingInformation>?</cis:dispatchingInformation>
+                     <cis:zip>53113</cis:zip>
+                     <cis:city>Bonn</cis:city>
+                     <!--Optional:-->
+                     <cis:Origin>
+                        <!--Optional:-->
+                        <cis:country>Deutschland</cis:country>
+                        <!--Optional:-->
+                        <cis:countryISOCode>DE</cis:countryISOCode>
+                        <!--Optional:-->
+                        <cis:state>?</cis:state>
+                     </cis:Origin>
+                  </Address>
+                  <Communication>
+                     <!--Optional:-->
+                     
+                     <!--Optional:-->
+                     
+                     <!--Optional:-->
+                     
+                  </Communication>
+               </ReturnReceiver>
+               <!--Optional:-->
+            </Shipment>
+            <!--Optional:-->
+            <PrintOnlyIfCodeable active="1"/>
+            <!--Optional:-->
+            <labelResponseType>URL</labelResponseType>
+         </ShipmentOrder>
+      </bus:CreateShipmentOrderRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

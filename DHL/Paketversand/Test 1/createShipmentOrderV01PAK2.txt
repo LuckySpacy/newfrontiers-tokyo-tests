@@ -1,0 +1,87 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cis="http://dhl.de/webservice/cisbase" xmlns:bus="http://dhl.de/webservices/businesscustomershipping">
+   <soapenv:Header>
+      <cis:Authentification>
+         <cis:user>2222222222_01</cis:user>
+         <cis:signature>pass</cis:signature>
+      </cis:Authentification>
+   </soapenv:Header>
+   <soapenv:Body>
+      <bus:CreateShipmentOrderRequest>
+         <bus:Version>
+            <majorRelease>2</majorRelease>
+            <minorRelease>2</minorRelease>
+         </bus:Version>
+         <ShipmentOrder>
+            <sequenceNumber>123456</sequenceNumber>
+            <Shipment>
+               <ShipmentDetails>
+                  <product>V01PAK</product>
+                  <cis:accountNumber>22222222220101</cis:accountNumber>
+                  <customerReference>Kundennummer 123456</customerReference>
+                  <shipmentDate>2018-12-31</shipmentDate>
+                  <ShipmentItem>
+                     <weightInKG>5</weightInKG>
+                     <lengthInCM>60</lengthInCM>
+                     <widthInCM>30</widthInCM>
+                     <heightInCM>15</heightInCM>
+                  </ShipmentItem>
+                  <Service>
+                  </Service>
+                  <Notification>
+                     <recipientEmailAddress>Absender@muster.de</recipientEmailAddress>
+                  </Notification>
+               </ShipmentDetails>
+               <Shipper>
+                  <Name>
+                     <cis:name1>Absender Zeile 1</cis:name1>
+                     <cis:name2>Absender Zeile 2</cis:name2>
+                     <cis:name3>Absender Zeile 3</cis:name3>
+                  </Name>
+                  <Address>
+                     <cis:streetName>Vegesacker Heerstr.</cis:streetName>
+                     <cis:streetNumber>111</cis:streetNumber>
+                     <cis:addressAddition>2.Etage</cis:addressAddition>
+                     <cis:dispatchingInformation>Abgangsinformation</cis:dispatchingInformation>
+                     <cis:zip>28757</cis:zip>
+                     <cis:city>Bremen</cis:city>
+                     <cis:Origin>
+                        <cis:country>Germany</cis:country>
+                        <cis:countryISOCode>DE</cis:countryISOCode>
+                     </cis:Origin>
+                  </Address>
+                  <Communication>
+                     <cis:phone>+49421123456</cis:phone>
+                     <cis:email>Empfaengerin@muster.de</cis:email>
+                     <cis:contactPerson>Frau Empfänger</cis:contactPerson>
+                  </Communication>
+               </Shipper>
+               <Receiver>
+                  <cis:name1>Empfänger Zeile 1</cis:name1>
+                  <Address>
+                     <cis:name2>Empfänger Zeile 2</cis:name2>
+                     <cis:name3>Empfänger Zeile 3</cis:name3>
+                     <cis:streetName>Neu-Galliner-Ring</cis:streetName>
+                     <cis:streetNumber>8</cis:streetNumber>
+                     <cis:addressAddition>3.Etage</cis:addressAddition>
+                     <cis:dispatchingInformation>?</cis:dispatchingInformation>
+                     <cis:zip>19258</cis:zip>
+                     <cis:city>Gallin</cis:city>
+                     <cis:Origin>
+                        <cis:country>Germany</cis:country>
+                        <cis:countryISOCode>DE</cis:countryISOCode>
+                        <cis:state>?</cis:state>
+                     </cis:Origin>
+                  </Address>
+                  <Communication>
+                     <cis:phone>+49421123456789</cis:phone>
+                     <cis:email>empfaengerin@muster.de</cis:email>
+                     <cis:contactPerson>Frau Empfängerin</cis:contactPerson>
+                  </Communication>
+               </Receiver>
+            </Shipment>
+            <PrintOnlyIfCodeable active="1"/>
+            <labelResponseType>URL</labelResponseType>
+         </ShipmentOrder>
+      </bus:CreateShipmentOrderRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
