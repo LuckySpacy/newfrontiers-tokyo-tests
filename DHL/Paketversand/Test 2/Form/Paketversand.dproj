@@ -114,23 +114,36 @@
         <DCCReference Include="..\Allgemein\Allgemein.RegIni.pas"/>
         <DCCReference Include="..\Allgemein\Allgemein.SysFolderlocation.pas"/>
         <DCCReference Include="..\Allgemein\Allgemein.System.pas"/>
-        <DCCReference Include="..\Allgemein\Allgemein.Types.pas">
-            <Form>$R *.res</Form>
-        </DCCReference>
+        <DCCReference Include="..\Allgemein\Allgemein.Types.pas"/>
         <DCCReference Include="..\Objekt\DHL\Objekt.DHLShipmentOrderRequestAPI.pas"/>
         <DCCReference Include="..\wsdl\dhl\geschaeftskundenversand_api_2.pas"/>
         <DCCReference Include="..\Frame\Frame.DHLVersion.pas">
             <Form>fra_DHLVersion</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="..\Frame\Frame.DHLShipmentOrder.pas">
             <Form>fra_DHLShipmentOrder</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="..\Objekt\DHL\Objekt.DHLSend.pas"/>
         <DCCReference Include="..\Objekt\DHL\Objekt.DHLShipmentorderResponse.pas"/>
+        <DCCReference Include="..\Objekt\DHL\Objekt.DHLBaselist.pas"/>
+        <DCCReference Include="..\Objekt\DHL\Objekt.DHLShipmentorderResponseList.pas"/>
+        <DCCReference Include="..\Objekt\Objekt.Downloadfile.pas"/>
+        <DCCReference Include="..\Objekt\DHL\Objekt.DHLVersionBase.pas"/>
+        <DCCReference Include="..\Objekt\DHL\Objekt.DHLVersionResponse.pas"/>
+        <DCCReference Include="..\Frame\Frame.DHLValidateShipmentOrder.pas">
+            <Form>fra_DHLValidateShipmentOrder</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Objekt\DHL\Objekt.DHLValidateShipmentOrderRequestAPI.pas"/>
+        <DCCReference Include="..\Objekt\DHL\Objekt.DHLValidateShipmentorder.pas"/>
+        <DCCReference Include="..\Objekt\DHL\Objekt.DHLShipment.pas"/>
+        <DCCReference Include="..\Objekt\DHL\Objekt.DHLValidateShipmentorderResponse.pas"/>
+        <DCCReference Include="..\Objekt\DHL\Objekt.DHLStatusinformation.pas"/>
+        <DCCReference Include="..\Objekt\DHL\Objekt.DHLStatusinformationList.pas"/>
+        <DCCReference Include="..\Objekt\DHL\Objekt.DHLValidateState.pas"/>
+        <DCCReference Include="..\Objekt\DHL\Objekt.DHLValidateStateList.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

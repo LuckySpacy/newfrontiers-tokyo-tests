@@ -11,6 +11,7 @@ object fra_DHLVersion: Tfra_DHLVersion
     Height = 25
     Caption = 'Versionsinformation holen'
     TabOrder = 0
+    OnClick = Button1Click
   end
   object edt_majorRelease: TLabeledEdit
     Left = 96

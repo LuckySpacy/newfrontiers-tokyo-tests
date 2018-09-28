@@ -5,7 +5,9 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Objekt.DHLShipmentOrderRequestAPI;
+  Objekt.DHLShipmentOrderRequestAPI, Objekt.DHLShipmentorderResponseList,
+  IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP,
+  Objekt.Downloadfile;
 
 type
   Tfra_DHLShipmentOrder = class(TFrame)
@@ -14,6 +16,7 @@ type
     Memo1: TMemo;
     procedure btn_ErzeugeShipmentorderClick(Sender: TObject);
   private
+    fDownloadfile: TDownloadfile;
     procedure SendeShipmentOrder;
     procedure FillShipmentOrderRequest(R: TDHLShipmentOrderRequestAPI);
   public
@@ -35,11 +38,12 @@ constructor Tfra_DHLShipmentOrder.Create(AOwner: TComponent);
 begin
   inherited;
   Memo1.Clear;
+  fDownloadfile := TDownloadfile.Create;
 end;
 
 destructor Tfra_DHLShipmentOrder.Destroy;
 begin
-
+  FreeAndNil(fDownloadfile);
   inherited;
 end;
 
@@ -54,13 +58,41 @@ procedure Tfra_DHLShipmentOrder.SendeShipmentOrder;
 var
   ShipmentOrder: TDHLShipmentOrderRequestAPI;
   Cur: TCursor;
+  ResponseList: TDHLShipmentorderResponseList;
+  i1: Integer;
+  Filename: string;
 begin
   Cur := Screen.Cursor;
   ShipmentOrder := TDHLShipmentOrderRequestAPI.Create;
   try
     Screen.Cursor := crHourGlass;
     FillShipmentOrderRequest(ShipmentOrder);
-    Memo1.Lines.Text := AllgemeinObj.DHLSend.SendShipmentOrder(ShipmentOrder, 'd:\Delphi\Tokyo\Test\DHL\Paketversand\Test 2\ShipmentOrder.xml');
+    ResponseList := AllgemeinObj.DHLSend.SendShipmentOrder(ShipmentOrder, AllgemeinObj.DownloadPath + 'ShipmentOrder.xml');
+    Memo1.Clear;
+    Memo1.Lines.Add('Statustext = ' + ResponseList.StatusText);
+    Memo1.Lines.Add('Statuscode = ' + IntToStr(ResponseList.StatusCode));
+    Memo1.Lines.Add('Statusmessage = ' + ResponseList.StatusMessage);
+    for i1 := 0 to ResponseList.Count -1 do
+    begin
+      Memo1.Lines.Add('ShipmentNumber = ' + ResponseList.Item[i1].ShipmentNumber);
+      Memo1.Lines.Add('SequenceNumber = ' + ResponseList.Item[i1].SequenceNumber);
+      Memo1.Lines.Add('LabelStatusText = ' + ResponseList.Item[i1].LabelStatusText);
+      Memo1.Lines.Add('LabelStatusCode = ' + IntToStr(ResponseList.Item[i1].LabelStatusCode));
+      Memo1.Lines.Add('LabelStatusMessage = ' + ResponseList.Item[i1].LabelStatusMessage);
+      Memo1.Lines.Add('LabelUrl = ' + ResponseList.Item[i1].LabelUrl);
+      Memo1.Lines.Add('ReturnLabelUrl = ' + ResponseList.Item[i1].ReturnLabelUrl);
+      Memo1.Lines.Add('ExportLabelUrl = ' + ResponseList.Item[i1].ExportLabelUrl);
+      Memo1.Lines.Add('CodLabelUrl = ' + ResponseList.Item[i1].CodLabelUrl);
+    end;
+
+    for i1 := 0 to ResponseList.Count -1 do
+    begin
+      Filename := 'Label_' + ResponseList.Item[i1].ShipmentNumber + '.pdf';
+      if (ResponseList.StatusCode = 0) and (ResponseList.Item[i1].LabelStatusCode = 0) then
+        fDownloadfile.Download(ResponseList.Item[i1].LabelUrl, AllgemeinObj.DownloadPath + Filename);
+    end;
+
+
   finally
     FreeAndNil(ShipmentOrder);
     Screen.Cursor := cur;
@@ -71,8 +103,8 @@ end;
 
 procedure Tfra_DHLShipmentOrder.FillShipmentOrderRequest(R: TDHLShipmentOrderRequestAPI);
 begin
-  R.Version.majorRelease := 2;
-  R.Version.minorRelease := 2;
+  R.Version.majorRelease := '2';
+  R.Version.minorRelease := '2';
   R.ShipmentOrder.sequenceNumber := '123456';
   r.ShipmentOrder.Shipment.Shipmentdetails.Product := 'V01PAK';
   r.ShipmentOrder.Shipment.Shipmentdetails.AccountNumber := '22222222220101';

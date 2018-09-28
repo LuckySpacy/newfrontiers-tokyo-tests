@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Objekt.Allgemein,
   Vcl.StdCtrls, Vcl.ExtCtrls, Frame.DHLVersion, Frame.DHLShipmentOrder,
-  Soap.InvokeRegistry, Soap.Rio, Soap.SOAPHTTPClient;
+  Soap.InvokeRegistry, Soap.Rio, Soap.SOAPHTTPClient, Frame.DHLValidateShipmentOrder;
 
 type
   TForm1 = class(TForm)
@@ -27,6 +27,7 @@ type
     edt_Url: TEdit;
     tbs_ShipmentOrder: TTabSheet;
     HTTPRIO1: THTTPRIO;
+    tbs_ValidateShipmentOrder: TTabSheet;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure EditExit(Sender: TObject);
@@ -35,6 +36,7 @@ type
   private
     fFrameDHLVersion: Tfra_DHLVersion;
     fFrameDHLShipmentOrder: TFra_DHLShipmentOrder;
+    fFrameDHLValidateShipmentOrder: Tfra_DHLValidateShipmentOrder;
     procedure SaveEinstellung;
   public
   end;
@@ -61,6 +63,11 @@ begin
   fFrameDHLShipmentOrder := Tfra_DHLShipmentOrder.Create(Self);
   fFrameDHLShipmentOrder.Parent := tbs_ShipmentOrder;
   fFrameDHLShipmentOrder.Align := alClient;
+
+  fFrameDHLValidateShipmentOrder := Tfra_DHLValidateShipmentOrder.Create(Self);
+  fFrameDHLValidateShipmentOrder.Parent := tbs_ValidateShipmentOrder;
+  fFrameDHLValidateShipmentOrder.Align := alClient;
+
 
 end;
 

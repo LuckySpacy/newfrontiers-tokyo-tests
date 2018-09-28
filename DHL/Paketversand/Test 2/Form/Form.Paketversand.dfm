@@ -21,7 +21,7 @@ object Form1: TForm1
     Top = 0
     Width = 912
     Height = 560
-    ActivePage = tbs_Einstellung
+    ActivePage = tbs_ValidateShipmentOrder
     Align = alClient
     TabOrder = 0
     object tbs_Einstellung: TTabSheet
@@ -128,10 +128,16 @@ object Form1: TForm1
       ImageIndex = 1
       ExplicitLeft = 8
       ExplicitTop = 28
+      ExplicitWidth = 0
+      ExplicitHeight = 0
     end
     object tbs_ShipmentOrder: TTabSheet
       Caption = 'ShipmentOrder'
       ImageIndex = 2
+    end
+    object tbs_ValidateShipmentOrder: TTabSheet
+      Caption = 'ValidateShipmentOrder'
+      ImageIndex = 3
     end
   end
   object HTTPRIO1: THTTPRIO

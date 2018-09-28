@@ -10,6 +10,7 @@ type
   private
     fIni: TIni;
     fDHLSend: TDHLSend;
+    fDownloadPath: string;
   protected
   public
     constructor Create;
@@ -17,6 +18,7 @@ type
     procedure Init;
     property Ini: TIni read fIni write fIni;
     property DHLSend: TDHLSend read fDHLSend write fDHLSend;
+    property DownloadPath: string read fDownloadPath;
   end;
 
 
@@ -39,6 +41,7 @@ begin
   fDHLSend.cisUser := fIni.cis_User;
   fDHLSend.cisSignature := fIni.cis_Password;
   fDHLSend.Url := fIni.Url;
+  fDownloadPath := ExtractFilePath(ParamStr(0));
 end;
 
 destructor TAllgemeinObj.Destroy;

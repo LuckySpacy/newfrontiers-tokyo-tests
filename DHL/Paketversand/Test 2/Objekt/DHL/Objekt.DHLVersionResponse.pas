@@ -1,4 +1,4 @@
-unit Objekt.DHLVersion;
+unit Objekt.DHLVersionResponse;
 
 interface
 
@@ -6,7 +6,7 @@ uses
   SysUtils, Classes, geschaeftskundenversand_api_2, Objekt.DHLVersionBase;
 
 type
-  TDHLVersion = class(TDHLVersionBase)
+  TDHLVersionResponse = class(TDHLVersionBase)
   private
   public
     constructor Create; override;
@@ -17,16 +17,14 @@ implementation
 
 { TDHLVersion }
 
-constructor TDHLVersion.Create;
-begin
-  inherited;
-  fVersionAPI := Version.Create;
-end;
-
-destructor TDHLVersion.Destroy;
+constructor TDHLVersionResponse.Create;
 begin
   inherited;
 end;
 
+destructor TDHLVersionResponse.Destroy;
+begin
+  inherited;
+end;
 
 end.

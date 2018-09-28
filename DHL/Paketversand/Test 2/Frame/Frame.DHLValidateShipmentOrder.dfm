@@ -1,20 +1,21 @@
-object fra_DHLShipmentOrder: Tfra_DHLShipmentOrder
+object fra_DHLValidateShipmentOrder: Tfra_DHLValidateShipmentOrder
   Left = 0
   Top = 0
-  Width = 451
-  Height = 305
-  Align = alClient
+  Width = 320
+  Height = 240
   TabOrder = 0
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 451
+    Width = 320
     Height = 41
     Align = alTop
     BevelOuter = bvNone
     Caption = 'Panel1'
     ShowCaption = False
     TabOrder = 0
+    ExplicitLeft = -131
+    ExplicitWidth = 451
     object btn_ErzeugeShipmentorder: TButton
       Left = 32
       Top = 9
@@ -28,8 +29,8 @@ object fra_DHLShipmentOrder: Tfra_DHLShipmentOrder
   object Memo1: TMemo
     Left = 0
     Top = 41
-    Width = 451
-    Height = 264
+    Width = 320
+    Height = 199
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -41,5 +42,9 @@ object fra_DHLShipmentOrder: Tfra_DHLShipmentOrder
     ParentFont = False
     ScrollBars = ssVertical
     TabOrder = 1
+    ExplicitLeft = -131
+    ExplicitTop = -24
+    ExplicitWidth = 451
+    ExplicitHeight = 264
   end
 end
