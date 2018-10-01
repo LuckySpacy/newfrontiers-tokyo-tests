@@ -33,7 +33,15 @@ uses
   Objekt.DHLStatusinformation in '..\Objekt\DHL\Objekt.DHLStatusinformation.pas',
   Objekt.DHLStatusinformationList in '..\Objekt\DHL\Objekt.DHLStatusinformationList.pas',
   Objekt.DHLValidateState in '..\Objekt\DHL\Objekt.DHLValidateState.pas',
-  Objekt.DHLValidateStateList in '..\Objekt\DHL\Objekt.DHLValidateStateList.pas';
+  Objekt.DHLValidateStateList in '..\Objekt\DHL\Objekt.DHLValidateStateList.pas',
+  Objekt.DHLUpdateShipmentOrderRequestAPI in '..\Objekt\DHL\Objekt.DHLUpdateShipmentOrderRequestAPI.pas',
+  Objekt.DHLShipmentOrderResponseAPI in '..\Objekt\DHL\Objekt.DHLShipmentOrderResponseAPI.pas',
+  Objekt.DHLUpdateShipmentorderResponse in '..\Objekt\DHL\Objekt.DHLUpdateShipmentorderResponse.pas',
+  Objekt.DHLLabelData in '..\Objekt\DHL\Objekt.DHLLabelData.pas',
+  Objekt.DHLDeleteShipmentOrderRequestAPI in '..\Objekt\DHL\Objekt.DHLDeleteShipmentOrderRequestAPI.pas',
+  Objekt.DHLDeleteShipmentOrderResponse in '..\Objekt\DHL\Objekt.DHLDeleteShipmentOrderResponse.pas',
+  Objekt.DHLDeletionState in '..\Objekt\DHL\Objekt.DHLDeletionState.pas',
+  Objekt.DHLDeletionStateList in '..\Objekt\DHL\Objekt.DHLDeletionStateList.pas';
 
 begin
   Application.Initialize;

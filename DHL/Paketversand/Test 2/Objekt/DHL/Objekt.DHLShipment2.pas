@@ -20,11 +20,13 @@ type
     property Shipmentdetails: TDHLShipmentdetails read fShipmentdetails write fShipmentdetails;
     property Shipper: TDHLShipper read fShipper write fShipper;
     property Receiver: TDHLReceiver read fReceiver write fReceiver;
+    procedure Copy(aShipment2: TDHLShipment2);
   end;
 
 implementation
 
 { TDHLShipment2 }
+
 
 constructor TDHLShipment2.Create;
 begin
@@ -50,5 +52,14 @@ function TDHLShipment2.Shipment2API: Shipment2;
 begin
   Result := fShipment2API;
 end;
+
+
+procedure TDHLShipment2.Copy(aShipment2: TDHLShipment2);
+begin
+  fShipmentdetails.Copy(aShipment2.Shipmentdetails);
+  fShipper.Copy(aShipment2.Shipper);
+  fReceiver.Copy(aShipment2.Receiver);
+end;
+
 
 end.

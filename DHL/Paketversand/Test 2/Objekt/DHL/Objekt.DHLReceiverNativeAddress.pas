@@ -40,11 +40,13 @@ type
     property Zip: string read fZip write setZip;
     property City: string read fCity write setCity;
     property Origin: TDHLOrigin read fOrigin write fOrigin;
+    procedure Copy(aNativeAdress: TDHLReceiverNativeAddress);
   end;
 
 implementation
 
 { TDHLReceiverNativeAddress }
+
 
 constructor TDHLReceiverNativeAddress.Create;
 begin
@@ -114,5 +116,20 @@ begin
   fZip := Value;
   fReceiverNativeAdressTypeAPI.zip := Value;
 end;
+
+
+procedure TDHLReceiverNativeAddress.Copy(aNativeAdress: TDHLReceiverNativeAddress);
+begin
+  setName2(aNativeAdress.Name2);
+  setName3(aNativeAdress.Name3);
+  setStreetName(aNativeAdress.StreetName);
+  setStreetNumber(aNativeAdress.StreetNumber);
+  setDispatchingInformation(aNativeAdress.DispatchingInformation);
+  setAddressAddition(aNativeAdress.AddressAddition);
+  setZip(aNativeAdress.Zip);
+  setCity(aNativeAdress.City);
+  fOrigin.copy(aNativeAdress.Origin);
+end;
+
 
 end.

@@ -30,11 +30,13 @@ type
     property ShipmentDate: TDateTime read fShipmentDate write setShipmentDate;
     property ShipmentItem: TDHLShipmentItem read fShipmentItem write fShipmentItem;
     property Notification: TDHLShipmentNotification read fShipmentNotification write fShipmentNotification;
+    procedure Copy(aShipmentdetails: TDHLShipmentdetails);
   end;
 
 implementation
 
 { TDHLShipmentdetails }
+
 
 constructor TDHLShipmentdetails.Create;
 begin
@@ -83,5 +85,16 @@ function TDHLShipmentdetails.ShipmentDetailsTypeTypeAPI: ShipmentDetailsTypeType
 begin
   Result := fShipmentDetailsTypeTypeAPI;
 end;
+
+procedure TDHLShipmentdetails.Copy(aShipmentdetails: TDHLShipmentdetails);
+begin
+  setProduct(aShipmentdetails.Product);
+  setAccountNumber(aShipmentdetails.AccountNumber);
+  setCustomerReference(aShipmentdetails.CustomerReference);
+  setShipmentDate(aShipmentdetails.ShipmentDate);
+  fShipmentItem.Copy(aShipmentdetails.ShipmentItem);
+  fShipmentNotification.Copy(aShipmentdetails.Notification);
+end;
+
 
 end.

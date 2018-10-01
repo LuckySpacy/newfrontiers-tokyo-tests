@@ -9,7 +9,8 @@ uses
  Soap.InvokeRegistry, Soap.Rio, Soap.SOAPHTTPClient, Objekt.DHLShipmentorderResponse,
  Objekt.DHLShipmentorderResponseList, Objekt.DHLVersionResponse,
  Objekt.DHLValidateShipmentorderRequestAPI, Objekt.DHLValidateShipmentOrderResponse,
- Objekt.DHLValidateState;
+ Objekt.DHLValidateState, Objekt.DHLUpdateShipmentOrderRequestAPI,
+ Objekt.DHLUpdateShipmentOrderResponse, Objekt.DHLStatusInformation;
 
 type
   TDHLSend = class
@@ -23,12 +24,14 @@ type
     fShipmentorderResponseList: TDHLShipmentorderResponseList;
     fVersionResponse: TDHLVersionResponse;
     fValidateShipmentResponse: TDHLValidateShipmentOrderResponse;
+    fDHLUpdateShipmentorderResponse: TDHLUpdateShipmentorderResponse;
     procedure HTTPRIOBeforeExecute(const MethodName: string; SOAPRequest: TStream);
   public
     constructor Create;
     destructor Destroy; override;
     function SendShipmentOrder(aShipmentOrderRequestAPI: TDHLShipmentOrderRequestAPI; aXMLFilename: string): TDHLShipmentorderResponseList;
     function SendValidateShipmentOrder(aValidateShipmentOrderRequestAPI: TDHLValidateShipmentorderRequestAPI; aXMLFilename: string): TDHLValidateShipmentorderResponse;
+    function SendUpdateShipmentOrder(aUpdateShipmentOrderRequestAPI: TDHLUpdateShipmentOrderRequestAPI; aXMLFilename: string): TDHLUpdateShipmentOrderResponse;
     function getVersion: TDHLVersionResponse;
     property Username: string read fUsername write fUsername;
     property Password: string read fPassword write fPassword;
@@ -51,6 +54,7 @@ begin
   fShipmentorderResponseList := TDHLShipmentorderResponseList.Create;
   fVersionResponse := TDHLVersionResponse.Create;
   fValidateShipmentResponse := TDHLValidateShipmentOrderResponse.Create;
+  fDHLUpdateShipmentorderResponse := TDHLUpdateShipmentorderResponse.Create;
 end;
 
 destructor TDHLSend.Destroy;
@@ -58,6 +62,7 @@ begin
   FreeAndNil(fShipmentorderResponseList);
   FreeAndNil(fVersionResponse);
   FreeAndNil(fValidateShipmentResponse);
+  FreeAndNil(fDHLUpdateShipmentorderResponse);
   inherited;
 end;
 
@@ -173,6 +178,7 @@ end;
 
 
 
+
 function TDHLSend.SendValidateShipmentOrder(
   aValidateShipmentOrderRequestAPI: TDHLValidateShipmentorderRequestAPI;
   aXMLFilename: string): TDHLValidateShipmentorderResponse;
@@ -222,6 +228,58 @@ begin
   Result := fValidateShipmentResponse;
 
 end;
+
+
+function TDHLSend.SendUpdateShipmentOrder(aUpdateShipmentOrderRequestAPI: TDHLUpdateShipmentOrderRequestAPI;
+  aXMLFilename: string): TDHLUpdateShipmentorderResponse;
+var
+  GHTTPRIO : THTTPRIO;
+  hAuthentification : Authentification;
+  Response : UpdateShipmentOrderResponse;
+  GKVAPI : GKVAPIServicePortType;
+  i: Integer;
+  StatusInfo: TDHLStatusinformation;
+begin
+  GHTTPRIO := THTTPRIO.Create(nil);
+  GHTTPRIO.HTTPWebNode.UserName := fUsername;
+  GHTTPRIO.HTTPWebNode.Password := fPassword;
+  GHTTPRIO.OnBeforeExecute := HTTPRIOBeforeExecute;
+
+  hAuthentification := Authentification.Create;
+  hAuthentification.user := fcisUser;
+  hAuthentification.signature := fcisSignature;
+  GHTTPRIO.SOAPHeaders.Send(hAuthentification);
+
+  GKVAPI := GetGKVAPIServicePortType(false, fUrl, GHTTPRIO);
+  Response := GKVAPI.updateShipmentOrder(aUpdateShipmentOrderRequestAPI.Request);
+
+
+  fDHLUpdateShipmentorderResponse.Version.majorRelease := Response.Version.majorRelease;
+  fDHLUpdateShipmentorderResponse.Version.minorRelease := Response.Version.minorRelease;
+  fDHLUpdateShipmentorderResponse.Version.Build        := Response.Version.build;
+
+  fDHLUpdateShipmentorderResponse.Status.StatusCode := Response.Status.statusCode;
+  fDHLUpdateShipmentorderResponse.Status.StatusText := Response.Status.statusText;
+  fDHLUpdateShipmentorderResponse.Status.StatusMessage := Response.Status.statusMessage[0];
+
+  fDHLUpdateShipmentorderResponse.LabelData.Status.StatusCode    := Response.LabelData.Status.statusCode;
+  fDHLUpdateShipmentorderResponse.LabelData.Status.StatusText    := Response.LabelData.Status.statusText;
+  fDHLUpdateShipmentorderResponse.LabelData.Status.StatusMessage := Response.LabelData.Status.statusMessage[0];
+  //fDHLUpdateShipmentorderResponse.LabelData.LabelData := Response.LabelData.labelData;
+  fDHLUpdateShipmentorderResponse.LabelData.LabelUrl := Response.LabelData.labelUrl;
+  fDHLUpdateShipmentorderResponse.LabelData.ReturnLabelUrl := Response.LabelData.returnLabelUrl;
+  fDHLUpdateShipmentorderResponse.LabelData.ExportLabelUrl := Response.LabelData.exportLabelUrl;
+  fDHLUpdateShipmentorderResponse.LabelData.CodLabelUrl := Response.LabelData.codLabelUrl;
+
+  fDHLUpdateShipmentorderResponse.LabelData.ShipmentNumber := Response.LabelData.shipmentNumber;
+
+  FreeAndNil(Response);
+  FreeAndNil(hAuthentification);
+
+  Result := fDHLUpdateShipmentorderResponse;
+
+end;
+
 
 procedure TDHLSend.HTTPRIOBeforeExecute(const MethodName: string; SOAPRequest: TStream);
 var

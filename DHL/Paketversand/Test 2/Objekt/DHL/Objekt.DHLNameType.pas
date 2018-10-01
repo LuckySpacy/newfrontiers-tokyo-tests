@@ -22,11 +22,13 @@ type
     property Name1: string read fName1 write setName1;
     property Name2: string read fName2 write setName2;
     property Name3: string read fName3 write setName3;
+    procedure Copy(aNameType: TDHLNameType);
   end;
 
 implementation
 
 { TDHLNameType }
+
 
 constructor TDHLNameType.Create;
 begin
@@ -61,5 +63,13 @@ begin
   fName3 := Value;
   fNameTypeAPI.name3 := Value;
 end;
+
+procedure TDHLNameType.Copy(aNameType: TDHLNameType);
+begin
+  setName1(aNameType.Name1);
+  setName2(aNameType.Name2);
+  setName3(aNameType.Name3);
+end;
+
 
 end.

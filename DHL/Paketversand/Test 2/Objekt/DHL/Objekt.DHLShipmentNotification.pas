@@ -16,11 +16,13 @@ type
     destructor Destroy; override;
     function ShipmentNotificationTypeAPI: ShipmentNotificationType;
     property recipientEmailAddress: string read frecipientEmailAddress write setrecipientEmailAddress;
+    procedure Copy(aShipmentNotification: TDHLShipmentNotification);
   end;
 
 implementation
 
 { TDHLShipmentNotification }
+
 
 constructor TDHLShipmentNotification.Create;
 begin
@@ -43,5 +45,11 @@ function TDHLShipmentNotification.ShipmentNotificationTypeAPI: ShipmentNotificat
 begin
   Result := fShipmentNotificationTypeAPI;
 end;
+
+procedure TDHLShipmentNotification.Copy(aShipmentNotification: TDHLShipmentNotification);
+begin
+  setrecipientEmailAddress(aShipmentNotification.recipientEmailAddress);
+end;
+
 
 end.

@@ -34,11 +34,13 @@ type
     property City: string read fCity write setCity;
     property AddressAddition: string read fAddressAddition write setAddressAddition;
     property Origin: TDHLOrigin read fDHLOrigin write fDHLOrigin;
+    procedure Copy(aNativeAdress: TDHLNativeAdress);
   end;
 
 implementation
 
 { TDHLNativeAdress }
+
 
 constructor TDHLNativeAdress.Create;
 begin
@@ -96,5 +98,18 @@ begin
   fZip := Value;
   fNativeAdressTypeAPI.zip := Value;
 end;
+
+
+procedure TDHLNativeAdress.Copy(aNativeAdress: TDHLNativeAdress);
+begin
+  setStreetName(aNativeAdress.StreetName);
+  setStreetNumber(aNativeAdress.StreetNumber);
+  setZip(aNativeAdress.Zip);
+  setCity(aNativeAdress.City);
+  setDispatchingInformation(aNativeAdress.DispatchingInformation);
+  setAddressAddition(aNativeAdress.AddressAddition);
+  fDHLOrigin.copy(aNativeAdress.Origin);
+end;
+
 
 end.

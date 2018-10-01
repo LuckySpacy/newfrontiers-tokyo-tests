@@ -7,17 +7,24 @@ uses
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
   Objekt.DHLShipmentOrderRequestAPI, Objekt.DHLShipmentorderResponseList,
   IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP,
-  Objekt.Downloadfile;
+  Objekt.Downloadfile, Objekt.DHLUpdateShipmentOrderResponse,
+  Objekt.DHLUpdateShipmentOrderRequestAPI, Objekt.DHLShipmentorderResponse;
 
 type
   Tfra_DHLShipmentOrder = class(TFrame)
     Panel1: TPanel;
     btn_ErzeugeShipmentorder: TButton;
     Memo1: TMemo;
+    btn_UpdateShipmentOrder: TButton;
     procedure btn_ErzeugeShipmentorderClick(Sender: TObject);
+    procedure btn_UpdateShipmentOrderClick(Sender: TObject);
   private
     fDownloadfile: TDownloadfile;
+    fShipmentOrderResponseList:  TDHLShipmentorderResponseList;
+    fShipmentOrder: TDHLShipmentOrderRequestAPI;
     procedure SendeShipmentOrder;
+    procedure UpdateShipmentOrder;
+    procedure FillUpdateShipmentOrder(U: TDHLUpdateShipmentOrderRequestAPI);
     procedure FillShipmentOrderRequest(R: TDHLShipmentOrderRequestAPI);
   public
     constructor Create(AOwner: TComponent); override;
@@ -34,15 +41,19 @@ uses
   Objekt.Allgemein;
 
 
+
 constructor Tfra_DHLShipmentOrder.Create(AOwner: TComponent);
 begin
   inherited;
   Memo1.Clear;
   fDownloadfile := TDownloadfile.Create;
+  fShipmentOrder := nil;
 end;
 
 destructor Tfra_DHLShipmentOrder.Destroy;
 begin
+  if fShipmentOrder <> nil then
+    FreeAndNil(fShipmentOrder);
   FreeAndNil(fDownloadfile);
   inherited;
 end;
@@ -56,48 +67,48 @@ end;
 
 procedure Tfra_DHLShipmentOrder.SendeShipmentOrder;
 var
-  ShipmentOrder: TDHLShipmentOrderRequestAPI;
   Cur: TCursor;
-  ResponseList: TDHLShipmentorderResponseList;
   i1: Integer;
   Filename: string;
 begin
   Cur := Screen.Cursor;
-  ShipmentOrder := TDHLShipmentOrderRequestAPI.Create;
+  if fShipmentOrder <> nil then
+    FreeAndNil(fShipmentOrder);
+
+  fShipmentOrder := TDHLShipmentOrderRequestAPI.Create;
   try
     Screen.Cursor := crHourGlass;
-    FillShipmentOrderRequest(ShipmentOrder);
-    ResponseList := AllgemeinObj.DHLSend.SendShipmentOrder(ShipmentOrder, AllgemeinObj.DownloadPath + 'ShipmentOrder.xml');
+    FillShipmentOrderRequest(fShipmentOrder);
+    fShipmentOrderResponseList := AllgemeinObj.DHLSend.SendShipmentOrder(fShipmentOrder, AllgemeinObj.DownloadPath + 'ShipmentOrder.xml');
     Memo1.Clear;
-    Memo1.Lines.Add('Statustext = ' + ResponseList.StatusText);
-    Memo1.Lines.Add('Statuscode = ' + IntToStr(ResponseList.StatusCode));
-    Memo1.Lines.Add('Statusmessage = ' + ResponseList.StatusMessage);
-    for i1 := 0 to ResponseList.Count -1 do
+    Memo1.Lines.Add('Statustext = ' + fShipmentOrderResponseList.StatusText);
+    Memo1.Lines.Add('Statuscode = ' + IntToStr(fShipmentOrderResponseList.StatusCode));
+    Memo1.Lines.Add('Statusmessage = ' + fShipmentOrderResponseList.StatusMessage);
+    for i1 := 0 to fShipmentOrderResponseList.Count -1 do
     begin
-      Memo1.Lines.Add('ShipmentNumber = ' + ResponseList.Item[i1].ShipmentNumber);
-      Memo1.Lines.Add('SequenceNumber = ' + ResponseList.Item[i1].SequenceNumber);
-      Memo1.Lines.Add('LabelStatusText = ' + ResponseList.Item[i1].LabelStatusText);
-      Memo1.Lines.Add('LabelStatusCode = ' + IntToStr(ResponseList.Item[i1].LabelStatusCode));
-      Memo1.Lines.Add('LabelStatusMessage = ' + ResponseList.Item[i1].LabelStatusMessage);
-      Memo1.Lines.Add('LabelUrl = ' + ResponseList.Item[i1].LabelUrl);
-      Memo1.Lines.Add('ReturnLabelUrl = ' + ResponseList.Item[i1].ReturnLabelUrl);
-      Memo1.Lines.Add('ExportLabelUrl = ' + ResponseList.Item[i1].ExportLabelUrl);
-      Memo1.Lines.Add('CodLabelUrl = ' + ResponseList.Item[i1].CodLabelUrl);
+      Memo1.Lines.Add('ShipmentNumber = ' + fShipmentOrderResponseList.Item[i1].ShipmentNumber);
+      Memo1.Lines.Add('SequenceNumber = ' + fShipmentOrderResponseList.Item[i1].SequenceNumber);
+      Memo1.Lines.Add('LabelStatusText = ' + fShipmentOrderResponseList.Item[i1].LabelStatusText);
+      Memo1.Lines.Add('LabelStatusCode = ' + IntToStr(fShipmentOrderResponseList.Item[i1].LabelStatusCode));
+      Memo1.Lines.Add('LabelStatusMessage = ' + fShipmentOrderResponseList.Item[i1].LabelStatusMessage);
+      Memo1.Lines.Add('LabelUrl = ' + fShipmentOrderResponseList.Item[i1].LabelUrl);
+      Memo1.Lines.Add('ReturnLabelUrl = ' + fShipmentOrderResponseList.Item[i1].ReturnLabelUrl);
+      Memo1.Lines.Add('ExportLabelUrl = ' + fShipmentOrderResponseList.Item[i1].ExportLabelUrl);
+      Memo1.Lines.Add('CodLabelUrl = ' + fShipmentOrderResponseList.Item[i1].CodLabelUrl);
     end;
 
-    for i1 := 0 to ResponseList.Count -1 do
+    for i1 := 0 to fShipmentOrderResponseList.Count -1 do
     begin
-      Filename := 'Label_' + ResponseList.Item[i1].ShipmentNumber + '.pdf';
-      if (ResponseList.StatusCode = 0) and (ResponseList.Item[i1].LabelStatusCode = 0) then
-        fDownloadfile.Download(ResponseList.Item[i1].LabelUrl, AllgemeinObj.DownloadPath + Filename);
+      Filename := 'Label_' + fShipmentOrderResponseList.Item[i1].ShipmentNumber + '.pdf';
+      if (fShipmentOrderResponseList.StatusCode = 0) and (fShipmentOrderResponseList.Item[i1].LabelStatusCode = 0) then
+        fDownloadfile.Download(fShipmentOrderResponseList.Item[i1].LabelUrl, AllgemeinObj.DownloadPath + Filename);
     end;
-
 
   finally
-    FreeAndNil(ShipmentOrder);
     Screen.Cursor := cur;
   end;
 end;
+
 
 
 
@@ -158,4 +169,49 @@ begin
 
 
 end;
+
+
+
+procedure Tfra_DHLShipmentOrder.btn_UpdateShipmentOrderClick(Sender: TObject);
+begin //
+  UpdateShipmentOrder;
+end;
+
+
+procedure Tfra_DHLShipmentOrder.UpdateShipmentOrder;
+var
+  UpdateShipmentOrder: TDHLUpdateShipmentOrderRequestAPI;
+  Response: TDHLUpdateShipmentOrderResponse;
+begin       //
+  UpdateShipmentOrder := TDHLUpdateShipmentOrderRequestAPI.Create;
+  try
+
+    FillUpdateShipmentOrder(UpdateShipmentOrder);
+    Response := AllgemeinObj.DHLSend.SendUpdateShipmentOrder(UpdateShipmentOrder, AllgemeinObj.DownloadPath + 'UpdateShipmentOrder.xml');
+    Memo1.Clear;
+    Memo1.Lines.Add('StatusText = ' + Response.Status.StatusText);
+    Memo1.Lines.Add('StatusMessage = ' + Response.Status.StatusMessage);
+
+  finally
+    FreeAndNil(UpdateShipmentOrder);
+  end;
+
+end;
+
+procedure Tfra_DHLShipmentOrder.FillUpdateShipmentOrder(U: TDHLUpdateShipmentOrderRequestAPI);
+var
+  sr : TDHLShipmentorderResponse;
+begin
+  sr := fShipmentOrderResponseList.Item[0];
+  u.ShipmentNumber := sr.ShipmentNumber;
+  U.Version.majorRelease := '2';
+  U.Version.minorRelease := '2';
+  U.ShipmentOrder.sequenceNumber := fShipmentOrder.ShipmentOrder.sequenceNumber;
+  U.ShipmentOrder.Shipment.Copy(fShipmentOrder.ShipmentOrder.Shipment);
+end;
+
+
+
+
+
 end.

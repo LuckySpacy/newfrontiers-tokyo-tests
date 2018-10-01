@@ -23,11 +23,13 @@ type
     property Country: string read fCountry write setCountry;
     property CountryISOCode: string read fCountryISOCode write setCountryISOCode;
     property State: string read fState write setState;
+    procedure copy(aOrigin: TDHLOrigin);
   end;
 
 implementation
 
 { TDHLOrigin }
+
 
 constructor TDHLOrigin.Create;
 begin
@@ -68,5 +70,13 @@ begin
   fState := Value;
   fOriginAPI.state := Value;
 end;
+
+procedure TDHLOrigin.copy(aOrigin: TDHLOrigin);
+begin
+  setCountry(aOrigin.Country);
+  setCountryISOCode(aOrigin.CountryISOCode);
+  setState(aOrigin.State);
+end;
+
 
 end.

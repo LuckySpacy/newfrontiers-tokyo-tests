@@ -22,11 +22,13 @@ type
     property Phone: string read fPhone write setPhone;
     property EMail: string read fEMail write setEMail;
     property ContactPerson: string read fContactPerson write setContactPerson;
+    procedure Copy(aCommunication: TDHLCommunication);
   end;
 
 implementation
 
 { TDHLCommunication }
+
 
 
 constructor TDHLCommunication.Create;
@@ -61,6 +63,14 @@ end;
 function TDHLCommunication.CommunicationTypeAPI: CommunicationType;
 begin
   Result := fCommunicationTypeAPI;
+end;
+
+
+procedure TDHLCommunication.Copy(aCommunication: TDHLCommunication);
+begin
+  setContactPerson(aCommunication.ContactPerson);
+  setPhone(aCommunication.Phone);
+  setEMail(aCommunication.EMail);
 end;
 
 

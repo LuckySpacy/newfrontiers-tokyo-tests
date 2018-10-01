@@ -21,12 +21,14 @@ type
     property sequenceNumber: string read fsequenceNumber write setsequenceNumber;
     property PrintOnlyIfCodeable: TDHLServiceconfiguration read fPrintOnlyIfCodeable write fPrintOnlyIfCodeable;
     property Shipment: TDHLShipment2 read fShipment2 write fShipment2;
+    procedure Copy(aShipmentOrder: TDHLShipmentorder);
   end;
 
 
 implementation
 
 { TDHLShipmentorder }
+
 
 constructor TDHLShipmentorder.Create;
 begin
@@ -61,5 +63,14 @@ function TDHLShipmentorder.ShipmentorderAPI: ShipmentOrderType;
 begin
   Result := fShipmentOrderTypeAPI;
 end;
+
+
+procedure TDHLShipmentorder.Copy(aShipmentOrder: TDHLShipmentorder);
+begin
+  setsequenceNumber(aShipmentOrder.sequenceNumber);
+  fPrintOnlyIfCodeable.Copy(aShipmentOrder.PrintOnlyIfCodeable);
+  fShipment2.Copy(aShipmentOrder.Shipment);
+end;
+
 
 end.

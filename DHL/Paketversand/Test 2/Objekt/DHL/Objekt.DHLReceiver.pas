@@ -21,11 +21,13 @@ type
     property Name1: string read fName1 write setName1;
     property Address: TDHLReceiverNativeAddress read fAddress write fAddress;
     property Communication: TDHLCommunication read fCommunication write fCommunication;
+    procedure Copy(aReceiver: TDHLReceiver);
   end;
 
 implementation
 
 { TDHLReceiver }
+
 
 constructor TDHLReceiver.Create;
 begin
@@ -54,5 +56,13 @@ begin
   fName1 := Value;
   fReceiverTypeAPI.name1 := Value;
 end;
+
+procedure TDHLReceiver.Copy(aReceiver: TDHLReceiver);
+begin
+  setName1(aReceiver.Name1);
+  fAddress.Copy(aReceiver.Address);
+  fCommunication.Copy(aReceiver.Communication);
+end;
+
 
 end.

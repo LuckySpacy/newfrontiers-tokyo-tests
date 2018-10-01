@@ -26,11 +26,13 @@ type
     property LengthCM: Int64 read fLengthCM write setLengthCM;
     property WidthCM: Int64 read fWidthCM write setWidthCM;
     property HeightCM: Int64 read fHeightCM write setHeightCM;
+    procedure Copy(aShipmentItem: TDHLShipmentItem);
   end;
 
 implementation
 
 { TDHLShipmentItem }
+
 
 constructor TDHLShipmentItem.Create;
 begin
@@ -79,5 +81,14 @@ function TDHLShipmentItem.ShipmentItemTypeAPI: ShipmentItemType;
 begin
   Result := fShipmentItemTypeAPI;
 end;
+
+procedure TDHLShipmentItem.Copy(aShipmentItem: TDHLShipmentItem);
+begin
+  setWeightKG(aShipmentItem.WeightKG);
+  setLengthCM(aShipmentItem.LengthCM);
+  setWidthCM(aShipmentItem.WidthCM);
+  setHeightCM(aShipmentItem.HeightCM);
+end;
+
 
 end.

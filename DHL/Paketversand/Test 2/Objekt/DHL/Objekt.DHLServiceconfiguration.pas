@@ -17,11 +17,13 @@ type
     destructor Destroy; override;
     function ServiceconfigurationAPI: Serviceconfiguration;
     property Active: string read fActive write setActive;
+    procedure Copy(aServiceconfiguration: TDHLServiceconfiguration);
   end;
 
 implementation
 
 { TDHLServiceconfiguration }
+
 
 constructor TDHLServiceconfiguration.Create;
 begin
@@ -45,5 +47,12 @@ begin
   fActive := Value;
   fServiceconfigurationAPI.active := fActive;
 end;
+
+
+procedure TDHLServiceconfiguration.Copy(aServiceconfiguration: TDHLServiceconfiguration);
+begin
+  setActive(aServiceconfiguration.Active);
+end;
+
 
 end.

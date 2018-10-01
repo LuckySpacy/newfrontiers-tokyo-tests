@@ -20,11 +20,13 @@ type
     property Name: TDHLNameType read fName write fName;
     property Adress: TDHLNativeAdress read fAdress write fAdress;
     property Communication: TDHLCommunication read fCommunication write fCommunication;
+    procedure Copy(aShipper: TDHLShipper);
   end;
 
 implementation
 
 { TDHLShipper }
+
 
 constructor TDHLShipper.Create;
 begin
@@ -51,5 +53,13 @@ function TDHLShipper.ShipperTypeAPI: ShipperType;
 begin
   Result := fShipperTypeAPI;
 end;
+
+procedure TDHLShipper.Copy(aShipper: TDHLShipper);
+begin
+  fName.Copy(aShipper.Name);
+  fAdress.Copy(aShipper.Adress);
+  fCommunication.Copy(aShipper.Communication);
+end;
+
 
 end.

@@ -16,13 +16,22 @@ object fra_DHLShipmentOrder: Tfra_DHLShipmentOrder
     ShowCaption = False
     TabOrder = 0
     object btn_ErzeugeShipmentorder: TButton
-      Left = 32
-      Top = 9
+      Left = 16
+      Top = 10
       Width = 145
       Height = 25
       Caption = 'Erzeuge ShipmentOrder'
       TabOrder = 0
       OnClick = btn_ErzeugeShipmentorderClick
+    end
+    object btn_UpdateShipmentOrder: TButton
+      Left = 167
+      Top = 10
+      Width = 145
+      Height = 25
+      Caption = 'Update ShipmentOrder'
+      TabOrder = 1
+      OnClick = btn_UpdateShipmentOrderClick
     end
   end
   object Memo1: TMemo
@@ -41,5 +50,6 @@ object fra_DHLShipmentOrder: Tfra_DHLShipmentOrder
     ParentFont = False
     ScrollBars = ssVertical
     TabOrder = 1
+    ExplicitTop = 40
   end
 end
