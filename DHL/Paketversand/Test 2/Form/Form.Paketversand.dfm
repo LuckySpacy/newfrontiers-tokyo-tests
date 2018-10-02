@@ -26,6 +26,10 @@ object Form1: TForm1
     TabOrder = 0
     object tbs_Einstellung: TTabSheet
       Caption = 'Einstellung'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label5: TLabel
         Left = 32
         Top = 255
@@ -134,6 +138,10 @@ object Form1: TForm1
     object tbs_ShipmentOrder: TTabSheet
       Caption = 'ShipmentOrder'
       ImageIndex = 2
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
     end
     object tbs_ValidateShipmentOrder: TTabSheet
       Caption = 'ValidateShipmentOrder'

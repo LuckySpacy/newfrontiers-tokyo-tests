@@ -45969,3 +45969,1372 @@ This application has leaked memory. The small block leaks are (excluding expecte
 69 - 84 bytes: ShipmentDetailsTypeType x 1, ReceiverNativeAddressType x 1
 
 Note: Memory leak detail is logged to a text file in the same folder as this application. To disable this memory leak check, undefine "EnableMemoryLeakReporting".
+
+--------------------------------2018/10/2 11:45:02--------------------------------
+A memory block has been leaked. The size is: 52
+
+This block was allocated by thread 0x36F0, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A4B0 [System.pas][System][@UStrFromPWCharLen$qqrr20System.UnicodeStringpbi][25328]
+43FAC5 [System.Variants.pas][System.Variants][Variants.@VarToUStr$qqrr20System.UnicodeStringrx8TVarData][3281]
+6025A3 [Xml.Win.msxmldom.pas][Xml.Win.msxmldom][Win.Msxmldom.TMSDOMNode.get_nodeValue][643]
+60F102 [Xml.XMLDoc.pas][Xml.XMLDoc][Xmldoc.TXMLNode.GetText][1973]
+673DC9 [Soap.OPToSOAPDomConv.pas][Soap.OPToSOAPDomConv][Optosoapdomconv.TSOAPDomConv.GetNodeAsText][5240]
+67245B [Soap.OPToSOAPDomConv.pas][Soap.OPToSOAPDomConv][Optosoapdomconv.TSOAPDomConv.InitObjectFromSOAP][4699]
+68D03C [Soap.InvokeRegistry.pas][Soap.InvokeRegistry][Invokeregistry.TRemotable.SOAPToObject][2388]
+67152D [Soap.OPToSOAPDomConv.pas][Soap.OPToSOAPDomConv][Optosoapdomconv.TSOAPDomConv.LoadObject][4332]
+6729C9 [Soap.OPToSOAPDomConv.pas][Soap.OPToSOAPDomConv][Optosoapdomconv.TSOAPDomConv.ConvertSOAPToObject][4799]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 6669
+
+Current memory dump of 256 bytes starting at pointer address 7FCBFA70:
+B0 04 02 00 02 00 00 00 12 00 00 00 32 00 32 00 32 00 32 00 30 00 31 00 30 00 31 00 30 00 30 00
+33 00 31 00 39 00 38 00 35 00 36 00 30 00 36 00 00 00 38 1E FF 77 80 80 00 00 00 00 F1 08 CC 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1B 1A 00 00 56 73 40 00 7F A2 40 00 6F B3 40 00
+87 00 41 00 73 1B 67 00 3C D0 68 00 2D 15 67 00 C9 29 67 00 E6 1F 67 00 3C D0 68 00 2D 15 67 00
+F0 36 00 00 F0 36 00 00 72 73 40 00 9E A3 40 00 80 27 67 00 3C D0 68 00 2D 15 67 00 C9 29 67 00
+E6 1F 67 00 3C D0 68 00 2D 15 67 00 C9 29 67 00 22 DF 66 00 26 00 00 00 B0 04 02 00 3C DD CA 87
+80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 C3 22 35 78 80 80 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 31 F9 CB 7F
+∞  .  .  .  .  .  .  .  .  .  .  .  2  .  2  .  2  .  2  .  0  .  1  .  0  .  1  .  0  .  0  .
+3  .  1  .  9  .  8  .  5  .  6  .  0  .  6  .  .  .  8  .  ˇ  w  Ä  Ä  .  .  .  .  Ò  .  Ã  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  V  s  @  .    ¢  @  .  o  ≥  @  .
+á  .  A  .  s  .  g  .  <  –  h  .  -  .  g  .  …  )  g  .  Ê  .  g  .  <  –  h  .  -  .  g  .
+  6  .  .    6  .  .  r  s  @  .  û  £  @  .  Ä  '  g  .  <  –  h  .  -  .  g  .  …  )  g  .
+Ê  .  g  .  <  –  h  .  -  .  g  .  …  )  g  .  "  ﬂ  f  .  &  .  .  .  ∞  .  .  .  <  ›     á
+Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  √  "  5  x  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  1  ˘  À  
+
+--------------------------------2018/10/2 11:45:02--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x36F0, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+6A6506 [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.Create]
+6A3F8C [Objekt.DHLShipmentorderResponseList.pas][Objekt.DHLShipmentorderResponseList][Dhlshipmentorderresponselist.TDHLShipmentorderResponseList.getShipmentorderResponse][49]
+73497E [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][234]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+734930 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+555F39 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+
+The block is currently used for an object of class: TDHLDeleteShipmentOrderRequestAPI
+
+The allocation number is: 8469
+
+Current memory dump of 256 bytes starting at pointer address 7FCD4900:
+2C 63 6A 00 70 E9 CD 7F 00 00 00 00 10 F3 CD 7F 00 00 00 00 70 A0 56 9F 00 00 00 00 60 20 CD 7F
+00 00 00 00 00 00 00 00 E4 92 41 00 00 00 00 00 F8 20 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+06 65 6A 00 8C 3F 6A 00 7E 49 73 00 71 5B 0A 77 6A 91 04 77 30 49 73 00 21 AA 53 00 2B 54 55 00
+F0 36 00 00 F0 36 00 00 72 73 40 00 9E A3 40 00 E4 3A 73 00 2C 36 73 00 21 AA 53 00 2B 54 55 00
+39 5F 55 00 B1 A4 53 00 32 93 75 76 E4 B1 71 76 25 B0 71 76 14 00 00 00 B0 04 02 00 43 92 58 D7
+2C 63 6A 00 D0 00 CE 7F 00 00 00 00 80 E0 CD 7F 00 00 00 00 BC 6D A7 28 00 00 00 00 A1 23 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 66 1A 00 00 56 73 40 00 7F A2 40 00 6F B3 40 00
+74 91 42 00 19 95 42 00 7F 01 73 00 C8 29 73 00 8B 28 73 00 05 DD 72 00 97 2F 73 00 99 3A 73 00
+,  c  j  .  p  È  Õ    .  .  .  .  .  Û  Õ    .  .  .  .  p  †  V  ü  .  .  .  .  `     Õ  
+.  .  .  .  .  .  .  .  ‰  í  A  .  .  .  .  .  ¯     .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+.  e  j  .  å  ?  j  .  ~  I  s  .  q  [  .  w  j  ë  .  w  0  I  s  .  !  ™  S  .  +  T  U  .
+  6  .  .    6  .  .  r  s  @  .  û  £  @  .  ‰  :  s  .  ,  6  s  .  !  ™  S  .  +  T  U  .
+9  _  U  .  ±  §  S  .  2  ì  u  v  ‰  ±  q  v  %  ∞  q  v  .  .  .  .  ∞  .  .  .  C  í  X  ◊
+,  c  j  .  –  .  Œ    .  .  .  .  Ä  ‡  Õ    .  .  .  .  º  m  ß  (  .  .  .  .  °  #  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  f  .  .  .  V  s  @  .    ¢  @  .  o  ≥  @  .
+t  ë  B  .  .  ï  B  .    .  s  .  »  )  s  .  ã  (  s  .  .  ›  r  .  ó  /  s  .  ô  :  s  .
+
+--------------------------------2018/10/2 11:45:02--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x36F0, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+6A6506 [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.Create]
+6A3F8C [Objekt.DHLShipmentorderResponseList.pas][Objekt.DHLShipmentorderResponseList][Dhlshipmentorderresponselist.TDHLShipmentorderResponseList.getShipmentorderResponse][49]
+73497E [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][234]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+734930 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+
+The block is currently used for an object of class: TDHLDeleteShipmentOrderRequestAPI
+
+The allocation number is: 8440
+
+Current memory dump of 256 bytes starting at pointer address 7FCD49A0:
+2C 63 6A 00 D0 00 CE 7F 00 00 00 00 80 E0 CD 7F 00 00 00 00 BC 6D A7 28 00 00 00 00 A1 23 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 66 1A 00 00 56 73 40 00 7F A2 40 00 6F B3 40 00
+74 91 42 00 19 95 42 00 7F 01 73 00 C8 29 73 00 8B 28 73 00 05 DD 72 00 97 2F 73 00 99 3A 73 00
+F0 36 00 00 F0 36 00 00 72 73 40 00 39 A3 40 00 F9 BB 40 00 1D BB 40 00 CD 84 40 00 B2 82 40 00
+05 8B 40 00 26 84 40 00 33 84 40 00 CD D9 72 00 31 35 6A 00 14 00 00 00 B0 04 02 00 3E 99 EB 86
+80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 C1 66 14 79 00 00 00 00 A1 4B CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1D 1A 00 00 56 73 40 00 7F A2 40 00 0C A7 40 00
+48 BB 4B 00 4B E2 4B 00 3D 77 6A 00 D4 93 41 00 56 73 40 00 04 37 73 00 2C 36 73 00 21 AA 53 00
+,  c  j  .  –  .  Œ    .  .  .  .  Ä  ‡  Õ    .  .  .  .  º  m  ß  (  .  .  .  .  °  #  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  f  .  .  .  V  s  @  .    ¢  @  .  o  ≥  @  .
+t  ë  B  .  .  ï  B  .    .  s  .  »  )  s  .  ã  (  s  .  .  ›  r  .  ó  /  s  .  ô  :  s  .
+  6  .  .    6  .  .  r  s  @  .  9  £  @  .  ˘  ª  @  .  .  ª  @  .  Õ  Ñ  @  .  ≤  Ç  @  .
+.  ã  @  .  &  Ñ  @  .  3  Ñ  @  .  Õ  Ÿ  r  .  1  5  j  .  .  .  .  .  ∞  .  .  .  >  ô  Î  Ü
+Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ¡  f  .  y  .  .  .  .  °  K  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  V  s  @  .    ¢  @  .  .  ß  @  .
+H  ª  K  .  K  ‚  K  .  =  w  j  .  ‘  ì  A  .  V  s  @  .  .  7  s  .  ,  6  s  .  !  ™  S  .
+
+--------------------------------2018/10/2 11:45:02--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x36F0, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69C6B6 [geschaeftskundenversand_api_2.pas][geschaeftskundenversand_api_2][Version.Create][2270]
+4082A4 [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69F406 [Objekt.DHLVersion.pas][Objekt.DHLVersion][Dhlversion.TDHLVersion.Create][23]
+6A652A [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.Create][30]
+73497E [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][234]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+
+The block is currently used for an object of class: Version
+
+The allocation number is: 8443
+
+Current memory dump of 256 bytes starting at pointer address 7FCDDF20:
+98 34 69 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+7B 32 95 8B 80 80 80 80 00 00 00 00 90 93 CD 7F 00 00 00 00 00 00 00 00 E4 92 41 00 00 00 00 00
+18 21 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 B6 C6 69 00 A4 82 40 00 BA 8A 40 00 06 F4 69 00
+2A 65 6A 00 7E 49 73 00 71 5B 0A 77 30 49 73 00 F0 36 00 00 F0 36 00 00 72 73 40 00 9E A3 40 00
+3A 1F 5F 00 92 1F 5F 00 A0 E6 53 00 62 9D 04 77 34 9D 04 77 23 12 02 77 F6 0B 03 77 A3 01 00 77
+C9 9C 01 77 20 00 00 00 B0 04 02 00 A1 D5 26 C6 98 34 69 00 00 00 00 00 08 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 5E 2A D9 39 80 80 80 80 00 00 00 00 90 93 CD 7F
+00 00 00 00 00 00 00 00 E4 92 41 00 00 00 00 00 FA 20 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+ò  4  i  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+{  2  ï  ã  Ä  Ä  Ä  Ä  .  .  .  .  ê  ì  Õ    .  .  .  .  .  .  .  .  ‰  í  A  .  .  .  .  .
+.  !  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .  ∂  ∆  i  .  §  Ç  @  .  ∫  ä  @  .  .  Ù  i  .
+*  e  j  .  ~  I  s  .  q  [  .  w  0  I  s  .    6  .  .    6  .  .  r  s  @  .  û  £  @  .
+:  .  _  .  í  .  _  .  †  Ê  S  .  b  ù  .  w  4  ù  .  w  #  .  .  w  ˆ  .  .  w  £  .  .  w
+…  ú  .  w     .  .  .  ∞  .  .  .  °  ’  &  ∆  ò  4  i  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ^  *  Ÿ  9  Ä  Ä  Ä  Ä  .  .  .  .  ê  ì  Õ  
+.  .  .  .  .  .  .  .  ‰  í  A  .  .  .  .  .  ˙     .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+
+--------------------------------2018/10/2 11:45:02--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x36F0, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69C6B6 [geschaeftskundenversand_api_2.pas][geschaeftskundenversand_api_2][Version.Create][2270]
+4082A4 [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69F406 [Objekt.DHLVersion.pas][Objekt.DHLVersion][Dhlversion.TDHLVersion.Create][23]
+6A652A [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.Create][30]
+73497E [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][234]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+734930 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+
+The block is currently used for an object of class: Version
+
+The allocation number is: 8472
+
+Current memory dump of 256 bytes starting at pointer address 7FCDDFD0:
+98 34 69 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+5E 2A D9 39 80 80 80 80 00 00 00 00 90 93 CD 7F 00 00 00 00 00 00 00 00 E4 92 41 00 00 00 00 00
+FA 20 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 EA F3 69 00 2A 65 6A 00 7E 49 73 00 71 5B 0A 77
+6A 91 04 77 30 49 73 00 21 AA 53 00 2B 54 55 00 F0 36 00 00 F0 36 00 00 72 73 40 00 5D A3 40 00
+14 60 41 00 59 23 6B 00 BE EB 6B 00 60 06 6C 00 0F 03 6D 00 47 03 6D 00 16 71 6D 00 95 F4 71 00
+30 3E 6D 00 18 00 00 00 E4 04 01 00 D9 94 71 75 2C F3 69 00 20 DF CD 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 26 6B 8E 8A 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 11 D7 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 07 1D 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+ò  4  i  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+^  *  Ÿ  9  Ä  Ä  Ä  Ä  .  .  .  .  ê  ì  Õ    .  .  .  .  .  .  .  .  ‰  í  A  .  .  .  .  .
+˙     .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .  Í  Û  i  .  *  e  j  .  ~  I  s  .  q  [  .  w
+j  ë  .  w  0  I  s  .  !  ™  S  .  +  T  U  .    6  .  .    6  .  .  r  s  @  .  ]  £  @  .
+.  `  A  .  Y  #  k  .  æ  Î  k  .  `  .  l  .  .  .  m  .  G  .  m  .  .  q  m  .  ï  Ù  q  .
+0  >  m  .  .  .  .  .  ‰  .  .  .  Ÿ  î  q  u  ,  Û  i  .     ﬂ  Õ    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  &  k  é  ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  ◊  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+
+--------------------------------2018/10/2 11:45:02--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x36F0, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69F3EA [Objekt.DHLVersion.pas][Objekt.DHLVersion][Dhlversion.TDHLVersion.Create]
+6A652A [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.Create][30]
+73497E [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][234]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+734930 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+
+The block is currently used for an object of class: TDHLVersion
+
+The allocation number is: 8442
+
+Current memory dump of 256 bytes starting at pointer address 7FCDE080:
+2C F3 69 00 20 DF CD 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 26 6B 8E 8A 80 80 80 80
+80 80 80 80 80 80 80 80 00 00 00 00 11 D7 CD 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+07 1D 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 62 5D 52 00 82 E5 71 00 C4 E6 71 00 D3 FF 71 00
+61 F6 71 00 F8 F3 71 00 D1 F3 71 00 95 73 6D 00 F0 36 00 00 F0 36 00 00 72 73 40 00 B9 82 40 00
+05 8B 40 00 CD 5D 52 00 33 84 40 00 A4 E7 71 00 61 28 72 00 A8 9C 40 00 7B 9B 74 00 54 86 39 76
+47 4A 02 77 20 00 00 00 44 99 6A 00 D3 7C 8F 74 80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 2C 83 70 8B 80 80 80 80 00 00 00 00 E1 F1 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2E 21 00 00 56 73 40 00 7F A2 40 00 6F B3 40 00
+,  Û  i  .     ﬂ  Õ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  &  k  é  ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  ◊  Õ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .  b  ]  R  .  Ç  Â  q  .  ƒ  Ê  q  .  ”  ˇ  q  .
+a  ˆ  q  .  ¯  Û  q  .  —  Û  q  .  ï  s  m  .    6  .  .    6  .  .  r  s  @  .  π  Ç  @  .
+.  ã  @  .  Õ  ]  R  .  3  Ñ  @  .  §  Á  q  .  a  (  r  .  ®  ú  @  .  {  õ  t  .  T  Ü  9  v
+G  J  .  w     .  .  .  D  ô  j  .  ”  |  è  t  Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ,  É  p  ã  Ä  Ä  Ä  Ä  .  .  .  .  ·  Ò  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  !  .  .  V  s  @  .    ¢  @  .  o  ≥  @  .
+
+--------------------------------2018/10/2 11:45:02--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x36F0, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69D65E [geschaeftskundenversand_api_2.pas][geschaeftskundenversand_api_2][DeleteShipmentOrderRequest.Create][2722]
+4082A4 [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+6A6518 [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.Create][29]
+73497E [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][234]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+734930 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+
+The block is currently used for an object of class: DeleteShipmentOrderRequest
+
+The allocation number is: 8470
+
+Current memory dump of 256 bytes starting at pointer address 7FCDE970:
+2C 6A 69 00 00 00 00 00 08 00 00 00 D0 DF CD 7F 00 00 00 00 00 00 00 00 E0 83 6A 27 80 80 80 80
+80 80 80 80 80 80 80 80 00 00 00 00 41 E8 CD 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+12 10 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 31 DF 46 00 A0 B2 46 00 88 E6 46 00 6D E3 46 00
+C4 D6 67 00 4A D4 67 00 53 E2 67 00 E8 E6 40 00 F0 36 00 00 F0 36 00 00 72 73 40 00 B9 82 40 00
+05 8B 40 00 BD DF 46 00 33 84 40 00 BF E6 46 00 33 84 40 00 B2 17 47 00 9C 0E 47 00 8E 68 44 00
+94 EA DA 76 18 00 00 00 30 B9 44 00 16 3B E6 FC 80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 E9 C4 19 03 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 B1 E0 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 1D 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+,  j  i  .  .  .  .  .  .  .  .  .  –  ﬂ  Õ    .  .  .  .  .  .  .  .  ‡  É  j  '  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  A  Ë  Õ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .  1  ﬂ  F  .  †  ≤  F  .  à  Ê  F  .  m  „  F  .
+ƒ  ÷  g  .  J  ‘  g  .  S  ‚  g  .  Ë  Ê  @  .    6  .  .    6  .  .  r  s  @  .  π  Ç  @  .
+.  ã  @  .  Ω  ﬂ  F  .  3  Ñ  @  .  ø  Ê  F  .  3  Ñ  @  .  ≤  .  G  .  ú  .  G  .  é  h  D  .
+î  Í  ⁄  v  .  .  .  .  0  π  D  .  .  ;  Ê  ¸  Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  È  ƒ  .  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ±  ‡  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+
+--------------------------------2018/10/2 11:45:02--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x36F0, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69F3EA [Objekt.DHLVersion.pas][Objekt.DHLVersion][Dhlversion.TDHLVersion.Create]
+6A652A [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.Create][30]
+73497E [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][234]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+734930 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+555F39 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+
+The block is currently used for an object of class: TDHLVersion
+
+The allocation number is: 8471
+
+Current memory dump of 256 bytes starting at pointer address 7FCDF310:
+2C F3 69 00 D0 DF CD 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 D2 8D C5 39 80 80 80 80
+80 80 80 80 80 80 80 80 00 00 00 00 61 F7 CD 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+F9 1C 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 62 5D 52 00 2C 97 4B 00 F5 94 4B 00 82 E5 71 00
+C4 E6 71 00 D3 FF 71 00 61 F6 71 00 F8 F3 71 00 F0 36 00 00 F0 36 00 00 72 73 40 00 B9 82 40 00
+05 8B 40 00 CD 5D 52 00 33 84 40 00 A4 E7 71 00 61 28 72 00 A8 9C 40 00 7B 9B 74 00 54 86 39 76
+47 4A 02 77 20 00 00 00 44 99 6A 00 10 54 47 74 80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 EF AB B8 8B 80 80 80 80 00 00 00 00 A1 F4 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FC 1C 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+,  Û  i  .  –  ﬂ  Õ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  “  ç  ≈  9  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  a  ˜  Õ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+˘  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .  b  ]  R  .  ,  ó  K  .  ı  î  K  .  Ç  Â  q  .
+ƒ  Ê  q  .  ”  ˇ  q  .  a  ˆ  q  .  ¯  Û  q  .    6  .  .    6  .  .  r  s  @  .  π  Ç  @  .
+.  ã  @  .  Õ  ]  R  .  3  Ñ  @  .  §  Á  q  .  a  (  r  .  ®  ú  @  .  {  õ  t  .  T  Ü  9  v
+G  J  .  w     .  .  .  D  ô  j  .  .  T  G  t  Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ô  ´  ∏  ã  Ä  Ä  Ä  Ä  .  .  .  .  °  Ù  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ¸  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+
+--------------------------------2018/10/2 11:45:02--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x36F0, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69D65E [geschaeftskundenversand_api_2.pas][geschaeftskundenversand_api_2][DeleteShipmentOrderRequest.Create][2722]
+4082A4 [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+6A6518 [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.Create][29]
+73497E [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][234]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+734930 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+
+The block is currently used for an object of class: DeleteShipmentOrderRequest
+
+The allocation number is: 8441
+
+Current memory dump of 256 bytes starting at pointer address 7FCE00D0:
+2C 6A 69 00 00 00 00 00 08 00 00 00 20 DF CD 7F 00 00 00 00 00 00 00 00 67 A8 F3 8A 80 80 80 80
+80 80 80 80 80 80 80 80 00 00 00 00 31 DB CD 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+6D 1A 00 00 56 73 40 00 9B 82 40 00 DD FA 40 00 BA 8A 40 00 4E D2 6A 00 65 D6 6A 00 72 F1 6C 00
+26 77 6D 00 AE F2 71 00 18 18 6B 00 B1 C1 6C 00 F0 36 00 00 F0 36 00 00 72 73 40 00 B9 82 40 00
+05 8B 40 00 26 84 40 00 68 FB 40 00 A3 E6 40 00 ED 14 6B 00 A8 9C 40 00 7B 9B 74 00 54 86 39 76
+47 4A 02 77 1C 00 00 00 84 BD 6A 00 43 A5 15 74 80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 BC 5A EA 8B 80 80 80 80 80 80 80 80 00 00 00 00 C1 03 CE 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1D 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+,  j  i  .  .  .  .  .  .  .  .  .     ﬂ  Õ    .  .  .  .  .  .  .  .  g  ®  Û  ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  1  €  Õ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+m  .  .  .  V  s  @  .  õ  Ç  @  .  ›  ˙  @  .  ∫  ä  @  .  N  “  j  .  e  ÷  j  .  r  Ò  l  .
+&  w  m  .  Æ  Ú  q  .  .  .  k  .  ±  ¡  l  .    6  .  .    6  .  .  r  s  @  .  π  Ç  @  .
+.  ã  @  .  &  Ñ  @  .  h  ˚  @  .  £  Ê  @  .  Ì  .  k  .  ®  ú  @  .  {  õ  t  .  T  Ü  9  v
+G  J  .  w  .  .  .  .  Ñ  Ω  j  .  C  •  .  t  Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  º  Z  Í  ã  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ¡  .  Œ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+
+--------------------------------2018/10/2 11:45:02--------------------------------
+This application has leaked memory. The small block leaks are (excluding expected leaks registered by pointer):
+
+13 - 20 bytes: TDHLDeleteShipmentOrderRequestAPI x 2
+21 - 36 bytes: DeleteShipmentOrderRequest x 2, TDHLVersion x 2, Version x 2
+37 - 52 bytes: UnicodeString x 1
+
+Note: Memory leak detail is logged to a text file in the same folder as this application. To disable this memory leak check, undefine "EnableMemoryLeakReporting".
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A70C [System.pas][System][@UStrAsg$qqrr20System.UnicodeStringx20System.UnicodeString][25634]
+69F27C [Objekt.DHLVersionBase.pas][Objekt.DHLVersionBase][Dhlversionbase.TDHLVersionBase.setmajorRelease][53]
+734A2F [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][238]
+76FFCB1C [RtlDeactivateActivationContextUnsafeFast]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+7349C4 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 3797
+
+Current memory dump of 256 bytes starting at pointer address 7FCD33C0:
+B0 04 02 00 01 00 00 00 01 00 00 00 32 00 00 00 49 D3 38 B2 80 80 80 80 00 00 00 00 81 34 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 DF 0E 00 00 CE 95 41 00 02 84 41 00 93 73 40 00
+2D CB 40 00 73 85 44 00 3C 74 44 00 61 74 44 00 9F 63 44 00 48 F6 4C 00 8E F7 4C 00 E8 F2 4C 00
+7C 0B 00 00 7C 0B 00 00 72 73 40 00 C8 CD 40 00 F5 C9 40 00 C9 9C 01 77 C7 69 4D 00 33 84 40 00
+18 F7 4C 00 30 95 41 00 45 95 41 00 72 73 40 00 B9 82 40 00 10 00 00 00 00 00 00 00 6E 12 6D FC
+80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80 91 ED 92 03 80 80 80 80 00 00 00 00 21 35 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 EA 0E 00 00 CE 95 41 00 45 96 41 00 93 73 40 00
+2D CB 40 00 73 85 44 00 3C 74 44 00 61 74 44 00 36 75 44 00 FB 02 4D 00 57 F6 4C 00 8E F7 4C 00
+∞  .  .  .  .  .  .  .  .  .  .  .  2  .  .  .  I  ”  8  ≤  Ä  Ä  Ä  Ä  .  .  .  .  Å  4  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ﬂ  .  .  .  Œ  ï  A  .  .  Ñ  A  .  ì  s  @  .
+-  À  @  .  s  Ö  D  .  <  t  D  .  a  t  D  .  ü  c  D  .  H  ˆ  L  .  é  ˜  L  .  Ë  Ú  L  .
+|  .  .  .  |  .  .  .  r  s  @  .  »  Õ  @  .  ı  …  @  .  …  ú  .  w  «  i  M  .  3  Ñ  @  .
+.  ˜  L  .  0  ï  A  .  E  ï  A  .  r  s  @  .  π  Ç  @  .  .  .  .  .  .  .  .  .  n  .  m  ¸
+Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ë  Ì  í  .  Ä  Ä  Ä  Ä  .  .  .  .  !  5  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Í  .  .  .  Œ  ï  A  .  E  ñ  A  .  ì  s  @  .
+-  À  @  .  s  Ö  D  .  <  t  D  .  a  t  D  .  6  u  D  .  ˚  .  M  .  W  ˆ  L  .  é  ˜  L  .
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69C6B6 [geschaeftskundenversand_api_2.pas][geschaeftskundenversand_api_2][Version.Create][2270]
+4082A4 [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69F406 [Objekt.DHLVersion.pas][Objekt.DHLVersion][Dhlversion.TDHLVersion.Create][23]
+6A6556 [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.Create][31]
+7349FF [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][234]
+76FFCB1C [RtlDeactivateActivationContextUnsafeFast]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+
+The block is currently used for an object of class: Version
+
+The allocation number is: 3790
+
+Current memory dump of 256 bytes starting at pointer address 7FCDB3D0:
+98 34 69 00 00 00 00 00 08 00 00 00 CC 33 CD 7F DC 18 E6 7F 00 00 00 00 00 00 00 00 00 00 00 00
+D5 0E B5 8B 80 80 80 80 00 00 00 00 71 B7 CD 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+F1 0D 00 00 56 73 40 00 7F A2 40 00 6F B3 40 00 8F 6B 43 00 AC 43 4C 00 08 67 4C 00 E4 50 4C 00
+72 73 40 00 39 A3 40 00 CA 42 4C 00 FA 53 4C 00 7C 0B 00 00 7C 0B 00 00 72 73 40 00 39 A3 40 00
+F9 BB 40 00 1D BB 40 00 CD 84 40 00 B2 82 40 00 05 8B 40 00 C0 4B 55 00 78 C2 53 00 05 8B 40 00
+A8 AD 4B 00 18 00 00 00 B0 04 02 00 B5 22 CD 85 80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 4A DD 32 7A 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 61 B5 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 68 0D 00 00 CE 95 41 00 77 51 DB 76 93 73 40 00
+ò  4  i  .  .  .  .  .  .  .  .  .  Ã  3  Õ    ‹  .  Ê    .  .  .  .  .  .  .  .  .  .  .  .
+’  .  µ  ã  Ä  Ä  Ä  Ä  .  .  .  .  q  ∑  Õ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+Ò  .  .  .  V  s  @  .    ¢  @  .  o  ≥  @  .  è  k  C  .  ¨  C  L  .  .  g  L  .  ‰  P  L  .
+r  s  @  .  9  £  @  .     B  L  .  ˙  S  L  .  |  .  .  .  |  .  .  .  r  s  @  .  9  £  @  .
+˘  ª  @  .  .  ª  @  .  Õ  Ñ  @  .  ≤  Ç  @  .  .  ã  @  .  ¿  K  U  .  x  ¬  S  .  .  ã  @  .
+®  ≠  K  .  .  .  .  .  ∞  .  .  .  µ  "  Õ  Ö  Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  J  ›  2  z  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  a  µ  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  h  .  .  .  Œ  ï  A  .  w  Q  €  v  ì  s  @  .
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69D65E [geschaeftskundenversand_api_2.pas][geschaeftskundenversand_api_2][DeleteShipmentOrderRequest.Create][2722]
+4082A4 [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+6A6544 [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.Create][30]
+7349FF [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][234]
+76FFCB1C [RtlDeactivateActivationContextUnsafeFast]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+
+The block is currently used for an object of class: DeleteShipmentOrderRequest
+
+The allocation number is: 3788
+
+Current memory dump of 256 bytes starting at pointer address 7FCDBAB0:
+2C 6A 69 00 00 00 00 00 08 00 00 00 D0 B3 CD 7F E0 B2 E2 7F 00 00 00 00 06 81 1A 15 80 80 80 80
+80 80 80 80 80 80 80 80 00 00 00 00 90 93 CD 7F 00 00 00 00 00 00 00 00 E4 92 41 00 00 00 00 00
+CD 0E 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 EA F3 69 00 56 65 6A 00 FF 49 73 00 1C CB FF 76
+71 5B 0A 77 6A 91 04 77 C4 49 73 00 21 AA 53 00 7C 0B 00 00 7C 0B 00 00 72 73 40 00 39 A3 40 00
+14 8C 53 00 03 67 73 00 67 76 5E 00 02 C0 5E 00 90 88 40 00 B1 A4 53 00 B1 A4 53 00 03 85 70 76
+E4 B1 71 76 18 00 00 00 B0 04 02 00 1B 91 BF D7 2C F3 69 00 D0 B3 CD 7F 7C 2D E6 7F 9C 17 E6 7F
+00 00 00 00 00 00 00 00 E4 6E 40 28 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 90 93 CD 7F
+00 00 00 00 00 00 00 00 E4 92 41 00 00 00 00 00 D0 0E 00 00 56 73 40 00 7F A2 40 00 0C A7 40 00
+,  j  i  .  .  .  .  .  .  .  .  .  –  ≥  Õ    ‡  ≤  ‚    .  .  .  .  .  Å  .  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ê  ì  Õ    .  .  .  .  .  .  .  .  ‰  í  A  .  .  .  .  .
+Õ  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .  Í  Û  i  .  V  e  j  .  ˇ  I  s  .  .  À  ˇ  v
+q  [  .  w  j  ë  .  w  ƒ  I  s  .  !  ™  S  .  |  .  .  .  |  .  .  .  r  s  @  .  9  £  @  .
+.  å  S  .  .  g  s  .  g  v  ^  .  .  ¿  ^  .  ê  à  @  .  ±  §  S  .  ±  §  S  .  .  Ö  p  v
+‰  ±  q  v  .  .  .  .  ∞  .  .  .  .  ë  ø  ◊  ,  Û  i  .  –  ≥  Õ    |  -  Ê    ú  .  Ê  
+.  .  .  .  .  .  .  .  ‰  n  @  (  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ê  ì  Õ  
+.  .  .  .  .  .  .  .  ‰  í  A  .  .  .  .  .  –  .  .  .  V  s  @  .    ¢  @  .  .  ß  @  .
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69F3EA [Objekt.DHLVersion.pas][Objekt.DHLVersion][Dhlversion.TDHLVersion.Create]
+6A6556 [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.Create][31]
+7349FF [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][234]
+76FFCB1C [RtlDeactivateActivationContextUnsafeFast]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+7349C4 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+
+The block is currently used for an object of class: TDHLVersion
+
+The allocation number is: 3789
+
+Current memory dump of 256 bytes starting at pointer address 7FCDBB60:
+2C F3 69 00 D0 B3 CD 7F 7C 2D E6 7F 9C 17 E6 7F 00 00 00 00 00 00 00 00 E4 6E 40 28 80 80 80 80
+80 80 80 80 80 80 80 80 00 00 00 00 90 93 CD 7F 00 00 00 00 00 00 00 00 E4 92 41 00 00 00 00 00
+D0 0E 00 00 56 73 40 00 7F A2 40 00 0C A7 40 00 4D 66 6A 00 0F 4A 73 00 1C CB FF 76 71 5B 0A 77
+6A 91 04 77 C4 49 73 00 21 AA 53 00 2B 54 55 00 7C 0B 00 00 7C 0B 00 00 72 73 40 00 5D A3 40 00
+75 02 49 00 2B 03 49 00 18 5F 4C 00 36 5B 4C 00 86 53 4C 00 36 46 54 00 68 53 4C 00 2E FB 4C 00
+4C 7B 53 00 16 00 00 00 E9 FD 01 00 DA 19 15 EB B0 04 02 00 01 00 00 00 04 00 00 00 33 00 37 00
+34 00 35 00 00 00 25 E6 EA 14 80 80 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 90 93 CD 7F
+00 00 00 00 00 00 00 00 E4 92 41 00 00 00 00 00 D1 0E 00 00 56 73 40 00 7F A2 40 00 0C A7 40 00
+,  Û  i  .  –  ≥  Õ    |  -  Ê    ú  .  Ê    .  .  .  .  .  .  .  .  ‰  n  @  (  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ê  ì  Õ    .  .  .  .  .  .  .  .  ‰  í  A  .  .  .  .  .
+–  .  .  .  V  s  @  .    ¢  @  .  .  ß  @  .  M  f  j  .  .  J  s  .  .  À  ˇ  v  q  [  .  w
+j  ë  .  w  ƒ  I  s  .  !  ™  S  .  +  T  U  .  |  .  .  .  |  .  .  .  r  s  @  .  ]  £  @  .
+u  .  I  .  +  .  I  .  .  _  L  .  6  [  L  .  Ü  S  L  .  6  F  T  .  h  S  L  .  .  ˚  L  .
+L  {  S  .  .  .  .  .  È  ˝  .  .  ⁄  .  .  Î  ∞  .  .  .  .  .  .  .  .  .  .  .  3  .  7  .
+4  .  5  .  .  .  %  Ê  Í  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ê  ì  Õ  
+.  .  .  .  .  .  .  .  ‰  í  A  .  .  .  .  .  —  .  .  .  V  s  @  .    ¢  @  .  .  ß  @  .
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A70C [System.pas][System][@UStrAsg$qqrr20System.UnicodeStringx20System.UnicodeString][25634]
+6A664D [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.setShipmentNumber][52]
+734A0F [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][236]
+76FFCB1C [RtlDeactivateActivationContextUnsafeFast]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+7349C4 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 3792
+
+Current memory dump of 256 bytes starting at pointer address 7FCDBC10:
+B0 04 02 00 01 00 00 00 04 00 00 00 33 00 37 00 34 00 35 00 00 00 25 E6 EA 14 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 00 00 00 00 90 93 CD 7F 00 00 00 00 00 00 00 00 E4 92 41 00 00 00 00 00
+D1 0E 00 00 56 73 40 00 7F A2 40 00 0C A7 40 00 75 66 6A 00 0F 4A 73 00 1C CB FF 76 71 5B 0A 77
+6A 91 04 77 C4 49 73 00 21 AA 53 00 2B 54 55 00 7C 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 16 00 00 00 00 00 00 00 F3 D6 D9 E7 B0 04 02 00 01 00 00 00 04 00 00 00 33 00 37 00
+34 00 35 00 00 00 0C 29 26 18 80 80 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 61 C0 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 D8 0E 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+∞  .  .  .  .  .  .  .  .  .  .  .  3  .  7  .  4  .  5  .  .  .  %  Ê  Í  .  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ê  ì  Õ    .  .  .  .  .  .  .  .  ‰  í  A  .  .  .  .  .
+—  .  .  .  V  s  @  .    ¢  @  .  .  ß  @  .  u  f  j  .  .  J  s  .  .  À  ˇ  v  q  [  .  w
+j  ë  .  w  ƒ  I  s  .  !  ™  S  .  +  T  U  .  |  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  Û  ÷  Ÿ  Á  ∞  .  .  .  .  .  .  .  .  .  .  .  3  .  7  .
+4  .  5  .  .  .  .  )  &  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  a  ¿  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ÿ  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A70C [System.pas][System][@UStrAsg$qqrr20System.UnicodeStringx20System.UnicodeString][25634]
+6A6675 [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.setShipmentNumber][54]
+734A0F [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][236]
+76FFCB1C [RtlDeactivateActivationContextUnsafeFast]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+7349C4 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 3793
+
+Current memory dump of 256 bytes starting at pointer address 7FCDBCC0:
+B0 04 02 00 01 00 00 00 04 00 00 00 33 00 37 00 34 00 35 00 00 00 0C 29 26 18 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 00 00 00 00 61 C0 CD 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+D8 0E 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 7F FB 40 00 D4 93 41 00 45 CB 67 00 0C DD 67 00
+71 7F 6A 00 56 73 40 00 D8 B3 40 00 5B 4A 73 00 7C 0B 00 00 7C 0B 00 00 72 73 40 00 B9 82 40 00
+05 8B 40 00 26 84 40 00 33 84 40 00 04 CC 67 00 ED DD 67 00 4B D1 67 00 37 D7 67 00 E3 E5 46 00
+A3 E6 40 00 24 00 00 00 C8 4C 68 00 77 81 12 87 80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 88 7E ED 78 00 00 00 00 61 EC CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 E2 0E 00 00 56 73 40 00 9B 82 40 00 DD FA 40 00
+∞  .  .  .  .  .  .  .  .  .  .  .  3  .  7  .  4  .  5  .  .  .  .  )  &  .  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  a  ¿  Õ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ÿ  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .    ˚  @  .  ‘  ì  A  .  E  À  g  .  .  ›  g  .
+q    j  .  V  s  @  .  ÿ  ≥  @  .  [  J  s  .  |  .  .  .  |  .  .  .  r  s  @  .  π  Ç  @  .
+.  ã  @  .  &  Ñ  @  .  3  Ñ  @  .  .  Ã  g  .  Ì  ›  g  .  K  —  g  .  7  ◊  g  .  „  Â  F  .
+£  Ê  @  .  $  .  .  .  »  L  h  .  w  Å  .  á  Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  à  ~  Ì  x  .  .  .  .  a  Ï  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ‚  .  .  .  V  s  @  .  õ  Ç  @  .  ›  ˙  @  .
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+68CEAE [Soap.InvokeRegistry.pas][Soap.InvokeRegistry][Invokeregistry.TRemotable.Create][2348]
+680751 [Soap.SOAPHTTPTrans.pas][Soap.SOAPHTTPTrans][Soaphttptrans.THTTPReqResp.SetPassword][695]
+6A7FB6 [Objekt.DHLSend.pas][Objekt.DHLSend][Dhlsend.TDHLSend.SendDeleteShipmentOrder][308]
+407356 [System.pas][System][@GetMem$qqri][4758]
+40B3D8 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][30056]
+734A5B [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][239]
+76FFCB1C [RtlDeactivateActivationContextUnsafeFast]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+
+The block is currently used for an object of class: Authentification
+
+The allocation number is: 3831
+
+Current memory dump of 256 bytes starting at pointer address 7FCDC030:
+30 94 69 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9C 5F CF 7F 5C 31 CE 7F 00 00 00 00
+62 24 F5 8E 80 80 80 80 00 00 00 00 01 CA CD 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+F9 0E 00 00 56 73 40 00 9B 82 40 00 DD FA 40 00 BA 8A 40 00 04 84 40 00 A7 93 41 00 EB D3 67 00
+C5 73 40 00 53 E2 67 00 E8 E6 40 00 6C B4 69 00 7C 0B 00 00 7C 0B 00 00 72 73 40 00 B9 82 40 00
+05 8B 40 00 26 84 40 00 68 FB 40 00 A3 E6 40 00 51 BC 40 00 1D BB 40 00 CD 84 40 00 B2 82 40 00
+05 8B 40 00 18 00 00 00 14 D3 67 00 5A 03 3C 86 80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 A5 FC C3 79 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 D1 D9 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FB 0E 00 00 56 73 40 00 9B 82 40 00 DD FA 40 00
+0  î  i  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ú  _  œ    \  1  Œ    .  .  .  .
+b  $  ı  é  Ä  Ä  Ä  Ä  .  .  .  .  .     Õ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+˘  .  .  .  V  s  @  .  õ  Ç  @  .  ›  ˙  @  .  ∫  ä  @  .  .  Ñ  @  .  ß  ì  A  .  Î  ”  g  .
+≈  s  @  .  S  ‚  g  .  Ë  Ê  @  .  l  ¥  i  .  |  .  .  .  |  .  .  .  r  s  @  .  π  Ç  @  .
+.  ã  @  .  &  Ñ  @  .  h  ˚  @  .  £  Ê  @  .  Q  º  @  .  .  ª  @  .  Õ  Ñ  @  .  ≤  Ç  @  .
+.  ã  @  .  .  .  .  .  .  ”  g  .  Z  .  <  Ü  Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  •  ¸  √  y  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  —  Ÿ  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ˚  .  .  .  V  s  @  .  õ  Ç  @  .  ›  ˙  @  .
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+6A6532 [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.Create]
+766FCB56 [NotifyWinEvent]
+718CC187 [Unknown function at ImageList_GetIconSize]
+7349FF [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][234]
+76FFCB1C [RtlDeactivateActivationContextUnsafeFast]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+7349C4 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+
+The block is currently used for an object of class: TDHLDeleteShipmentOrderRequestAPI
+
+The allocation number is: 3787
+
+Current memory dump of 256 bytes starting at pointer address 7FCE25A0:
+2C 63 6A 00 B0 BA CD 7F E0 B2 E2 7F CC BC CD 7F 60 BB CD 7F 00 00 00 00 90 17 80 2D 80 80 80 80
+80 80 80 80 80 80 80 80 00 00 00 00 E1 27 CE 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+D8 08 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 2B 70 53 00 F6 4A 51 00 F5 75 53 00 4C C0 53 00
+BB 06 56 00 F8 4E 4C 00 25 51 4C 00 72 73 40 00 7C 0B 00 00 7C 0B 00 00 B9 82 40 00 05 8B 40 00
+A8 AD 4B 00 33 84 40 00 B4 77 53 00 72 73 40 00 B9 82 40 00 05 8B 40 00 A8 AD 4B 00 0C C3 53 00
+41 07 56 00 24 00 00 00 D8 B6 52 00 65 39 75 86 80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 9A C6 8A 79 00 00 00 00 C1 23 CE 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 DC 08 00 00 C5 73 40 00 2D CB 40 00 6E CC 40 00
+,  c  j  .  ∞  ∫  Õ    ‡  ≤  ‚    Ã  º  Õ    `  ª  Õ    .  .  .  .  ê  .  Ä  -  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ·  '  Œ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ÿ  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .  +  p  S  .  ˆ  J  Q  .  ı  u  S  .  L  ¿  S  .
+ª  .  V  .  ¯  N  L  .  %  Q  L  .  r  s  @  .  |  .  .  .  |  .  .  .  π  Ç  @  .  .  ã  @  .
+®  ≠  K  .  3  Ñ  @  .  ¥  w  S  .  r  s  @  .  π  Ç  @  .  .  ã  @  .  ®  ≠  K  .  .  √  S  .
+A  .  V  .  $  .  .  .  ÿ  ∂  R  .  e  9  u  Ü  Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ö  ∆  ä  y  .  .  .  .  ¡  #  Œ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ‹  .  .  .  ≈  s  @  .  -  À  @  .  n  Ã  @  .
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A4B0 [System.pas][System][@UStrFromPWCharLen$qqrr20System.UnicodeStringpbi][25328]
+5FE0BB [Objekt.Ini.pas][Objekt.Ini][Ini.TIni.getcis_Password][116]
+6A850B [Objekt.Allgemein.pas][Objekt.Allgemein][Allgemein.TAllgemeinObj.Create][42]
+736534 [Form.Paketversand.pas][Form.Paketversand][Paketversand.TForm1.FormCreate][57]
+5E6B83 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3788]
+5E679F [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3671]
+408B28 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][18304]
+5E6750 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3661]
+5F1CB1 [Vcl.Forms.pas][Vcl.Forms][Forms.TApplication.CreateForm][10760]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 2454
+
+Current memory dump of 256 bytes starting at pointer address 7FCE3150:
+B0 04 02 00 01 00 00 00 04 00 00 00 70 00 61 00 73 00 73 00 00 00 63 15 5A 78 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 00 00 00 00 21 30 CE 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+A2 09 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 B7 8C 54 00 15 76 53 00 4C C0 53 00 43 59 5E 00
+57 63 5E 00 BA 8A 40 00 A0 89 6A 00 4B 65 73 00 7C 0B 00 00 7C 0B 00 00 72 73 40 00 B9 82 40 00
+05 8B 40 00 A8 AD 4B 00 33 84 40 00 F6 77 53 00 72 73 40 00 B9 82 40 00 05 8B 40 00 A8 AD 4B 00
+0C C3 53 00 24 00 00 00 4C B9 52 00 71 A2 BB 86 80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 8E 5D 44 79 00 00 00 00 E1 32 CE 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 A3 09 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+∞  .  .  .  .  .  .  .  .  .  .  .  p  .  a  .  s  .  s  .  .  .  c  .  Z  x  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  !  0  Œ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+¢  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .  ∑  å  T  .  .  v  S  .  L  ¿  S  .  C  Y  ^  .
+W  c  ^  .  ∫  ä  @  .  †  â  j  .  K  e  s  .  |  .  .  .  |  .  .  .  r  s  @  .  π  Ç  @  .
+.  ã  @  .  ®  ≠  K  .  3  Ñ  @  .  ˆ  w  S  .  r  s  @  .  π  Ç  @  .  .  ã  @  .  ®  ≠  K  .
+.  √  S  .  $  .  .  .  L  π  R  .  q  ¢  ª  Ü  Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  é  ]  D  y  .  .  .  .  ·  2  Œ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  £  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 52
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A4B0 [System.pas][System][@UStrFromPWCharLen$qqrr20System.UnicodeStringpbi][25328]
+5FDF3F [Objekt.Ini.pas][Objekt.Ini][Ini.TIni.getcis_User][105]
+6A84EC [Objekt.Allgemein.pas][Objekt.Allgemein][Allgemein.TAllgemeinObj.Create][41]
+736534 [Form.Paketversand.pas][Form.Paketversand][Paketversand.TForm1.FormCreate][57]
+5E6B83 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate][3788]
+5E679F [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction][3671]
+408B28 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][18304]
+5E6750 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Create][3661]
+5F1CB1 [Vcl.Forms.pas][Vcl.Forms][Forms.TApplication.CreateForm][10760]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 2448
+
+Current memory dump of 256 bytes starting at pointer address 7FCF5F90:
+B0 04 02 00 01 00 00 00 0D 00 00 00 32 00 32 00 32 00 32 00 32 00 32 00 32 00 32 00 32 00 32 00
+5F 00 30 00 31 00 00 00 4D EA 58 78 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 11 62 CF 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 73 05 00 00 56 73 40 00 7F A2 40 00 6F B3 40 00
+8F 6B 43 00 AC 43 4C 00 08 67 4C 00 E4 50 4C 00 72 73 40 00 39 A3 40 00 FA 5B 4C 00 CA 42 4C 00
+7C 0B 00 00 7C 0B 00 00 39 A3 40 00 F9 BB 40 00 1D BB 40 00 CD 84 40 00 B2 82 40 00 05 8B 40 00
+00 0E 56 00 78 C2 53 00 05 8B 40 00 A8 AD 4B 00 14 5A 5E 00 26 00 00 00 B0 04 02 00 F7 76 ED 85
+80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 08 89 12 7A 80 80 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 91 81 CF 7F
+∞  .  .  .  .  .  .  .  .  .  .  .  2  .  2  .  2  .  2  .  2  .  2  .  2  .  2  .  2  .  2  .
+_  .  0  .  1  .  .  .  M  Í  X  x  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  b  œ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  s  .  .  .  V  s  @  .    ¢  @  .  o  ≥  @  .
+è  k  C  .  ¨  C  L  .  .  g  L  .  ‰  P  L  .  r  s  @  .  9  £  @  .  ˙  [  L  .     B  L  .
+|  .  .  .  |  .  .  .  9  £  @  .  ˘  ª  @  .  .  ª  @  .  Õ  Ñ  @  .  ≤  Ç  @  .  .  ã  @  .
+.  .  V  .  x  ¬  S  .  .  ã  @  .  ®  ≠  K  .  .  Z  ^  .  &  .  .  .  ∞  .  .  .  ˜  v  Ì  Ö
+Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  .  â  .  z  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ë  Å  œ  
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 12
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+4073C5 [System.pas][System][@ReallocMem$qqrrpvi][4950]
+40CB21 [System.pas][System][DynArraySetLength$qqrrpvpvipi][35017]
+69F41A [Objekt.DHLVersion.pas][Objekt.DHLVersion][Dhlversion.TDHLVersion.Create][24]
+40CC6E [System.pas][System][@DynArraySetLength$qqrv][35119]
+6A6588 [Objekt.DHLDeleteShipmentOrderRequestAPI.pas][Objekt.DHLDeleteShipmentOrderRequestAPI][Dhldeleteshipmentorderrequestapi.TDHLDeleteShipmentOrderRequestAPI.Create][33]
+7349FF [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][234]
+76FFCB1C [RtlDeactivateActivationContextUnsafeFast]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+7349C4 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+
+The block is currently used for an object of class: Unknown
+
+The allocation number is: 3791
+
+Current memory dump of 256 bytes starting at pointer address 7FE2B2D8:
+02 00 00 00 01 00 00 00 1C BC CD 7F 3A 7D B5 4E 00 00 00 00 49 B8 E2 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 D9 0E 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 B6 D5 68 00 54 CB 67 00
+0C DD 67 00 71 7F 6A 00 56 73 40 00 D8 B3 40 00 5B 4A 73 00 1C CB FF 76 7C 0B 00 00 7C 0B 00 00
+72 73 40 00 B9 82 40 00 05 8B 40 00 19 D6 68 00 33 84 40 00 0C CC 67 00 ED DD 67 00 4B D1 67 00
+37 D7 67 00 E3 E5 46 00 A3 E6 40 00 0C 00 00 00 04 47 68 00 25 D5 35 FE 80 AC 75 00 80 80 80 80
+80 80 80 80 DA 2A CA 01 00 00 00 00 69 BF E2 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+2B 13 00 00 56 73 40 00 33 A7 42 00 6E A7 42 00 25 0F 54 00 B1 A4 53 00 0D FA FF 76 A8 67 0A 77
+9E CB 04 77 71 5B 0A 77 6A 91 04 77 57 5B 0A 77 7C 0B 00 00 7C 0B 00 00 72 73 40 00 8A A7 42 00
+.  .  .  .  .  .  .  .  .  º  Õ    :  }  µ  N  .  .  .  .  I  ∏  ‚    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  Ÿ  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .  ∂  ’  h  .  T  À  g  .
+.  ›  g  .  q    j  .  V  s  @  .  ÿ  ≥  @  .  [  J  s  .  .  À  ˇ  v  |  .  .  .  |  .  .  .
+r  s  @  .  π  Ç  @  .  .  ã  @  .  .  ÷  h  .  3  Ñ  @  .  .  Ã  g  .  Ì  ›  g  .  K  —  g  .
+7  ◊  g  .  „  Â  F  .  £  Ê  @  .  .  .  .  .  .  G  h  .  %  ’  5  ˛  Ä  ¨  u  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  ⁄  *     .  .  .  .  .  i  ø  ‚    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
++  .  .  .  V  s  @  .  3  ß  B  .  n  ß  B  .  %  .  T  .  ±  §  S  .  .  ˙  ˇ  v  ®  g  .  w
+û  À  .  w  q  [  .  w  j  ë  .  w  W  [  .  w  |  .  .  .  |  .  .  .  r  s  @  .  ä  ß  B  .
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A70C [System.pas][System][@UStrAsg$qqrr20System.UnicodeStringx20System.UnicodeString][25634]
+69F262 [Objekt.DHLVersionBase.pas][Objekt.DHLVersionBase][Dhlversionbase.TDHLVersionBase.setmajorRelease][51]
+734A2F [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][238]
+76FFCB1C [RtlDeactivateActivationContextUnsafeFast]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+7349C4 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 3796
+
+Current memory dump of 256 bytes starting at pointer address 7FE61790:
+B0 04 02 00 01 00 00 00 01 00 00 00 32 00 00 00 48 4A 7E 14 80 80 80 80 00 00 00 00 31 1F E6 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 8D 08 00 00 56 73 40 00 33 A7 42 00 6E A7 42 00
+35 A5 53 00 CC F1 53 00 B1 A4 53 00 D3 BF 89 71 E1 BF 89 71 F6 D7 53 00 1C CB FF 76 BB E0 70 76
+7C 0B 00 00 7C 0B 00 00 8A A7 42 00 D9 77 53 00 72 73 40 00 B9 82 40 00 05 8B 40 00 A8 AD 4B 00
+0C C3 53 00 41 07 56 00 78 C2 53 00 05 8B 40 00 5B 33 52 00 14 00 00 00 14 00 00 00 E7 D1 B2 55
+80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 18 2E 4D AA 00 00 00 00 10 C0 E5 7F
+00 00 00 00 00 00 00 00 E4 92 41 00 00 00 00 00 D3 0E 00 00 56 73 40 00 7F A2 40 00 0C A7 40 00
+B4 F2 69 00 1F 4A 73 00 1C CB FF 76 71 5B 0A 77 6A 91 04 77 C4 49 73 00 21 AA 53 00 2B 54 55 00
+∞  .  .  .  .  .  .  .  .  .  .  .  2  .  .  .  H  J  ~  .  Ä  Ä  Ä  Ä  .  .  .  .  1  .  Ê  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ç  .  .  .  V  s  @  .  3  ß  B  .  n  ß  B  .
+5  •  S  .  Ã  Ò  S  .  ±  §  S  .  ”  ø  â  q  ·  ø  â  q  ˆ  ◊  S  .  .  À  ˇ  v  ª  ‡  p  v
+|  .  .  .  |  .  .  .  ä  ß  B  .  Ÿ  w  S  .  r  s  @  .  π  Ç  @  .  .  ã  @  .  ®  ≠  K  .
+.  √  S  .  A  .  V  .  x  ¬  S  .  .  ã  @  .  [  3  R  .  .  .  .  .  .  .  .  .  Á  —  ≤  U
+Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  M  ™  .  .  .  .  .  ¿  Â  
+.  .  .  .  .  .  .  .  ‰  í  A  .  .  .  .  .  ”  .  .  .  V  s  @  .    ¢  @  .  .  ß  @  .
+¥  Ú  i  .  .  J  s  .  .  À  ˇ  v  q  [  .  w  j  ë  .  w  ƒ  I  s  .  !  ™  S  .  +  T  U  .
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A70C [System.pas][System][@UStrAsg$qqrr20System.UnicodeStringx20System.UnicodeString][25634]
+69F2B4 [Objekt.DHLVersionBase.pas][Objekt.DHLVersionBase][Dhlversionbase.TDHLVersionBase.setminorRelease][60]
+734A1F [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][237]
+76FFCB1C [RtlDeactivateActivationContextUnsafeFast]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+7349C4 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 3795
+
+Current memory dump of 256 bytes starting at pointer address 7FE618D0:
+B0 04 02 00 01 00 00 00 01 00 00 00 32 00 00 00 67 15 60 14 80 80 80 80 00 00 00 00 11 21 E6 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 AE 08 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+04 84 40 00 BA 8A 40 00 FC A1 54 00 9D B4 53 00 86 76 53 00 4C C0 53 00 BB 06 56 00 F8 4E 4C 00
+7C 0B 00 00 7C 0B 00 00 B9 82 40 00 05 8B 40 00 DD 94 4B 00 33 84 40 00 5E A2 54 00 33 84 40 00
+1B 78 53 00 B9 82 40 00 05 8B 40 00 A8 AD 4B 00 0C C3 53 00 14 00 00 00 18 6A 49 00 35 59 7A 86
+80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 CA A6 85 79 00 00 00 00 51 1D E6 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 DB 08 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+04 84 40 00 BA 8A 40 00 FC A1 54 00 9D B4 53 00 86 76 53 00 4C C0 53 00 BB 06 56 00 F8 4E 4C 00
+∞  .  .  .  .  .  .  .  .  .  .  .  2  .  .  .  g  .  `  .  Ä  Ä  Ä  Ä  .  .  .  .  .  !  Ê  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Æ  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+.  Ñ  @  .  ∫  ä  @  .  ¸  °  T  .  ù  ¥  S  .  Ü  v  S  .  L  ¿  S  .  ª  .  V  .  ¯  N  L  .
+|  .  .  .  |  .  .  .  π  Ç  @  .  .  ã  @  .  ›  î  K  .  3  Ñ  @  .  ^  ¢  T  .  3  Ñ  @  .
+.  x  S  .  π  Ç  @  .  .  ã  @  .  ®  ≠  K  .  .  √  S  .  .  .  .  .  .  j  I  .  5  Y  z  Ü
+Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä     ¶  Ö  y  .  .  .  .  Q  .  Ê  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  €  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+.  Ñ  @  .  ∫  ä  @  .  ¸  °  T  .  ù  ¥  S  .  Ü  v  S  .  L  ¿  S  .  ª  .  V  .  ¯  N  L  .
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0xB7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A70C [System.pas][System][@UStrAsg$qqrr20System.UnicodeStringx20System.UnicodeString][25634]
+69F29A [Objekt.DHLVersionBase.pas][Objekt.DHLVersionBase][Dhlversionbase.TDHLVersionBase.setminorRelease][58]
+734A1F [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.DeleteShipmentOrder][237]
+76FFCB1C [RtlDeactivateActivationContextUnsafeFast]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+7349C4 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick][222]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 3794
+
+Current memory dump of 256 bytes starting at pointer address 7FE62D70:
+B0 04 02 00 01 00 00 00 01 00 00 00 32 00 00 00 41 D6 7B 14 80 80 80 80 00 00 00 00 B1 30 E6 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 0C 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+04 84 40 00 BA 8A 40 00 FC A1 54 00 9D B4 53 00 86 76 53 00 4C C0 53 00 B7 4F 55 00 B8 52 55 00
+7C 0B 00 00 7C 0B 00 00 72 73 40 00 B9 82 40 00 05 8B 40 00 DD 94 4B 00 33 84 40 00 5E A2 54 00
+33 84 40 00 1B 78 53 00 B9 82 40 00 05 8B 40 00 A8 AD 4B 00 14 00 00 00 18 6A 49 00 4C 6E 6F 86
+80 AC 75 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 B3 91 90 79 00 00 00 00 D1 2E E6 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 CA 0B 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+04 84 40 00 BA 8A 40 00 FC A1 54 00 9D B4 53 00 86 76 53 00 4C C0 53 00 B7 4F 55 00 B8 52 55 00
+∞  .  .  .  .  .  .  .  .  .  .  .  2  .  .  .  A  ÷  {  .  Ä  Ä  Ä  Ä  .  .  .  .  ±  0  Ê  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+.  Ñ  @  .  ∫  ä  @  .  ¸  °  T  .  ù  ¥  S  .  Ü  v  S  .  L  ¿  S  .  ∑  O  U  .  ∏  R  U  .
+|  .  .  .  |  .  .  .  r  s  @  .  π  Ç  @  .  .  ã  @  .  ›  î  K  .  3  Ñ  @  .  ^  ¢  T  .
+3  Ñ  @  .  .  x  S  .  π  Ç  @  .  .  ã  @  .  ®  ≠  K  .  .  .  .  .  .  j  I  .  L  n  o  Ü
+Ä  ¨  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ≥  ë  ê  y  .  .  .  .  —  .  Ê  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .     .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+.  Ñ  @  .  ∫  ä  @  .  ¸  °  T  .  ù  ¥  S  .  Ü  v  S  .  L  ¿  S  .  ∑  O  U  .  ∏  R  U  .
+
+--------------------------------2018/10/2 11:52:47--------------------------------
+This application has leaked memory. The small block leaks are (excluding expected leaks registered by pointer):
+
+5 - 12 bytes: Unknown x 1
+13 - 20 bytes: UnicodeString x 4
+21 - 36 bytes: TDHLDeleteShipmentOrderRequestAPI x 1, Authentification x 1, TDHLVersion x 1, DeleteShipmentOrderRequest x 1, Version x 1, UnicodeString x 3
+37 - 52 bytes: UnicodeString x 1
+
+Note: Memory leak detail is logged to a text file in the same folder as this application. To disable this memory leak check, undefine "EnableMemoryLeakReporting".
+
+--------------------------------2018/10/2 15:52:46--------------------------------
+A memory block has been leaked. The size is: 52
+
+This block was allocated by thread 0x2F7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A4B0 [System.pas][System][@UStrFromPWCharLen$qqrr20System.UnicodeStringpbi][25328]
+43FAC5 [System.Variants.pas][System.Variants][Variants.@VarToUStr$qqrr20System.UnicodeStringrx8TVarData][3281]
+6025A3 [Xml.Win.msxmldom.pas][Xml.Win.msxmldom][Win.Msxmldom.TMSDOMNode.get_nodeValue][643]
+60F102 [Xml.XMLDoc.pas][Xml.XMLDoc][Xmldoc.TXMLNode.GetText][1973]
+673DC9 [Soap.OPToSOAPDomConv.pas][Soap.OPToSOAPDomConv][Optosoapdomconv.TSOAPDomConv.GetNodeAsText][5240]
+67245B [Soap.OPToSOAPDomConv.pas][Soap.OPToSOAPDomConv][Optosoapdomconv.TSOAPDomConv.InitObjectFromSOAP][4699]
+68D03C [Soap.InvokeRegistry.pas][Soap.InvokeRegistry][Invokeregistry.TRemotable.SOAPToObject][2388]
+67152D [Soap.OPToSOAPDomConv.pas][Soap.OPToSOAPDomConv][Optosoapdomconv.TSOAPDomConv.LoadObject][4332]
+6729C9 [Soap.OPToSOAPDomConv.pas][Soap.OPToSOAPDomConv][Optosoapdomconv.TSOAPDomConv.ConvertSOAPToObject][4799]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 6701
+
+Current memory dump of 256 bytes starting at pointer address 7FCBFBF0:
+B0 04 02 00 01 00 00 00 12 00 00 00 32 00 32 00 32 00 32 00 30 00 31 00 30 00 31 00 30 00 30 00
+33 00 31 00 39 00 38 00 39 00 30 00 30 00 30 00 00 00 80 2B FF 77 80 80 00 00 00 00 B1 FD CB 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 69 26 00 00 56 73 40 00 7F A2 40 00 6F B3 40 00
+87 00 41 00 73 1B 67 00 3C D0 68 00 2D 15 67 00 C9 29 67 00 22 DF 66 00 C5 73 40 00 D7 E5 66 00
+7C 2F 00 00 7C 2F 00 00 72 73 40 00 9E A3 40 00 80 27 67 00 3C D0 68 00 2D 15 67 00 C9 29 67 00
+22 DF 66 00 C5 73 40 00 D7 E5 66 00 01 E8 66 00 F2 20 67 00 26 00 00 00 B0 04 02 00 08 43 79 87
+80 BC 75 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 F7 BC 86 78 80 80 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 B1 0C CC 7F
+∞  .  .  .  .  .  .  .  .  .  .  .  2  .  2  .  2  .  2  .  0  .  1  .  0  .  1  .  0  .  0  .
+3  .  1  .  9  .  8  .  9  .  0  .  0  .  0  .  .  .  Ä  +  ˇ  w  Ä  Ä  .  .  .  .  ±  ˝  À  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  i  &  .  .  V  s  @  .    ¢  @  .  o  ≥  @  .
+á  .  A  .  s  .  g  .  <  –  h  .  -  .  g  .  …  )  g  .  "  ﬂ  f  .  ≈  s  @  .  ◊  Â  f  .
+|  /  .  .  |  /  .  .  r  s  @  .  û  £  @  .  Ä  '  g  .  <  –  h  .  -  .  g  .  …  )  g  .
+"  ﬂ  f  .  ≈  s  @  .  ◊  Â  f  .  .  Ë  f  .  Ú     g  .  &  .  .  .  ∞  .  .  .  .  C  y  á
+Ä  º  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  ˜  º  Ü  x  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ±  .  Ã  
+
+--------------------------------2018/10/2 15:52:46--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x2F7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A70C [System.pas][System][@UStrAsg$qqrr20System.UnicodeStringx20System.UnicodeString][25634]
+69F27C [Objekt.DHLVersionBase.pas][Objekt.DHLVersionBase][Dhlversionbase.TDHLVersionBase.setmajorRelease][53]
+735AC2 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.GetLabel][279]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+735A40 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_GetLabelClick][264]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+555F39 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 8480
+
+Current memory dump of 256 bytes starting at pointer address 7FCD4900:
+B0 04 02 00 01 00 00 00 01 00 00 00 32 00 00 00 1F 66 49 8A 80 80 80 80 00 00 00 00 61 22 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 63 1A 00 00 56 73 40 00 7F A2 40 00 0C A7 40 00
+9D 36 73 00 9F 35 73 00 19 EA 72 00 AB 3C 73 00 39 48 73 00 CC 43 73 00 21 AA 53 00 2B 54 55 00
+7C 2F 00 00 7C 2F 00 00 72 73 40 00 39 A3 40 00 F9 BB 40 00 1D BB 40 00 CD 84 40 00 B2 82 40 00
+05 8B 40 00 7B 8A 6F 00 33 84 40 00 15 29 73 00 97 F3 4C 00 14 00 00 00 B0 04 02 00 10 ED 21 87
+80 BC 75 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 EF 12 DE 78 00 00 00 00 60 20 CD 7F
+00 00 00 00 00 00 00 00 E4 92 41 00 00 00 00 00 1E 21 00 00 56 73 40 00 7F A2 40 00 0C A7 40 00
+B4 F2 69 00 B2 5A 73 00 71 5B 0A 77 6A 91 04 77 40 5A 73 00 21 AA 53 00 2B 54 55 00 39 5F 55 00
+∞  .  .  .  .  .  .  .  .  .  .  .  2  .  .  .  .  f  I  ä  Ä  Ä  Ä  Ä  .  .  .  .  a  "  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  c  .  .  .  V  s  @  .    ¢  @  .  .  ß  @  .
+ù  6  s  .  ü  5  s  .  .  Í  r  .  ´  <  s  .  9  H  s  .  Ã  C  s  .  !  ™  S  .  +  T  U  .
+|  /  .  .  |  /  .  .  r  s  @  .  9  £  @  .  ˘  ª  @  .  .  ª  @  .  Õ  Ñ  @  .  ≤  Ç  @  .
+.  ã  @  .  {  ä  o  .  3  Ñ  @  .  .  )  s  .  ó  Û  L  .  .  .  .  .  ∞  .  .  .  .  Ì  !  á
+Ä  º  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ô  .  ﬁ  x  .  .  .  .  `     Õ  
+.  .  .  .  .  .  .  .  ‰  í  A  .  .  .  .  .  .  !  .  .  V  s  @  .    ¢  @  .  .  ß  @  .
+¥  Ú  i  .  ≤  Z  s  .  q  [  .  w  j  ë  .  w  @  Z  s  .  !  ™  S  .  +  T  U  .  9  _  U  .
+
+--------------------------------2018/10/2 15:52:46--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x2F7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A70C [System.pas][System][@UStrAsg$qqrr20System.UnicodeStringx20System.UnicodeString][25634]
+69F2B4 [Objekt.DHLVersionBase.pas][Objekt.DHLVersionBase][Dhlversionbase.TDHLVersionBase.setminorRelease][60]
+735AB2 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.GetLabel][278]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+735A40 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_GetLabelClick][264]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+555F39 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 8478
+
+Current memory dump of 256 bytes starting at pointer address 7FCD4A40:
+B0 04 02 00 01 00 00 00 01 00 00 00 32 00 00 00 CD 54 BC 28 80 80 80 80 00 00 00 00 61 4F CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 49 2D 00 00 56 73 40 00 7F A2 40 00 B0 A4 40 00
+57 E0 42 00 C9 9C 01 77 76 1B 4D 00 36 93 B0 03 30 95 41 00 45 95 41 00 AD ED 42 00 CD E7 42 00
+7C 2F 00 00 7C 2F 00 00 9E A3 40 00 02 BC 40 00 2B BC 40 00 1D BB 40 00 41 81 43 00 A8 9C 40 00
+F5 A0 40 00 7B AB 74 00 54 86 39 76 47 4A 02 77 17 4A 02 77 12 00 00 00 B0 04 02 00 96 1D 57 63
+80 BC 75 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 69 E2 A8 9C 80 80 00 00 00 00 81 20 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 86 1A 00 00 56 73 40 00 7F A2 40 00 6F B3 40 00
+74 91 42 00 19 95 42 00 93 0E 73 00 DC 36 73 00 9F 35 73 00 19 EA 72 00 AB 3C 73 00 39 48 73 00
+∞  .  .  .  .  .  .  .  .  .  .  .  2  .  .  .  Õ  T  º  (  Ä  Ä  Ä  Ä  .  .  .  .  a  O  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  I  -  .  .  V  s  @  .    ¢  @  .  ∞  §  @  .
+W  ‡  B  .  …  ú  .  w  v  .  M  .  6  ì  ∞  .  0  ï  A  .  E  ï  A  .  ≠  Ì  B  .  Õ  Á  B  .
+|  /  .  .  |  /  .  .  û  £  @  .  .  º  @  .  +  º  @  .  .  ª  @  .  A  Å  C  .  ®  ú  @  .
+ı  †  @  .  {  ´  t  .  T  Ü  9  v  G  J  .  w  .  J  .  w  .  .  .  .  ∞  .  .  .  ñ  .  W  c
+Ä  º  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  i  ‚  ®  ú  Ä  Ä  .  .  .  .  Å     Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ü  .  .  .  V  s  @  .    ¢  @  .  o  ≥  @  .
+t  ë  B  .  .  ï  B  .  ì  .  s  .  ‹  6  s  .  ü  5  s  .  .  Í  r  .  ´  <  s  .  9  H  s  .
+
+--------------------------------2018/10/2 15:52:46--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x2F7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69D706 [geschaeftskundenversand_api_2.pas][geschaeftskundenversand_api_2][GetLabelRequest.Create][2736]
+6A70F6 [Objekt.DHLGetLabelRequestAPI.pas][Objekt.DHLGetLabelRequestAPI][Dhlgetlabelrequestapi.TDHLGetLabelRequestAPI.Create][31]
+735A91 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.GetLabel][275]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+735A40 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_GetLabelClick][264]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+
+The block is currently used for an object of class: GetLabelRequest
+
+The allocation number is: 8475
+
+Current memory dump of 256 bytes starting at pointer address 7FCDF730:
+04 6C 69 00 00 00 00 00 08 00 00 00 F0 F9 CD 7F 38 B8 E2 7F 00 00 00 00 00 00 00 00 62 A7 34 8A
+80 80 80 80 80 80 80 80 00 00 00 00 01 F6 CD 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+2C 1D 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 62 5D 52 00 96 F2 71 00 D8 F3 71 00 E7 0C 72 00
+75 03 72 00 0C 01 72 00 E5 00 72 00 A9 80 6D 00 7C 2F 00 00 7C 2F 00 00 72 73 40 00 B9 82 40 00
+05 8B 40 00 CD 5D 52 00 33 84 40 00 B8 F4 71 00 75 35 72 00 A8 9C 40 00 7B AB 74 00 54 86 39 76
+47 4A 02 77 20 00 00 00 58 A6 6A 00 88 17 90 74 80 BC 75 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 77 E8 6F 8B 80 80 80 80 00 00 00 00 91 F2 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 68 1F 00 00 56 73 40 00 7F A2 40 00 B0 A4 40 00
+.  l  i  .  .  .  .  .  .  .  .  .    ˘  Õ    8  ∏  ‚    .  .  .  .  .  .  .  .  b  ß  4  ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  ˆ  Õ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+,  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .  b  ]  R  .  ñ  Ú  q  .  ÿ  Û  q  .  Á  .  r  .
+u  .  r  .  .  .  r  .  Â  .  r  .  ©  Ä  m  .  |  /  .  .  |  /  .  .  r  s  @  .  π  Ç  @  .
+.  ã  @  .  Õ  ]  R  .  3  Ñ  @  .  ∏  Ù  q  .  u  5  r  .  ®  ú  @  .  {  ´  t  .  T  Ü  9  v
+G  J  .  w     .  .  .  X  ¶  j  .  à  .  ê  t  Ä  º  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  w  Ë  o  ã  Ä  Ä  Ä  Ä  .  .  .  .  ë  Ú  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  h  .  .  .  V  s  @  .    ¢  @  .  ∞  §  @  .
+
+--------------------------------2018/10/2 15:52:46--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x2F7C, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69C6B6 [geschaeftskundenversand_api_2.pas][geschaeftskundenversand_api_2][Version.Create][2272]
+4082A4 [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69F406 [Objekt.DHLVersion.pas][Objekt.DHLVersion][Dhlversion.TDHLVersion.Create][23]
+6A70E4 [Objekt.DHLGetLabelRequestAPI.pas][Objekt.DHLGetLabelRequestAPI][Dhlgetlabelrequestapi.TDHLGetLabelRequestAPI.Create][30]
+735A91 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.GetLabel][275]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+
+The block is currently used for an object of class: Version
+
+The allocation number is: 8474
+
+Current memory dump of 256 bytes starting at pointer address 7FCDF9F0:
+98 34 69 00 00 00 00 00 08 00 00 00 0C 49 CD 7F 4C 4A CD 7F 00 00 00 00 00 00 00 00 00 00 00 00
+6B E2 94 8B 80 80 80 80 00 00 00 00 C1 F8 CD 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+37 1D 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 62 5D 52 00 96 F2 71 00 D8 F3 71 00 E7 0C 72 00
+75 03 72 00 0C 01 72 00 E5 00 72 00 A9 80 6D 00 7C 2F 00 00 7C 2F 00 00 72 73 40 00 B9 82 40 00
+05 8B 40 00 CD 5D 52 00 33 84 40 00 B8 F4 71 00 75 35 72 00 A8 9C 40 00 7B AB 74 00 54 86 39 76
+47 4A 02 77 20 00 00 00 58 A6 6A 00 53 1A 90 74 80 BC 75 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 AC E5 6F 8B 80 80 80 80 00 00 00 00 F1 FE CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 11 1D 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+ò  4  i  .  .  .  .  .  .  .  .  .  .  I  Õ    L  J  Õ    .  .  .  .  .  .  .  .  .  .  .  .
+k  ‚  î  ã  Ä  Ä  Ä  Ä  .  .  .  .  ¡  ¯  Õ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+7  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .  b  ]  R  .  ñ  Ú  q  .  ÿ  Û  q  .  Á  .  r  .
+u  .  r  .  .  .  r  .  Â  .  r  .  ©  Ä  m  .  |  /  .  .  |  /  .  .  r  s  @  .  π  Ç  @  .
+.  ã  @  .  Õ  ]  R  .  3  Ñ  @  .  ∏  Ù  q  .  u  5  r  .  ®  ú  @  .  {  ´  t  .  T  Ü  9  v
+G  J  .  w     .  .  .  X  ¶  j  .  S  .  ê  t  Ä  º  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ¨  Â  o  ã  Ä  Ä  Ä  Ä  .  .  .  .  Ò  ˛  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+
+--------------------------------2018/10/2 15:52:46--------------------------------
+A memory block has been leaked. The size is: 12
+
+This block was allocated by thread 0x2F7C, and the stack trace (return addresses) at the time was:
+4073C5 [System.pas][System][@ReallocMem$qqrrpvi][4950]
+40CB21 [System.pas][System][DynArraySetLength$qqrrpvpvipi][35017]
+69D730 [geschaeftskundenversand_api_2.pas][geschaeftskundenversand_api_2][GetLabelRequest.Create][2739]
+40CC6E [System.pas][System][@DynArraySetLength$qqrv][35119]
+6A7128 [Objekt.DHLGetLabelRequestAPI.pas][Objekt.DHLGetLabelRequestAPI][Dhlgetlabelrequestapi.TDHLGetLabelRequestAPI.Create][34]
+735A91 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.GetLabel][275]
+770A5B71 [Unknown function at RtlpNtSetValueKey]
+7704916A [Unknown function at EtwCheckCoverage]
+735A40 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_GetLabelClick][264]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+
+The block is currently used for an object of class: Unknown
+
+The allocation number is: 8476
+
+Current memory dump of 256 bytes starting at pointer address 7FE2B830:
+01 00 00 00 01 00 00 00 FC FB CB 7F AF 25 54 8A 00 00 00 00 81 B6 E2 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 EC 20 00 00 C5 73 40 00 2D CB 40 00 73 85 44 00 3C 74 44 00 61 74 44 00
+9F 63 44 00 48 F6 4C 00 8E F7 4C 00 E8 F2 4C 00 63 25 6B 00 AB 25 6B 00 7C 2F 00 00 7C 2F 00 00
+72 73 40 00 C8 CD 40 00 F5 C9 40 00 45 95 41 00 C7 69 4D 00 33 84 40 00 18 F7 4C 00 AC F9 4C 00
+D6 F9 4C 00 05 FA 4C 00 0A F8 4C 00 0C 00 00 00 00 00 00 00 BC DF 45 86 80 BC 75 00 80 80 80 80
+80 80 80 80 43 20 BA 79 00 00 00 00 F9 C2 E2 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+CA 22 00 00 C5 73 40 00 2D CB 40 00 73 85 44 00 3C 74 44 00 61 74 44 00 9F 63 44 00 48 F6 4C 00
+8E F7 4C 00 E8 F2 4C 00 81 00 68 00 65 28 68 00 7C 2F 00 00 7C 2F 00 00 72 73 40 00 C8 CD 40 00
+.  .  .  .  .  .  .  .  ¸  ˚  À    Ø  %  T  ä  .  .  .  .  Å  ∂  ‚    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  Ï     .  .  ≈  s  @  .  -  À  @  .  s  Ö  D  .  <  t  D  .  a  t  D  .
+ü  c  D  .  H  ˆ  L  .  é  ˜  L  .  Ë  Ú  L  .  c  %  k  .  ´  %  k  .  |  /  .  .  |  /  .  .
+r  s  @  .  »  Õ  @  .  ı  …  @  .  E  ï  A  .  «  i  M  .  3  Ñ  @  .  .  ˜  L  .  ¨  ˘  L  .
+÷  ˘  L  .  .  ˙  L  .  .  ¯  L  .  .  .  .  .  .  .  .  .  º  ﬂ  E  Ü  Ä  º  u  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  C     ∫  y  .  .  .  .  ˘  ¬  ‚    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+   "  .  .  ≈  s  @  .  -  À  @  .  s  Ö  D  .  <  t  D  .  a  t  D  .  ü  c  D  .  H  ˆ  L  .
+é  ˜  L  .  Ë  Ú  L  .  Å  .  h  .  e  (  h  .  |  /  .  .  |  /  .  .  r  s  @  .  »  Õ  @  .
+
+--------------------------------2018/10/2 15:52:46--------------------------------
+This application has leaked memory. The small block leaks are (excluding expected leaks registered by pointer):
+
+5 - 12 bytes: Unknown x 1
+13 - 20 bytes: UnicodeString x 2
+21 - 36 bytes: Version x 1, GetLabelRequest x 1
+37 - 52 bytes: UnicodeString x 1
+
+Note: Memory leak detail is logged to a text file in the same folder as this application. To disable this memory leak check, undefine "EnableMemoryLeakReporting".
+
+--------------------------------2018/10/2 15:54:31--------------------------------
+A memory block has been leaked. The size is: 52
+
+This block was allocated by thread 0x2D38, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A4B0 [System.pas][System][@UStrFromPWCharLen$qqrr20System.UnicodeStringpbi][25328]
+43FAC5 [System.Variants.pas][System.Variants][Variants.@VarToUStr$qqrr20System.UnicodeStringrx8TVarData][3281]
+6025A3 [Xml.Win.msxmldom.pas][Xml.Win.msxmldom][Win.Msxmldom.TMSDOMNode.get_nodeValue][643]
+60F102 [Xml.XMLDoc.pas][Xml.XMLDoc][Xmldoc.TXMLNode.GetText][1973]
+673DC9 [Soap.OPToSOAPDomConv.pas][Soap.OPToSOAPDomConv][Optosoapdomconv.TSOAPDomConv.GetNodeAsText][5240]
+67245B [Soap.OPToSOAPDomConv.pas][Soap.OPToSOAPDomConv][Optosoapdomconv.TSOAPDomConv.InitObjectFromSOAP][4699]
+68D03C [Soap.InvokeRegistry.pas][Soap.InvokeRegistry][Invokeregistry.TRemotable.SOAPToObject][2388]
+67152D [Soap.OPToSOAPDomConv.pas][Soap.OPToSOAPDomConv][Optosoapdomconv.TSOAPDomConv.LoadObject][4332]
+6729C9 [Soap.OPToSOAPDomConv.pas][Soap.OPToSOAPDomConv][Optosoapdomconv.TSOAPDomConv.ConvertSOAPToObject][4799]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 6701
+
+Current memory dump of 256 bytes starting at pointer address 7FCBFBF0:
+B0 04 02 00 01 00 00 00 12 00 00 00 32 00 32 00 32 00 32 00 30 00 31 00 30 00 31 00 30 00 30 00
+33 00 31 00 39 00 38 00 39 00 32 00 36 00 30 00 00 00 08 30 FF 77 80 80 00 00 00 00 F1 F6 CB 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 86 26 00 00 56 73 40 00 7F A2 40 00 B0 A4 40 00
+C5 FA 43 00 A3 25 60 00 02 F1 60 00 C9 3D 67 00 5B 24 67 00 3C D0 68 00 2D 15 67 00 C9 29 67 00
+38 2D 00 00 38 2D 00 00 72 73 40 00 39 A3 40 00 F9 BB 40 00 1D BB 40 00 CD 84 40 00 B2 82 40 00
+05 8B 40 00 CD 5F 6A 00 33 84 40 00 FB 13 52 00 38 9A 4B 00 32 00 00 00 B0 04 02 00 C5 71 A7 86
+80 BC 75 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 3A 8E 58 79 80 80 00 00 00 00 71 F8 CB 7F
+∞  .  .  .  .  .  .  .  .  .  .  .  2  .  2  .  2  .  2  .  0  .  1  .  0  .  1  .  0  .  0  .
+3  .  1  .  9  .  8  .  9  .  2  .  6  .  0  .  .  .  .  0  ˇ  w  Ä  Ä  .  .  .  .  Ò  ˆ  À  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ü  &  .  .  V  s  @  .    ¢  @  .  ∞  §  @  .
+≈  ˙  C  .  £  %  `  .  .  Ò  `  .  …  =  g  .  [  $  g  .  <  –  h  .  -  .  g  .  …  )  g  .
+8  -  .  .  8  -  .  .  r  s  @  .  9  £  @  .  ˘  ª  @  .  .  ª  @  .  Õ  Ñ  @  .  ≤  Ç  @  .
+.  ã  @  .  Õ  _  j  .  3  Ñ  @  .  ˚  .  R  .  8  ö  K  .  2  .  .  .  ∞  .  .  .  ≈  q  ß  Ü
+Ä  º  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  :  é  X  y  Ä  Ä  .  .  .  .  q  ¯  À  
+
+--------------------------------2018/10/2 15:54:31--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x2D38, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A70C [System.pas][System][@UStrAsg$qqrr20System.UnicodeStringx20System.UnicodeString][25634]
+69F27C [Objekt.DHLVersionBase.pas][Objekt.DHLVersionBase][Dhlversionbase.TDHLVersionBase.setmajorRelease][53]
+735AC2 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.GetLabel][279]
+735A40 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_GetLabelClick][264]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+555F39 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+53A4B1 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.WndProc][7338]
+76759332 [Unknown function at GetDC]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 8523
+
+Current memory dump of 256 bytes starting at pointer address 7FCD42C0:
+B0 04 02 00 01 00 00 00 01 00 00 00 32 00 00 00 0A 35 98 01 80 80 80 80 00 00 00 00 60 20 CD 7F
+00 00 00 00 00 00 00 00 E4 92 41 00 00 00 00 00 49 21 00 00 56 73 40 00 7F A2 40 00 0C A7 40 00
+B4 F2 69 00 B2 5A 73 00 40 5A 73 00 21 AA 53 00 2B 54 55 00 39 5F 55 00 B1 A4 53 00 32 93 75 76
+38 2D 00 00 38 2D 00 00 72 73 40 00 B9 82 40 00 05 8B 40 00 CF 0D 4C 00 33 84 40 00 62 0F 4C 00
+B6 3C 73 00 39 48 73 00 CC 43 73 00 21 AA 53 00 2B 54 55 00 10 00 00 00 A0 D4 49 00 B7 09 D0 FD
+B0 04 02 00 01 00 00 00 01 00 00 00 32 00 00 00 48 F6 2F 02 80 80 80 80 00 00 00 00 21 44 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 22 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+76 E6 46 00 9C 0E 47 00 6D E3 46 00 C4 D6 67 00 4A D4 67 00 53 E2 67 00 E8 E6 40 00 6C B4 69 00
+∞  .  .  .  .  .  .  .  .  .  .  .  2  .  .  .  .  5  ò  .  Ä  Ä  Ä  Ä  .  .  .  .  `     Õ  
+.  .  .  .  .  .  .  .  ‰  í  A  .  .  .  .  .  I  !  .  .  V  s  @  .    ¢  @  .  .  ß  @  .
+¥  Ú  i  .  ≤  Z  s  .  @  Z  s  .  !  ™  S  .  +  T  U  .  9  _  U  .  ±  §  S  .  2  ì  u  v
+8  -  .  .  8  -  .  .  r  s  @  .  π  Ç  @  .  .  ã  @  .  œ  .  L  .  3  Ñ  @  .  b  .  L  .
+∂  <  s  .  9  H  s  .  Ã  C  s  .  !  ™  S  .  +  T  U  .  .  .  .  .  †  ‘  I  .  ∑  .  –  ˝
+∞  .  .  .  .  .  .  .  .  .  .  .  2  .  .  .  H  ˆ  /  .  Ä  Ä  Ä  Ä  .  .  .  .  !  D  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  "  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+v  Ê  F  .  ú  .  G  .  m  „  F  .  ƒ  ÷  g  .  J  ‘  g  .  S  ‚  g  .  Ë  Ê  @  .  l  ¥  i  .
+
+--------------------------------2018/10/2 15:54:31--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x2D38, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40A27F [System.pas][System][@NewUnicodeString$qqri][24650]
+40A70C [System.pas][System][@UStrAsg$qqrr20System.UnicodeStringx20System.UnicodeString][25634]
+69F2B4 [Objekt.DHLVersionBase.pas][Objekt.DHLVersionBase][Dhlversionbase.TDHLVersionBase.setminorRelease][60]
+735AB2 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.GetLabel][278]
+735A40 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_GetLabelClick][264]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+555F39 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+53A4B1 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.WndProc][7338]
+76759332 [Unknown function at GetDC]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 8521
+
+Current memory dump of 256 bytes starting at pointer address 7FCD4360:
+B0 04 02 00 01 00 00 00 01 00 00 00 32 00 00 00 48 F6 2F 02 80 80 80 80 00 00 00 00 21 44 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 22 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+76 E6 46 00 9C 0E 47 00 6D E3 46 00 C4 D6 67 00 4A D4 67 00 53 E2 67 00 E8 E6 40 00 6C B4 69 00
+38 2D 00 00 38 2D 00 00 72 73 40 00 B9 82 40 00 05 8B 40 00 D5 E6 46 00 33 84 40 00 B2 17 47 00
+9C 0E 47 00 8E 68 44 00 ED 45 5E 5E 94 EA DA 76 37 6F 5F 5E 10 00 00 00 34 E3 44 00 E7 3F 3F B9
+80 BC 75 00 80 80 80 80 80 80 80 80 80 80 80 80 18 C0 C0 46 80 80 80 80 00 00 00 00 C1 58 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FC 21 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+76 E6 46 00 FB 05 46 00 6D E3 46 00 C4 D6 67 00 4A D4 67 00 53 E2 67 00 E8 E6 40 00 6C B4 69 00
+∞  .  .  .  .  .  .  .  .  .  .  .  2  .  .  .  H  ˆ  /  .  Ä  Ä  Ä  Ä  .  .  .  .  !  D  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  "  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+v  Ê  F  .  ú  .  G  .  m  „  F  .  ƒ  ÷  g  .  J  ‘  g  .  S  ‚  g  .  Ë  Ê  @  .  l  ¥  i  .
+8  -  .  .  8  -  .  .  r  s  @  .  π  Ç  @  .  .  ã  @  .  ’  Ê  F  .  3  Ñ  @  .  ≤  .  G  .
+ú  .  G  .  é  h  D  .  Ì  E  ^  ^  î  Í  ⁄  v  7  o  _  ^  .  .  .  .  4  „  D  .  Á  ?  ?  π
+Ä  º  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  ¿  ¿  F  Ä  Ä  Ä  Ä  .  .  .  .  ¡  X  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ¸  !  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+v  Ê  F  .  ˚  .  F  .  m  „  F  .  ƒ  ÷  g  .  J  ‘  g  .  S  ‚  g  .  Ë  Ê  @  .  l  ¥  i  .
+
+--------------------------------2018/10/2 15:54:31--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x2D38, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69D706 [geschaeftskundenversand_api_2.pas][geschaeftskundenversand_api_2][GetLabelRequest.Create][2736]
+6A70F6 [Objekt.DHLGetLabelRequestAPI.pas][Objekt.DHLGetLabelRequestAPI][Dhlgetlabelrequestapi.TDHLGetLabelRequestAPI.Create][31]
+735A91 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.GetLabel][275]
+735A40 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_GetLabelClick][264]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+555F39 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+53A4B1 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.WndProc][7338]
+
+The block is currently used for an object of class: GetLabelRequest
+
+The allocation number is: 8518
+
+Current memory dump of 256 bytes starting at pointer address 7FCDDFD0:
+04 6C 69 00 00 00 00 00 08 00 00 00 30 F7 CD 7F 38 B8 E2 7F 00 00 00 00 00 00 00 00 DB 30 CF 77
+80 80 80 80 80 80 80 80 00 00 00 00 21 FA CD 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+38 1D 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 62 5D 52 00 96 F2 71 00 D8 F3 71 00 E7 0C 72 00
+75 03 72 00 0C 01 72 00 E5 00 72 00 A9 80 6D 00 38 2D 00 00 38 2D 00 00 72 73 40 00 B9 82 40 00
+05 8B 40 00 CD 5D 52 00 33 84 40 00 B8 F4 71 00 75 35 72 00 A8 9C 40 00 7B AB 74 00 54 86 39 76
+47 4A 02 77 20 00 00 00 58 A6 6A 00 AC FB 8F 74 80 BC 75 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 53 04 70 8B 80 80 80 80 00 00 00 00 11 E2 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 24 1D 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00
+.  l  i  .  .  .  .  .  .  .  .  .  0  ˜  Õ    8  ∏  ‚    .  .  .  .  .  .  .  .  €  0  œ  w
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  !  ˙  Õ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+8  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .  b  ]  R  .  ñ  Ú  q  .  ÿ  Û  q  .  Á  .  r  .
+u  .  r  .  .  .  r  .  Â  .  r  .  ©  Ä  m  .  8  -  .  .  8  -  .  .  r  s  @  .  π  Ç  @  .
+.  ã  @  .  Õ  ]  R  .  3  Ñ  @  .  ∏  Ù  q  .  u  5  r  .  ®  ú  @  .  {  ´  t  .  T  Ü  9  v
+G  J  .  w     .  .  .  X  ¶  j  .  ¨  ˚  è  t  Ä  º  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  S  .  p  ã  Ä  Ä  Ä  Ä  .  .  .  .  .  ‚  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  $  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .
+
+--------------------------------2018/10/2 15:54:31--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x2D38, and the stack trace (return addresses) at the time was:
+407356 [System.pas][System][@GetMem$qqri][4758]
+40829B [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69C6B6 [geschaeftskundenversand_api_2.pas][geschaeftskundenversand_api_2][Version.Create][2272]
+4082A4 [System.pas][System][TObject.NewInstance][16922]
+408ABA [System.pas][System][@ClassCreate$qqrpvzc][18255]
+69F406 [Objekt.DHLVersion.pas][Objekt.DHLVersion][Dhlversion.TDHLVersion.Create][23]
+6A70E4 [Objekt.DHLGetLabelRequestAPI.pas][Objekt.DHLGetLabelRequestAPI][Dhlgetlabelrequestapi.TDHLGetLabelRequestAPI.Create][30]
+735A91 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.GetLabel][275]
+735A40 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_GetLabelClick][264]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+
+The block is currently used for an object of class: Version
+
+The allocation number is: 8517
+
+Current memory dump of 256 bytes starting at pointer address 7FCDF730:
+98 34 69 00 00 00 00 00 08 00 00 00 CC 42 CD 7F 6C 43 CD 7F 00 00 00 00 00 00 00 00 00 00 00 00
+C0 FB AD 77 80 80 80 80 00 00 00 00 01 F6 CD 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+2C 1D 00 00 56 73 40 00 9B 82 40 00 BA 8A 40 00 62 5D 52 00 96 F2 71 00 D8 F3 71 00 E7 0C 72 00
+75 03 72 00 0C 01 72 00 E5 00 72 00 A9 80 6D 00 38 2D 00 00 38 2D 00 00 72 73 40 00 B9 82 40 00
+05 8B 40 00 CD 5D 52 00 33 84 40 00 B8 F4 71 00 75 35 72 00 A8 9C 40 00 7B AB 74 00 54 86 39 76
+47 4A 02 77 20 00 00 00 58 A6 6A 00 00 13 90 74 80 BC 75 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 FF EC 6F 8B 80 80 80 80 00 00 00 00 91 F2 CD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 68 1F 00 00 56 73 40 00 7F A2 40 00 B0 A4 40 00
+ò  4  i  .  .  .  .  .  .  .  .  .  Ã  B  Õ    l  C  Õ    .  .  .  .  .  .  .  .  .  .  .  .
+¿  ˚  ≠  w  Ä  Ä  Ä  Ä  .  .  .  .  .  ˆ  Õ    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+,  .  .  .  V  s  @  .  õ  Ç  @  .  ∫  ä  @  .  b  ]  R  .  ñ  Ú  q  .  ÿ  Û  q  .  Á  .  r  .
+u  .  r  .  .  .  r  .  Â  .  r  .  ©  Ä  m  .  8  -  .  .  8  -  .  .  r  s  @  .  π  Ç  @  .
+.  ã  @  .  Õ  ]  R  .  3  Ñ  @  .  ∏  Ù  q  .  u  5  r  .  ®  ú  @  .  {  ´  t  .  T  Ü  9  v
+G  J  .  w     .  .  .  X  ¶  j  .  .  .  ê  t  Ä  º  u  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ˇ  Ï  o  ã  Ä  Ä  Ä  Ä  .  .  .  .  ë  Ú  Õ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  h  .  .  .  V  s  @  .    ¢  @  .  ∞  §  @  .
+
+--------------------------------2018/10/2 15:54:31--------------------------------
+A memory block has been leaked. The size is: 12
+
+This block was allocated by thread 0x2D38, and the stack trace (return addresses) at the time was:
+4073C5 [System.pas][System][@ReallocMem$qqrrpvi][4950]
+40CB21 [System.pas][System][DynArraySetLength$qqrrpvpvipi][35017]
+69D730 [geschaeftskundenversand_api_2.pas][geschaeftskundenversand_api_2][GetLabelRequest.Create][2739]
+40CC6E [System.pas][System][@DynArraySetLength$qqrv][35119]
+6A7128 [Objekt.DHLGetLabelRequestAPI.pas][Objekt.DHLGetLabelRequestAPI][Dhlgetlabelrequestapi.TDHLGetLabelRequestAPI.Create][34]
+735A91 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.GetLabel][275]
+735A40 [Frame.DHLShipmentOrder.pas][Frame.DHLShipmentOrder][Dhlshipmentorder.Tfra_DHLShipmentOrder.btn_GetLabelClick][264]
+53AA21 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+55542B [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+555F39 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+53A4B1 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.WndProc][7338]
+
+The block is currently used for an object of class: Unknown
+
+The allocation number is: 8519
+
+Current memory dump of 256 bytes starting at pointer address 7FE2B830:
+01 00 00 00 01 00 00 00 FC FB CB 7F FD 12 BA 77 00 00 00 00 81 B6 E2 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 EC 20 00 00 C5 73 40 00 2D CB 40 00 73 85 44 00 3C 74 44 00 61 74 44 00
+9F 63 44 00 48 F6 4C 00 8E F7 4C 00 E8 F2 4C 00 63 25 6B 00 AB 25 6B 00 38 2D 00 00 38 2D 00 00
+72 73 40 00 C8 CD 40 00 F5 C9 40 00 45 95 41 00 C7 69 4D 00 33 84 40 00 18 F7 4C 00 AC F9 4C 00
+D6 F9 4C 00 05 FA 4C 00 0A F8 4C 00 0C 00 00 00 00 00 00 00 34 DB 45 86 80 BC 75 00 80 80 80 80
+80 80 80 80 CB 24 BA 79 00 00 00 00 F9 C2 E2 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+F5 22 00 00 C5 73 40 00 2D CB 40 00 73 85 44 00 3C 74 44 00 61 74 44 00 9F 63 44 00 48 F6 4C 00
+8E F7 4C 00 E8 F2 4C 00 81 00 68 00 65 28 68 00 38 2D 00 00 38 2D 00 00 72 73 40 00 C8 CD 40 00
+.  .  .  .  .  .  .  .  ¸  ˚  À    ˝  .  ∫  w  .  .  .  .  Å  ∂  ‚    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  Ï     .  .  ≈  s  @  .  -  À  @  .  s  Ö  D  .  <  t  D  .  a  t  D  .
+ü  c  D  .  H  ˆ  L  .  é  ˜  L  .  Ë  Ú  L  .  c  %  k  .  ´  %  k  .  8  -  .  .  8  -  .  .
+r  s  @  .  »  Õ  @  .  ı  …  @  .  E  ï  A  .  «  i  M  .  3  Ñ  @  .  .  ˜  L  .  ¨  ˘  L  .
+÷  ˘  L  .  .  ˙  L  .  .  ¯  L  .  .  .  .  .  .  .  .  .  4  €  E  Ü  Ä  º  u  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  À  $  ∫  y  .  .  .  .  ˘  ¬  ‚    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ı  "  .  .  ≈  s  @  .  -  À  @  .  s  Ö  D  .  <  t  D  .  a  t  D  .  ü  c  D  .  H  ˆ  L  .
+é  ˜  L  .  Ë  Ú  L  .  Å  .  h  .  e  (  h  .  8  -  .  .  8  -  .  .  r  s  @  .  »  Õ  @  .
+
+--------------------------------2018/10/2 15:54:31--------------------------------
+This application has leaked memory. The small block leaks are (excluding expected leaks registered by pointer):
+
+5 - 12 bytes: Unknown x 1
+13 - 20 bytes: UnicodeString x 2
+21 - 36 bytes: Version x 1, GetLabelRequest x 1
+37 - 52 bytes: UnicodeString x 1
+
+Note: Memory leak detail is logged to a text file in the same folder as this application. To disable this memory leak check, undefine "EnableMemoryLeakReporting".

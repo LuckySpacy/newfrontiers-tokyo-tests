@@ -1,4 +1,4 @@
-unit Objekt.DHLDeleteShipmentOrderRequestAPI;
+unit Objekt.DHLGetLabelRequestAPI;
 
 interface
 
@@ -6,9 +6,9 @@ uses
   SysUtils, System.Classes, geschaeftskundenversand_api_2, Objekt.DHLVersion;
 
 type
-  TDHLDeleteShipmentOrderRequestAPI = class
+  TDHLGetLabelRequestAPI = class
   private
-    fRequest: DeleteShipmentOrderRequest;
+    fRequest: GetLabelRequest;
     fArray_Of_ShipmentNumber: Array_Of_shipmentNumber;
     fShipmentNumber: string;
     FVersion: TDHLVersion;
@@ -16,42 +16,36 @@ type
   public
     constructor Create;
     destructor Destroy; override;
-    property Request: DeleteShipmentOrderRequest read fRequest write fRequest;
+    property Request: GetLabelRequest read fRequest write fRequest;
     property Version: TDHLVersion read FVersion write fVersion;
     property ShipmentNumber: string read fShipmentNumber write setShipmentNumber;
   end;
 
 implementation
 
-{ TDHLDeleteShipmentOrderRequestAPI }
+{ TDHLGetLabelRequestAPI }
 
-constructor TDHLDeleteShipmentOrderRequestAPI.Create;
+constructor TDHLGetLabelRequestAPI.Create;
 begin
-  fRequest := DeleteShipmentOrderRequest.Create;
   fVersion := TDHLVersion.Create;
-  fRequest.Version := fVersion.VersionAPI;
+  fRequest := GetLabelRequest.Create;
+  fRequest.Version := FVersion.VersionAPI;
+  //fRequest.labelResponseType := URL;
   setLength(fArray_Of_ShipmentNumber, 1);
 end;
 
-destructor TDHLDeleteShipmentOrderRequestAPI.Destroy;
+destructor TDHLGetLabelRequestAPI.Destroy;
 begin
-  FreeAndNil(fRequest);
   FreeAndNil(fVersion);
+  FreeAndNil(fRequest);
   inherited;
 end;
 
-
-
-
-
-
-procedure TDHLDeleteShipmentOrderRequestAPI.setShipmentNumber(const Value: string);
-var
-  Shipnr: Array_Of_shipmentNumber;
+procedure TDHLGetLabelRequestAPI.setShipmentNumber(const Value: string);
 begin
   fArray_Of_ShipmentNumber[0] := Value;
-  fRequest.shipmentNumber := fArray_Of_ShipmentNumber;
   fShipmentNumber := Value;
+  fRequest.shipmentNumber := fArray_Of_ShipmentNumber;
 end;
 
 end.

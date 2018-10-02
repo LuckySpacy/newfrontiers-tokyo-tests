@@ -10,7 +10,10 @@ uses
  Objekt.DHLShipmentorderResponseList, Objekt.DHLVersionResponse,
  Objekt.DHLValidateShipmentorderRequestAPI, Objekt.DHLValidateShipmentOrderResponse,
  Objekt.DHLValidateState, Objekt.DHLUpdateShipmentOrderRequestAPI,
- Objekt.DHLUpdateShipmentOrderResponse, Objekt.DHLStatusInformation;
+ Objekt.DHLUpdateShipmentOrderResponse, Objekt.DHLStatusInformation,
+ Objekt.DHLDeleteShipmentOrderRequestAPI, Objekt.DHLDeleteShipmentOrderResponse,
+ Objekt.DHLDeletionState, Objekt.DHLGetLabelRequestAPI, Objekt.DHLGetLabelResponse,
+ Objekt.DHLLabelData;
 
 type
   TDHLSend = class
@@ -25,6 +28,8 @@ type
     fVersionResponse: TDHLVersionResponse;
     fValidateShipmentResponse: TDHLValidateShipmentOrderResponse;
     fDHLUpdateShipmentorderResponse: TDHLUpdateShipmentorderResponse;
+    fDHLDeleteShipmentorderResponse: TDHLDeleteShipmentorderResponse;
+    fDHLGetLabelResponse: TDHLGetLabelResponse;
     procedure HTTPRIOBeforeExecute(const MethodName: string; SOAPRequest: TStream);
   public
     constructor Create;
@@ -32,6 +37,8 @@ type
     function SendShipmentOrder(aShipmentOrderRequestAPI: TDHLShipmentOrderRequestAPI; aXMLFilename: string): TDHLShipmentorderResponseList;
     function SendValidateShipmentOrder(aValidateShipmentOrderRequestAPI: TDHLValidateShipmentorderRequestAPI; aXMLFilename: string): TDHLValidateShipmentorderResponse;
     function SendUpdateShipmentOrder(aUpdateShipmentOrderRequestAPI: TDHLUpdateShipmentOrderRequestAPI; aXMLFilename: string): TDHLUpdateShipmentOrderResponse;
+    function SendDeleteShipmentOrder(aDeleteShipmentOrderRequestAPI: TDHLDeleteShipmentOrderRequestAPI; aXMLFilename: string): TDHLDeleteShipmentOrderResponse;
+    function SendGetLabel(aGetLabelRequestAPI: TDHLGetLabelRequestAPI; aXMLFilename: string): TDHLGetLabelResponse;
     function getVersion: TDHLVersionResponse;
     property Username: string read fUsername write fUsername;
     property Password: string read fPassword write fPassword;
@@ -55,6 +62,9 @@ begin
   fVersionResponse := TDHLVersionResponse.Create;
   fValidateShipmentResponse := TDHLValidateShipmentOrderResponse.Create;
   fDHLUpdateShipmentorderResponse := TDHLUpdateShipmentorderResponse.Create;
+  fDHLDeleteShipmentorderResponse := TDHLDeleteShipmentorderResponse.Create;
+  fDHLGetLabelResponse := TDHLGetLabelResponse.Create;
+
 end;
 
 destructor TDHLSend.Destroy;
@@ -63,6 +73,8 @@ begin
   FreeAndNil(fVersionResponse);
   FreeAndNil(fValidateShipmentResponse);
   FreeAndNil(fDHLUpdateShipmentorderResponse);
+  FreeAndNil(fDHLDeleteShipmentorderResponse);
+  FreeAndNil(fDHLGetLabelResponse);
   inherited;
 end;
 
@@ -92,6 +104,7 @@ begin
   Result := fVersionResponse;
 
 end;
+
 
 function TDHLSend.SendShipmentOrder(aShipmentOrderRequestAPI: TDHLShipmentOrderRequestAPI; aXMLFilename: string): TDHLShipmentorderResponseList;
 var
@@ -280,6 +293,110 @@ begin
 
 end;
 
+
+function TDHLSend.SendDeleteShipmentOrder(aDeleteShipmentOrderRequestAPI: TDHLDeleteShipmentOrderRequestAPI;
+  aXMLFilename: string): TDHLDeleteShipmentOrderResponse;
+var
+  GHTTPRIO : THTTPRIO;
+  hAuthentification : Authentification;
+  Response : DeleteShipmentOrderResponse;
+  GKVAPI : GKVAPIServicePortType;
+  i: Integer;
+  ValidateState: TDHLValidateState;
+  DeletionState: TDHLDeletionState;
+begin
+  GHTTPRIO := THTTPRIO.Create(nil);
+  GHTTPRIO.HTTPWebNode.UserName := fUsername;
+  GHTTPRIO.HTTPWebNode.Password := fPassword;
+  GHTTPRIO.OnBeforeExecute := HTTPRIOBeforeExecute;
+
+  hAuthentification := Authentification.Create;
+  hAuthentification.user := fcisUser;
+  hAuthentification.signature := fcisSignature;
+  GHTTPRIO.SOAPHeaders.Send(hAuthentification);
+
+  GKVAPI := GetGKVAPIServicePortType(false, fUrl, GHTTPRIO);
+  Response := GKVAPI.DeleteShipmentOrder(aDeleteShipmentOrderRequestAPI.Request);
+
+
+  fDHLDeleteShipmentorderResponse.Version.majorRelease := Response.Version.majorRelease;
+  fDHLDeleteShipmentorderResponse.Version.minorRelease := Response.Version.minorRelease;
+  fDHLDeleteShipmentorderResponse.Version.Build        := Response.Version.build;
+
+  fDHLDeleteShipmentorderResponse.Status.StatusCode := Response.Status.statusCode;
+  fDHLDeleteShipmentorderResponse.Status.StatusText := Response.Status.statusText;
+  fDHLDeleteShipmentorderResponse.Status.StatusMessage := Response.Status.statusMessage[0];
+
+  for i := Low(Response.DeletionState) to High(Response.DeletionState) do
+  begin
+    DeletionState := fDHLDeleteShipmentorderResponse.DeletionState.Add;
+    DeletionState.Status.StatusCode    := Response.DeletionState[i].Status.statusCode;
+    DeletionState.Status.StatusText    := Response.DeletionState[i].Status.statusText;
+    DeletionState.Status.StatusMessage := Response.DeletionState[i].Status.statusMessage[0];
+    DeletionState.ShipmentNumber       := Response.DeletionState[i].shipmentNumber;
+  end;
+
+  FreeAndNil(Response);
+  FreeAndNil(hAuthentification);
+
+  Result := fDHLDeleteShipmentorderResponse;
+
+end;
+
+
+
+function TDHLSend.SendGetLabel(aGetLabelRequestAPI: TDHLGetLabelRequestAPI;
+  aXMLFilename: string): TDHLGetLabelResponse;
+var
+  GHTTPRIO : THTTPRIO;
+  hAuthentification : Authentification;
+  Response : GetLabelResponse;
+  GKVAPI : GKVAPIServicePortType;
+  lbl: TDHLLabelData;
+  i: Integer;
+begin
+  GHTTPRIO := THTTPRIO.Create(nil);
+  GHTTPRIO.HTTPWebNode.UserName := fUsername;
+  GHTTPRIO.HTTPWebNode.Password := fPassword;
+  GHTTPRIO.OnBeforeExecute := HTTPRIOBeforeExecute;
+
+  hAuthentification := Authentification.Create;
+  hAuthentification.user := fcisUser;
+  hAuthentification.signature := fcisSignature;
+  GHTTPRIO.SOAPHeaders.Send(hAuthentification);
+
+  GKVAPI := GetGKVAPIServicePortType(false, fUrl, GHTTPRIO);
+  Response := GKVAPI.GetLabel(aGetLabelRequestAPI.Request);
+
+
+  fDHLGetLabelResponse.Version.majorRelease := Response.Version.majorRelease;
+  fDHLGetLabelResponse.Version.minorRelease := Response.Version.minorRelease;
+  fDHLGetLabelResponse.Version.Build        := Response.Version.build;
+
+  fDHLGetLabelResponse.Status.StatusCode := Response.Status.statusCode;
+  fDHLGetLabelResponse.Status.StatusText := Response.Status.statusText;
+  fDHLGetLabelResponse.Status.StatusMessage := Response.Status.statusMessage[0];
+
+  for i := Low(Response.LabelData) to High(Response.LabelData) do
+  begin
+    lbl := fDHLGetLabelResponse.LabelData.Add;
+    lbl.Status.StatusCode    := Response.LabelData[i].Status.statusCode;
+    lbl.Status.StatusText    := Response.LabelData[i].Status.statusText;
+    lbl.Status.StatusMessage := Response.LabelData[i].Status.statusMessage[0];
+    lbl.ShipmentNumber       := Response.LabelData[i].shipmentNumber;
+    lbl.LabelUrl             := Response.LabelData[i].labelUrl;
+    lbl.ReturnLabelUrl       := Response.LabelData[i].returnLabelUrl;
+    lbl.ExportLabelData      := Response.LabelData[i].exportLabelUrl;
+    lbl.CodLabelUrl          := Response.LabelData[i].codLabelUrl;
+  end;
+
+
+  FreeAndNil(Response);
+  FreeAndNil(hAuthentification);
+
+  Result := fDHLGetLabelResponse;
+
+end;
 
 procedure TDHLSend.HTTPRIOBeforeExecute(const MethodName: string; SOAPRequest: TStream);
 var

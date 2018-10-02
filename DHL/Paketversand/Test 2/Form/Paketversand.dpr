@@ -41,7 +41,10 @@ uses
   Objekt.DHLDeleteShipmentOrderRequestAPI in '..\Objekt\DHL\Objekt.DHLDeleteShipmentOrderRequestAPI.pas',
   Objekt.DHLDeleteShipmentOrderResponse in '..\Objekt\DHL\Objekt.DHLDeleteShipmentOrderResponse.pas',
   Objekt.DHLDeletionState in '..\Objekt\DHL\Objekt.DHLDeletionState.pas',
-  Objekt.DHLDeletionStateList in '..\Objekt\DHL\Objekt.DHLDeletionStateList.pas';
+  Objekt.DHLDeletionStateList in '..\Objekt\DHL\Objekt.DHLDeletionStateList.pas',
+  Objekt.DHLGetLabelRequestAPI in '..\Objekt\DHL\Objekt.DHLGetLabelRequestAPI.pas',
+  Objekt.DHLGetLabelResponse in '..\Objekt\DHL\Objekt.DHLGetLabelResponse.pas',
+  Objekt.DHLLabelDataList in '..\Objekt\DHL\Objekt.DHLLabelDataList.pas';
 
 begin
   Application.Initialize;

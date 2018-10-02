@@ -121,8 +121,6 @@ type
 
   {$SCOPEDENUMS OFF}
 
-
-
   { "http://dhl.de/webservices/businesscustomershipping"[Smpl] }
   labelResponseType2 = (URL, B64);
 

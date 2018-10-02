@@ -8,7 +8,9 @@ uses
   Objekt.DHLShipmentOrderRequestAPI, Objekt.DHLShipmentorderResponseList,
   IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP,
   Objekt.Downloadfile, Objekt.DHLUpdateShipmentOrderResponse,
-  Objekt.DHLUpdateShipmentOrderRequestAPI, Objekt.DHLShipmentorderResponse;
+  Objekt.DHLUpdateShipmentOrderRequestAPI, Objekt.DHLShipmentorderResponse,
+  Objekt.DHLDeleteShipmentOrderRequestAPI, Objekt.DHLDeleteShipmentorderResponse,
+  Objekt.DHLGetLabelRequestAPI, Objekt.DHLGetLabelResponse;
 
 type
   Tfra_DHLShipmentOrder = class(TFrame)
@@ -16,14 +18,20 @@ type
     btn_ErzeugeShipmentorder: TButton;
     Memo1: TMemo;
     btn_UpdateShipmentOrder: TButton;
+    btn_DeleteShipmentorder: TButton;
+    btn_GetLabel: TButton;
     procedure btn_ErzeugeShipmentorderClick(Sender: TObject);
     procedure btn_UpdateShipmentOrderClick(Sender: TObject);
+    procedure btn_DeleteShipmentorderClick(Sender: TObject);
+    procedure btn_GetLabelClick(Sender: TObject);
   private
     fDownloadfile: TDownloadfile;
     fShipmentOrderResponseList:  TDHLShipmentorderResponseList;
     fShipmentOrder: TDHLShipmentOrderRequestAPI;
     procedure SendeShipmentOrder;
     procedure UpdateShipmentOrder;
+    procedure DeleteShipmentOrder;
+    procedure GetLabel;
     procedure FillUpdateShipmentOrder(U: TDHLUpdateShipmentOrderRequestAPI);
     procedure FillShipmentOrderRequest(R: TDHLShipmentOrderRequestAPI);
   public
@@ -50,6 +58,7 @@ begin
   fShipmentOrder := nil;
 end;
 
+
 destructor Tfra_DHLShipmentOrder.Destroy;
 begin
   if fShipmentOrder <> nil then
@@ -63,6 +72,7 @@ procedure Tfra_DHLShipmentOrder.btn_ErzeugeShipmentorderClick(Sender: TObject);
 begin
   SendeShipmentOrder;
 end;
+
 
 
 procedure Tfra_DHLShipmentOrder.SendeShipmentOrder;
@@ -178,6 +188,7 @@ begin //
 end;
 
 
+
 procedure Tfra_DHLShipmentOrder.UpdateShipmentOrder;
 var
   UpdateShipmentOrder: TDHLUpdateShipmentOrderRequestAPI;
@@ -208,6 +219,80 @@ begin
   U.Version.minorRelease := '2';
   U.ShipmentOrder.sequenceNumber := fShipmentOrder.ShipmentOrder.sequenceNumber;
   U.ShipmentOrder.Shipment.Copy(fShipmentOrder.ShipmentOrder.Shipment);
+end;
+
+
+
+procedure Tfra_DHLShipmentOrder.btn_DeleteShipmentorderClick(Sender: TObject);
+begin //
+  DeleteShipmentorder;
+end;
+
+
+procedure Tfra_DHLShipmentOrder.DeleteShipmentOrder;
+var
+  DeleteShipmentOrder: TDHLDeleteShipmentOrderRequestAPI;
+  Response: TDHLDeleteShipmentOrderResponse;
+  i1: Integer;
+  sr : TDHLShipmentorderResponse;
+begin
+  sr := fShipmentOrderResponseList.Item[0];
+  DeleteShipmentOrder := TDHLDeleteShipmentOrderRequestAPI.Create;
+  DeleteShipmentOrder.ShipmentNumber := sr.ShipmentNumber;
+  //DeleteShipmentOrder.ShipmentNumber := '3745835968';
+  DeleteShipmentOrder.Version.minorRelease := '2';
+  DeleteShipmentOrder.Version.majorRelease := '2';
+  Response := AllgemeinObj.DHLSend.SendDeleteShipmentOrder(DeleteShipmentOrder,  AllgemeinObj.DownloadPath + 'DeleteShipmentOrder.xml');
+  Memo1.Clear;
+  Memo1.Lines.Add('StatusText = ' + Response.Status.StatusText);
+  Memo1.Lines.Add('StatusMessage = ' + Response.Status.StatusMessage);
+
+  for i1 := 0 to Response.DeletionState.Count -1 do
+  begin
+    Memo1.Lines.Add('D.StatusText = ' + Response.DeletionState.Item[i1].Status.StatusText);
+    Memo1.Lines.Add('D.StatusMessage = ' + Response.DeletionState.Item[i1].Status.StatusMessage);
+    Memo1.Lines.Add('D.ShipmentNumber = ' + Response.DeletionState.Item[i1].ShipmentNumber);
+  end;
+
+  FreeAndNil(DeleteShipmentOrder);
+
+end;
+
+
+procedure Tfra_DHLShipmentOrder.btn_GetLabelClick(Sender: TObject);
+begin
+  GetLabel;
+end;
+
+procedure Tfra_DHLShipmentOrder.GetLabel;
+var
+  GetLabel: TDHLGetLabelRequestAPI;
+  Response: TDHLGetLabelResponse;
+  i1: Integer;
+  sr : TDHLShipmentorderResponse;
+begin
+  //sr := fShipmentOrderResponseList.Item[0];
+  GetLabel := TDHLGetLabelRequestAPI.Create;
+  //GetLabel.ShipmentNumber := sr.ShipmentNumber;
+  GetLabel.ShipmentNumber := '222201010031989260';
+  GetLabel.Version.minorRelease := '2';
+  GetLabel.Version.majorRelease := '2';
+  Response := AllgemeinObj.DHLSend.SendGetLabel(GetLabel,  AllgemeinObj.DownloadPath + 'GetLabel.xml');
+  Memo1.Clear;
+  Memo1.Lines.Add('StatusText = ' + Response.Status.StatusText);
+  Memo1.Lines.Add('StatusMessage = ' + Response.Status.StatusMessage);
+
+  for i1 := 0 to Response.LabelData.Count -1 do
+  begin
+    Memo1.Lines.Add('L.StatusText = ' + Response.LabelData.Item[i1].Status.StatusText);
+    Memo1.Lines.Add('L.StatusMessage = ' + Response.LabelData.Item[i1].Status.StatusMessage);
+    Memo1.Lines.Add('ShipmentNumber = ' + Response.LabelData.Item[i1].ShipmentNumber);
+    Memo1.Lines.Add('LabelUrl = ' + Response.LabelData.Item[i1].LabelUrl);
+  end;
+
+
+  FreeAndNil(GetLabel);
+
 end;
 
 

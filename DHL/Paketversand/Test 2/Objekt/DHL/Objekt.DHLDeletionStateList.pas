@@ -16,6 +16,8 @@ type
     property Item[Index: Integer]: TDHLDeletionState read getDHLDeletionState;
     function Add: TDHLDeletionState;
   end;
+
+
 implementation
 
 { TDHLDeletionStateList }
