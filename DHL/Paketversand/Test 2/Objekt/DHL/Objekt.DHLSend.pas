@@ -13,7 +13,8 @@ uses
  Objekt.DHLUpdateShipmentOrderResponse, Objekt.DHLStatusInformation,
  Objekt.DHLDeleteShipmentOrderRequestAPI, Objekt.DHLDeleteShipmentOrderResponse,
  Objekt.DHLDeletionState, Objekt.DHLGetLabelRequestAPI, Objekt.DHLGetLabelResponse,
- Objekt.DHLLabelData;
+ Objekt.DHLLabelData, Objekt.DHLManifestRequestAPI,
+ Objekt.DHLManifestResponse, System.Types;
 
 type
   TDHLSend = class
@@ -30,7 +31,9 @@ type
     fDHLUpdateShipmentorderResponse: TDHLUpdateShipmentorderResponse;
     fDHLDeleteShipmentorderResponse: TDHLDeleteShipmentorderResponse;
     fDHLGetLabelResponse: TDHLGetLabelResponse;
+    fDHLManifestResponse: TDHLManifestResponse;
     procedure HTTPRIOBeforeExecute(const MethodName: string; SOAPRequest: TStream);
+    function Converter(P: TByteDynArray): string;
   public
     constructor Create;
     destructor Destroy; override;
@@ -40,6 +43,7 @@ type
     function SendDeleteShipmentOrder(aDeleteShipmentOrderRequestAPI: TDHLDeleteShipmentOrderRequestAPI; aXMLFilename: string): TDHLDeleteShipmentOrderResponse;
     function SendGetLabel(aGetLabelRequestAPI: TDHLGetLabelRequestAPI; aXMLFilename: string): TDHLGetLabelResponse;
     function getVersion: TDHLVersionResponse;
+    function getManifest(aManifestRequestAPI: TDHLManifestRequestAPI; aXMLFilename: string): TDHLManifestResponse;
     property Username: string read fUsername write fUsername;
     property Password: string read fPassword write fPassword;
     property cisUser: string read fcisUser write fcisUser;
@@ -50,6 +54,9 @@ type
 implementation
 
 { TDHLSend }
+
+uses
+  System.NetEncoding, Soap.EncdDecd;
 
 constructor TDHLSend.Create;
 begin
@@ -64,7 +71,7 @@ begin
   fDHLUpdateShipmentorderResponse := TDHLUpdateShipmentorderResponse.Create;
   fDHLDeleteShipmentorderResponse := TDHLDeleteShipmentorderResponse.Create;
   fDHLGetLabelResponse := TDHLGetLabelResponse.Create;
-
+  fDHLManifestResponse := TDHLManifestResponse.Create;
 end;
 
 destructor TDHLSend.Destroy;
@@ -75,6 +82,7 @@ begin
   FreeAndNil(fDHLUpdateShipmentorderResponse);
   FreeAndNil(fDHLDeleteShipmentorderResponse);
   FreeAndNil(fDHLGetLabelResponse);
+  FreeAndNil(fDHLManifestResponse);
   inherited;
 end;
 
@@ -397,6 +405,96 @@ begin
   Result := fDHLGetLabelResponse;
 
 end;
+
+
+function TDHLSend.getManifest(aManifestRequestAPI: TDHLManifestRequestAPI;
+  aXMLFilename: string): TDHLManifestResponse;
+var
+  GHTTPRIO : THTTPRIO;
+  hAuthentification : Authentification;
+  Response : getManifestResponse;
+  GKVAPI : GKVAPIServicePortType;
+  m: TMemoryStream;
+  i1: Integer;
+  List: TStringList;
+   fs : TFileStream;
+begin
+  GHTTPRIO := THTTPRIO.Create(nil);
+  GHTTPRIO.HTTPWebNode.UserName := fUsername;
+  GHTTPRIO.HTTPWebNode.Password := fPassword;
+  GHTTPRIO.OnBeforeExecute := HTTPRIOBeforeExecute;
+
+  hAuthentification := Authentification.Create;
+  hAuthentification.user := fcisUser;
+  hAuthentification.signature := fcisSignature;
+  GHTTPRIO.SOAPHeaders.Send(hAuthentification);
+
+  GKVAPI := GetGKVAPIServicePortType(false, fUrl, GHTTPRIO);
+  Response := GKVAPI.getManifest(aManifestRequestAPI.Request);
+
+
+  fDHLManifestResponse.Version.majorRelease := Response.Version.majorRelease;
+  fDHLManifestResponse.Version.minorRelease := Response.Version.minorRelease;
+  fDHLManifestResponse.Version.Build        := Response.Version.build;
+
+  fDHLManifestResponse.Status.StatusCode := Response.Status.statusCode;
+  fDHLManifestResponse.Status.StatusText := Response.Status.statusText;
+  fDHLManifestResponse.Status.StatusMessage := Response.Status.statusMessage[0];
+
+  fDHLManifestResponse.ManifestData := '';
+
+  //fDHLManifestResponse.ManifestData := Converter(Response.manifestData);
+
+  fs := TFileStream.Create('c:\temp\manifest.pdf',fmCreate);
+
+  try
+    fs.WriteBuffer(pointer(Response.manifestData)^,high(Response.manifestData));
+  finally
+    fs.free;
+  end;
+
+  {
+  List := TStringList.Create;
+  //List.Text := EncodeBase64(@Response.manifestData[0], Length(Response.manifestData));
+  List.Text := Converter(Response.manifestData);
+  List.SaveToFile('c:\temp\manifest.pdf');
+  FreeAndNil(List);
+  }
+
+
+  {
+  for i1 := low(Response.manifestData) to High(Response.manifestData) do
+  begin
+    fDHLManifestResponse.ManifestData := fDHLManifestResponse.ManifestData + chr(Response.manifestData[i1]);
+  end;
+  }
+
+  {
+  m := TmemoryStream.Create;
+  m.Write(Response.manifestData, Length(Response.manifestData));
+  m.Position := 0;
+  m.SaveToFile('c:\temp\manifestdata.txt');
+  FreeAndNil(m);
+  }
+
+  FreeAndNil(Response);
+  FreeAndNil(hAuthentification);
+
+  Result := fDHLManifestResponse;
+
+end;
+
+
+function TDHLSend.Converter(P: TByteDynArray): string;
+var
+  Buffer: AnsiString;
+begin
+  SetLength(Buffer, Length(P));
+  System.Move(P[0], Buffer[1], Length(P));
+  //Result := EncodeString(Buffer);
+  Result := Buffer;
+end;
+
 
 procedure TDHLSend.HTTPRIOBeforeExecute(const MethodName: string; SOAPRequest: TStream);
 var

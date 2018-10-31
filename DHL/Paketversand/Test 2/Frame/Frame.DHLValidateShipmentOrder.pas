@@ -6,14 +6,18 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
   Objekt.DHLValidateShipmentOrder, Objekt.DHLValidateShipmentOrderRequestAPI,
-  Objekt.DHLValidateShipmentOrderResponse;
+  Objekt.DHLValidateShipmentOrderResponse, Objekt.DHLManifestRequestAPI,
+  Objekt.DHLManifestResponse, Vcl.ComCtrls;
 
 type
   Tfra_DHLValidateShipmentOrder = class(TFrame)
     Panel1: TPanel;
     btn_ErzeugeShipmentorder: TButton;
     Memo1: TMemo;
+    btn_Tagesabschluss: TButton;
+    edt_Tagesabschluss: TDateTimePicker;
     procedure btn_ErzeugeShipmentorderClick(Sender: TObject);
+    procedure btn_TagesabschlussClick(Sender: TObject);
   private
     procedure SendeValidateShipmentOrder;
     procedure FillValidateShipmentOrderRequest(r: TDHLValidateShipmentOrderRequestAPI);
@@ -38,10 +42,11 @@ begin
   SendeValidateShipmentOrder;
 end;
 
+
 constructor Tfra_DHLValidateShipmentOrder.Create(AOwner: TComponent);
 begin
   inherited;
-
+  edt_Tagesabschluss.Date := now;
 end;
 
 destructor Tfra_DHLValidateShipmentOrder.Destroy;
@@ -56,7 +61,6 @@ var
   Cur: TCursor;
   Response: TDHLValidateShipmentorderResponse;
   i1: Integer;
-  Filename: string;
 begin
   Cur := Screen.Cursor;
   ValidateShipmentOrder := TDHLValidateShipmentOrderRequestAPI.Create;
@@ -137,6 +141,32 @@ begin
   s.Shipment.Receiver.Communication.Phone := '+49421123456789';
   s.Shipment.Receiver.Communication.EMail := 'empfaengerin@muster.de';
   s.Shipment.Receiver.Communication.ContactPerson := 'Frau Empfängerin';
+end;
+
+
+procedure Tfra_DHLValidateShipmentOrder.btn_TagesabschlussClick(
+  Sender: TObject);
+var
+  ManifestRequest: TDHLManifestRequestAPI;
+  Cur: TCursor;
+  Response: TDHLManifestResponse;
+  i1: Integer;
+begin
+  Cur := Screen.Cursor;
+  ManifestRequest := TDHLManifestRequestAPI.Create;
+  try
+    Screen.Cursor := crHourGlass;
+    ManifestRequest.ManifestDate := edt_Tagesabschluss.Date;
+    Response := AllgemeinObj.DHLSend.getManifest(ManifestRequest, AllgemeinObj.DownloadPath + 'Manifest.xml');
+    Memo1.Clear;
+    Memo1.Lines.Add('Statustext = ' + Response.Status.StatusText);
+    Memo1.Lines.Add('Statuscode = ' + IntToStr(Response.Status.StatusCode));
+    Memo1.Lines.Add('Statusmessage = ' + Response.Status.StatusMessage);
+
+  finally
+    FreeAndNil(ManifestRequest);
+    Screen.Cursor := cur;
+  end;
 end;
 
 end.

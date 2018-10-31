@@ -4,6 +4,11 @@ program Paketversand;
 
 uses
   FastMM4 in '..\..\..\..\FastMM\FastMM4.pas',
+  madExcept,
+  madLinkDisAsm,
+  madListHardware,
+  madListProcesses,
+  madListModules,
   FastMM4Messages in '..\..\..\..\FastMM\FastMM4Messages.pas',
   Vcl.Forms,
   Form.Paketversand in 'Form.Paketversand.pas' {Form1},
@@ -44,7 +49,9 @@ uses
   Objekt.DHLDeletionStateList in '..\Objekt\DHL\Objekt.DHLDeletionStateList.pas',
   Objekt.DHLGetLabelRequestAPI in '..\Objekt\DHL\Objekt.DHLGetLabelRequestAPI.pas',
   Objekt.DHLGetLabelResponse in '..\Objekt\DHL\Objekt.DHLGetLabelResponse.pas',
-  Objekt.DHLLabelDataList in '..\Objekt\DHL\Objekt.DHLLabelDataList.pas';
+  Objekt.DHLLabelDataList in '..\Objekt\DHL\Objekt.DHLLabelDataList.pas',
+  Objekt.DHLManifestRequestAPI in '..\Objekt\DHL\Objekt.DHLManifestRequestAPI.pas',
+  Objekt.DHLManifestResponse in '..\Objekt\DHL\Objekt.DHLManifestResponse.pas';
 
 begin
   Application.Initialize;
