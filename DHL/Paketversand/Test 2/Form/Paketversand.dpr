@@ -51,7 +51,8 @@ uses
   Objekt.DHLGetLabelResponse in '..\Objekt\DHL\Objekt.DHLGetLabelResponse.pas',
   Objekt.DHLLabelDataList in '..\Objekt\DHL\Objekt.DHLLabelDataList.pas',
   Objekt.DHLManifestRequestAPI in '..\Objekt\DHL\Objekt.DHLManifestRequestAPI.pas',
-  Objekt.DHLManifestResponse in '..\Objekt\DHL\Objekt.DHLManifestResponse.pas';
+  Objekt.DHLManifestResponse in '..\Objekt\DHL\Objekt.DHLManifestResponse.pas',
+  Frame.Sendungsverfolgung in '..\Frame\Frame.Sendungsverfolgung.pas' {fra_Sendungsverfolgung: TFrame};
 
 begin
   Application.Initialize;

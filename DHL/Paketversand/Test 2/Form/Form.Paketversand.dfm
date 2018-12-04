@@ -21,15 +21,11 @@ object Form1: TForm1
     Top = 0
     Width = 912
     Height = 560
-    ActivePage = tbs_ValidateShipmentOrder
+    ActivePage = tbs_Sendungsverfolgung
     Align = alClient
     TabOrder = 0
     object tbs_Einstellung: TTabSheet
       Caption = 'Einstellung'
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label5: TLabel
         Left = 32
         Top = 255
@@ -130,22 +126,18 @@ object Form1: TForm1
     object tbs_Version: TTabSheet
       Caption = 'Version'
       ImageIndex = 1
-      ExplicitLeft = 8
-      ExplicitTop = 28
-      ExplicitWidth = 0
-      ExplicitHeight = 0
     end
     object tbs_ShipmentOrder: TTabSheet
       Caption = 'ShipmentOrder'
       ImageIndex = 2
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
     end
     object tbs_ValidateShipmentOrder: TTabSheet
       Caption = 'ValidateShipmentOrder'
       ImageIndex = 3
+    end
+    object tbs_Sendungsverfolgung: TTabSheet
+      Caption = 'Sendungsverfolgung'
+      ImageIndex = 4
     end
   end
   object HTTPRIO1: THTTPRIO

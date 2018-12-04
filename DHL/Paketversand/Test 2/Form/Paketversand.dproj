@@ -159,6 +159,11 @@
         <DCCReference Include="..\Objekt\DHL\Objekt.DHLLabelDataList.pas"/>
         <DCCReference Include="..\Objekt\DHL\Objekt.DHLManifestRequestAPI.pas"/>
         <DCCReference Include="..\Objekt\DHL\Objekt.DHLManifestResponse.pas"/>
+        <DCCReference Include="..\Frame\Frame.Sendungsverfolgung.pas">
+            <Form>fra_Sendungsverfolgung</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
