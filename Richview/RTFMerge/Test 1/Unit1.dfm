@@ -54,6 +54,32 @@ object Form1: TForm1
       TabOrder = 1
       OnClick = Button2Click
     end
+    object Button3: TButton
+      Left = 178
+      Top = 10
+      Width = 75
+      Height = 25
+      Caption = 'Button1'
+      TabOrder = 2
+    end
+    object Button4: TButton
+      Left = 259
+      Top = 10
+      Width = 75
+      Height = 25
+      Caption = 'Button1'
+      TabOrder = 3
+      OnClick = Button4Click
+    end
+    object Button5: TButton
+      Left = 340
+      Top = 10
+      Width = 75
+      Height = 25
+      Caption = 'Button1'
+      TabOrder = 4
+      OnClick = Button5Click
+    end
   end
   object rv2: TRichViewEdit
     Left = 0
