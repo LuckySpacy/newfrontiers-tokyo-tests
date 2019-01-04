@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 363
+  ClientHeight = 579
   ClientWidth = 663
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -38,7 +38,7 @@ object Form1: TForm1
     TabOrder = 1
     object Button1: TButton
       Left = 16
-      Top = 8
+      Top = 10
       Width = 75
       Height = 25
       Caption = 'Button1'
@@ -79,6 +79,15 @@ object Form1: TForm1
       Caption = 'Button1'
       TabOrder = 4
       OnClick = Button5Click
+    end
+    object Button6: TButton
+      Left = 436
+      Top = 10
+      Width = 75
+      Height = 25
+      Caption = 'Button1'
+      TabOrder = 5
+      OnClick = Button6Click
     end
   end
   object rv2: TRichViewEdit
@@ -129,8 +138,8 @@ object Form1: TForm1
     Left = 0
     Top = 289
     Width = 663
-    Height = 64
-    Align = alTop
+    Height = 290
+    Align = alClient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -140,6 +149,7 @@ object Form1: TForm1
       'mem_1')
     ParentFont = False
     TabOrder = 5
+    ExplicitHeight = 64
   end
   object RVStyle1: TRVStyle
     TextStyles = <

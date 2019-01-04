@@ -33,7 +33,7 @@ object Form1: TForm1
     OnClick = btn_PDFClick
   end
   object Report: TfrxReport
-    Version = '5.6.6'
+    Version = '5.6.8'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -99,6 +99,8 @@ object Form1: TForm1
   object gtFRExportInterface1: TgtFRExportInterface
     DoBeginDoc = True
     DoEndDoc = True
+    ShowSaveDialog = False
+    RichTextAsImage = True
     Left = 136
     Top = 72
   end

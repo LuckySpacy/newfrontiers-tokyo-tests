@@ -37,8 +37,9 @@ begin
   Report.PrepareReport;
   gtPDFEngine1.Preferences.OpenAfterCreate := true;
   gtPDFEngine1.Preferences.ShowSetupDialog := false;
-  gtFRExportInterface1.Engine := gtPDFEngine1;
   gtPDFEngine1.Preferences.EmbedTrueTypeFonts := etfNone;
+  gtFRExportInterface1.RichTextAsImage := true;
+  gtFRExportInterface1.Engine := gtPDFEngine1;
   IgtDocumentEngine(gtFRExportInterface1.Engine).FileName := 'PDF1.pdf';
   IgtDocumentEngine(gtFRExportInterface1.Engine).Preferences.ShowSetupDialog := false;
   gtFRExportInterface1.RenderDocument(Report, false, false);

@@ -23,10 +23,12 @@ type
     Button3: TButton;
     Button4: TButton;
     Button5: TButton;
+    Button6: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
   private
     function AsRVF(rv: TRichViewEdit): string;
     function RTFAsString(rv: TRichViewEdit): string;
@@ -34,6 +36,7 @@ type
     function MergeRTFOhneUmbruch(aRTFString1, aRTFString2: string; const aCanvas: TCanvas = nil; aPageWidth: Integer = 800): string;
     function LetzterUmbruchEntfernen(aRTFString: string): string;
     procedure MoveCaretToTheEnd(rv: TRichViewEdit);
+    function StrToRTF(aValue: string): string;
   public
   end;
 
@@ -122,7 +125,8 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  mem_1.Lines.Text := RTFAsString(rv1);
+  rv1.SaveRTF('c:\Temp3\x.rtf', false);
+//  mem_1.Lines.Text := RTFAsString(rv1);
 end;
 
 
@@ -171,6 +175,11 @@ begin
   rtf2 := RTFAsString(rv2);
   MergeRTFOhneUmbruch(rtf1, rtf2);
 
+end;
+
+procedure TForm1.Button6Click(Sender: TObject);
+begin
+  mem_2.Text := StrToRTF(mem_1.Text);
 end;
 
 function TForm1.LetzterUmbruchEntfernen(aRTFString: string): string;
@@ -466,6 +475,61 @@ begin
     FreeAndNil(m1);
     FreeAndNil(rh1);
     FreeAndNil(rh2);
+  end;
+end;
+
+
+function TForm1.StrToRTF(aValue: string): string;
+var
+  List: TStringList;
+  m   : TMemoryStream;
+  rh  : TRvReportHelper;
+  rv  : TReportRichView;
+  Style: TRvStyle;
+  fi: TFontInfo;
+  i1: Integer;
+begin
+  rh    := TRvReportHelper.Create(nil);
+  List  := TStringList.Create;
+  m     := TMemoryStream.Create;
+  Style := TRvStyle.Create(nil);
+  try
+
+    Style.TextStyles.Clear;
+    fi := Style.TextStyles.Add;
+    {
+    fi.FontName := aFont.Fontname;
+    fi.Size := aFont.Fontsize;
+    fi.Style := aFont.Style;
+    fi.Color := aFont.Fontcolor;
+   }
+    rv       := rh.RichView;
+    rv.RTFReadProperties.TextStyleMode := rvrsAddIfNeeded;
+    rv.RTFReadProperties.ParaStyleMode := rvrsAddIfNeeded;
+    rv.RVFOptions := rv.RVFOptions + [rvfoSaveTextStyles];
+    rv.RVFOptions := rv.RVFOptions + [rvfoSaveParaStyles];
+    rv.Style := Style;
+
+    List.Text := aValue;
+
+    rv.Clear;
+    for i1 := 0 to List.Count -1 do
+    begin
+      rv.AddNL(List.Strings[i1], 0, 0);
+    end;
+
+    m.Position := 0;
+    m.Clear;
+    rv.SaveRTFToStream(m, false);
+    m.Position := 0;
+    List.LoadFromStream(m);
+    Result := trim(List.Text);
+
+  finally
+    FreeAndNil(List);
+    FreeAndNil(m);
+    FreeAndNil(Style);
+    FreeAndNil(rh);
   end;
 end;
 
