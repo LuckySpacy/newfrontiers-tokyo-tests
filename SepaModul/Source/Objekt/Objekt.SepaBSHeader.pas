@@ -17,6 +17,7 @@ type
     fPmtInfId: string;
     fChrgBr: string;
     fMsgId: string;
+    fChanged: Boolean;
     function getCtrlSum: Currency;
     function getNbOfTxs: Integer;
     function getMsgId: string;
@@ -36,6 +37,7 @@ type
     property CtrlSum: Currency read getCtrlSum;
     property ChrgBr: string read fChrgBr write fChrgBr;
     property MsgId: string read getMsgId write fMsgId;
+    property Changed: Boolean read fChanged write fChanged;
   end;
 
 implementation
@@ -45,6 +47,7 @@ implementation
 constructor TSepaBSHeader.Create;
 begin
   fBS := TSepaBSPosList.Create;
+  fChanged := false;
   Init;
 end;
 

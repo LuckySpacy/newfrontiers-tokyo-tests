@@ -13,9 +13,12 @@ type
     fNm: string;
     fCreDtTM: string;
     fCtrlSum: real;
+    fNbOfTxs: Integer;
     function GetCount: Integer;
     function getSepaBSHeader(Index: Integer): TSepaBSHeader;
     function getMsgId: string;
+    function getNbOfTxs: Integer;
+    function getCtrlSum: real;
   public
     constructor Create;
     destructor Destroy; override;
@@ -24,7 +27,8 @@ type
     function Add: TSepaBSHeader;
     property MsgId: string read getMsgId write fMsgId;
     property CreDtTm: string read fCreDtTM write fCreDtTM;
-    property CtrlSum: real read fCtrlSum write fCtrlSum;
+    property CtrlSum: real read getCtrlSum;
+    property NbOfTxs: Integer read getNbOfTxs;
     property Nm: string read fNm write fNm;
     procedure Init;
     function getBSHeader(aIBAN: string; aZahldatum: TDateTime): TSepaBSHeader;
@@ -53,11 +57,29 @@ begin
   Result := fList.Count;
 end;
 
+function TSepaBSHeaderList.getCtrlSum: real;
+var
+  i1: Integer;
+begin
+  Result := 0;
+  for i1 := 0 to fList.Count -1 do
+  begin
+    Result := Result + TSepaBSHeader(fList.Items[i1]).CtrlSum;
+  end;
+end;
+
 function TSepaBSHeaderList.getMsgId: string;
 begin
   if fMsgId = '' then
     fMsgId := FormatDateTime('yyyy-mm-dd hh:mm:nn:zzz', now);
   Result := fMsgId;
+end;
+
+
+function TSepaBSHeaderList.getNbOfTxs: Integer;
+begin
+  fNbOfTxs := fList.Count;
+  Result := fNbOfTxs;
 end;
 
 function TSepaBSHeaderList.getSepaBSHeader(Index: Integer): TSepaBSHeader;

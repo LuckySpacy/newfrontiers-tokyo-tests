@@ -72,7 +72,7 @@ begin
   else
     Filename := 'SEPA_' + fAuftraggeber + '_' + FormatDateTime('yyyymmdd', now) + '.log';
 
-  Path := IncludeTrailingBackslash(Path) + 'Logs\';
+  Path := IncludeTrailingPathDelimiter(Path) + 'Logs\';
   if not DirectoryExists(Path) then
     ForceDirectories(Path);
 
@@ -100,6 +100,7 @@ begin
     SepaGutschrift.Sicherungspfad := fSicherungspfad;
     SepaGutschrift.Trans := fTrans;
     SepaGutschrift.LadeAlleGutschriften;
+    SepaGutschrift.LadeUeberweisungsauftrag;
     SepaGutschrift.SchreibeAlleGutschriften;
   finally
     FreeAndNil(SepaGutschrift);

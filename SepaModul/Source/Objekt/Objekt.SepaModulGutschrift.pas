@@ -31,6 +31,7 @@ type
     procedure LadeGutschrift(aFilename: string; aBS: TSepaBSHeaderList);
     procedure LadeAlleGutschriften;
     procedure SchreibeAlleGutschriften;
+    procedure LadeUeberweisungsauftrag;
     procedure DeleteAllGutschrift(aPath: string);
     procedure SchreibeGutschrift(aSepaDatei: TSepaDatei);
     procedure setLog(aLog: TSepa_Log);
@@ -110,6 +111,7 @@ begin
 
 end;
 
+
 procedure TSepaModulGutschrift.SchreibeGutschrift(aSepaDatei: TSepaDatei);
 var
   Pfad: string;
@@ -125,13 +127,16 @@ begin
   Pfad := IncludeTrailingPathDelimiter(Ausgabepfad) + 'Test\';
   if not DirectoryExists(Pfad) then
     ForceDirectories(Pfad);
-  DeleteAllGutschrift(Pfad);
 
   BS := aSepaDatei.BSHeaderList;
 
   for i1 := 0 to BS.Count -1 do
   begin
     BSHeader := BS.Item[i1];
+
+    //if not BSHeader.Changed then
+    //  continue;
+
     if fCstmrCdtTrfInitn <> nil then
       FreeAndNil(fCstmrCdtTrfInitn);
     fCstmrCdtTrfInitn := TSepa_G_CstmrCdtTrfInitn.Create;
@@ -150,8 +155,8 @@ begin
 
       fCstmrCdtTrfInitn.Grphdr.MsgId := BSHeader.MsgId;
       fCstmrCdtTrfInitn.Grphdr.CreDtTM := fSepaFormat.IsoDateTime;
-      fCstmrCdtTrfInitn.Grphdr.NbOfTxs := IntToStr(BSHeader.NbOfTxs);
-      fCstmrCdtTrfInitn.Grphdr.CtrlSum := CurrToStr(BSHeader.CtrlSum);
+      fCstmrCdtTrfInitn.Grphdr.NbOfTxs := IntToStr(BS.NbOfTxs);
+      fCstmrCdtTrfInitn.Grphdr.CtrlSum := CurrToStr(BS.CtrlSum);
       fCstmrCdtTrfInitn.Grphdr.InitgPty.Nm := BSHeader.Auftraggeber;
 
       PmtInf := fCstmrCdtTrfInitn.PmtInf;
@@ -167,9 +172,9 @@ begin
 
       for i2 := 0 to BSHeader.BS.Count -1 do
       begin
-        BSPos := BSHeader.BS.Item[i1];
+        BSPos := BSHeader.BS.Item[i2];
         CdtTrfTxInf := PmtInf.AddCdtTrfTxInf;
-        CdtTrfTxInf.Amt.InstdAmt.InstdAmt  := fSepaFormat.SepaCurrToCurrStr(BSPos.Betrag);
+        CdtTrfTxInf.Amt.InstdAmt.InstdAmt  := CurrToStr(BSPos.Betrag);
         CdtTrfTxInf.Amt.InstdAmt.Ccy       := BSPos.Waehrung;
         CdtTrfTxInf.CdtrAgt.FinInstnId.BIC := BSPos.BIC;
         CdtTrfTxInf.Cdtr.Nm                := BSPos.Empfaenger;
@@ -206,6 +211,7 @@ begin
   if fSepaDateiList <> nil then
     FreeAndNil(fSepaDateiList);
   fSepaDateiList := TSepaDateiList.Create;
+  fSepaDateiList.FilePath := Ausgabepfad;
   FileList := TStringList.Create;
   try
     fNf.System.GetAllFiles(fAusgabepfad, FileList, true, false, 'SEPA_G*.xml');
@@ -246,6 +252,87 @@ begin
   end;
 
 end;
+
+procedure TSepaModulGutschrift.LadeUeberweisungsauftrag;
+var
+  qry: TIBQuery;
+  qryUpd: TIBQuery;
+  BSHeader: TSepaBSHeader;
+  BSPos: TSepaBSPos;
+  SepaDatei: TSepaDatei;
+begin
+  if fSepaDateiList = nil then
+    fSepaDateiList := TSepaDateiList.Create;
+  fSepaDateiList.FilePath := Ausgabepfad;
+  if fTrans.InTransaction then
+    fTrans.Commit;
+
+  fTrans.StartTransaction;
+  qryUpd := TIBQuery.Create(nil);
+  qry := TIBQuery.Create(nil);
+  try
+    qryUpd.Transaction := fTrans;
+    qry.Transaction := fTrans;
+    qry.SQL.Text := ' select * from ueberweisungsauftrag' +
+                    ' where su_delete != "T"' +
+                    ' and   su_sepa_erstellt != "T"' +
+                    ' order by su_auftraggeber_iban';
+
+    qryUpd.SQL.Text := ' update ueberweisungsauftrag' +
+                       ' set su_sepa_erstellt = "T", su_sepa_erstellt_datum = :datum' +
+                       ' where su_id = :id';
+
+    qry.Open;
+    while not qry.Eof do
+    begin
+      try
+        qryUpd.ParamByName('datum').AsDateTime := now;
+        qryUpd.ParamByName('id').AsInteger     := qry.FieldByName('su_id').asInteger;
+        qryUpd.ExecSQL;
+      except
+        on E:Exception do
+        begin
+          fLog.Add('', E.Message + ' ' + qry.FieldByName('su_id').asString);
+          qry.Next;
+          continue;
+        end;
+      end;
+      //SepaDatei := fSepaDateiList.SepaDateiByIban(qry.FieldByName('su_auftraggeber_iban').AsString);
+      SepaDatei := fSepaDateiList.SepaDateiByIbanUndZahlung(qry.FieldByName('su_auftraggeber_iban').AsString, qry.FieldByName('su_zahldatum').asDateTime);
+      BSHeader  := SepaDatei.BSHeaderList.getBSHeader(qry.FieldByName('su_auftraggeber_iban').AsString, qry.FieldByName('su_zahldatum').asDateTime);
+
+      BSHeader.IBAN         := qry.FieldByName('su_auftraggeber_iban').AsString;
+      BSHeader.Auftraggeber := qry.FieldByName('su_auftraggeber').AsString;
+      BSHeader.BIC          := qry.FieldByName('su_bic').AsString;
+      BSHeader.ZahlDatum    := qry.FieldByName('su_zahldatum').AsDateTime;
+
+      if BSHeader.PmtInfId = '' then
+        BSHeader.PmtInfId := FormatDateTime('yyyymmddhhnnsszzz', now);
+
+      BSHeader.PmtMtd       := 'TRF';
+      BSHeader.ChrgBr       := 'SLEV';
+
+      BSHeader.Changed := true;
+      BSPos := BSHeader.BS.Add;
+      BSPos.SU_Id := qry.FieldByName('su_id').asInteger;
+      BSPos.Betrag := qry.FieldByName('su_betrag').AsFloat;
+      BSPos.EndToEnd := qry.FieldByName('su_endtoend').AsString;
+      BSPos.BIC := qry.FieldByName('su_bic').AsString;
+      BSPos.Empfaenger := qry.FieldByName('su_empfaenger').AsString;
+      BSPos.IBAN := qry.FieldByName('su_iban').AsString;
+      BSPos.VZweck.Zweck1 := qry.FieldByName('su_vzweck1').AsString;
+      BSPos.VZweck.Zweck2 := qry.FieldByName('su_vzweck2').AsString;
+      BSPos.VZweck.Zweck3 := qry.FieldByName('su_vzweck3').AsString;
+      BSPos.VZweck.Zweck4 := qry.FieldByName('su_vzweck4').AsString;
+      qry.Next;
+    end;
+
+  finally
+    FreeAndNil(qry);
+    FreeAndNil(qryUpd);
+  end;
+end;
+
 
 
 end.

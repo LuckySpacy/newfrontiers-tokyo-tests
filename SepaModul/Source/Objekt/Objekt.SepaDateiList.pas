@@ -9,8 +9,12 @@ type
   TSepaDateiList = class
   private
     fList: TObjectList;
+    fFilePath: string;
     function GetCount: Integer;
     function getSepaDatei(Index: Integer): TSepaDatei;
+    function getNewFilename: string;
+    function getLastFileNumber: Integer;
+    procedure setFilePath(const Value: string);
   public
     constructor Create;
     destructor Destroy; override;
@@ -18,6 +22,9 @@ type
     property Item[Index: Integer]: TSepaDatei read getSepaDatei;
     function Add: TSepaDatei;
     function SepaDatei(aFilename: string): TSepaDatei;
+    function SepaDateiByIban(aIBAN: string): TSepaDatei;
+    function SepaDateiByIbanUndZahlung(aIBAN: string; aZahlung: TDateTime): TSepaDatei;
+    property FilePath: string read fFilePath write setFilePath;
     procedure Init;
   end;
 
@@ -29,6 +36,7 @@ implementation
 constructor TSepaDateiList.Create;
 begin
   fList := TObjectList.Create;
+  fFilePath := '';
 end;
 
 destructor TSepaDateiList.Destroy;
@@ -65,6 +73,63 @@ begin
   Result.Filename := aFilename;
 end;
 
+
+function TSepaDateiList.SepaDateiByIban(aIBAN: string): TSepaDatei;
+var
+  i1, i2: Integer;
+  SepaDat: TSepaDatei;
+begin
+  Result := nil;
+  for i1 := 0 to fList.Count -1 do
+  begin
+    SepaDat := TSepaDatei(fList.Items[i1]);
+    for i2 := 0 to SepaDat.BSHeaderList.Count -1 do
+    begin
+      if SameText(SepaDat.BSHeaderList.Item[i2].IBAN, aIBAN) then
+      begin
+        Result := SepaDat;
+        exit;
+      end;
+    end;
+  end;
+  Result := Add;
+  Result.Filename := fFilePath + getNewFilename;
+end;
+
+
+
+
+
+procedure TSepaDateiList.setFilePath(const Value: string);
+begin
+  fFilePath := IncludeTrailingPathDelimiter(Value);
+end;
+
+function TSepaDateiList.getLastFileNumber: Integer;
+var
+  i1: Integer;
+begin
+  Result := -1;
+  for i1 := 0 to fList.Count -1 do
+  begin
+    if Result < TSepaDatei(fList.Items[i1]).DateiNummer then
+      Result := TSepaDatei(fList.Items[i1]).DateiNummer;
+  end;
+end;
+
+function TSepaDateiList.getNewFilename: string;
+var
+  LastFileNumber: Integer;
+  sFileNumber: string;
+begin
+  LastFileNumber := getLastFileNumber;
+  inc(LastFileNumber);
+  sFileNumber := IntToStr(LastFileNumber);
+  while (Length(sFileNumber) <3) do
+    sFileNumber := '0' + sFileNumber;
+  Result := 'SEPA_G' + sFileNumber + '.xml';
+end;
+
 function TSepaDateiList.getSepaDatei(Index: Integer): TSepaDatei;
 begin
   Result := nil;
@@ -77,5 +142,28 @@ procedure TSepaDateiList.Init;
 begin
 
 end;
+
+function TSepaDateiList.SepaDateiByIbanUndZahlung(aIBAN: string;  aZahlung: TDateTime): TSepaDatei;
+var
+  i1, i2: Integer;
+  SepaDat: TSepaDatei;
+begin
+  Result := nil;
+  for i1 := 0 to fList.Count -1 do
+  begin
+    SepaDat := TSepaDatei(fList.Items[i1]);
+    for i2 := 0 to SepaDat.BSHeaderList.Count -1 do
+    begin
+      if (SameText(SepaDat.BSHeaderList.Item[i2].IBAN, aIBAN)) and (SepaDat.BSHeaderList.Item[i2].ZahlDatum = aZahlung) then
+      begin
+        Result := SepaDat;
+        exit;
+      end;
+    end;
+  end;
+  Result := Add;
+  Result.Filename := fFilePath + getNewFilename;
+end;
+
 
 end.

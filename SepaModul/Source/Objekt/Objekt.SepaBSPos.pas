@@ -16,6 +16,7 @@ type
     fWaehrung: string;
     fZahldatum: TDateTime;
     fEndToEnd: string;
+    fSU_ID: Integer;
   public
     constructor Create;
     destructor Destroy; override;
@@ -28,6 +29,7 @@ type
     property VZweck: TSepaVZweck read fVZweck write fVZweck;
     property Zahldatum: TDateTime read fZahldatum write fZahldatum;
     property EndToEnd: string read fEndToEnd write fEndToEnd;
+    property SU_ID: Integer read fSU_ID write fSU_ID;
     function VZweckStr: string;
   end;
 
@@ -38,6 +40,7 @@ implementation
 constructor TSepaBSPos.Create;
 begin
   fVZweck := TSepaVZweck.Create;
+  Init;
 end;
 
 destructor TSepaBSPos.Destroy;
@@ -55,6 +58,7 @@ begin
   fWaehrung   := 'EUR';
   fZahldatum  := StrToDate('01.01.1999');
   fEndToEnd   := '';
+  fSU_ID      := 0;
   fVZweck.Init;
 end;
 

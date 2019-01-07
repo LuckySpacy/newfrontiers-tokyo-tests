@@ -5,42 +5,44 @@
   Diese Datei enthält vom Compiler erzeugte Ressourcen, die an die ausführbare Datei gebunden wurden. Wenn diese Datei leer ist, dann wurden keine vom Compiler generierten Ressourcen an die erzeugte ausführbare Datei gebunden.
 */
 
-#define Xml_XMLConst_SNodeReadOnly 64928
-#define Xml_XMLConst_SNoRefresh 64929
-#define Xml_XMLConst_SMissingFileName 64930
-#define Xml_XMLConst_SLine 64931
-#define Xml_XMLConst_SDuplicateRegistration 64944
-#define Xml_XMLConst_SNoMatchingDOMVendor 64945
-#define Xml_XMLConst_SNoDOMNodeEx 64946
-#define Xml_XMLConst_SDOMNotSupported 64947
-#define Xml_XMLConst_SNoDOMVendorSelected 64948
-#define Xml_XMLConst_SNodeExpected 64949
-#define Xml_XMLConst_SMSDOMNotInstalled 64950
-#define Xml_XMLConst_SNotActive 64951
-#define Xml_XMLConst_SNodeNotFound 64952
-#define Xml_XMLConst_SMissingNode 64953
-#define Xml_XMLConst_SNoAttributes 64954
-#define Xml_XMLConst_SInvalidNodeType 64955
-#define Xml_XMLConst_SMismatchedRegItems 64956
-#define Xml_XMLConst_SNotSingleTextNode 64957
-#define Xml_XMLConst_SNoDOMParseOptions 64958
-#define Xml_XMLConst_SMissingItemTag 64959
+#define Xml_XMLConst_SNoDOMParseOptions 64928
+#define Xml_XMLConst_SMissingItemTag 64929
+#define Xml_XMLConst_SNodeReadOnly 64930
+#define Xml_XMLConst_SNoRefresh 64931
+#define Xml_XMLConst_SMissingFileName 64932
+#define Xml_XMLConst_SLine 64933
+#define o_sysfolderlocation_rsE_S_FALSE 64944
+#define o_sysfolderlocation_rsE_InvalidArgument 64945
+#define Xml_XMLConst_SDuplicateRegistration 64946
+#define Xml_XMLConst_SNoMatchingDOMVendor 64947
+#define Xml_XMLConst_SNoDOMNodeEx 64948
+#define Xml_XMLConst_SDOMNotSupported 64949
+#define Xml_XMLConst_SNoDOMVendorSelected 64950
+#define Xml_XMLConst_SNodeExpected 64951
+#define Xml_XMLConst_SMSDOMNotInstalled 64952
+#define Xml_XMLConst_SNotActive 64953
+#define Xml_XMLConst_SNodeNotFound 64954
+#define Xml_XMLConst_SMissingNode 64955
+#define Xml_XMLConst_SNoAttributes 64956
+#define Xml_XMLConst_SInvalidNodeType 64957
+#define Xml_XMLConst_SMismatchedRegItems 64958
+#define Xml_XMLConst_SNotSingleTextNode 64959
 #define IBX_IBXConst_SIB65feature 64960
 #define IBX_IBXConst_SLoginPromptFailure 64961
-#define IBX_IBXConst_SIB70feature 64962
-#define IBX_IBXConst_SIB71feature 64963
-#define IBX_IBXConst_SIB80feature 64964
-#define IBX_IBXConst_SFileSizeDumpCountIncompatibility 64965
-#define IBX_IBXConst_SCannotPerformDumpOnActiveConnection 64966
-#define IBX_IBXConst_SIBUnknownServerType 64967
-#define IBX_IBXConst_SInvalidLibraryType 64968
-#define IBX_IBXConst_SCannotChangeServerType 64969
-#define IBX_IBXConst_SColumnEncryptionError 64970
-#define IBX_IBXConst_SEncryptionError 64971
-#define IBX_IBXConst_SInvalidODSVersion 64972
-#define o_sysfolderlocation_rsE_GetPathFromIDList 64973
-#define o_sysfolderlocation_rsE_S_FALSE 64974
-#define o_sysfolderlocation_rsE_InvalidArgument 64975
+#define IBX_IBXConst_SIBMemoryError 64962
+#define IBX_IBXConst_SIB70feature 64963
+#define IBX_IBXConst_SIB71feature 64964
+#define IBX_IBXConst_SIB80feature 64965
+#define IBX_IBXConst_SFileSizeDumpCountIncompatibility 64966
+#define IBX_IBXConst_SCannotPerformDumpOnActiveConnection 64967
+#define IBX_IBXConst_SIBUnknownServerType 64968
+#define IBX_IBXConst_SInvalidLibraryType 64969
+#define IBX_IBXConst_SCannotChangeServerType 64970
+#define IBX_IBXConst_SColumnEncryptionError 64971
+#define IBX_IBXConst_SEncryptionError 64972
+#define IBX_IBXConst_SInvalidODSVersion 64973
+#define IBX_IBXConst_SBatchParamFieldMisMatch 64974
+#define o_sysfolderlocation_rsE_GetPathFromIDList 64975
 #define IBX_IBXConst_SNoOptionsSet 64976
 #define IBX_IBXConst_SNoDestinationDirectory 64977
 #define IBX_IBXConst_SNosourceDirectory 64978
@@ -603,10 +605,14 @@
 #define System_SysConst_SDiskFull 65535
 STRINGTABLE
 BEGIN
+	Xml_XMLConst_SNoDOMParseOptions,	L"DOM-Implementierung unterst\x00fctzt nicht IDOMParseOptions"
+	Xml_XMLConst_SMissingItemTag,	L"Die Eigenschaft ItemTag ist nicht initialisiert"
 	Xml_XMLConst_SNodeReadOnly,	L"Knoten ist schreibgesch\x00fctzt"
 	Xml_XMLConst_SNoRefresh,	L"Aktualisierung wird nur unterst\x00fctzt, wenn die Eigenschaften FileName oder XML gesetzt sind"
 	Xml_XMLConst_SMissingFileName,	L"FileName muss angegeben werden"
 	Xml_XMLConst_SLine,	L"Zeile"
+	o_sysfolderlocation_rsE_S_FALSE,	L"Ordner existiert nicht"
+	o_sysfolderlocation_rsE_InvalidArgument,	L"Argument ung\x00fcltig"
 	Xml_XMLConst_SDuplicateRegistration,	L"DOM-Implementierung \"%s\" bereits registriert"
 	Xml_XMLConst_SNoMatchingDOMVendor,	L"Kein entsprechender DOM-Hersteller: \"%s\""
 	Xml_XMLConst_SNoDOMNodeEx,	L"Der gew\x00e4hlte DOM-Hersteller unterst\x00fctzt diese Eigenschaft oder Methode nicht"
@@ -621,10 +627,9 @@ BEGIN
 	Xml_XMLConst_SInvalidNodeType,	L"Ung\x00fcltiger Knotentyp"
 	Xml_XMLConst_SMismatchedRegItems,	L"Nicht \x00fcbereinstimmende Parameter bei RegisterChildNodes"
 	Xml_XMLConst_SNotSingleTextNode,	L"Element \"%s\" enth\x00e4lt keinen einzelnen Textknoten"
-	Xml_XMLConst_SNoDOMParseOptions,	L"DOM-Implementierung unterst\x00fctzt nicht IDOMParseOptions"
-	Xml_XMLConst_SMissingItemTag,	L"Die Eigenschaft ItemTag ist nicht initialisiert"
 	IBX_IBXConst_SIB65feature,	L"%s ist ein Funktion von InterBase 6.5. Upgraden Sie auf InterBase 6.5, um diese Funktion zu nutzen"
 	IBX_IBXConst_SLoginPromptFailure,	L"Standardanmelde-Dialogfeld nicht gefunden. F\x00fcgen Sie dem uses-Abschnitt der Main-Datei DBLogDlg hinzu."
+	IBX_IBXConst_SIBMemoryError,	L"Zu wenig Arbeitsspeicher"
 	IBX_IBXConst_SIB70feature,	L"%s ist ein Funktion von InterBase 7.0. Upgraden Sie auf InterBase 7.0, um diese Funktion zu nutzen"
 	IBX_IBXConst_SIB71feature,	L"%s ist ein Funktion von InterBase 7.1. Upgraden Sie auf InterBase 7.1, um diese Funktion zu nutzen"
 	IBX_IBXConst_SIB80feature,	L"%s ist ein Funktion von InterBase 2007. Upgraden Sie auf InterBase 2007, um diese Funktion zu nutzen"
@@ -636,9 +641,8 @@ BEGIN
 	IBX_IBXConst_SColumnEncryptionError,	L"Tabellenname und Spaltenname sind zum Festlegen von Passw\x00f6rtern f\x00fcr die Spaltenverschl\x00fcsselung erforderlich"
 	IBX_IBXConst_SEncryptionError,	L"Verbindung muss zum Festlegen von Verschl\x00fcsselungspassw\x00f6rtern aktiv sein"
 	IBX_IBXConst_SInvalidODSVersion,	L"Ung\x00fcltige Version von ODS Major Restore. G\x00fcltige Optionen sind 0 (keine \x00c4nderung) und >= ODS 13"
+	IBX_IBXConst_SBatchParamFieldMisMatch,	L"Alle Parameter m\x00fcssen ein \x00fcbereinstimmendes Feld mit demselben Namen im \x00fcbergebenen TIBSQL haben"
 	o_sysfolderlocation_rsE_GetPathFromIDList,	L"Ordner kann nicht ermittelt werden"
-	o_sysfolderlocation_rsE_S_FALSE,	L"Ordner existiert nicht"
-	o_sysfolderlocation_rsE_InvalidArgument,	L"Argument ung\x00fcltig"
 	IBX_IBXConst_SNoOptionsSet,	L"Es sind keine Installationsoptionen ausgew\x00e4hlt"
 	IBX_IBXConst_SNoDestinationDirectory,	L"DestinationDirectory nicht festgelegt"
 	IBX_IBXConst_SNosourceDirectory,	L"SourceDirectory nicht festgelegt"
