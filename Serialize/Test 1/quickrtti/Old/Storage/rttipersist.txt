@@ -1,0 +1,68 @@
+ Two experiments:
+ 1) "Datasets" of TPersistent objects... runtime and event driven..
+ runtime will use RTTI to populate the controls, while the evendriven will allow you 
+to define how your data is populated... you transpot the data to-from the controls.
+
+TPersistentObjectSet = class(TComponent)
+private
+
+published
+  property  Storage:TPersistentStorage read fstore write fstore;
+
+  property  Object:TPersistent read getObject write setObject;
+  property  ObjectID:String read fobjectid write fobjectid;
+  function  ObjectCount:integer;
+
+  procedure First;
+  procedure Previous;
+  procedure Next;
+  procedure Last;
+
+  procedure Append;
+  procedure Insert;
+  procedure Update;
+  procedure Save;
+  procedure Cancel;  
+end;
+
+
+ 2) "Indefinitely Persistable" - SQL backed, Toadbase-backed, File of type backed...
+ basically you build the back end... when you create the object and use the "Attach".. 
+it will connect to the stored object... like
+
+ThisContact:=TPContact.create (objectID:String; Storage:TPersistentStorage);
+
+or
+
+ThisContact:=  Storage.AttachToObject ( Storage.CreateObjectID );
+
+would attach to an object on creation. Storage would handle looking up a given object.
+
+
+TPersistentStorage = class (TComponent)
+private
+
+public
+  {for use by transactional back-ends}
+
+  procedure Prepare;
+  procedure BeginTransaction;
+  procedure Commit;
+  procedure RollBack;
+
+  {These are mainly for use by the ObjectSets}
+  function  FindObjectIDs (Where:String;var ObjectIDList:TStrings);
+  function  GetObjects    (Where:String;var ObjectList:TList);
+published
+  function  AttachToObject (ObjectID:String):TPersistent;
+  procedure StoreObject (ObjectID:String;Object:TPersistent);
+  procedure DeleteObject (ObjectID:String);
+  procedure CreateObjectID :String;
+   
+end;
+
+{see how easy it would be to make a "remote storage"?}
+
+
+
+ 

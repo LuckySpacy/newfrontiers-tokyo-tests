@@ -1,0 +1,97 @@
+object frm_CopyFile: Tfrm_CopyFile
+  Left = 0
+  Top = 0
+  BorderIcons = [biMinimize, biMaximize]
+  BorderStyle = bsDialog
+  Caption = 'Kopieren'
+  ClientHeight = 157
+  ClientWidth = 442
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Bevel1: TBevel
+    Left = 0
+    Top = 0
+    Width = 442
+    Height = 22
+    Align = alTop
+    Shape = bsSpacer
+    ExplicitWidth = 448
+  end
+  object lbl_Von: TLabel
+    AlignWithMargins = True
+    Left = 10
+    Top = 25
+    Width = 429
+    Height = 13
+    Margins.Left = 10
+    Align = alTop
+    Caption = 'lbl_Von'
+    ExplicitLeft = 248
+    ExplicitTop = 168
+    ExplicitWidth = 34
+  end
+  object lbl_Nach: TLabel
+    AlignWithMargins = True
+    Left = 10
+    Top = 44
+    Width = 429
+    Height = 13
+    Margins.Left = 10
+    Align = alTop
+    Caption = 'lbl_Von'
+    ExplicitLeft = 13
+    ExplicitTop = 61
+    ExplicitWidth = 34
+  end
+  object Bevel2: TBevel
+    Left = 0
+    Top = 83
+    Width = 442
+    Height = 26
+    Align = alTop
+    Shape = bsSpacer
+    ExplicitTop = 111
+    ExplicitWidth = 651
+  end
+  object pg: TProgressBar
+    AlignWithMargins = True
+    Left = 10
+    Top = 63
+    Width = 422
+    Height = 17
+    Margins.Left = 10
+    Margins.Right = 10
+    Align = alTop
+    TabOrder = 0
+    ExplicitLeft = 112
+    ExplicitTop = 128
+    ExplicitWidth = 150
+  end
+  object btn_Cancel: TButton
+    AlignWithMargins = True
+    Left = 10
+    Top = 112
+    Width = 422
+    Height = 25
+    Margins.Left = 10
+    Margins.Right = 10
+    Align = alTop
+    Caption = 'Abbrechen'
+    TabOrder = 1
+    OnClick = btn_CancelClick
+    ExplicitLeft = 328
+    ExplicitTop = 168
+    ExplicitWidth = 75
+  end
+end

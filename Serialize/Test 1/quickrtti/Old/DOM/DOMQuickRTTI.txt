@@ -1,0 +1,39 @@
+Michael,
+ 
+Thanks for the very useful and interesting work released under the name QuickRTTI.  I have made some small improvements and some significant additions that you may find useful.
+ 
+Here are the improvements:
+ 
+-  destructor TQuickRTTI.destroy; cleanup that was missing
+-  procedure TQuickRTTI.SetObject  is now sligthly more efficient
+ 
+Additions
+-procedure TQuickRTTI.inputDOMXML(DomElem: IXMLDOMElement);
+{
+  The equivalent to inputXML using the XMLparser.  Can optionally validate
+  the XML file using the Schema information created by CreateSchemas.
+  See the quicktest example for how to do this.
+}
+-procedure TQuickRTTI.CreateSchemas(Schemas : IXMLDOMSchemaCollection);
+{
+  Create Schema information.  One Schema is created for each class and added to
+  the IXMLDOMSchemaCollection.  This Scema collection can be used to validate
+  XML input.  See the quicktest for an example.
+}
+-function TQuickRTTI.outputDOMXML(Doc: IXMLDOMDocument2): IXMLDOMElement;
+{
+  Use the MSXML parser to create the object representation as an IXMLDomElement.
+  Then use the IXMLDomElement.xml property to get the XML object representation.
+  The RTTI property OutputSchemaInfo determines whether Namespace schema info is included.
+}
+ 
+See the attached QuickRTTI.pas and the modified demo.
+ 
+ 
+Using the MSXML parcer slows down things but offers the opportunity to generate schema information and validate XML input.
+
+Feel free to use the additional code and release is to the public domain if you want.
+ 
+ 
+Best Regards
+Kiriakos VLhaos

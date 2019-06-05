@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<inherited ParentReport="Briefpapier.fr3" EngineOptions.DoublePass="True" ReportOptions.CreateDate="41345,374858206" ReportOptions.LastChange="43500,3903054514" ScriptText.Text="var&#13;&#10;  CalcHeightReportSummary: Extended;&#13;&#10;  CalcHeightTextUeberEndsumme   : Extended;&#13;&#10;  CalcHeightTextUnterEndsumme   : Extended;&#13;&#10;  CalcHeightAuslandstext        : Extended;&#13;&#10;  CalcHeightBankverbindungstext : Extended;&#13;&#10;  CalcHeightZBtext              : Extended;&#13;&#10;  CalcHeightEntgelttext         : Extended;&#13;&#10;  CalcHeightSepatext            : Extended;&#13;&#10;  CalcHeightNichtSteuerbar      : Extended;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;function GetReportSummaryHeight: Extended;&#13;&#10;var&#13;&#10;  RealHeight: Integer;&#13;&#10;begin&#13;&#10;  RealHeight := 0;&#13;&#10;  if CalcHeightTextUnterEndsumme &#62; 0 then    RealHeight := RealHeight + 5;&#13;&#10;  if CalcHeightAuslandstext &#62; 0 then         RealHeight := RealHeight + 5;&#13;&#10;  if CalcHeightNichtSteuerbar &#62; 0 then       RealHeight := RealHeight + 5;&#13;&#10;  if CalcHeightBankverbindungstext &#62; 0 then  RealHeight := RealHeight + 5;&#13;&#10;  if CalcHeightZBtext &#62; 0 then               RealHeight := RealHeight + 5;&#13;&#10;  if CalcHeightEntgelttext &#62; 0 then          RealHeight := RealHeight + 5;&#13;&#10;  if CalcHeightSepatext &#62; 0 then             RealHeight := RealHeight + 5;&#13;&#10;&#13;&#10;  if RealHeight &#62; 0 then&#13;&#10;    RealHeight := RealHeight -5;&#13;&#10;&#13;&#10;  Result := Engine.PageHeight -CalcHeightReportSummary - Pagefooter1.Height;&#13;&#10;  Result := Result - CalcHeightTextUnterEndsumme - CalcHeightAuslandstext - CalcHeightBankverbindungstext - CalcHeightZBtext;&#13;&#10;  Result := Result - CalcHeightEntgelttext - CalcHeightNichtSteuerbar;&#13;&#10;  Result := Result - CalcHeightSepatext;&#13;&#10;  Result := Result + RealHeight;&#13;&#10;end;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;//---------------------------------------------------------------------------------------------------------------------&#13;&#10;// Höhe der einzelnen Child's berechnen&#13;&#10;//---------------------------------------------------------------------------------------------------------------------&#13;&#10;procedure ReportSummary1OnAfterCalcHeight(Sender: TfrxComponent);&#13;&#10;var&#13;&#10;  CurY: Extended;&#13;&#10;begin&#13;&#10;  ColumnFooter1.Height := 0;&#13;&#10;  CalcHeightReportSummary := ReportSummary1.height;&#13;&#10;end;&#13;&#10;&#13;&#10;procedure Child_TextUeberEndsummeOnAfterCalcHeight(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  CalcHeightTextUeberEndsumme := Child_TextUeberEndsumme.Height;&#13;&#10;end;&#13;&#10;&#13;&#10;procedure Child_ZahlungsbedingungOnAfterCalcHeight(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  CalcHeightZBtext := Child_Zahlungsbedingung.Height;&#13;&#10;end;&#13;&#10;&#13;&#10;procedure Child_BankverbindungstextOnAfterCalcHeight(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  CalcHeightBankverbindungstext := Child_Bankverbindungstext.Height;&#13;&#10;end;&#13;&#10;&#13;&#10;procedure Child_AuslandstextOnAfterCalcHeight(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  CalcHeightAuslandstext := Child_Auslandstext.Height;&#13;&#10;end;&#13;&#10;&#13;&#10;procedure Child_EntgelttextOnAfterCalcHeight(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  CalcHeightEntgelttext := Child_Entgelttext.Height;&#13;&#10;end;&#13;&#10;&#13;&#10;procedure Child_TextUnterEndsummeOnAfterCalcHeight(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  CalcHeightTextUnterEndsumme := Child_TextUnterEndsumme.Height;&#13;&#10;end;&#13;&#10;&#13;&#10;procedure Child_SepatextOnAfterCalcHeight(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  CalcHeightSepatext := Child_Sepatext.Height;&#13;&#10;end;&#13;&#10;&#13;&#10;procedure Child_NichtSteuerbarOnAfterCalcHeight(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  CalcHeightNichtSteuerbar := Child_NichtSteuerbar.Height;&#13;&#10;end;&#13;&#10;&#13;&#10;&#13;&#10;//---------------------------------------------------------------------------------------------------------------------&#13;&#10;// Child's OnBeforePrint&#13;&#10;//---------------------------------------------------------------------------------------------------------------------&#13;&#10;&#13;&#10;procedure ReportSummary1OnBeforePrint(Sender: TfrxComponent);&#13;&#10;var&#13;&#10;  CurY: Extended;&#13;&#10;begin&#13;&#10;  ReportSummary1.Child            := Child_TextUnterEndsumme;&#13;&#10;  {&#13;&#10;  Child_TextUnterEndsumme.Child   := Child_Zahlungsbedingung;&#13;&#10;  Child_Zahlungsbedingung.Child   := Child_Bankverbindungstext;&#13;&#10;  Child_Bankverbindungstext.Child := Child_Auslandstext;&#13;&#10;  Child_Auslandstext.Child        := Child_NichtSteuerbar;&#13;&#10;  Child_NichtSteuerbar.Child      := Child_Entgelttext;&#13;&#10;  Child_Entgelttext.Child         := Child_Sepatext;&#13;&#10;  }&#13;&#10;&#13;&#10;  Child_TextUnterEndsumme.Child   := Child_Zahlungsbedingung;&#13;&#10;  Child_Zahlungsbedingung.Child   := Child_Auslandstext;&#13;&#10;  Child_Auslandstext.Child        := Child_NichtSteuerbar;&#13;&#10;  Child_NichtSteuerbar.Child      := Child_Entgelttext;&#13;&#10;  Child_Entgelttext.Child         := Child_Sepatext;&#13;&#10;  Child_Sepatext.Child            := Child_Bankverbindungstext;&#13;&#10;&#13;&#10;  if Engine.FinalPass then&#13;&#10;  begin&#13;&#10;    CurY := GetReportSummaryHeight;&#13;&#10;    CurY := CurY - 1;&#13;&#10;    if Engine.CurY - 1 &#60;= CurY then&#13;&#10;      Engine.CurY := CurY&#13;&#10;    else&#13;&#10;    begin&#13;&#10;      Engine.NewPage;&#13;&#10;      Engine.CurY := CurY;&#13;&#10;    end;&#13;&#10;  end;&#13;&#10;end;&#13;&#10;&#13;&#10;&#13;&#10;procedure Child_TextUeberEndsummeOnBeforePrint(Sender: TfrxComponent);&#13;&#10;var&#13;&#10;  CurY: Extended;&#13;&#10;begin&#13;&#10;  if not Child_TextUeberEndsumme.Visible then&#13;&#10;    exit;&#13;&#10;  if Engine.FinalPass then&#13;&#10;  begin&#13;&#10;    CurY := GetReportSummaryHeight - CalcHeightTextUeberEndsumme;&#13;&#10;    if Engine.CurY &#60;= CurY then&#13;&#10;      Engine.CurY := CurY&#13;&#10;    else&#13;&#10;    begin&#13;&#10;      Engine.NewPage;&#13;&#10;      Engine.CurY := CurY;&#13;&#10;    end;&#13;&#10;  end;&#13;&#10;end;&#13;&#10;&#13;&#10;&#13;&#10;procedure Child_BankverbindungstextOnBeforePrint(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;//  Child_Bankverbindungstext.Visible := Trim(rv_Bankverbindungstext.RichEdit.Lines.Text) &#62; '';&#13;&#10;end;&#13;&#10;&#13;&#10;function HasText_TextUnterEndsumme: Boolean;&#13;&#10;begin&#13;&#10;  Result := Trim(rv_TextUnterEndsumme.RichEdit.Lines.Text) &#62; '';&#13;&#10;  if (not Result) and (&#60;TEXTUNTERENDSUMME&#62; &#60;&#62; &#60;NULL&#62;) then&#13;&#10;    Result := &#60;TEXTUNTERENDSUMME&#62; &#62; ''&#13;&#10;end;&#13;&#10;&#13;&#10;function HasText_ZB: Boolean;&#13;&#10;begin&#13;&#10;  Result := Trim(rv_Zahlungsbedingung.RichEdit.Lines.Text) &#62; '';&#13;&#10;  if (not Result) and (&#60;ZB&#62; &#60;&#62; &#60;NULL&#62;) then&#13;&#10;    Result := Trim(&#60;ZB&#62;) &#62; '';&#13;&#10;end;&#13;&#10;&#13;&#10;function HasText_TextUeberEndsumme: Boolean;&#13;&#10;begin&#13;&#10;  Result := Trim(rv_TextUeberEndsumme.RichEdit.Lines.Text) &#62; '';&#13;&#10;  if (not Result) and (&#60;TEXTUEBERENDSUMME&#62; &#60;&#62; &#60;NULL&#62;) then&#13;&#10;    Result := &#60;TEXTUEBERENDSUMME&#62; &#62; ''&#13;&#10;end;&#13;&#10;&#13;&#10;&#13;&#10;procedure Child_Adresse2OnBeforePrint(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  if &#60;ADRESSE2&#62; = 'Lieferadresse' then&#13;&#10;    Rich15.RichEdit.Lines.Text := 'Lieferanschrift';&#13;&#10;  if &#60;ADRESSE2&#62; = 'Rechnungsadresse' then&#13;&#10;    Rich15.RichEdit.Lines.Text := 'Rechnungsanschrift';&#13;&#10;&#13;&#10;end;&#13;&#10;&#13;&#10;procedure PageHeader1OnBeforePrint(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  //Child_TextUnterEndsumme.Visible := Trim(rv_TextUnterEndsumme.RichEdit.Lines.Text) &#62; '';&#13;&#10;end;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;procedure Rich7OnBeforePrint(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  Rich7.RichEdit.Lines.Text := '';&#13;&#10;  if &#60;qry_Vorgang.&#34;VO_LIEFERSELECT&#34;&#62; = 1 then&#13;&#10;    Rich7.RichEdit.Lines.Text := 'Liefertermin: ' + DateToStr(&#60;qry_Vorgang.&#34;VO_LIEFERTERMIN&#34;&#62;);&#13;&#10;  if &#60;qry_Vorgang.&#34;VO_LIEFERSELECT&#34;&#62; = 2 then&#13;&#10;    Rich7.RichEdit.Lines.Text := 'Liefertermin: KW ' + IntToStr(&#60;qry_Vorgang.&#34;VO_LIEFERKW&#34;&#62;) + '/' + IntToStr(&#60;qry_Vorgang.&#34;VO_LIEFERKWJ&#34;&#62;);&#13;&#10;  if &#60;qry_Vorgang.&#34;VO_ART&#34;&#62; &#60;&#62; 2 then&#13;&#10;     Rich7.visible := false;&#13;&#10;end;&#13;&#10;&#13;&#10;procedure rv_BestaetOnBeforePrint(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  rv_Bestaet.RichEdit.Lines.Text := '';&#13;&#10;  if &#60;qry_Vorgang.&#34;VO_ART&#34;&#62; = 3 then&#13;&#10;    rv_Bestaet.RichEdit.Lines.Text := 'AuftragsbestätigungsNr. ' + &#60;vo_desc.&#34;LI_NUMMER&#34;&#62;;&#13;&#10;  if &#60;qry_Vorgang.&#34;VO_ART&#34;&#62; = 4 then&#13;&#10;    rv_Bestaet.RichEdit.Lines.Text := 'AuftragsbestätigungsNr. ' + &#60;vo_desc.&#34;AU_NUMMER&#34;&#62;;&#13;&#10;end;&#13;&#10;&#13;&#10;&#13;&#10;procedure rv_KondOnBeforePrint(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  rv_Kond.Visible := &#60;ZBDRUCKEN&#62; = 'T';&#13;&#10;end;&#13;&#10;&#13;&#10;procedure Child_HeaderInfoOnBeforePrint(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  if &#60;qry_Vorgang.&#34;VO_ART&#34;&#62; = 1 then  // Angebot&#13;&#10;  begin&#13;&#10;    rv_Typ.RichEdit.Lines.Text      := 'Ihre Anfrage:';&#13;&#10;    rv_Datum.RichEdit.Lines.Text    := 'Anfragedatum:';&#13;&#10;    rv_Bestellt.RichEdit.Lines.Text := 'Anfrage durch:';&#13;&#10;  end;&#13;&#10;end;&#13;&#10;&#13;&#10;procedure Child_TextUnterEndsummeOnBeforePrint(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  //ShowMessage('Child_TextUnterEndsumme');&#13;&#10;end;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;procedure Child_ZahlungsbedingungOnBeforePrint(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  Child_Zahlungsbedingung.Visible := false&#13;&#10;end;&#13;&#10;&#13;&#10;begin&#13;&#10;  CalcHeightReportSummary       := 0;&#13;&#10;  CalcHeightTextUeberEndsumme   := 0;&#13;&#10;  CalcHeightTextUnterEndsumme   := 0;&#13;&#10;  CalcHeightAuslandstext        := 0;&#13;&#10;  CalcHeightBankverbindungstext := 0;&#13;&#10;  CalcHeightZBtext              := 0;&#13;&#10;  CalcHeightEntgelttext         := 0;&#13;&#10;  CalcHeightSepatext            := 0;&#13;&#10;  CalcHeightNichtSteuerbar      := 0;&#13;&#10;end.">
+  <Datasets>
+    <item DataSetName="qry_Charge"/>
+    <item DataSetName="qry_Kunden"/>
+    <item DataSetName="qry_pos"/>
+    <item DataSetName="qry_SN_Nebeineinander"/>
+    <item DataSetName="qry_SN_NurImKopf"/>
+    <item DataSetName="qry_SN_Untereinander"/>
+    <item DataSetName="qry_Vorgang"/>
+    <item DataSetName="vo_desc"/>
+    <item DataSetName="qry_AN"/>
+  </Datasets>
+  <Variables>
+    <item Name=" Vorgang"/>
+    <item Name="VO_ID" Value="48707"/>
+    <item Name="VO_VORGANGSTEXT" Value="'ORDER CONFIRMATION'"/>
+    <item Name="VO_KUDEB" Value="'2002388 / 2003388'"/>
+    <item Name="KUKO_USTID" Value="'de 253547923'"/>
+    <item Name="REFNR" Value="'2003388-12630'"/>
+    <item Name="SKBRUTTO" Value="'985,44 €'"/>
+    <item Name="VO_KOND"/>
+    <item Name=" Allgemein"/>
+    <item Name="Waehrungssymbol" Value="' €'"/>
+    <item Name="PRINTLANGBEZBREIT" Value="0"/>
+    <item Name="Faxnummer" Value="''"/>
+    <item Name="ZBDRUCKEN" Value="'F'"/>
+    <item Name="ZAHLUNGSHINWEISTEXT" Value="'{\rtf1\fbidis\ansi\ansicpg0\uc1\deff0\deflang0\deflangfe0{\fonttbl{\f0\fnil Arial;}{\f1\fnil Courier New;}{\f2\fnil Times New Roman;}{\f3\fnil\fcharset2 Symbol;}{\f4\fnil Arial Unicode MS;}{\f5\fnil Symbol;}}{\colortbl;\red0\green0\blue255;\red0\green0\blue128;\red128\green0\blue0;\red0\green128\blue0;\red255\green255\blue255;\red64\green128\blue128;\red255\green255\blue206;\red128\green64\blue0;\red0\green0\blue0;\red153\green180\blue209;\red240\green240\blue240;}{\*\listtable{\list\listtemplateid991901572\listsimple1&#13;&#10;{\listlevel\levelnfc23\leveljc0\li360\fi-360\jclisttab\tx360{\leveltext\''01\u183 \''b7;}{\levelnumbers;}\f5\fs24}&#13;&#10;\listid610576793}&#13;&#10;}&#13;&#10;{\*\listoverridetable&#13;&#10;{\listoverride\listid610576793\listoverridecount0\ls1}&#13;&#10;}&#13;&#10;&#13;&#10;&#13;&#10;\pard\fi0\li0\ql\ri0\sb0\sa0\itap0 \plain \f0\fs16 Erste Text f\u252 \''fcr Englisch\par}'"/>
+    <item Name="EUAUSLANDSTEXTZEIGEN" Value="'F'"/>
+    <item Name="AUSLANDSTEXTZEIGEN" Value="'F'"/>
+    <item Name="KONTORFORMULAR" Value="'F'"/>
+    <item Name="ADRESSE2" Value="'Lieferadresse'"/>
+    <item Name=" ReportSummery"/>
+    <item Name="MWST_VOLL" Value="'19'"/>
+    <item Name="MWST_MINDER" Value="'7'"/>
+    <item Name="NETTOSUMME_VOLL" Value="'845,00 €'"/>
+    <item Name="NETTOSUMME_MINDER" Value="'0,00 €'"/>
+    <item Name="MWST_VOLL_SUMME" Value="'160,55 €'"/>
+    <item Name="MWST_MINDER_SUMME" Value="'0,00 €'"/>
+    <item Name="MWST_GESAMT" Value="'160,55 €'"/>
+    <item Name="ENDSUMME" Value="'1.005,55 €'"/>
+    <item Name="RABATTSUMME" Value="'0,00 €'"/>
+    <item Name="NETTOWARENWERT" Value="'845,00 €'"/>
+    <item Name="VO_PORTO" Value="'0,00 €'"/>
+    <item Name="NETTO" Value="'845,00 €'"/>
+    <item Name=" Sprachtexte"/>
+    <item Name="SP_Seriennummer" Value="'Seriennummer: '"/>
+    <item Name="SP_Liefertermin_Datum" Value="'day of delivery:'"/>
+    <item Name="SP_Charge"/>
+    <item Name="SP_Liefertermin_KW" Value="'Liefertermin KW '"/>
+    <item Name=" Formulartexte"/>
+    <item Name="Positionsschlusstext"/>
+    <item Name=" Kontor Summen"/>
+    <item Name="VO_NETTO_7" Value="'0,00 €'"/>
+    <item Name="VO_NETTO_16" Value="'845,00 €'"/>
+    <item Name="VO_MWST_7" Value="'0,00 €'"/>
+    <item Name="VO_MWST_16" Value="'160,55 €'"/>
+    <item Name="VO_BRUTTO_7" Value="'0,00 €'"/>
+    <item Name="VO_BRUTTO_16" Value="'1.005,55 €'"/>
+    <item Name="VO_SKNETTO_7" Value="'0,00 €'"/>
+    <item Name="VO_SKNETTO_16" Value="'828,10 €'"/>
+    <item Name="VO_SKMWST_7" Value="'0,00 €'"/>
+    <item Name="VO_SKMWST_16" Value="'157,34 €'"/>
+    <item Name="VO_SKMWST" Value="'157,34 €'"/>
+    <item Name="VO_SKBRUTTO_7" Value="'0,00 €'"/>
+    <item Name="VO_SKBRUTTO_16" Value="'985,44 €'"/>
+    <item Name="VO_SKBRUTTO" Value="'985,44 €'"/>
+    <item Name="VO_SKONTON" Value="'16,90 €'"/>
+    <item Name="WARENTARIFNRDRUCKEN" Value="'F'"/>
+    <item Name="KOPFAUSBLENDEN" Value="'F'"/>
+    <item Name="FREITEXTDRUCKEN" Value="'F'"/>
+    <item Name="SPRACHID" Value="'102'"/>
+    <item Name="VERSANDZEIT" Value="''"/>
+    <item Name="BANKVERBINDUNGSTEXT" Value="''"/>
+    <item Name="AUSLANDSTEXT" Value="'Erste Text für Englisch'"/>
+    <item Name="ZAHLUNGSBEDINGUNG" Value="''"/>
+    <item Name="ENTGELTTEXT" Value="'(Engl) Es bestehen Vereinbarungen, aus denen sich nachträgliche Minderungen des Entgelts ergeben können.'"/>
+    <item Name="NICHTSTEUERBAR" Value="''"/>
+    <item Name="TRANSPORTVERS" Value="''"/>
+    <item Name="TRANSPORTVERS_SUMME" Value="''"/>
+    <item Name="VO_NETTO_0" Value="'0,00 €'"/>
+    <item Name="VO_SKNETTO" Value="'828,10 €'"/>
+    <item Name="VO_SKNETTO_0" Value="'0,00 €'"/>
+    <item Name="VO_BRUTTO" Value="'1.005,55 €'"/>
+    <item Name="VO_BRUTTO_0" Value="'0,00 €'"/>
+    <item Name="VO_SKBRUTTO_0" Value="'0,00 €'"/>
+    <item Name="VO_SKONTOB" Value="'20,11 €'"/>
+    <item Name="VO_MWST" Value="'160,55 €'"/>
+    <item Name="VO_MWST_0" Value="'0,00 €'"/>
+    <item Name="VO_NETTOWARENWERT16" Value="'845,00 €'"/>
+    <item Name="VO_NETTOWARENWERT7" Value="'0,00 €'"/>
+    <item Name="VO_NETTOWARENWERT0" Value="'0,00 €'"/>
+    <item Name="VO_LIEFERADRESSE" Value="''"/>
+    <item Name="VO_FREITEXT1" Value="''"/>
+    <item Name="VO_FREITEXT2" Value="''"/>
+    <item Name="VO_FREITEXT3" Value="''"/>
+    <item Name="VO_KONTORSTNR" Value="''"/>
+    <item Name="VO_KONTORUSTID" Value="'de 253547923'"/>
+    <item Name="VERSANDARTTEXT" Value="'Abholung engl'"/>
+    <item Name="ZAHLARTTEXT" Value="'SEPA Lastschrifft  engl.'"/>
+    <item Name="VO_KUNR" Value="2002388"/>
+    <item Name="ZEIGEADRESSE2" Value="'0'"/>
+    <item Name="POSSCHLUSSTEXT" Value="''"/>
+    <item Name="TEXTUEBERENDSUMME" Value="''"/>
+    <item Name="TEXTUNTERENDSUMME" Value="''"/>
+    <item Name="SCHLUSSTEXT" Value="''"/>
+    <item Name="ZB" Value="'Payment 7 days 2,00%, 30 days net.'"/>
+  </Variables>
+  <TfrxDataPage Name="Data"/>
+  <TfrxReportPage Name="Page2" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="16" RightMargin="10" TopMargin="10" BottomMargin="6" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxMasterData Name="MasterData_SN_Untereinander" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="15,11811024" Left="0" Top="18,89765" Width="695,43352" ColumnWidth="0" ColumnGap="0" DataSetName="qry_SN_Untereinander" RowCount="0">
+      <TfrxRichView Name="rv_SN_Untereinander" Left="147,4015748" Top="0" Width="566,9295" Height="15,11811024" GapX="2" GapY="1" PropData="0852696368456469740AE10000007B5C727466315C616E73695C616E7369637067313235325C64656666305C6E6F7569636F6D7061745C6465666C616E67313033317B5C666F6E7474626C7B5C66305C666E696C5C6663686172736574302053746F6E6553616E733B7D7D0D0A7B5C2A5C67656E657261746F722052696368656432302031302E302E31373133347D5C766965776B696E64345C756331200D0A5C706172645C66305C66733136205B53505F53657269656E6E756D6D65725D5B7172795F534E5F556E74657265696E616E6465722E224F55545F534E4E554D4D45524E225D5C7061720D0A7D0D0A00"/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+  <TfrxReportPage Name="Page3" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="16" RightMargin="10" TopMargin="10" BottomMargin="6" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxMasterData Name="MasterData_SN_Nebeneinander" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="15,11811024" Left="0" Top="18,89765" Width="695,43352" ColumnWidth="0" ColumnGap="0" RowCount="0">
+      <TfrxRichView Name="rv_SN_Nebeneinander" Left="147,4015748" Top="0" Width="544,25232" Height="15,11811024" GapX="2" GapY="1" PropData="0852696368456469740AE20000007B5C727466315C616E73695C616E7369637067313235325C64656666305C6E6F7569636F6D7061745C6465666C616E67313033317B5C666F6E7474626C7B5C66305C666E696C5C6663686172736574302053746F6E6553616E733B7D7D0D0A7B5C2A5C67656E657261746F722052696368656432302031302E302E31373133347D5C766965776B696E64345C756331200D0A5C706172645C66305C66733136205B53505F53657269656E6E756D6D65725D5B7172795F534E5F4E656265696E65696E616E6465722E224F55545F534E4E554D4D45524E225D5C7061720D0A7D0D0A00"/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+  <TfrxReportPage Name="Page4" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="16" RightMargin="10" TopMargin="6" BottomMargin="6" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxMasterData Name="MasterData_SN_NurImKopf" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="15,11811024" Left="0" Top="18,89765" Width="695,43352" ColumnWidth="0" ColumnGap="0" RowCount="0">
+      <TfrxRichView Name="rv_SN_NurImKopf" Left="147,4015748" Top="0" Width="544,25232" Height="15,11811024" GapX="2" GapY="1" PropData="0852696368456469740ADD0000007B5C727466315C616E73695C616E7369637067313235325C64656666305C6E6F7569636F6D7061745C6465666C616E67313033317B5C666F6E7474626C7B5C66305C666E696C5C6663686172736574302053746F6E6553616E733B7D7D0D0A7B5C2A5C67656E657261746F722052696368656432302031302E302E31373133347D5C766965776B696E64345C756331200D0A5C706172645C66305C66733136205B53505F53657269656E6E756D6D65725D5B7172795F534E5F4E7572496D4B6F70662E224F55545F534E4E554D4D45524E225D5C7061720D0A7D0D0A00"/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+  <TfrxReportPage Name="Page5" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="16" RightMargin="10" TopMargin="10" BottomMargin="6" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxMasterData Name="MasterData_Charge" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="13,22834646" Left="0" Top="18,89765" Width="695,43352" ColumnWidth="0" ColumnGap="0" DataSetName="qry_Charge" RowCount="0" Stretched="True">
+      <TfrxRichView Name="rv_Charge" Left="136,06299213" Top="0" Width="483,77984" Height="13,22834646" GapX="2" GapY="1" PropData="0852696368456469740AE70000007B5C727466315C616E73695C616E7369637067313235325C64656666305C6E6F7569636F6D7061747B5C666F6E7474626C7B5C66305C666E696C5C6663686172736574302053746F6E6553616E733B7D7D0D0A7B5C2A5C67656E657261746F722052696368656432302031302E302E31373133347D5C766965776B696E64345C756331200D0A5C706172645C66305C667331365C6C616E6731303331204368617267653A205B7172795F4368617267652E2243485F4E554D4D4552225D20204D656E67653A205B7172795F4368617267652E2243485F4D454E4745225D5C7061720D0A7D0D0A00"/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+</inherited>

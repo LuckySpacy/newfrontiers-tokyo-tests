@@ -33,7 +33,7 @@ implementation
 
 procedure TForm1.btn_PDFClick(Sender: TObject);
 begin
-  Report.LoadFromFile('Test1.fr3');
+  Report.LoadFromFile('Test.fr3');
   Report.PrepareReport;
   gtPDFEngine1.Preferences.OpenAfterCreate := true;
   gtPDFEngine1.Preferences.ShowSetupDialog := false;

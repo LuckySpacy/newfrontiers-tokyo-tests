@@ -1,0 +1,29 @@
+<Entity Type TYPE="TEntityType">
+ <NAME>TMusicAlbum</NAME>
+<PROPERTYTYPES TYPE="TPropertyTypes">
+<PropertyType TYPE="TPropertyType">
+ <PROPERTYKIND>pkString</PROPERTYKIND>
+ <PROPERTYNAME>Title</PROPERTYNAME>
+</PropertyType>
+<PropertyType TYPE="TPropertyType">
+ <PROPERTYKIND>pkString</PROPERTYKIND>
+ <PROPERTYNAME>Author</PROPERTYNAME>
+</PropertyType>
+<PropertyType TYPE="TPropertyType">
+ <PROPERTYKIND>pkInteger</PROPERTYKIND>
+ <PROPERTYNAME>Number of tracks</PROPERTYNAME>
+</PropertyType>
+<PropertyType TYPE="TPropertyType">
+ <PROPERTYKIND>pkInteger</PROPERTYKIND>
+ <PROPERTYNAME>Total playing time</PROPERTYNAME>
+</PropertyType>
+<PropertyType TYPE="TPropertyType">
+ <PROPERTYKIND>pkDate</PROPERTYKIND>
+ <PROPERTYNAME>Date of release</PROPERTYNAME>
+</PropertyType>
+<PropertyType TYPE="TPropertyType">
+ <PROPERTYKIND>pkInteger</PROPERTYKIND>
+ <PROPERTYNAME>Number of items in stock</PROPERTYNAME>
+</PropertyType>
+</PROPERTYTYPES>
+</Entity Type>

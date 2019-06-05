@@ -1,0 +1,24 @@
+Here's a cool idea.  I have an object say "1234ABCD" that has a procedure
+ that gets called when you click a button.. like incriments a counter.
+ This procedure would also normally fire an event "OnIncriment".. ok. so 
+ here's the object:
+ 
+ TMyObject = class(TPersistent)
+  private
+    fval:integer;
+    fOnIncriment:TNotifyEvent
+  public
+    procedure DoIncriment;
+  published
+    property Value:integer read fval write fval;
+    property OnIncriment:TNotifyEvent read fonincriment write fonincriment;
+  end;
+
+ nice and simple... ok. basic Delphi stuff.. now if I also have a property that
+ registers with Interbase's event structure.. I can register event:
+ "1234ABCD_OnIncriment"... and when I create the object I register to listen
+ on that as well... SO.. I can create two objects remotely, that respond to
+ the event by connecting back to the storage, pulling the new value and updating,
+ or updating the storage as needed when clicked.
+
+ I guess it raises some issues, being a shared integer, but it might be worth something

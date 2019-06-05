@@ -1,0 +1,58 @@
+{Here is the original SETOBJECT method}
+
+procedure TQuickRTTI.SetObject (o:TPersistent);
+var PTI:PTypeInfo;List:TPropList;
+   Tinfo,Sub:TPropInfo;   i,j :integer;   vin:variant;
+   tempq:TQuickRTTI; ttinfo:TTypeinfo; n:tstringlist;
+begin
+if assigned(o) then
+begin
+if not(assigned(props)) then props:=tstringlist.create;
+if not (assigned(QCache)) then QCache:=TQuickRTTI.create;
+
+
+while objs.count>0 do
+ begin
+    objs.delete(0);
+ end;
+
+props.clear;
+fobj:=o;
+PTI:=o.ClassInfo ;
+PList:= @List;
+i:= GetPropList(PTI,[ tkInteger, tkChar, tkEnumeration, tkFloat,
+    tkString, tkSet, tkClass, tkMethod, tkWChar, tkLString, tkWString,
+    tkVariant, tkArray, tkRecord, tkInterface, tkInt64, tkDynArray],
+    PList);
+
+{getting the list... but I'm pretty much trying to ignore
+method calls for this version
+for i:= 0 to 25 do
+if  assigned(Plist[i]) then
+ begin
+   Tinfo:= Plist[i]^;
+   vin:=GetPropValue(fobj,Tinfo.Name,True);
+
+   ttinfo:=tinfo.PropType^^;
+   if ttinfo.kind=tkClass  then
+      begin
+      // tempq:=TQuickRTTI.create;
+      // tempq.RTTIObject := TPersistent(GetObjectProp(fobj,Tinfo.name));
+      // objs.AddObject (Uppercase(Tinfo.Name),tempq)  ;
+      // tempq.TagName := Tinfo.name;
+        props.addobject(Uppercase(Tinfo.Name), Pointer(PList[i]));
+        objs.AddObject (Uppercase(Tinfo.Name),TPersistent(GetObjectProp(fobj,Tinfo.name)));
+
+      end
+     else
+      begin
+      props.addobject(Uppercase(Tinfo.Name), Pointer(PList[i]) );
+      objs.add('<N/A>');
+      end;
+ end;
+
+ end; {assigned(o)
+end;  
+
+{I haven't tested Kiriakos' new one very much, but I included his in the live version.
+ If you have problems, try this one.}

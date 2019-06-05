@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B769F5E3-CB58-47D2-96BD-2D0348350F8A}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Test\TMSDLLTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="C:\Users\tbachmann.GB\Documents\Embarcadero\Studio\Projekte\TDSDLLTestExe.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TMSDLLTest">
+        <MSBuild Projects="Test\TMSDLLTest.dproj"/>
+    </Target>
+    <Target Name="TMSDLLTest:Clean">
+        <MSBuild Projects="Test\TMSDLLTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TMSDLLTest:Make">
+        <MSBuild Projects="Test\TMSDLLTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TDSDLLTestExe">
+        <MSBuild Projects="C:\Users\tbachmann.GB\Documents\Embarcadero\Studio\Projekte\TDSDLLTestExe.dproj"/>
+    </Target>
+    <Target Name="TDSDLLTestExe:Clean">
+        <MSBuild Projects="C:\Users\tbachmann.GB\Documents\Embarcadero\Studio\Projekte\TDSDLLTestExe.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TDSDLLTestExe:Make">
+        <MSBuild Projects="C:\Users\tbachmann.GB\Documents\Embarcadero\Studio\Projekte\TDSDLLTestExe.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TMSDLLTest;TDSDLLTestExe"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TMSDLLTest:Clean;TDSDLLTestExe:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TMSDLLTest:Make;TDSDLLTestExe:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
