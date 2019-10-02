@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{311FD88C-E4BB-41E5-A36B-A26AA1F08AD5}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Zeitplaner\NFSBackupUI.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="NFSBackupUI">
+        <MSBuild Projects="Zeitplaner\NFSBackupUI.dproj"/>
+    </Target>
+    <Target Name="NFSBackupUI:Clean">
+        <MSBuild Projects="Zeitplaner\NFSBackupUI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="NFSBackupUI:Make">
+        <MSBuild Projects="Zeitplaner\NFSBackupUI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="NFSBackupUI"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="NFSBackupUI:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="NFSBackupUI:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
