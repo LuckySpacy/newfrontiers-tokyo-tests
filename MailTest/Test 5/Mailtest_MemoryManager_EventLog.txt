@@ -1,0 +1,602 @@
+
+--------------------------------2019/8/21 15:58:58--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 68
+
+This block was allocated by thread 0x3920, and the stack trace (return addresses) at the time was:
+4070E6 [System.pas][System][@GetMem$qqri][4758]
+40A9AB [System.pas][System][@NewUnicodeString$qqri][24650]
+40BA97 [System.pas][System][@UStrSetLength$qqrr20System.UnicodeStringi][29962]
+40BAEE [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][30047]
+6454C3 [IdEMailAddress.pas][IdEMailAddress][TIdEMailAddressItem.ConvertAddress][266]
+6459ED [IdEMailAddress.pas][IdEMailAddress][TIdEMailAddressItem.GetText][385]
+64630F [IdEMailAddress.pas][IdEMailAddress][TIdEMailAddressList.GetEMailAddresses][686]
+682829 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Senden][149]
+684928 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.MailSenden][178]
+684118 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.btn_SendenClick][144]
+529301 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt UnicodeString
+
+The allocation number is: 28684
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE2F760:
+B0 04 02 00 01 00 00 00 19 00 00 00 62 00 61 00 63 00 68 00 6D 00 61 00 6E 00 6E 00 40 00 6E 00
+65 00 77 00 2D 00 66 00 72 00 6F 00 6E 00 74 00 69 00 65 00 72 00 73 00 2E 00 64 00 65 00 00 00
+1B 4E C4 8C 80 80 80 80 00 00 00 00 81 F8 E2 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+2D 73 00 00 E6 70 40 00 D7 AE 42 00 E5 AE 42 00 15 F8 52 00 91 8D 52 00 12 23 0F 77 E3 22 0F 77
+A7 3E 19 77 6B 32 19 77 06 DF 12 77 59 CC 0D 77 20 39 00 00 20 39 00 00 2E AF 42 00 B9 60 52 00
+02 71 40 00 25 8A 40 00 18 D9 6E 00 88 41 4B 00 EC AB 52 00 58 AB 52 00 AC 57 52 00 01 3C 53 00
+58 AB 52 00 38 00 00 00 38 00 00 00 32 50 2E 4F 80 4C 71 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+∞  .  .  .  .  .  .  .  .  .  .  .  b  .  a  .  c  .  h  .  m  .  a  .  n  .  n  .  @  .  n  .
+e  .  w  .  -  .  f  .  r  .  o  .  n  .  t  .  i  .  e  .  r  .  s  .  .  .  d  .  e  .  .  .
+.  N  ƒ  å  Ä  Ä  Ä  Ä  .  .  .  .  Å  ¯  ‚    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+-  s  .  .  Ê  p  @  .  ◊  Æ  B  .  Â  Æ  B  .  .  ¯  R  .  ë  ç  R  .  .  #  .  w  „  "  .  w
+ß  >  .  w  k  2  .  w  .  ﬂ  .  w  Y  Ã  .  w     9  .  .     9  .  .  .  Ø  B  .  π  `  R  .
+.  q  @  .  %  ä  @  .  .  Ÿ  n  .  à  A  K  .  Ï  ´  R  .  X  ´  R  .  ¨  W  R  .  .  <  S  .
+X  ´  R  .  8  .  .  .  8  .  .  .  2  P  .  O  Ä  L  q  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+
+--------------------------------2019/8/21 15:58:58--------------------------------
+Diese Anwendung hat Speicher verloren. Die Grˆﬂen von kleinen Speicherblˆcken, die verlorengegangen sind, betragen (ausgenommen erwartete Speicherlecks, die durch Zeiger registriert wurden):
+
+53 - 68 Bytes: UnicodeString x 1
+
+Notiz: Speicherleck-Details werden in eine Textdatei geschrieben, die sich im selben Verzeichnis wie diese Anwendung befindet. Um diese Speicherleck-‹berpr¸fung abzuschalten, kommentieren Sie "EnableMemoryLeakReporting" aus.
+
+--------------------------------2019/8/22 8:42:56--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 52
+
+This block was allocated by thread 0x414C, and the stack trace (return addresses) at the time was:
+4070E6 [System.pas][System][@GetMem$qqri][4758]
+408A07 [System.pas][System][TObject.NewInstance][16922]
+409226 [System.pas][System][@ClassCreate$qqrpvzc][18255]
+4CFB93 [System.Generics.Collections.pas][System.Classes][Generics.Collections.%TList__1$p25System.Classes.TComponent%.Create][4130]
+4C89A5 [System.Classes.pas][System.Classes][Classes.TComponent.Insert][16101]
+4C8AFE [System.Classes.pas][System.Classes][Classes.TComponent.InsertComponent][16143]
+4C8658 [System.Classes.pas][System.Classes][Classes.TComponent.Create][15961]
+60D6B7 [IdBaseComponent.pas][IdBaseComponent][TIdInitializerComponent.Create][183]
+60D707 [IdBaseComponent.pas][IdBaseComponent][TIdBaseComponent.Create][291]
+6831F1 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.SetSendParam][186]
+6830C0 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Senden][157]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TList<System.Classes.TComponent>
+
+The allocation number is: 29667
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FD64290:
+F4 35 4A 00 00 00 00 00 01 00 00 00 B0 31 4A 00 44 FB 4C 00 90 42 D6 7F 50 FB 4C 00 90 42 D6 7F
+98 2B E1 7F D0 5B 70 00 00 00 00 00 00 00 00 00 00 00 00 00 DE FC 6C 8E 00 00 00 00 D1 3C D6 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 D9 73 00 00 E6 70 40 00 AB A9 40 00 DC AB 40 00
+67 74 52 00 E1 52 68 00 50 4B 68 00 01 93 52 00 D7 7B 54 00 E5 86 54 00 91 8D 52 00 5C 13 0F 77
+4C 41 00 00 4C 41 00 00 65 AA 40 00 9D C1 40 00 C1 C0 40 00 E5 C1 40 00 47 D2 40 00 7D CE 40 00
+BD CE 4B 00 F6 D0 40 00 73 75 4B 00 06 6E 4B 00 9F 8B 40 00 2A 00 00 00 B0 04 02 00 01 EC 03 FD
+80 5C 71 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 FE 13 FC 02 80 80 80 80 80 80 80 80 80 80 00 00 00 00 30 ED D5 7F
+Ù  5  J  .  .  .  .  .  .  .  .  .  ∞  1  J  .  D  ˚  L  .  ê  B  ÷    P  ˚  L  .  ê  B  ÷  
+ò  +  ·    –  [  p  .  .  .  .  .  .  .  .  .  .  .  .  .  ﬁ  ¸  l  é  .  .  .  .  —  <  ÷  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ÿ  s  .  .  Ê  p  @  .  ´  ©  @  .  ‹  ´  @  .
+g  t  R  .  ·  R  h  .  P  K  h  .  .  ì  R  .  ◊  {  T  .  Â  Ü  T  .  ë  ç  R  .  \  .  .  w
+L  A  .  .  L  A  .  .  e  ™  @  .  ù  ¡  @  .  ¡  ¿  @  .  Â  ¡  @  .  G  “  @  .  }  Œ  @  .
+Ω  Œ  K  .  ˆ  –  @  .  s  u  K  .  .  n  K  .  ü  ã  @  .  *  .  .  .  ∞  .  .  .  .  Ï  .  ˝
+Ä  \  q  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ˛  .  ¸  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  0  Ì  ’  
+
+--------------------------------2019/8/22 8:42:56--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 52
+
+This block was allocated by thread 0x414C, and the stack trace (return addresses) at the time was:
+4070E6 [System.pas][System][@GetMem$qqri][4758]
+408A07 [System.pas][System][TObject.NewInstance][16922]
+409226 [System.pas][System][@ClassCreate$qqrpvzc][18255]
+4CFB93 [System.Generics.Collections.pas][System.Classes][Generics.Collections.%TList__1$p25System.Classes.TComponent%.Create][4130]
+409294 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][18304]
+4C88BC [System.Classes.pas][System.Classes][Classes.TComponent.FreeNotification][16051]
+60D712 [IdBaseComponent.pas][IdBaseComponent][TIdBaseComponent.Create][292]
+682248 [IdSASLUserPass.pas][IdSASLUserPass][TIdSASLUserPass.SetUserPassProvider][126]
+683208 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.SetSendParam][187]
+6830C0 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Senden][157]
+6853D4 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.MailSenden][185]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TList<System.Classes.TComponent>
+
+The allocation number is: 29669
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FD64410:
+F4 35 4A 00 00 00 00 00 01 00 00 00 B0 31 4A 00 44 FB 4C 00 10 44 D6 7F 50 FB 4C 00 10 44 D6 7F
+F8 2D E1 7F D0 5B 70 00 00 00 00 00 00 00 00 00 00 00 00 00 99 DC 55 8E 00 00 00 00 30 ED D5 7F
+00 00 00 00 00 00 00 00 70 9A 41 00 00 00 00 00 E7 73 00 00 E6 70 40 00 07 8A 40 00 26 92 40 00
+93 FB 4C 00 87 55 44 00 BC 88 4C 00 2D 39 44 00 F9 88 4C 00 48 22 68 00 08 32 68 00 C0 30 68 00
+4C 41 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 34 00 00 00 00 00 00 00 46 42 81 83
+F4 35 4A 00 00 00 00 00 01 00 00 00 B0 31 4A 00 44 FB 4C 00 D0 44 D6 7F 50 FB 4C 00 D0 44 D6 7F
+68 B3 D7 7F D0 5B 70 00 00 00 00 00 00 00 00 00 00 00 00 00 B9 BD 7E 7C 00 00 00 00 11 48 D6 7F
+Ù  5  J  .  .  .  .  .  .  .  .  .  ∞  1  J  .  D  ˚  L  .  .  D  ÷    P  ˚  L  .  .  D  ÷  
+¯  -  ·    –  [  p  .  .  .  .  .  .  .  .  .  .  .  .  .  ô  ‹  U  é  .  .  .  .  0  Ì  ’  
+.  .  .  .  .  .  .  .  p  ö  A  .  .  .  .  .  Á  s  .  .  Ê  p  @  .  .  ä  @  .  &  í  @  .
+ì  ˚  L  .  á  U  D  .  º  à  L  .  -  9  D  .  ˘  à  L  .  H  "  h  .  .  2  h  .  ¿  0  h  .
+L  A  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  4  .  .  .  .  .  .  .  F  B  Å  É
+Ù  5  J  .  .  .  .  .  .  .  .  .  ∞  1  J  .  D  ˚  L  .  –  D  ÷    P  ˚  L  .  –  D  ÷  
+h  ≥  ◊    –  [  p  .  .  .  .  .  .  .  .  .  .  .  .  .  π  Ω  ~  |  .  .  .  .  .  H  ÷  
+
+--------------------------------2019/8/22 8:42:56--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 52
+
+This block was allocated by thread 0x414C, and the stack trace (return addresses) at the time was:
+4070E6 [System.pas][System][@GetMem$qqri][4758]
+408A07 [System.pas][System][TObject.NewInstance][16922]
+409226 [System.pas][System][@ClassCreate$qqrpvzc][18255]
+4CFB93 [System.Generics.Collections.pas][System.Classes][Generics.Collections.%TList__1$p25System.Classes.TComponent%.Create][4130]
+445587 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalSetCapacity][3845]
+4C88BC [System.Classes.pas][System.Classes][Classes.TComponent.FreeNotification][16051]
+44392D [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalAdd4][2482]
+4C88F9 [System.Classes.pas][System.Classes][Classes.TComponent.FreeNotification][16055]
+682248 [IdSASLUserPass.pas][IdSASLUserPass][TIdSASLUserPass.SetUserPassProvider][126]
+683208 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.SetSendParam][187]
+6830C0 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Senden][157]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TList<System.Classes.TComponent>
+
+The allocation number is: 29671
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FD644D0:
+F4 35 4A 00 00 00 00 00 01 00 00 00 B0 31 4A 00 44 FB 4C 00 D0 44 D6 7F 50 FB 4C 00 D0 44 D6 7F
+68 B3 D7 7F D0 5B 70 00 00 00 00 00 00 00 00 00 00 00 00 00 B9 BD 7E 7C 00 00 00 00 11 48 D6 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 29 74 00 00 55 71 40 00 A9 CF 40 00 F6 D0 40 00
+73 75 4B 00 74 72 4B 00 3E 73 4B 00 D9 6E 4B 00 7C 6E 4B 00 4C 33 68 00 C8 30 68 00 D4 53 68 00
+4C 41 00 00 4C 41 00 00 02 71 40 00 50 D2 40 00 7D CE 40 00 BD CE 4B 00 F6 D0 40 00 73 75 4B 00
+06 6E 4B 00 9F 8B 40 00 F5 DF 65 00 02 71 40 00 25 8A 40 00 28 00 00 00 00 00 00 00 05 3A 58 86
+80 5C 71 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 FA C5 A7 79 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 91 49 D6 7F
+Ù  5  J  .  .  .  .  .  .  .  .  .  ∞  1  J  .  D  ˚  L  .  –  D  ÷    P  ˚  L  .  –  D  ÷  
+h  ≥  ◊    –  [  p  .  .  .  .  .  .  .  .  .  .  .  .  .  π  Ω  ~  |  .  .  .  .  .  H  ÷  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  )  t  .  .  U  q  @  .  ©  œ  @  .  ˆ  –  @  .
+s  u  K  .  t  r  K  .  >  s  K  .  Ÿ  n  K  .  |  n  K  .  L  3  h  .  »  0  h  .  ‘  S  h  .
+L  A  .  .  L  A  .  .  .  q  @  .  P  “  @  .  }  Œ  @  .  Ω  Œ  K  .  ˆ  –  @  .  s  u  K  .
+.  n  K  .  ü  ã  @  .  ı  ﬂ  e  .  .  q  @  .  %  ä  @  .  (  .  .  .  .  .  .  .  .  :  X  Ü
+Ä  \  q  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ˙  ≈  ß  y  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ë  I  ÷  
+
+--------------------------------2019/8/22 8:42:56--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 36
+
+This block was allocated by thread 0x414C, and the stack trace (return addresses) at the time was:
+4070E6 [System.pas][System][@GetMem$qqri][4758]
+40A9AB [System.pas][System][@NewUnicodeString$qqri][24650]
+40ABDC [System.pas][System][@UStrFromPWCharLen$qqrr20System.UnicodeStringpbi][25328]
+527467 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.GetText][6231]
+685272 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.MailSenden][175]
+684B50 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.btn_SendenClick][145]
+529301 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+547BD7 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+5486E5 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+528D91 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.WndProc][7338]
+770F135C [RtlDeactivateActivationContextUnsafeFast]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt UnicodeString
+
+The allocation number is: 29654
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FD6BA60:
+B0 04 02 00 01 00 00 00 0A 00 00 00 53 00 6F 00 6D 00 6D 00 65 00 72 00 32 00 30 00 31 00 39 00
+00 00 9D 61 0C 02 80 80 00 00 00 00 41 C6 D6 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+CE 73 00 00 E6 70 40 00 07 8A 40 00 29 FE 40 00 26 92 40 00 70 8B 40 00 6B BE 80 75 CB 9A 4C 00
+0F 3E 54 00 FC 8F 40 00 91 8D 52 00 62 84 14 75 4C 41 00 00 4C 41 00 00 02 71 40 00 25 8A 40 00
+C4 E3 6E 00 92 8B 40 00 B4 FE 40 00 F5 C1 40 00 C1 C0 40 00 39 8C 40 00 1E 8A 40 00 C4 E3 6E 00
+F9 BF 4C 00 1C 00 00 00 F8 99 4C 00 E5 40 60 70 80 5C 71 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 1A BF 9F 8F 80 80 80 80 80 80 80 80 00 00 00 00 71 C1 D6 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 E4 7E 00 00 E6 70 40 00 07 8A 40 00 26 92 40 00
+∞  .  .  .  .  .  .  .  .  .  .  .  S  .  o  .  m  .  m  .  e  .  r  .  2  .  0  .  1  .  9  .
+.  .  ù  a  .  .  Ä  Ä  .  .  .  .  A  ∆  ÷    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+Œ  s  .  .  Ê  p  @  .  .  ä  @  .  )  ˛  @  .  &  í  @  .  p  ã  @  .  k  æ  Ä  u  À  ö  L  .
+.  >  T  .  ¸  è  @  .  ë  ç  R  .  b  Ñ  .  u  L  A  .  .  L  A  .  .  .  q  @  .  %  ä  @  .
+ƒ  „  n  .  í  ã  @  .  ¥  ˛  @  .  ı  ¡  @  .  ¡  ¿  @  .  9  å  @  .  .  ä  @  .  ƒ  „  n  .
+˘  ø  L  .  .  .  .  .  ¯  ô  L  .  Â  @  `  p  Ä  \  q  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  ø  ü  è  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  q  ¡  ÷  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ‰  ~  .  .  Ê  p  @  .  .  ä  @  .  &  í  @  .
+
+--------------------------------2019/8/22 8:42:56--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 20
+
+This block was allocated by thread 0x414C, and the stack trace (return addresses) at the time was:
+419D5A [FastMM4][DebugReallocMem$qqrpvi]
+407123 [System.pas][System][@ReallocMem$qqrrpvi][4880]
+40CFB5 [System.pas][System][DynArraySetLength$qqrrpvpvipi][35021]
+445587 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalSetCapacity][3845]
+444720 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalGrow][3106]
+444745 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalGrowCheck][3112]
+443907 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalAdd4][2478]
+4C88F0 [System.Classes.pas][System.Classes][Classes.TComponent.FreeNotification][16054]
+661098 [IdSASLCollection.pas][IdSASLCollection][TIdSASLListEntry.SetSASL][170]
+683258 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.SetSendParam][190]
+6830C0 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Senden][157]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt Unbekannt
+
+The allocation number is: 29672
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FD7B360:
+01 00 00 00 02 00 00 00 E0 98 E2 7F 00 00 00 00 63 C1 DC A2 80 80 80 80 00 00 00 00 21 B4 D7 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 86 12 00 00 E6 70 40 00 07 8A 40 00 26 92 40 00
+70 8B 40 00 CB 89 52 00 97 55 52 00 57 BE 52 00 01 BF 52 00 11 73 52 00 5C 61 52 00 AC E3 4B 00
+4C 41 00 00 4C 41 00 00 25 8A 40 00 C4 E3 6E 00 BD 28 4B 00 9F 8B 40 00 EE 55 52 00 A3 BE 52 00
+4F AB 52 00 AC 57 52 00 01 3C 53 00 58 AB 52 00 25 56 55 00 14 00 00 00 F8 FD 48 00 4F EB DE 86
+80 5C 71 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 B0 14 21 79 00 00 00 00 01 B6 D7 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FD 12 00 00 E6 70 40 00 07 8A 40 00 26 92 40 00
+70 8B 40 00 26 92 40 00 A4 8B 53 00 7D 9D 52 00 66 5F 52 00 6C 2F 53 00 37 1B 54 00 20 E3 4B 00
+.  .  .  .  .  .  .  .  ‡  ò  ‚    .  .  .  .  c  ¡  ‹  ¢  Ä  Ä  Ä  Ä  .  .  .  .  !  ¥  ◊  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ü  .  .  .  Ê  p  @  .  .  ä  @  .  &  í  @  .
+p  ã  @  .  À  â  R  .  ó  U  R  .  W  æ  R  .  .  ø  R  .  .  s  R  .  \  a  R  .  ¨  „  K  .
+L  A  .  .  L  A  .  .  %  ä  @  .  ƒ  „  n  .  Ω  (  K  .  ü  ã  @  .  Ó  U  R  .  £  æ  R  .
+O  ´  R  .  ¨  W  R  .  .  <  S  .  X  ´  R  .  %  V  U  .  .  .  .  .  ¯  ˝  H  .  O  Î  ﬁ  Ü
+Ä  \  q  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ∞  .  !  y  .  .  .  .  .  ∂  ◊  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ˝  .  .  .  Ê  p  @  .  .  ä  @  .  &  í  @  .
+p  ã  @  .  &  í  @  .  §  ã  S  .  }  ù  R  .  f  _  R  .  l  /  S  .  7  .  T  .     „  K  .
+
+--------------------------------2019/8/22 8:42:56--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 12
+
+This block was allocated by thread 0x414C, and the stack trace (return addresses) at the time was:
+407155 [System.pas][System][@ReallocMem$qqrrpvi][4950]
+40CFB5 [System.pas][System][DynArraySetLength$qqrrpvpvipi][35021]
+445587 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalSetCapacity][3845]
+444720 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalGrow][3106]
+444745 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalGrowCheck][3112]
+443907 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalAdd4][2478]
+4C89B8 [System.Classes.pas][System.Classes][Classes.TComponent.Insert][16102]
+4C8AFE [System.Classes.pas][System.Classes][Classes.TComponent.InsertComponent][16143]
+4C8658 [System.Classes.pas][System.Classes][Classes.TComponent.Create][15961]
+60D6B7 [IdBaseComponent.pas][IdBaseComponent][TIdInitializerComponent.Create][183]
+60D707 [IdBaseComponent.pas][IdBaseComponent][TIdBaseComponent.Create][291]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt Unbekannt
+
+The allocation number is: 29668
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE12B90:
+01 00 00 00 01 00 00 00 E0 98 E2 7F 31 F2 94 B8 00 00 00 00 79 2A E1 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 07 4C 00 00 55 71 40 00 A9 CF 40 00 87 55 44 00 20 47 44 00 45 47 44 00
+0B 2B 44 00 B6 3B 4B 00 B9 56 5F 00 97 C1 5F 00 FA BD 5F 00 B9 B3 5F 00 4C 41 00 00 4C 41 00 00
+02 71 40 00 50 D2 40 00 7D CE 40 00 25 8A 40 00 71 92 40 00 40 9C 5F 00 87 55 44 00 35 3A 44 00
+57 38 4B 00 A4 5F 5F 00 21 6F 5F 00 0C 00 00 00 00 00 00 00 7E 71 73 86 80 5C 71 00 80 80 80 80
+80 80 80 80 81 8E 8C 79 00 00 00 00 E1 29 E1 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+D8 4C 00 00 E6 70 40 00 07 8A 40 00 26 92 40 00 70 8B 40 00 26 92 40 00 E7 D5 4C 00 AB 37 4B 00
+FC 55 5F 00 AB 55 5F 00 00 EA 40 00 70 6B 5F 00 4C 41 00 00 4C 41 00 00 02 71 40 00 25 8A 40 00
+.  .  .  .  .  .  .  .  ‡  ò  ‚    1  Ú  î  ∏  .  .  .  .  y  *  ·    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  L  .  .  U  q  @  .  ©  œ  @  .  á  U  D  .     G  D  .  E  G  D  .
+.  +  D  .  ∂  ;  K  .  π  V  _  .  ó  ¡  _  .  ˙  Ω  _  .  π  ≥  _  .  L  A  .  .  L  A  .  .
+.  q  @  .  P  “  @  .  }  Œ  @  .  %  ä  @  .  q  í  @  .  @  ú  _  .  á  U  D  .  5  :  D  .
+W  8  K  .  §  _  _  .  !  o  _  .  .  .  .  .  .  .  .  .  ~  q  s  Ü  Ä  \  q  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Å  é  å  y  .  .  .  .  ·  )  ·    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ÿ  L  .  .  Ê  p  @  .  .  ä  @  .  &  í  @  .  p  ã  @  .  &  í  @  .  Á  ’  L  .  ´  7  K  .
+¸  U  _  .  ´  U  _  .  .  Í  @  .  p  k  _  .  L  A  .  .  L  A  .  .  .  q  @  .  %  ä  @  .
+
+--------------------------------2019/8/22 8:42:56--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 12
+
+This block was allocated by thread 0x414C, and the stack trace (return addresses) at the time was:
+407155 [System.pas][System][@ReallocMem$qqrrpvi][4950]
+40CFB5 [System.pas][System][DynArraySetLength$qqrrpvpvipi][35021]
+445587 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalSetCapacity][3845]
+444720 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalGrow][3106]
+444745 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalGrowCheck][3112]
+443907 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalAdd4][2478]
+4C88F0 [System.Classes.pas][System.Classes][Classes.TComponent.FreeNotification][16054]
+682248 [IdSASLUserPass.pas][IdSASLUserPass][TIdSASLUserPass.SetUserPassProvider][126]
+683208 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.SetSendParam][187]
+6830C0 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Senden][157]
+6853D4 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.MailSenden][185]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt Unbekannt
+
+The allocation number is: 29670
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE12DF0:
+01 00 00 00 01 00 00 00 00 98 E2 7F 23 55 6E 78 00 00 00 00 D9 2C E1 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 6A 5B 00 00 55 71 40 00 A9 CF 40 00 87 55 44 00 20 47 44 00 45 47 44 00
+0B 2B 44 00 B6 3B 4B 00 B9 56 5F 00 97 C1 5F 00 FA BD 5F 00 B9 B3 5F 00 4C 41 00 00 4C 41 00 00
+02 71 40 00 50 D2 40 00 7D CE 40 00 25 8A 40 00 71 92 40 00 40 9C 5F 00 87 55 44 00 35 3A 44 00
+57 38 4B 00 A4 5F 5F 00 21 6F 5F 00 0C 00 00 00 00 00 00 00 41 83 73 86 80 5C 71 00 80 80 80 80
+80 80 80 80 BE 7C 8C 79 00 00 00 00 41 2C E1 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+3B 5C 00 00 E6 70 40 00 07 8A 40 00 26 92 40 00 70 8B 40 00 26 92 40 00 E7 D5 4C 00 AB 37 4B 00
+FC 55 5F 00 AB 55 5F 00 00 EA 40 00 70 6B 5F 00 4C 41 00 00 4C 41 00 00 02 71 40 00 25 8A 40 00
+.  .  .  .  .  .  .  .  .  ò  ‚    #  U  n  x  .  .  .  .  Ÿ  ,  ·    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  j  [  .  .  U  q  @  .  ©  œ  @  .  á  U  D  .     G  D  .  E  G  D  .
+.  +  D  .  ∂  ;  K  .  π  V  _  .  ó  ¡  _  .  ˙  Ω  _  .  π  ≥  _  .  L  A  .  .  L  A  .  .
+.  q  @  .  P  “  @  .  }  Œ  @  .  %  ä  @  .  q  í  @  .  @  ú  _  .  á  U  D  .  5  :  D  .
+W  8  K  .  §  _  _  .  !  o  _  .  .  .  .  .  .  .  .  .  A  É  s  Ü  Ä  \  q  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  æ  |  å  y  .  .  .  .  A  ,  ·    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+;  \  .  .  Ê  p  @  .  .  ä  @  .  &  í  @  .  p  ã  @  .  &  í  @  .  Á  ’  L  .  ´  7  K  .
+¸  U  _  .  ´  U  _  .  .  Í  @  .  p  k  _  .  L  A  .  .  L  A  .  .  .  q  @  .  %  ä  @  .
+
+--------------------------------2019/8/22 8:42:56--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 84
+
+This block was allocated by thread 0x414C, and the stack trace (return addresses) at the time was:
+4070E6 [System.pas][System][@GetMem$qqri][4758]
+408A07 [System.pas][System][TObject.NewInstance][16922]
+409226 [System.pas][System][@ClassCreate$qqrpvzc][18255]
+60D6FA [IdBaseComponent.pas][IdBaseComponent][TIdBaseComponent.Create][290]
+6831D0 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.SetSendParam][184]
+6830C0 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Senden][157]
+6853D4 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.MailSenden][185]
+684B50 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.btn_SendenClick][145]
+529301 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+547BD7 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+5486E5 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TIdSASLLogin
+
+The allocation number is: 29664
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE29800:
+A4 22 68 00 00 00 00 00 00 00 00 00 00 00 00 00 90 42 D6 7F D0 44 D6 7F 00 00 00 00 00 01 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 E8 D8 49 00 F8 D8 49 00
+C8 00 00 00 00 00 00 00 E0 98 E2 7F 00 00 00 00 00 00 00 00 DE 38 31 79 00 00 00 00 80 65 E2 7F
+00 00 00 00 00 00 00 00 70 9A 41 00 00 00 00 00 E2 73 00 00 E6 70 40 00 07 8A 40 00 26 92 40 00
+FA D6 60 00 F1 31 68 00 C0 30 68 00 D4 53 68 00 50 4B 68 00 01 93 52 00 D7 7B 54 00 E5 86 54 00
+4C 41 00 00 4C 41 00 00 65 AA 40 00 9D C1 40 00 C1 C0 40 00 E5 C1 40 00 47 D2 40 00 7D CE 40 00
+BD CE 4B 00 F6 D0 40 00 73 75 4B 00 06 6E 4B 00 9F 8B 40 00 4C 00 00 00 B0 04 02 00 1C C8 CE 86
+C4 1D 66 00 00 98 E2 7F 00 00 00 00 00 00 00 00 00 00 00 00 10 44 D6 7F 00 00 00 00 00 01 00 00
+§  "  h  .  .  .  .  .  .  .  .  .  .  .  .  .  ê  B  ÷    –  D  ÷    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ë  ÿ  I  .  ¯  ÿ  I  .
+»  .  .  .  .  .  .  .  ‡  ò  ‚    .  .  .  .  .  .  .  .  ﬁ  8  1  y  .  .  .  .  Ä  e  ‚  
+.  .  .  .  .  .  .  .  p  ö  A  .  .  .  .  .  ‚  s  .  .  Ê  p  @  .  .  ä  @  .  &  í  @  .
+˙  ÷  `  .  Ò  1  h  .  ¿  0  h  .  ‘  S  h  .  P  K  h  .  .  ì  R  .  ◊  {  T  .  Â  Ü  T  .
+L  A  .  .  L  A  .  .  e  ™  @  .  ù  ¡  @  .  ¡  ¿  @  .  Â  ¡  @  .  G  “  @  .  }  Œ  @  .
+Ω  Œ  K  .  ˆ  –  @  .  s  u  K  .  .  n  K  .  ü  ã  @  .  L  .  .  .  ∞  .  .  .  .  »  Œ  Ü
+ƒ  .  f  .  .  ò  ‚    .  .  .  .  .  .  .  .  .  .  .  .  .  D  ÷    .  .  .  .  .  .  .  .
+
+--------------------------------2019/8/22 8:42:56--------------------------------
+Ein Speicherblock hat Speicher verloren. Die Grˆﬂe ist: 84
+
+This block was allocated by thread 0x414C, and the stack trace (return addresses) at the time was:
+4070E6 [System.pas][System][@GetMem$qqri][4758]
+408A07 [System.pas][System][TObject.NewInstance][16922]
+409226 [System.pas][System][@ClassCreate$qqrpvzc][18255]
+60D6FA [IdBaseComponent.pas][IdBaseComponent][TIdBaseComponent.Create][290]
+6831F1 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.SetSendParam][186]
+6830C0 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Senden][157]
+6853D4 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.MailSenden][185]
+684B50 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.btn_SendenClick][145]
+529301 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+547BD7 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+5486E5 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+
+Der Block wird momentan f¸r eine Objektklasse benutzt TIdUserPassProvider
+
+The allocation number is: 29666
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE298E0:
+C4 1D 66 00 00 98 E2 7F 00 00 00 00 00 00 00 00 00 00 00 00 10 44 D6 7F 00 00 00 00 00 01 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 E8 D8 49 00 F8 D8 49 00
+00 00 00 00 6C BA D6 7F 00 00 00 00 E3 37 31 79 80 80 80 80 80 80 80 80 00 00 00 00 E1 A9 E2 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 94 87 00 00 E6 70 40 00 AB A9 40 00 8B AF 40 00
+E0 BC 40 00 29 92 68 00 A4 32 6B 00 59 CC 0D 77 A6 86 4C 00 36 93 95 01 78 84 41 00 DF 08 71 75
+4C 41 00 00 4C 41 00 00 65 AA 40 00 9D C1 40 00 C1 C0 40 00 E5 C1 40 00 47 D2 40 00 C6 E5 6E 00
+58 F2 6E 00 85 F2 6E 00 DE 29 6F 00 63 2B 6F 00 14 A4 40 00 22 00 00 00 B0 04 02 00 7A EC 0D 74
+80 5C 71 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+ƒ  .  f  .  .  ò  ‚    .  .  .  .  .  .  .  .  .  .  .  .  .  D  ÷    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ë  ÿ  I  .  ¯  ÿ  I  .
+.  .  .  .  l  ∫  ÷    .  .  .  .  „  7  1  y  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ·  ©  ‚  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  î  á  .  .  Ê  p  @  .  ´  ©  @  .  ã  Ø  @  .
+‡  º  @  .  )  í  h  .  §  2  k  .  Y  Ã  .  w  ¶  Ü  L  .  6  ì  ï  .  x  Ñ  A  .  ﬂ  .  q  u
+L  A  .  .  L  A  .  .  e  ™  @  .  ù  ¡  @  .  ¡  ¿  @  .  Â  ¡  @  .  G  “  @  .  ∆  Â  n  .
+X  Ú  n  .  Ö  Ú  n  .  ﬁ  )  o  .  c  +  o  .  .  §  @  .  "  .  .  .  ∞  .  .  .  z  Ï  .  t
+Ä  \  q  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+
+--------------------------------2019/8/22 8:42:56--------------------------------
+Diese Anwendung hat Speicher verloren. Die Grˆﬂen von kleinen Speicherblˆcken, die verlorengegangen sind, betragen (ausgenommen erwartete Speicherlecks, die durch Zeiger registriert wurden):
+
+5 - 12 Bytes: Unbekannt x 2
+13 - 20 Bytes: Unbekannt x 1
+21 - 36 Bytes: UnicodeString x 1
+37 - 52 Bytes: TList<System.Classes.TComponent> x 3
+69 - 84 Bytes: TIdUserPassProvider x 1, TIdSASLLogin x 1
+
+Notiz: Speicherleck-Details werden in eine Textdatei geschrieben, die sich im selben Verzeichnis wie diese Anwendung befindet. Um diese Speicherleck-‹berpr¸fung abzuschalten, kommentieren Sie "EnableMemoryLeakReporting" aus.
+
+--------------------------------2019/8/22 9:10:15--------------------------------
+FastMM hat einen Versuch entdeckt, eine virtuelle Methode eines freigegebenen Objektes aufzurufen. Eine Schutzverletzung wird nun aufgerufen, um die aktuelle Operation abzubrechen.
+
+Freigegebene Objekt-Klasse: TIdUserPassProvider
+
+Virtuelle Methode: Destroy
+
+Adresse der virtuellen Methode: 4C8678
+
+The allocation number was: 30089
+
+The object was allocated by thread 0x3E20, and the stack trace (return addresses) at the time was:
+4070E6 [System.pas][System][@GetMem$qqri][4758]
+408A07 [System.pas][System][TObject.NewInstance][16922]
+409226 [System.pas][System][@ClassCreate$qqrpvzc][18255]
+60D6FA [IdBaseComponent.pas][IdBaseComponent][TIdBaseComponent.Create][290]
+683361 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.SetSendParam][199]
+683230 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Senden][170]
+685724 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.MailSenden][212]
+684EA0 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.btn_SendenClick][172]
+529301 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+547BD7 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+5486E5 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+
+The object was subsequently freed by thread 0x3E20, and the stack trace (return addresses) at the time was:
+408A25 [System.pas][System][TObject.FreeInstance][16931]
+6EE714 [madExcept][InterceptClassDestroy$qqrp14System.TObject]
+4C86C4 [System.Classes.pas][System.Classes][Classes.TComponent.Destroy][15972]
+408B9F [System.pas][System][TObject.Free][16994]
+4C8BF9 [System.Classes.pas][System.Classes][Classes.TComponent.DestroyComponents][16171]
+4C8698 [System.Classes.pas][System.Classes][Classes.TComponent.Destroy][15968]
+6604D0 [IdSASL.pas][IdSASL][TIdSASL.Destroy][158]
+408B9F [System.pas][System][TObject.Free][16994]
+682E86 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Destroy][107]
+5E123D [Vcl.Forms.pas][Vcl.Forms][Forms.TScreen.AlignForms][9009]
+408B9F [System.pas][System][TObject.Free][16994]
+
+The current thread ID is 0x3E20, and the stack trace (return addresses) leading to this error is:
+408B9F [System.pas][System][TObject.Free][16994]
+682EAF [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Destroy][109]
+408B9F [System.pas][System][TObject.Free][16994]
+6846E2 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.FormDestroy][129]
+5D8AAB [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoDestroy][3800]
+5D889F [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.BeforeDestruction][3733]
+4092D0 [System.pas][System][@BeforeDestruction$qqrxp14System.TObjectzc][18338]
+5D88AF [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Destroy][3742]
+4C8B7A [System.Classes.pas][System.Classes][Classes.TComponent.RemoveComponent][16155]
+4C8BF9 [System.Classes.pas][System.Classes][Classes.TComponent.DestroyComponents][16171]
+5D68CE [Vcl.Forms.pas][Vcl.Forms][Forms.DoneApplication$qqrv][2198]
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE29800:
+80 5C 71 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 89 60 74 78 80 80 80 80 80 80 80 80 00 00 00 00 41 99 E2 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 5F 79 00 00 EC A9 40 00 17 B6 40 00 25 90 68 00
+78 D9 68 00 B1 2A 19 77 E9 58 0F 77 23 56 04 74 47 56 04 74 90 44 6B 00 99 48 6B 00 72 49 6B 00
+20 3E 00 00 20 3E 00 00 02 71 40 00 89 AA 40 00 4F AC 40 00 E8 46 6B 00 99 48 6B 00 72 49 6B 00
+B2 49 6B 00 20 CF 6E 00 C2 17 66 00 38 D1 6E 00 C2 17 66 00 4A 00 00 00 E4 04 01 00 C7 1D C3 5C
+80 5C 71 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+Ä  \  q  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  â  `  t  x  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  A  ô  ‚  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  _  y  .  .  Ï  ©  @  .  .  ∂  @  .  %  ê  h  .
+x  Ÿ  h  .  ±  *  .  w  È  X  .  w  #  V  .  t  G  V  .  t  ê  D  k  .  ô  H  k  .  r  I  k  .
+   >  .  .     >  .  .  .  q  @  .  â  ™  @  .  O  ¨  @  .  Ë  F  k  .  ô  H  k  .  r  I  k  .
+≤  I  k  .     œ  n  .  ¬  .  f  .  8  —  n  .  ¬  .  f  .  J  .  .  .  ‰  .  .  .  «  .  √  \
+Ä  \  q  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+
+--------------------------------2019/8/22 10:40:52--------------------------------
+FastMM hat einen Versuch entdeckt, eine virtuelle Methode eines freigegebenen Objektes aufzurufen. Eine Schutzverletzung wird nun aufgerufen, um die aktuelle Operation abzubrechen.
+
+Freigegebene Objekt-Klasse: TIdUserPassProvider
+
+Virtuelle Methode: Destroy
+
+Adresse der virtuellen Methode: 4C8678
+
+The allocation number was: 29654
+
+The object was allocated by thread 0x928, and the stack trace (return addresses) at the time was:
+4070E6 [System.pas][System][@GetMem$qqri][4758]
+408A07 [System.pas][System][TObject.NewInstance][16922]
+409226 [System.pas][System][@ClassCreate$qqrpvzc][18255]
+60D6FA [IdBaseComponent.pas][IdBaseComponent][TIdBaseComponent.Create][290]
+683361 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.SetSendParam][202]
+683230 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Senden][173]
+685708 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.MailSenden][212]
+684E84 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.btn_SendenClick][172]
+529301 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+547BD7 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+5486E5 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+
+The object was subsequently freed by thread 0x928, and the stack trace (return addresses) at the time was:
+408A25 [System.pas][System][TObject.FreeInstance][16931]
+6EE6F8 [madExcept][InterceptClassDestroy$qqrp14System.TObject]
+4C86C4 [System.Classes.pas][System.Classes][Classes.TComponent.Destroy][15972]
+408B9F [System.pas][System][TObject.Free][16994]
+4C8BF9 [System.Classes.pas][System.Classes][Classes.TComponent.DestroyComponents][16171]
+4C8698 [System.Classes.pas][System.Classes][Classes.TComponent.Destroy][15968]
+6604D0 [IdSASL.pas][IdSASL][TIdSASL.Destroy][158]
+408B9F [System.pas][System][TObject.Free][16994]
+682E86 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Destroy][110]
+5E123D [Vcl.Forms.pas][Vcl.Forms][Forms.TScreen.AlignForms][9009]
+408B9F [System.pas][System][TObject.Free][16994]
+
+The current thread ID is 0x928, and the stack trace (return addresses) leading to this error is:
+408B9F [System.pas][System][TObject.Free][16994]
+682EAF [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Destroy][112]
+408B9F [System.pas][System][TObject.Free][16994]
+6846C6 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.FormDestroy][129]
+5D8AAB [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoDestroy][3800]
+5D889F [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.BeforeDestruction][3733]
+4092D0 [System.pas][System][@BeforeDestruction$qqrxp14System.TObjectzc][18338]
+5D88AF [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Destroy][3742]
+4C8B7A [System.Classes.pas][System.Classes][Classes.TComponent.RemoveComponent][16155]
+4C8BF9 [System.Classes.pas][System.Classes][Classes.TComponent.DestroyComponents][16171]
+5D68CE [Vcl.Forms.pas][Vcl.Forms][Forms.DoneApplication$qqrv][2198]
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE29800:
+80 5C 71 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 CC 74 78 80 80 80 80 80 80 80 80 00 00 00 00 41 99 E2 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9F 74 00 00 55 71 40 00 B5 CF 40 00 F6 D0 40 00
+C9 64 43 00 2C A8 4B 00 73 9C 5F 00 F4 A0 5F 00 D3 96 5F 00 5A 94 5F 00 39 58 5F 00 3E 5A 5F 00
+28 09 00 00 28 09 00 00 02 71 40 00 50 D2 40 00 7D CE 40 00 F6 D0 40 00 58 A7 4B 00 90 A4 4B 00
+D0 A3 4B 00 AA A3 4B 00 58 AA 4B 00 9F 8B 40 00 AB 9C 5F 00 4C 00 00 00 00 00 00 00 64 A2 8E 86
+80 5C 71 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+Ä  \  q  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ã  t  x  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  A  ô  ‚  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ü  t  .  .  U  q  @  .  µ  œ  @  .  ˆ  –  @  .
+…  d  C  .  ,  ®  K  .  s  ú  _  .  Ù  †  _  .  ”  ñ  _  .  Z  î  _  .  9  X  _  .  >  Z  _  .
+(  .  .  .  (  .  .  .  .  q  @  .  P  “  @  .  }  Œ  @  .  ˆ  –  @  .  X  ß  K  .  ê  §  K  .
+–  £  K  .  ™  £  K  .  X  ™  K  .  ü  ã  @  .  ´  ú  _  .  L  .  .  .  .  .  .  .  d  ¢  é  Ü
+Ä  \  q  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+
+--------------------------------2019/8/22 11:24:46--------------------------------
+FastMM hat einen Versuch entdeckt, eine virtuelle Methode eines freigegebenen Objektes aufzurufen. Eine Schutzverletzung wird nun aufgerufen, um die aktuelle Operation abzubrechen.
+
+Freigegebene Objekt-Klasse: TIdUserPassProvider
+
+Virtuelle Methode: Destroy
+
+Adresse der virtuellen Methode: 4C8678
+
+The allocation number was: 28661
+
+The object was allocated by thread 0xAB0, and the stack trace (return addresses) at the time was:
+4070E6 [System.pas][System][@GetMem$qqri][4758]
+408A07 [System.pas][System][TObject.NewInstance][16922]
+409226 [System.pas][System][@ClassCreate$qqrpvzc][18255]
+60D6FA [IdBaseComponent.pas][IdBaseComponent][TIdBaseComponent.Create][290]
+683361 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.SetSendParam][202]
+683230 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Senden][173]
+68572E [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.MailSenden][213]
+684E84 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.btn_SendenClick][172]
+529301 [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.Click][7454]
+547BD7 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.Click][5449]
+5486E5 [Vcl.StdCtrls.pas][Vcl.StdCtrls][Stdctrls.TCustomButton.CNCommand][5910]
+
+The object was subsequently freed by thread 0xAB0, and the stack trace (return addresses) at the time was:
+408A25 [System.pas][System][TObject.FreeInstance][16931]
+6EE71C [madExcept][InterceptClassDestroy$qqrp14System.TObject]
+4C86C4 [System.Classes.pas][System.Classes][Classes.TComponent.Destroy][15972]
+408B9F [System.pas][System][TObject.Free][16994]
+4C8BF9 [System.Classes.pas][System.Classes][Classes.TComponent.DestroyComponents][16171]
+4C8698 [System.Classes.pas][System.Classes][Classes.TComponent.Destroy][15968]
+6604D0 [IdSASL.pas][IdSASL][TIdSASL.Destroy][158]
+408B9F [System.pas][System][TObject.Free][16994]
+682E86 [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Destroy][110]
+5E123D [Vcl.Forms.pas][Vcl.Forms][Forms.TScreen.AlignForms][9009]
+408B9F [System.pas][System][TObject.Free][16994]
+
+The current thread ID is 0xAB0, and the stack trace (return addresses) leading to this error is:
+408B9F [System.pas][System][TObject.Free][16994]
+682EAF [Objekt.SendMail.pas][Objekt.SendMail][Sendmail.TSendMail.Destroy][112]
+408B9F [System.pas][System][TObject.Free][16994]
+6846C6 [Form.Mailtest.pas][Form.Mailtest][Mailtest.Tfrm_Mailtest.FormDestroy][129]
+5D8AAB [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoDestroy][3800]
+5D889F [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.BeforeDestruction][3733]
+4092D0 [System.pas][System][@BeforeDestruction$qqrxp14System.TObjectzc][18338]
+5D88AF [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.Destroy][3742]
+4C8B7A [System.Classes.pas][System.Classes][Classes.TComponent.RemoveComponent][16155]
+4C8BF9 [System.Classes.pas][System.Classes][Classes.TComponent.DestroyComponents][16171]
+5D68CE [Vcl.Forms.pas][Vcl.Forms][Forms.DoneApplication$qqrv][2198]
+
+Aktueller Speicherauszug von 256 Bytes, beginnend ab Zeigeradresse 7FE29800:
+80 5C 71 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 07 CD 74 78 80 80 80 80 80 80 80 80 00 00 00 00 01 9B E2 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 67 7D 00 00 55 71 40 00 B5 CF 40 00 F6 D0 40 00
+CC 40 60 00 95 22 63 00 5A 19 63 00 27 6B 63 00 CC 65 63 00 B4 63 63 00 39 69 63 00 4D 2B 64 00
+B0 0A 00 00 B0 0A 00 00 02 71 40 00 50 D2 40 00 F2 13 63 00 B6 18 63 00 2F 17 63 00 39 66 63 00
+B4 63 63 00 39 69 63 00 4D 2B 64 00 03 25 64 00 10 26 64 00 4B 00 00 00 00 00 00 00 09 B4 BE 87
+80 5C 71 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+Ä  \  q  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  Õ  t  x  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  õ  ‚  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  g  }  .  .  U  q  @  .  µ  œ  @  .  ˆ  –  @  .
+Ã  @  `  .  ï  "  c  .  Z  .  c  .  '  k  c  .  Ã  e  c  .  ¥  c  c  .  9  i  c  .  M  +  d  .
+∞  .  .  .  ∞  .  .  .  .  q  @  .  P  “  @  .  Ú  .  c  .  ∂  .  c  .  /  .  c  .  9  f  c  .
+¥  c  c  .  9  i  c  .  M  +  d  .  .  %  d  .  .  &  d  .  K  .  .  .  .  .  .  .  .  ¥  æ  á
+Ä  \  q  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä

@@ -26,6 +26,7 @@ type
     IdIOHandlerStream1: TIdIOHandlerStream;
     Button5: TButton;
     Memo1: TMemo;
+    edt_IP: TEdit;
     procedure Button1Click(Sender: TObject);
     procedure ClientSocket1Error(Sender: TObject; Socket: TCustomWinSocket;
       ErrorEvent: TErrorEvent; var ErrorCode: Integer);
@@ -164,6 +165,7 @@ begin
     List.Add('P1'+ #10);
     }
 
+    idftp1.Host := edt_IP.Text;
     List.Text := Memo1.Text;
 
     List.SaveToStream(st);

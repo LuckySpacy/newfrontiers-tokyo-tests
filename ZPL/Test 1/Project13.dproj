@@ -86,7 +86,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Unit17.pas">
+        <DCCReference Include="u_ZPLTest.pas">
             <Form>Form17</Form>
             <FormType>dfm</FormType>
         </DCCReference>

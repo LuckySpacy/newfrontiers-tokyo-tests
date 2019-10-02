@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{BFDAD506-0F0A-4FD4-93E2-F0469FB434B3}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Project1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\PackNFSCustomPanel.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Project1">
+        <MSBuild Projects="Project1.dproj"/>
+    </Target>
+    <Target Name="Project1:Clean">
+        <MSBuild Projects="Project1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project1:Make">
+        <MSBuild Projects="Project1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PackNFSCustomPanel">
+        <MSBuild Projects="..\PackNFSCustomPanel.dproj"/>
+    </Target>
+    <Target Name="PackNFSCustomPanel:Clean">
+        <MSBuild Projects="..\PackNFSCustomPanel.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PackNFSCustomPanel:Make">
+        <MSBuild Projects="..\PackNFSCustomPanel.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Project1;PackNFSCustomPanel"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Project1:Clean;PackNFSCustomPanel:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Project1:Make;PackNFSCustomPanel:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

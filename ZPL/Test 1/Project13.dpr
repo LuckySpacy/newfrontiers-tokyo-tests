@@ -7,7 +7,7 @@ uses
   madListProcesses,
   madListModules,
   Vcl.Forms,
-  Unit17 in 'Unit17.pas' {Form17},
+  u_ZPLTest in 'u_ZPLTest.pas' {Form17},
   rawprinting in 'rawprinting.pas';
 
 {$R *.res}
